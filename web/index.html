@@ -7,6 +7,13 @@
   <meta name="description" content="Leia o Catecismo da Igreja Católica parágrafo por parágrafo e converse com ele." />
   <meta name="theme-color" content="#fbf8f3" media="(prefers-color-scheme: light)" />
   <meta name="theme-color" content="#1b1714" media="(prefers-color-scheme: dark)" />
+  <script>
+    // Tema e letra antes da primeira pintura (sem piscar o tema claro). O app.js confirma depois.
+    try {
+      var t = localStorage.getItem('tema'); if (t === 'light' || t === 'dark' || t === 'sepia') document.documentElement.dataset.theme = t;
+      var f = Number(localStorage.getItem('fonte')); if (f >= 0.8 && f <= 1.6) document.documentElement.style.setProperty('--escala', String(f));
+    } catch (e) { /* sem armazenamento */ }
+  </script>
   <link rel="manifest" href="manifest.webmanifest" />
   <link rel="icon" href="icone.svg" type="image/svg+xml" />
   <link rel="apple-touch-icon" href="icone.svg" />
@@ -91,16 +98,18 @@
             <div class="passos" aria-hidden="true"></div>
             <button type="button" id="bt-maior" aria-label="Aumentar letra">A</button>
           </div>
+          <p class="previa" aria-label="Prévia do texto">O desejo de Deus está inscrito no coração do homem, já que o homem é criado por Deus e para Deus.</p>
         </div>
         <div class="grupo">
           <span class="rotulo" id="rot-tema">Tema</span>
           <div class="segmentos" role="group" aria-labelledby="rot-tema">
             <button type="button" data-tema="light"><svg class="ic"><use href="#i-sol"/></svg>Claro</button>
             <button type="button" data-tema="dark"><svg class="ic"><use href="#i-lua"/></svg>Escuro</button>
-            <button type="button" data-tema="auto">Automático</button>
+            <button type="button" data-tema="sepia" title="Sépia: papel envelhecido, mais confortável para ler"><svg class="ic"><use href="#i-livro"/></svg>Sépia</button>
+            <button type="button" data-tema="auto" title="Automático: segue o tema do aparelho">Auto</button>
           </div>
         </div>
-        <p class="nota-sistema">Vale para o leitor e para as respostas do chat.</p>
+        <p class="nota-sistema">O tamanho vale para o leitor, a busca e as respostas do chat.</p>
       </div>
     </section>
   </div>

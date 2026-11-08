@@ -21,12 +21,19 @@
   color-scheme: light;
 }
 @media (prefers-color-scheme: dark) {
-  :root:not([data-theme="light"]) {
+  :root:not([data-theme="light"]):not([data-theme="sepia"]) {
     --fundo: #1b1714; --superficie: #241f1b; --texto: #ece4da; --suave: #a99c90; --linha: #3a322b; --trilho: #2c2621;
     --acento: #e0a675; --acento-suave: #3a2a1e; --destaque: #5c4a14; --alvo: #33291b; --alca: #4a4038;
     --sombra: 0 1px 2px rgb(0 0 0 / 40%); --sombra-folha: 0 -8px 30px rgb(0 0 0 / 50%);
     color-scheme: dark;
   }
+}
+/* Sépia: modo leitura, papel envelhecido com menos contraste que o claro */
+:root[data-theme="sepia"] {
+  --fundo: #f3e9d2; --superficie: #faf3e1; --texto: #3b2e1f; --suave: #6f5f48; --linha: #dfcfae; --trilho: #e9dcbf;
+  --acento: #8a4513; --acento-suave: #ecd9b8; --destaque: #f0d27c; --alvo: #f6e4bd; --alca: #cbb791;
+  --sombra: 0 1px 2px rgb(80 55 20 / 10%), 0 4px 16px rgb(80 55 20 / 8%); --sombra-folha: 0 -8px 30px rgb(59 46 31 / 22%);
+  color-scheme: light;
 }
 :root[data-theme="dark"] {
   --fundo: #1b1714; --superficie: #241f1b; --texto: #ece4da; --suave: #a99c90; --linha: #3a322b; --trilho: #2c2621;
@@ -140,7 +147,7 @@ main { max-width: 44rem; margin: 0 auto; padding: 0 16px 96px; outline: none; }
 .resultados a:hover { border-color: var(--acento); }
 .r-num { font-weight: 700; color: var(--acento); }
 .r-cap { color: var(--suave); font-size: .875rem; align-self: center; }
-.r-trecho { grid-column: 1 / -1; font-family: var(--serif); line-height: 1.55; }
+.r-trecho { grid-column: 1 / -1; font-family: var(--serif); font-size: calc(1rem * var(--escala)); line-height: 1.55; }
 mark { background: var(--destaque); color: inherit; border-radius: 2px; padding: 0 1px; }
 
 /* ---------- início ---------- */
@@ -317,10 +324,20 @@ button.cita.fonte {
   border: 1px solid var(--linha); background: var(--superficie); color: var(--texto); font-size: 14px;
 }
 button.cita.fonte:hover { border-color: var(--acento); color: var(--acento); background: var(--superficie); }
-.digitando { display: flex; gap: 5px; padding: 6px 0; margin: 0; }
-.digitando span { width: 7px; height: 7px; border-radius: 50%; background: var(--suave); animation: pulsa 1s infinite ease-in-out; }
-.digitando span:nth-child(2) { animation-delay: .15s; }
-.digitando span:nth-child(3) { animation-delay: .3s; }
+
+/* Modo sem IA: resposta oficial do Compêndio */
+.msg.compendio .balao { border-left: 3px solid var(--acento); padding-left: 14px; }
+.msg.assistente .comp-aviso { margin-bottom: .9em; }
+.msg.assistente .comp-pergunta { font-weight: 600; margin-bottom: .4em; }
+.comp-n { display: block; font: 600 .75rem/1.4 var(--sans); letter-spacing: .04em; text-transform: uppercase; color: var(--acento); }
+.comp-outro { margin-top: 1em; border-top: 1px solid var(--linha); padding-top: .7em; }
+.comp-outro summary { cursor: pointer; color: var(--acento); font: .9375rem/1.45 var(--sans); }
+.comp-outro[open] summary { margin-bottom: .6em; }
+.comp-outro .fontes-lista { margin-top: .5em; }
+p.digitando { display: flex; gap: 5px; padding: 6px 0; margin: 0; }
+p.digitando span { width: 7px; height: 7px; border-radius: 50%; background: var(--suave); animation: pulsa 1s infinite ease-in-out; }
+p.digitando span:nth-child(2) { animation-delay: .15s; }
+p.digitando span:nth-child(3) { animation-delay: .3s; }
 @keyframes pulsa { 0%, 80%, 100% { opacity: .25; } 40% { opacity: 1; } }
 
 .boas-vindas { display: flex; flex-direction: column; align-items: center; text-align: center; gap: 10px; padding: 12px 0 8px; }
@@ -399,10 +416,14 @@ button.cita.fonte:hover { border-color: var(--acento); color: var(--acento); bac
 .passos { flex: 1; display: flex; align-items: center; justify-content: space-between; padding: 0 8px; }
 .passos span { width: 12px; height: 12px; border-radius: 50%; background: var(--linha); }
 .passos span.on { width: 18px; height: 18px; background: var(--acento); }
+.previa {
+  margin: 0; padding: 12px 14px; border: 1px solid var(--linha); border-radius: 12px; background: var(--superficie);
+  font: calc(1.125rem * var(--escala))/1.6 var(--serif); color: var(--texto); transition: font-size .15s;
+}
 .segmentos { display: flex; gap: 4px; padding: 4px; background: var(--trilho); border-radius: 14px; }
 .segmentos button {
-  flex: 1; height: 48px; border: 0; border-radius: 10px; background: none;
-  display: flex; align-items: center; justify-content: center; gap: 6px; font: 600 15px var(--sans); color: var(--texto);
+  flex: 1; min-width: 0; height: 48px; padding: 0 4px; border: 0; border-radius: 10px; background: none;
+  display: flex; align-items: center; justify-content: center; gap: 5px; font: 600 14px var(--sans); color: var(--texto);
 }
 .segmentos button .ic { width: 20px; height: 20px; }
 .segmentos button[aria-pressed="true"] { background: var(--superficie); color: var(--acento); box-shadow: 0 1px 3px rgb(60 40 20 / 18%); }

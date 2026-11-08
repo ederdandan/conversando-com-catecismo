@@ -1,11 +1,11 @@
 // Service worker: leitor 100% offline. Nunca intercepta a API do chat (outro domínio / /api/).
 // Ao mudar qualquer arquivo do site, troque a VERSAO: os aparelhos baixam tudo de novo e recarregam.
-const VERSAO = 'catecismo-v6';
+const VERSAO = 'catecismo-v8';
 const ARQUIVOS = [
   './', 'index.html', 'estilo.css', 'icone.svg', 'manifest.webmanifest',
   'js/app.js', 'js/dados.js', 'js/leitor.js', 'js/busca.js', 'js/html.js',
-  'js/chat.js', 'js/citacoes.js', 'js/config.js',
-  'data/catecismo.json',
+  'js/chat.js', 'js/citacoes.js', 'js/config.js', 'js/compendio.js',
+  'data/catecismo.json', 'data/compendio.json',
 ];
 
 self.addEventListener('install', (ev) => {

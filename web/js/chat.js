@@ -3,6 +3,7 @@ import { API_URL } from './config.js';
 import { selecionarParagrafos } from './busca.js';
 import { avaliarResposta, htmlResposta, MENSAGEM_RECUSA } from './citacoes.js';
 import { esc } from './html.js';
+import { carregarCompendio, criarIndiceCompendio, htmlRespostaCompendio, responderPeloCompendio } from './compendio.js';
 
 const SUGESTOES = [
   'O que é a graça?',
@@ -23,6 +24,17 @@ try { conversa = JSON.parse(armazenamento.ler('conversa', '[]')) || []; } catch 
 const salvarConversa = () => armazenamento.gravar('conversa', JSON.stringify(conversa.slice(-30)));
 
 let emAndamento = null; // AbortController da resposta atual
+let indiceCompendio = null;
+
+// Sem IA (cota esgotada, IA fora do ar, sem internet): a pergunta oficial mais parecida do Compêndio.
+async function respostaCompendio(pergunta, motivo) {
+  try {
+    indiceCompendio ??= criarIndiceCompendio(await carregarCompendio());
+    return { papel: 'assistente', estado: 'compendio', motivo, itens: responderPeloCompendio(indiceCompendio, pergunta) };
+  } catch {
+    return { papel: 'assistente', texto: motivo, estado: 'erro' };
+  }
+}
 
 // ---------- API ----------
 async function chamarApi(caminho, { metodo = 'GET', corpo, sinal } = {}) {
@@ -38,13 +50,14 @@ async function chamarApi(caminho, { metodo = 'GET', corpo, sinal } = {}) {
     });
   } catch (e) {
     if (e.name === 'AbortError') throw e;
-    throw new Error('Sem conexão com o servidor do chat. Verifique sua internet.');
+    throw Object.assign(new Error('Sem conexão com o servidor do chat.'), { semIA: true });
   }
   if (!r.ok) {
     let msg = `Erro ${r.status}`;
     try { msg = (await r.json()).erro || msg; } catch { /* corpo não-JSON */ }
     const err = new Error(msg);
     err.status = r.status;
+    err.semIA = r.status === 429 || r.status >= 500; // cota esgotada ou IA fora do ar → Compêndio
     throw err;
   }
   return r;
@@ -74,6 +87,11 @@ async function lerEventos(resposta, onEvento) {
 // ---------- renderização ----------
 function htmlMensagem(m, i) {
   if (m.papel === 'usuario') return `<div class="msg usuario"><div class="balao">${esc(m.texto)}</div></div>`;
+  if (m.estado === 'compendio') {
+    return `<article class="msg assistente compendio" data-i="${i}">
+      <div class="autor"><span class="selo">${icone('livro')}</span>Compêndio do Catecismo</div>
+      ${htmlRespostaCompendio(m)}</article>`;
+  }
   const aval = m.estado === 'pronto' ? avaliarResposta(m.texto, m.paragrafos || []) : null;
   let corpo;
   if (m.estado === 'erro') corpo = `<p class="msg-erro">${esc(m.texto)}</p>`;
@@ -206,7 +224,7 @@ async function perguntar(main, texto, ctx) {
         const agora = performance.now();
         if (agora - ultimoDesenho > 60) { atualizarMensagem(main, i); rolarParaFim(main); ultimoDesenho = agora; }
       } else if (ev.tipo === 'erro') {
-        throw new Error(ev.mensagem);
+        throw Object.assign(new Error(ev.mensagem || 'A IA parou de responder.'), { semIA: true });
       }
     });
     conversa[i].estado = conversa[i].texto ? 'pronto' : 'erro';
@@ -216,7 +234,9 @@ async function perguntar(main, texto, ctx) {
       conversa[i].estado = conversa[i].texto ? 'pronto' : 'erro';
       if (!conversa[i].texto) conversa[i].texto = 'Resposta interrompida.';
     } else {
-      conversa[i] = { papel: 'assistente', texto: e.message, estado: 'erro' };
+      conversa[i] = e.semIA
+        ? await respostaCompendio(pergunta, e.message)
+        : { papel: 'assistente', texto: e.message, estado: 'erro' };
       if (e.status === 401) {
         armazenamento.gravar('codigo', null);
         conversa.splice(i - 1, 2);

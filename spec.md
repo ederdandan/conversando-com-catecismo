@@ -111,6 +111,12 @@ Resultado atual: **2865/2865 §**, sem duplicados, 3623 de 3646 referências de 
 ### 4.2. Mensagem padrão de recusa
 > "Não encontrei no Catecismo da Igreja Católica uma resposta para essa pergunta. Tente reformular ou pesquisar no leitor."
 
+### 4.3. Modo sem IA — Compêndio do Catecismo
+Quando a IA não responde (sem internet, HTTP 429 por cota/limite, HTTP 5xx, ou erro no meio do stream), o chat mostra a resposta **oficial** do Compêndio do Catecismo (598 perguntas e respostas, Santa Sé 2005) mais parecida com a pergunta, com os § do Catecismo indicados pelo próprio Compêndio (clicáveis). Funciona offline.
+- Dados: `npm run dados:compendio` → `web/data/compendio.json` (`{ fonte, total, itens: [{ n, pergunta, resposta, refs }] }`), gerado de `vatican.va/archive/compendium_ccc/documents/archive_2005_compendium-ccc_po.html`. O script valida 598 itens em ordem, respostas não vazias e refs em 1–2865; corrige 5 erros de digitação de referências da página em português (tabela `CORRECOES`).
+- Busca (`web/js/compendio.js`): BM25 sobre pergunta (peso 2) + resposta; perguntas dependentes ("deste sacramento") herdam a pergunta anterior; "O que é X?" prioriza a pergunta oficial "O que é X…". Para não responder fora do tema, exige pontuação ≥ 3 **e** cobertura ≥ 50% dos termos da pergunta (ponderada por raridade); sem item parecido, diz que não encontrou.
+- Não roda em 400/401/403/413 (erro do pedido ou do código de convite).
+
 ---
 
 ## 5. Requisitos — Worker (`worker/`)

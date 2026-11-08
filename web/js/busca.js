@@ -189,6 +189,8 @@ const SINONIMOS = [
   [['dinheiro', 'riqueza', 'rico'], 'riquezas bens pobreza'],
   [['idolo', 'idolatria', 'supersticao', 'horoscopo', 'magia'], 'idolatria supersticao adivinhacao magia'],
   [['eucaristia', 'santissimo'], 'eucaristia'],
+  [['amem'], 'amen'], // grafia de Portugal: Ámen
+  [['depois da morte', 'apos a morte', 'quando morremos', 'quando a gente morre'], 'morte corpo alma sucede juizo particular'],
   [['uncao', 'extrema uncao', 'doente', 'doentes'], 'uncao enfermos'],
 ].map(([chaves, extra]) => [chaves.map(normalizar), normalizar(extra)]);
 

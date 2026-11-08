@@ -15,8 +15,8 @@ const pref = {
   gravar(k, v) { try { if (v === null) localStorage.removeItem(k); else localStorage.setItem(k, v); } catch { /* sem armazenamento */ } },
 };
 
-// Tamanho da letra em 5 níveis.
-const ESCALAS = [0.9, 1, 1.1, 1.2, 1.35];
+// Tamanho da letra em 5 níveis (passos de ~15%, perceptíveis no celular).
+const ESCALAS = [0.875, 1, 1.15, 1.3, 1.5];
 function nivelFonte() {
   const atual = Number(pref.ler('fonte', '1')) || 1;
   return ESCALAS.reduce((melhor, v, i) => (Math.abs(v - atual) < Math.abs(ESCALAS[melhor] - atual) ? i : melhor), 1);
@@ -29,9 +29,14 @@ function aplicarFonte(nivel = nivelFonte()) {
   $('#bt-menor').disabled = i === 0;
   $('#bt-maior').disabled = i === ESCALAS.length - 1;
 }
+// Cor da barra do navegador no celular: segue o tema escolhido (no automático, as duas <meta> por media query).
+const metasCor = [...document.querySelectorAll('meta[name="theme-color"]')].map((m) => [m, m.content]);
 function aplicarTema(tema) {
+  if (!['light', 'dark', 'sepia', 'auto'].includes(tema)) tema = 'auto';
   if (tema === 'auto') delete document.documentElement.dataset.theme;
   else document.documentElement.dataset.theme = tema;
+  const fundo = getComputedStyle(document.documentElement).getPropertyValue('--fundo').trim();
+  metasCor.forEach(([m, original]) => { m.content = tema === 'auto' ? original : fundo; });
   pref.gravar('tema', tema);
   document.querySelectorAll('#ajustes [data-tema]').forEach((b) => b.setAttribute('aria-pressed', String(b.dataset.tema === tema)));
 }
