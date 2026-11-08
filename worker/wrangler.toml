@@ -23,8 +23,9 @@ PROVEDOR_RESERVA_URL = "https://api.groq.com/openai/v1/chat/completions"
 # Reserva (Groq, plano gratuito), usada só se todos os Gemini falharem.
 # "modelo@esforço" por item (gpt-oss aceita low/medium/high; qwen aceita none/default). Vazio = sem reserva.
 MODELO_RESERVA = "openai/gpt-oss-120b@low,qwen/qwen3.8-27b@none"
-LIMITE_DIARIO_POR_CODIGO = "30"
-LIMITE_DIARIO_GLOBAL = "300"
+# Por código: alto o bastante para ninguém sentir; só evita que uma pessoa gaste a cota gratuita de todos.
+LIMITE_DIARIO_POR_CODIGO = "100"
+LIMITE_DIARIO_GLOBAL = "500"
 
 # Contadores diários (Durable Object com SQLite — disponível no plano gratuito)
 [[durable_objects.bindings]]

@@ -185,13 +185,14 @@ function rolarParaFim(main) {
   if (main.querySelector('#mensagens')) window.scrollTo({ top: document.documentElement.scrollHeight });
 }
 
+// O selo só aparece quando restam poucas perguntas no dia (o limite é alto e não precisa ficar à vista).
+const AVISAR_COTA_ABAIXO = 10;
 function mostrarCota(main, restantes) {
   const el = main.querySelector('#cota');
-  if (el && restantes !== null && restantes !== undefined) {
-    el.textContent = `${restantes} ${restantes === 1 ? 'pergunta' : 'perguntas'} hoje`;
-    el.title = 'Perguntas que você ainda pode fazer hoje';
-    el.hidden = false;
-  }
+  if (!el || restantes === null || restantes === undefined) return;
+  el.textContent = `${restantes} ${restantes === 1 ? 'pergunta' : 'perguntas'} hoje`;
+  el.title = 'Perguntas que você ainda pode fazer hoje';
+  el.hidden = restantes > AVISAR_COTA_ABAIXO;
 }
 
 // ---------- fluxo de pergunta ----------

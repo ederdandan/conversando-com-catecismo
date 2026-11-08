@@ -126,7 +126,7 @@ No modo IA, quando a IA não responde (sem internet, HTTP 429 por cota/limite, H
 - **Rotas**: `POST /api/chat` (SSE), `OPTIONS` (preflight CORS), `GET /api/saude`.
 - **CORS**: permitir somente `https://<usuario>.github.io` (+ `http://localhost:*` em dev); headers CORS também nas respostas de erro.
 - **Segredos** (`wrangler secret put`): `GEMINI_API_KEY`, `GROQ_API_KEY`, `CODIGOS_CONVITE` (lista `nome:codigo`).
-- **Variáveis**: `MODELO_PRINCIPAL`, `MODELO_RESERVA`, `LIMITE_DIARIO_POR_CODIGO` (ex.: 30), `LIMITE_DIARIO_GLOBAL` (ex.: 300).
+- **Variáveis**: `MODELO_PRINCIPAL`, `MODELO_RESERVA`, `LIMITE_DIARIO_POR_CODIGO` (100), `LIMITE_DIARIO_GLOBAL` (500). O chat só mostra "N perguntas hoje" quando restam 10 ou menos.
 - **Contadores**: Durable Object (SQLite, plano gratuito) ou KV; Rate Limiting binding para rajadas por IP.
 - **Validação de entrada**: pergunta ≤ 500 caracteres; ≤ 12 números de §, todos entre 1 e 2865; histórico ≤ 2 turnos e ≤ 1.500 caracteres.
 - **Dados no Worker**: módulo com `n → texto` (sem notas). Validar tamanho/tempo de inicialização; alternativa: blocos por capítulo buscados do Pages com Cache API.
