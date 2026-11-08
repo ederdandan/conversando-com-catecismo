@@ -124,7 +124,7 @@ function htmlCodigo(erro = '') {
     </div>
     <form id="form-codigo" class="form-codigo">
       <label for="campo-codigo">Código de convite</label>
-      <input id="campo-codigo" name="codigo" type="password" autocomplete="off" required minlength="6" />
+      <input id="campo-codigo" name="codigo" type="password" autocomplete="off" required minlength="6" enterkeyhint="go" />
       <button type="submit" class="bt-pri">Entrar</button>
     </form>
     ${erro ? `<p class="msg-erro" role="alert">${esc(erro)}</p>` : ''}
@@ -150,6 +150,7 @@ function htmlChat() {
         <div class="sugestoes">${SUGESTOES.map((s) => `<button type="button" class="sugestao"><span>${esc(s)}</span>${icone('enviar')}</button>`).join('')}</div>
       </div>` : '';
   return `<header class="cab cab-chat">
+      <a class="cab-icone" href="#/" aria-label="Início"><img src="icones/icone-192.png" alt="" width="28" height="28" /></a>
       <h1>Conversar</h1>
       ${ia ? '<span class="cota" id="cota" hidden></span>' : '<span class="cota modo" title="Respostas oficiais do Compêndio do Catecismo">Compêndio</span>'}
       <button type="button" class="bt-icone" id="bt-nova" aria-label="Nova conversa" title="Nova conversa">${icone('novo')}</button>
@@ -158,7 +159,7 @@ function htmlChat() {
     <div class="mensagens" id="mensagens" aria-live="polite">${vazio}${conversa.map(htmlMensagem).join('')}</div>
     <div class="compositor-area">
       <form class="compositor" id="form-pergunta">
-        <textarea name="pergunta" rows="1" maxlength="500" placeholder="Escreva sua pergunta…" aria-label="Sua pergunta" required></textarea>
+        <textarea name="pergunta" rows="1" maxlength="500" placeholder="Escreva sua pergunta…" aria-label="Sua pergunta" enterkeyhint="send"></textarea>
         <button type="submit" class="bt-enviar" aria-label="Enviar">${icone('enviar')}</button>
       </form>
       <p class="aviso-ia">${ia ? 'Resposta gerada por IA. Confira os parágrafos citados.' : 'Respostas oficiais do Compêndio do Catecismo (2005).'}</p>
@@ -301,16 +302,33 @@ function telaChat(main, ctx) {
     caixa.classList.toggle('cheia', caixa.scrollHeight > 160);
   };
   caixa.addEventListener('input', ajustar);
-  caixa.addEventListener('keydown', (ev) => {
-    if (ev.key === 'Enter' && !ev.shiftKey && !ev.isComposing) { ev.preventDefault(); form.requestSubmit(); }
-  });
-  form.addEventListener('submit', (ev) => {
-    ev.preventDefault();
+  const enviar = () => {
+    // Enquanto a resposta anterior ainda está sendo escrita, mantém o texto no campo (não perde a pergunta).
+    if (!caixa.value.trim() || emAndamento) return;
     const t = caixa.value;
     caixa.value = '';
     ajustar();
     perguntar(main, t, ctx);
+  };
+  // Enter envia; Shift+Enter quebra a linha.
+  // Teclado físico: keydown. Teclado do celular (Gboard etc.): o Enter costuma chegar "em composição"
+  // (keyCode 229), então também tratamos o beforeinput de quebra de linha.
+  let shift = false;
+  caixa.addEventListener('keydown', (ev) => {
+    shift = ev.shiftKey;
+    if (ev.key === 'Enter' && !ev.shiftKey && !(ev.isComposing && ev.keyCode === 229)) { ev.preventDefault(); enviar(); }
   });
+  caixa.addEventListener('keyup', () => { shift = false; });
+  caixa.addEventListener('beforeinput', (ev) => {
+    if ((ev.inputType === 'insertLineBreak' || ev.inputType === 'insertParagraph') && !shift) { ev.preventDefault(); enviar(); }
+  });
+  form.addEventListener('submit', (ev) => { ev.preventDefault(); enviar(); });
+  // Tocar no botão não pode tirar o foco do campo: senão o teclado fecha, as abas voltam,
+  // o botão sai de baixo do dedo e o primeiro toque se perde ("precisa tocar duas vezes").
+  const manterFoco = (ev) => { if (document.activeElement === caixa) ev.preventDefault(); };
+  const btEnviar = form.querySelector('.bt-enviar');
+  btEnviar.addEventListener('pointerdown', manterFoco);
+  btEnviar.addEventListener('mousedown', manterFoco);
   main.querySelector('#bt-nova').addEventListener('click', () => {
     emAndamento?.abort();
     conversa = [];
@@ -323,7 +341,11 @@ function telaChat(main, ctx) {
   });
   // No celular, as abas somem enquanto o teclado está aberto.
   caixa.addEventListener('focus', () => document.body.classList.add('digitando'));
-  caixa.addEventListener('blur', () => document.body.classList.remove('digitando'));
+  // Ao sair do campo, espera um instante antes de mostrar as abas de novo: um toque em andamento
+  // (num botão perto do campo) termina antes de o layout mudar.
+  caixa.addEventListener('blur', () => setTimeout(() => {
+    if (document.activeElement !== caixa) document.body.classList.remove('digitando');
+  }, 200));
   // "Perguntar sobre este trecho" (leitor) deixa a pergunta pronta para a pessoa completar ou enviar.
   let rascunho = '';
   try { rascunho = sessionStorage.getItem('rascunho') || ''; sessionStorage.removeItem('rascunho'); } catch { /* sem armazenamento */ }

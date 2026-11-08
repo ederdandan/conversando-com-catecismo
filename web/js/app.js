@@ -58,7 +58,10 @@ const obterIndice = (d) => (indice ??= criarIndice(d.paragrafos));
 
 // ---------- pedaços comuns ----------
 const botaoAa = '<button type="button" class="bt-icone bt-aa" aria-label="Ajustes de leitura">Aa</button>';
-const cabecalho = (titulo) => `<header class="cab"><h1>${titulo}</h1>${botaoAa}</header>`;
+// Ícone do app no cabeçalho das telas principais (só no celular; no computador ele já está na barra do topo).
+// Não entra no leitor nem em telas com seta de voltar, para não poluir.
+const iconeCab = '<a class="cab-icone" href="#/" aria-label="Início"><img src="icones/icone-192.png" alt="" width="28" height="28" /></a>';
+const cabecalho = (titulo) => `<header class="cab">${iconeCab}<h1>${titulo}</h1>${botaoAa}</header>`;
 
 function formBusca(valor = '') {
   return `<form class="busca" id="form-busca" role="search">
