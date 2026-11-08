@@ -1,6 +1,6 @@
 // Endereço da API do chat (Cloudflare Worker).
-// Em produção: preencher na fase 6 com o endereço do Worker publicado.
-const PRODUCAO = '';
+// Em produção: Worker publicado com `npm run deploy` (pasta worker/).
+const PRODUCAO = 'https://catecismo-api.catecismo-api.workers.dev';
 
 // Desenvolvimento: `npm run dev` no worker/ sobe em http://localhost:8787.
 // Para testar outra porta/endereço: localStorage.setItem('api_url', 'http://localhost:8792')

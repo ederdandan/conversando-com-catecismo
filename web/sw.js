@@ -1,5 +1,5 @@
 // Service worker: leitor 100% offline. Nunca intercepta a API do chat (outro domínio / /api/).
-const VERSAO = 'catecismo-v3';
+const VERSAO = 'catecismo-v4';
 const ARQUIVOS = [
   './', 'index.html', 'estilo.css', 'icone.svg', 'manifest.webmanifest',
   'js/app.js', 'js/dados.js', 'js/leitor.js', 'js/busca.js', 'js/html.js',
