@@ -35,20 +35,42 @@ export function htmlNota(p, numero) {
   return nota ? `<p><span class="nota-n">${nota.n}.</span> ${esc(nota.texto)}</p>` : '';
 }
 
-export function htmlSumario(d) {
+const icone = (nome) => `<svg class="ic" aria-hidden="true"><use href="#i-${nome}"/></svg>`;
+
+// "Terceira Parte — A Vida em Cristo" → { curto: "A Vida em Cristo", rotulo: "3ª Parte" }
+export function nomeParte(parte, tituloParte) {
+  if (!parte) return { curto: 'Prólogo', rotulo: 'Prólogo' };
+  return { curto: tituloParte.split(/\s+[—–-]\s+/).slice(1).join(' — ') || tituloParte, rotulo: `${parte}ª Parte` };
+}
+
+export function partesDe(d) {
   const partes = [];
   for (const c of d.capitulos) {
     let pt = partes[partes.length - 1];
     if (!pt || pt.parte !== c.parte) partes.push((pt = { parte: c.parte, titulo: c.tituloParte, caps: [] }));
     pt.caps.push(c);
   }
-  return `<nav class="sumario" aria-label="Sumário">${partes.map((pt) => `
-    <section>
-      <h2>${esc(pt.titulo)}</h2>
-      <ol>${pt.caps.map((c) => `
-        <li><a href="#/p/${c.ini}"><span>${esc(c.titulo || pt.titulo)}</span><small>§ ${c.ini}–${c.fim}</small></a></li>`).join('')}
+  return partes;
+}
+
+// Sumário em sanfona: cada parte abre e fecha. `aberta` = número da parte aberta; `ultimo` = § onde parou.
+export function htmlSumario(d, { aberta = null, ultimo = 0 } = {}) {
+  return `<nav class="sumario" aria-label="Sumário">${partesDe(d).map((pt) => {
+    const { curto, rotulo } = nomeParte(pt.parte, pt.titulo);
+    const info = pt.parte
+      ? `${rotulo} · ${pt.caps.length} capítulos`
+      : `§ ${pt.caps[0].ini}–${pt.caps.at(-1).fim}`;
+    return `
+    <details class="parte" data-parte="${pt.parte}"${pt.parte === aberta ? ' open' : ''}>
+      <summary><span class="t"><b>${esc(curto)}</b><small>${info}</small></span>${icone('baixo')}</summary>
+      <ol>${pt.caps.map((c) => {
+        const aqui = ultimo >= c.ini && ultimo <= c.fim;
+        return `
+        <li><a href="#/p/${aqui ? ultimo : c.ini}"${aqui ? ' class="atual"' : ''}><span>${esc(c.titulo || pt.titulo)}${aqui ? `<small class="parou">Você parou aqui · § ${ultimo}</small>` : ''}</span><small>§ ${c.ini}</small></a></li>`;
+      }).join('')}
       </ol>
-    </section>`).join('')}
+    </details>`;
+  }).join('')}
   </nav>`;
 }
 
@@ -57,10 +79,26 @@ export function htmlCapitulo(d, cap) {
   for (let n = cap.ini; n <= cap.fim; n++) ps.push(htmlParagrafo(d.porN.get(n)));
   const ant = d.capitulos[cap.indice - 1];
   const prox = d.capitulos[cap.indice + 1];
+  const { rotulo, curto } = nomeParte(cap.parte, cap.tituloParte);
+  const titulo = cap.titulo || curto;
+  const pct = ((cap.ini / d.totalParagrafos) * 100).toFixed(1);
   const nav = `<nav class="cap-nav" aria-label="Capítulos">
     ${ant ? `<a href="#/p/${ant.ini}" rel="prev">← ${esc(ant.titulo)}</a>` : '<span></span>'}
     ${prox ? `<a href="#/p/${prox.ini}" rel="next">${esc(prox.titulo)} →</a>` : '<span></span>'}
   </nav>`;
-  return `<div class="trilha"><a href="#/sumario">Sumário</a> › ${esc(cap.tituloParte)}${cap.titulo && cap.titulo !== 'Prólogo' ? ` › ${esc(cap.titulo)}` : ''}</div>
-    <div class="texto">${ps.join('')}</div>${nav}`;
+  const seta = (c, dir, rotuloSeta) => (c
+    ? `<a class="bt-icone" href="#/p/${c.ini}" aria-label="${rotuloSeta}: ${esc(c.titulo)}">${icone(dir)}</a>`
+    : `<span class="bt-icone" aria-hidden="true"></span>`);
+  return `<header class="cab cab-leitor">
+      <a class="bt-icone" href="#/sumario/${cap.parte}" aria-label="Voltar ao sumário">${icone('esq')}</a>
+      <div class="cab-titulos"><small>${esc(rotulo)}${cap.parte ? ` · ${esc(curto)}` : ''}</small><strong>${esc(titulo)}</strong></div>
+      <button type="button" class="bt-icone bt-aa" aria-label="Ajustes de leitura">Aa</button>
+      <div class="progresso" aria-hidden="true"><span style="width:${pct}%"></span></div>
+    </header>
+    <div class="texto">${ps.join('')}</div>${nav}
+    <div class="barra-leitura">
+      ${seta(ant, 'esq', 'Capítulo anterior')}
+      <a class="perguntar" href="#/conversar" data-perguntar>${icone('chat')}<span>Perguntar sobre este trecho</span></a>
+      ${seta(prox, 'dir', 'Próximo capítulo')}
+    </div>`;
 }

@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
   <title>Catecismo da Igreja Católica</title>
   <meta name="description" content="Leia o Catecismo da Igreja Católica parágrafo por parágrafo e converse com ele." />
-  <meta name="theme-color" content="#7a3b12" media="(prefers-color-scheme: light)" />
+  <meta name="theme-color" content="#fbf8f3" media="(prefers-color-scheme: light)" />
   <meta name="theme-color" content="#1b1714" media="(prefers-color-scheme: dark)" />
   <link rel="manifest" href="manifest.webmanifest" />
   <link rel="icon" href="icone.svg" type="image/svg+xml" />
@@ -13,36 +13,98 @@
   <link rel="stylesheet" href="estilo.css" />
 </head>
 <body>
+  <!-- Ícones (traço), usados com <svg><use href="#i-..."/></svg> -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <symbol id="i-inicio" viewBox="0 0 24 24"><path d="M3 10.5 12 3l9 7.5V20a1 1 0 0 1-1 1h-5v-6h-6v6H4a1 1 0 0 1-1-1z"/></symbol>
+    <symbol id="i-livro" viewBox="0 0 24 24"><path d="M5 4h11a3 3 0 0 1 3 3v13H8a3 3 0 0 1-3-3z"/><path d="M5 17a3 3 0 0 1 3-3h11"/></symbol>
+    <symbol id="i-chat" viewBox="0 0 24 24"><path d="M4 5h16v11H9l-5 4z"/></symbol>
+    <symbol id="i-mais" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></symbol>
+    <symbol id="i-busca" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></symbol>
+    <symbol id="i-esq" viewBox="0 0 24 24"><path d="m15 5-7 7 7 7"/></symbol>
+    <symbol id="i-dir" viewBox="0 0 24 24"><path d="m9 5 7 7-7 7"/></symbol>
+    <symbol id="i-baixo" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></symbol>
+    <symbol id="i-fechar" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18"/></symbol>
+    <symbol id="i-enviar" viewBox="0 0 24 24"><path d="M12 19V5M5 12l7-7 7 7"/></symbol>
+    <symbol id="i-novo" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></symbol>
+    <symbol id="i-cruz" viewBox="0 0 24 24"><path d="M12 4v16M7 9h10"/></symbol>
+    <symbol id="i-sol" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></symbol>
+    <symbol id="i-lua" viewBox="0 0 24 24"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z"/></symbol>
+  </svg>
+
+  <!-- Topo do computador (no celular a navegação fica nas abas de baixo) -->
   <header class="topo">
     <a class="marca" href="#/" aria-label="Início">
       <img src="icone.svg" alt="" width="28" height="28" />
       <span>Catecismo</span>
     </a>
     <nav class="nav" aria-label="Principal">
+      <a href="#/" data-rota="inicio">Início</a>
       <a href="#/sumario" data-rota="sumario">Ler</a>
       <a href="#/conversar" data-rota="conversar">Conversar</a>
       <a href="#/sobre" data-rota="sobre">Sobre</a>
     </nav>
-    <div class="ajustes">
-      <button type="button" id="bt-menor" title="Diminuir letra" aria-label="Diminuir letra">A−</button>
-      <button type="button" id="bt-maior" title="Aumentar letra" aria-label="Aumentar letra">A+</button>
-      <button type="button" id="bt-tema" title="Tema" aria-label="Alternar tema">◐</button>
-    </div>
   </header>
+
   <main id="conteudo" tabindex="-1"></main>
+
+  <!-- Abas do celular -->
+  <nav class="abas" aria-label="Principal">
+    <a href="#/" data-rota="inicio"><span class="bolha"><svg class="ic"><use href="#i-inicio"/></svg></span>Início</a>
+    <a href="#/sumario" data-rota="sumario"><span class="bolha"><svg class="ic"><use href="#i-livro"/></svg></span>Ler</a>
+    <a href="#/conversar" data-rota="conversar"><span class="bolha"><svg class="ic"><use href="#i-chat"/></svg></span>Conversar</a>
+    <a href="#/sobre" data-rota="sobre"><span class="bolha"><svg class="ic"><use href="#i-mais"/></svg></span>Mais</a>
+  </nav>
+
+  <!-- Parágrafo citado (painel lateral no computador, folha de baixo no celular) -->
   <div id="painel" class="painel" hidden>
-    <aside class="painel-caixa" role="dialog" aria-modal="false" aria-labelledby="painel-titulo">
+    <aside class="painel-caixa folha" role="dialog" aria-modal="false" aria-labelledby="painel-titulo">
+      <span class="alca" aria-hidden="true"></span>
       <header>
         <div>
           <h2 id="painel-titulo"></h2>
           <p id="painel-local"></p>
         </div>
-        <button type="button" id="painel-fechar" aria-label="Fechar">✕</button>
+        <button type="button" class="bt-icone suave" id="painel-fechar" aria-label="Fechar"><svg class="ic"><use href="#i-fechar"/></svg></button>
       </header>
       <div id="painel-corpo"></div>
-      <a id="painel-ler" class="painel-ler" href="#/">Ler no contexto →</a>
+      <footer class="painel-acoes">
+        <button type="button" class="bt-sec" id="painel-ant"><svg class="ic"><use href="#i-esq"/></svg><span></span></button>
+        <a id="painel-ler" class="bt-pri" href="#/">Ler no contexto</a>
+        <button type="button" class="bt-sec" id="painel-prox"><span></span><svg class="ic"><use href="#i-dir"/></svg></button>
+      </footer>
     </aside>
   </div>
+
+  <!-- Ajustes de leitura (Aa) -->
+  <div id="ajustes" class="painel" hidden>
+    <section class="painel-caixa folha ajustes-caixa" role="dialog" aria-modal="false" aria-labelledby="ajustes-titulo">
+      <span class="alca" aria-hidden="true"></span>
+      <header>
+        <div><h2 id="ajustes-titulo">Aparência do texto</h2></div>
+        <button type="button" class="bt-icone suave" id="ajustes-fechar" aria-label="Fechar"><svg class="ic"><use href="#i-fechar"/></svg></button>
+      </header>
+      <div class="ajustes-corpo">
+        <div class="grupo">
+          <span class="rotulo" id="rot-tamanho">Tamanho da letra</span>
+          <div class="tamanho" role="group" aria-labelledby="rot-tamanho">
+            <button type="button" id="bt-menor" aria-label="Diminuir letra">A</button>
+            <div class="passos" aria-hidden="true"></div>
+            <button type="button" id="bt-maior" aria-label="Aumentar letra">A</button>
+          </div>
+        </div>
+        <div class="grupo">
+          <span class="rotulo" id="rot-tema">Tema</span>
+          <div class="segmentos" role="group" aria-labelledby="rot-tema">
+            <button type="button" data-tema="light"><svg class="ic"><use href="#i-sol"/></svg>Claro</button>
+            <button type="button" data-tema="dark"><svg class="ic"><use href="#i-lua"/></svg>Escuro</button>
+            <button type="button" data-tema="auto">Automático</button>
+          </div>
+        </div>
+        <p class="nota-sistema">Vale para o leitor e para as respostas do chat.</p>
+      </div>
+    </section>
+  </div>
+
   <noscript><p class="aviso">Ative o JavaScript para ler o Catecismo.</p></noscript>
   <script type="module" src="js/app.js"></script>
 </body>

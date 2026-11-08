@@ -48,3 +48,25 @@ test('marcadores de nota viram botões e a nota é exibida', () => {
   assert.match(html, /class="nota-ref"[^>]*data-nota="1"/);
   assert.match(htmlNota(p, '1'), /Gaudium et Spes/);
 });
+
+test('sumário em sanfona: abre a parte pedida e marca onde a pessoa parou', async () => {
+  const { nomeParte } = await import('../web/js/leitor.js');
+  assert.deepEqual(nomeParte(3, 'Terceira Parte — A Vida em Cristo'), { curto: 'A Vida em Cristo', rotulo: '3ª Parte' });
+  assert.deepEqual(nomeParte(0, 'Prólogo'), { curto: 'Prólogo', rotulo: 'Prólogo' });
+  const html = htmlSumario(d, { aberta: 3, ultimo: 1995 });
+  assert.equal([...html.matchAll(/<details/g)].length, 5, 'prólogo + 4 partes');
+  assert.match(html, /<details class="parte" data-parte="3" open>/);
+  assert.equal([...html.matchAll(/ open>/g)].length, 1, 'só uma parte aberta');
+  assert.match(html, /href="#\/p\/1995" class="atual"/);
+  assert.match(html, /Você parou aqui · § 1995/);
+});
+
+test('capítulo tem cabeçalho com voltar, progresso e barra de leitura', () => {
+  const cap = capitulos.find((c) => c.ini <= 1849 && c.fim >= 1849);
+  const html = htmlCapitulo(d, cap);
+  assert.match(html, /href="#\/sumario\/3" aria-label="Voltar ao sumário"/);
+  assert.match(html, /<small>3ª Parte · A Vida em Cristo<\/small>/);
+  assert.match(html, /class="progresso"/);
+  assert.match(html, /data-perguntar/);
+  assert.match(html, /aria-label="Próximo capítulo: /);
+});

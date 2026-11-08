@@ -7,11 +7,10 @@ import { esc } from './html.js';
 const SUGESTOES = [
   'O que é a graça?',
   'Quais são os sacramentos de cura?',
-  'O que é o pecado mortal?',
-  'Por que rezar o Pai-Nosso?',
-  'O que a Igreja ensina sobre o casamento?',
+  'Por que rezamos o Pai-Nosso?',
   'O que acontece depois da morte?',
 ];
+const icone = (nome) => `<svg class="ic" aria-hidden="true"><use href="#i-${nome}"/></svg>`;
 const MAX_HISTORICO_CHARS = 1400;
 
 const armazenamento = {
@@ -84,20 +83,27 @@ function htmlMensagem(m, i) {
   } else if (!m.texto) corpo = '<p class="digitando" aria-label="Escrevendo"><span></span><span></span><span></span></p>';
   else corpo = htmlResposta(m.texto, m.paragrafos || []);
 
-  const consultados = m.paragrafos?.length && m.estado === 'pronto' && !aval?.recusa && !aval?.semFonte
-    ? `<details class="consultados"><summary>${m.paragrafos.length} parágrafos consultados</summary>
-        <div>${m.paragrafos.map((n) => `<button type="button" class="cita" data-n="${n}">§ ${n}</button>`).join(' ')}</div></details>`
+  const fontes = m.paragrafos?.length && m.estado === 'pronto' && !aval?.recusa && !aval?.semFonte
+    ? `<div class="fontes"><span class="rotulo">Fontes consultadas · toque para ler</span>
+        <div class="fontes-lista">${m.paragrafos.map((n) => `<button type="button" class="cita fonte" data-n="${n}">§ ${n}</button>`).join('')}</div></div>`
     : '';
-  return `<div class="msg assistente" data-i="${i}"><div class="balao">${corpo}${consultados}</div></div>`;
+  return `<article class="msg assistente" data-i="${i}">
+    <div class="autor"><span class="selo">${icone('cruz')}</span>Catequista</div>
+    <div class="balao">${corpo}</div>${fontes}</article>`;
 }
 
 function htmlCodigo(erro = '') {
-  return `<section class="chat-codigo">
-    <h1>Conversar com o Catecismo</h1>
-    <p>Faça perguntas e receba respostas baseadas <strong>somente</strong> no Catecismo da Igreja Católica, com os parágrafos citados.</p>
-    <form id="form-codigo" class="busca">
-      <input name="codigo" type="password" autocomplete="off" placeholder="Código de convite" aria-label="Código de convite" required minlength="6" />
-      <button type="submit">Entrar</button>
+  return `<header class="cab"><h1>Conversar</h1></header>
+  <section class="chat-codigo tela">
+    <div class="boas-vindas">
+      <span class="selo grande">${icone('chat')}</span>
+      <h2>Converse com um catequista</h2>
+      <p>Respostas baseadas <strong>somente</strong> no Catecismo da Igreja Católica, sempre com os parágrafos citados.</p>
+    </div>
+    <form id="form-codigo" class="form-codigo">
+      <label for="campo-codigo">Código de convite</label>
+      <input id="campo-codigo" name="codigo" type="password" autocomplete="off" required minlength="6" />
+      <button type="submit" class="bt-pri">Entrar</button>
     </form>
     ${erro ? `<p class="msg-erro" role="alert">${esc(erro)}</p>` : ''}
     <p class="nota-sistema">O acesso ao chat é por convite. O leitor do Catecismo é livre.</p>
@@ -107,22 +113,28 @@ function htmlCodigo(erro = '') {
 function htmlChat() {
   const vazio = !conversa.length
     ? `<div class="chat-vazio">
-        <p>Pergunte algo sobre a fé católica. As respostas citam os parágrafos do Catecismo.</p>
-        <div class="sugestoes">${SUGESTOES.map((s) => `<button type="button" class="sugestao">${esc(s)}</button>`).join('')}</div>
+        <div class="boas-vindas">
+          <span class="selo grande">${icone('chat')}</span>
+          <h2>Qual é a sua dúvida sobre a fé?</h2>
+          <p>Um catequista responde usando apenas o Catecismo e mostra de qual parágrafo veio cada resposta.</p>
+        </div>
+        <span class="rotulo">Experimente perguntar</span>
+        <div class="sugestoes">${SUGESTOES.map((s) => `<button type="button" class="sugestao"><span>${esc(s)}</span>${icone('enviar')}</button>`).join('')}</div>
       </div>` : '';
-  return `<section class="chat">
-    <div class="chat-topo">
+  return `<header class="cab cab-chat">
       <h1>Conversar</h1>
-      <span class="cota" id="cota"></span>
-      <button type="button" class="link" id="bt-nova">Nova conversa</button>
-      <button type="button" class="link" id="bt-sair" title="Trocar código de convite">Sair</button>
-    </div>
+      <span class="cota" id="cota" hidden></span>
+      <button type="button" class="bt-icone" id="bt-nova" aria-label="Nova conversa" title="Nova conversa">${icone('novo')}</button>
+    </header>
+    <section class="chat">
     <div class="mensagens" id="mensagens" aria-live="polite">${vazio}${conversa.map(htmlMensagem).join('')}</div>
-    <form class="compositor" id="form-pergunta">
-      <textarea name="pergunta" rows="1" maxlength="500" placeholder="Pergunte ao Catecismo…" aria-label="Sua pergunta" required></textarea>
-      <button type="submit" aria-label="Enviar">Enviar</button>
-    </form>
-    <p class="aviso-ia">Respostas geradas por IA com base no Catecismo. Confira sempre os parágrafos citados.</p>
+    <div class="compositor-area">
+      <form class="compositor" id="form-pergunta">
+        <textarea name="pergunta" rows="1" maxlength="500" placeholder="Escreva sua pergunta…" aria-label="Sua pergunta" required></textarea>
+        <button type="submit" class="bt-enviar" aria-label="Enviar">${icone('enviar')}</button>
+      </form>
+      <p class="aviso-ia">Resposta gerada por IA. Confira os parágrafos citados.</p>
+    </div>
   </section>`;
 }
 
@@ -132,14 +144,18 @@ function atualizarMensagem(main, i) {
   else main.querySelector('#mensagens')?.insertAdjacentHTML('beforeend', htmlMensagem(conversa[i], i));
 }
 
+// O campo de pergunta é fixo embaixo: rolar até o fim da página deixa a última mensagem logo acima dele.
 function rolarParaFim(main) {
-  const ult = main.querySelector('#mensagens')?.lastElementChild;
-  ult?.scrollIntoView({ block: 'end' });
+  if (main.querySelector('#mensagens')) window.scrollTo({ top: document.documentElement.scrollHeight });
 }
 
 function mostrarCota(main, restantes) {
   const el = main.querySelector('#cota');
-  if (el && restantes !== null && restantes !== undefined) el.textContent = `${restantes} perguntas restantes hoje`;
+  if (el && restantes !== null && restantes !== undefined) {
+    el.textContent = `${restantes} ${restantes === 1 ? 'pergunta' : 'perguntas'} hoje`;
+    el.title = 'Perguntas que você ainda pode fazer hoje';
+    el.hidden = false;
+  }
 }
 
 // ---------- fluxo de pergunta ----------
@@ -238,7 +254,7 @@ function ligarCodigo(main, ctx) {
       ligarCodigo(main, ctx);
     }
   });
-  main.querySelector('input[name="codigo"]').focus();
+  if (matchMedia('(min-width: 761px)').matches) main.querySelector('input[name="codigo"]').focus();
 }
 
 function telaChat(main, ctx) {
@@ -267,24 +283,31 @@ function telaChat(main, ctx) {
     salvarConversa();
     telaChat(main, ctx);
   });
-  main.querySelector('#bt-sair').addEventListener('click', () => {
-    emAndamento?.abort();
-    armazenamento.gravar('codigo', null);
-    telaConversar(main, ctx);
-  });
   main.querySelector('.sugestoes')?.addEventListener('click', (ev) => {
     const b = ev.target.closest('.sugestao');
-    if (b) perguntar(main, b.textContent, ctx);
+    if (b) perguntar(main, b.textContent.trim(), ctx);
   });
+  // No celular, as abas somem enquanto o teclado está aberto.
+  caixa.addEventListener('focus', () => document.body.classList.add('digitando'));
+  caixa.addEventListener('blur', () => document.body.classList.remove('digitando'));
+  // "Perguntar sobre este trecho" (leitor) deixa a pergunta pronta para a pessoa completar ou enviar.
+  let rascunho = '';
+  try { rascunho = sessionStorage.getItem('rascunho') || ''; sessionStorage.removeItem('rascunho'); } catch { /* sem armazenamento */ }
   rolarParaFim(main);
-  caixa.focus({ preventScroll: true });
+  if (rascunho) {
+    caixa.value = rascunho;
+    ajustar();
+    caixa.focus();
+  } else if (matchMedia('(min-width: 761px)').matches) {
+    caixa.focus({ preventScroll: true }); // no celular, não abre o teclado sozinho
+  }
   chamarApi('/api/cota').then((r) => r.json()).then((c) => mostrarCota(main, c.restantes)).catch(() => {});
 }
 
 export function telaConversar(main, ctx) {
   document.title = 'Conversar · Catecismo';
   if (!API_URL) {
-    main.innerHTML = '<section class="aviso"><h1>Conversar com o Catecismo</h1><p>O chat ainda não está disponível neste endereço.</p></section>';
+    main.innerHTML = '<header class="cab"><h1>Conversar</h1></header><section class="tela"><div class="aviso"><p>O chat ainda não está disponível neste endereço.</p></div></section>';
     return;
   }
   if (!armazenamento.ler('codigo')) {
