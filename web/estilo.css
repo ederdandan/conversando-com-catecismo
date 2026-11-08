@@ -478,3 +478,20 @@ p.digitando span:nth-child(3) { animation-delay: .3s; }
 #linha-instalar { display: contents; }
 .chat-vazio .convite-ia { margin-top: 18px; text-align: left; }
 .cota.modo { background: var(--acento-suave); color: var(--acento); }
+
+/* Troca de aba por gesto (celular): a tela nova entra pelo lado do gesto */
+@keyframes entra-dir { from { opacity: .4; transform: translateX(28px); } to { opacity: 1; transform: none; } }
+@keyframes entra-esq { from { opacity: .4; transform: translateX(-28px); } to { opacity: 1; transform: none; } }
+main.entra-dir { animation: entra-dir .2s ease-out; }
+main.entra-esq { animation: entra-esq .2s ease-out; }
+@media (prefers-reduced-motion: reduce) { main.entra-dir, main.entra-esq { animation: none; } }
+/* "Conversa apagada · Desfazer" */
+.aviso-desfazer {
+  position: fixed; z-index: 16; left: 50%; transform: translateX(-50%);
+  bottom: calc(env(safe-area-inset-bottom) + var(--abas-h) + 132px);
+  display: flex; align-items: center; gap: 14px; padding: 10px 10px 10px 16px; border-radius: 14px;
+  background: var(--texto); color: var(--fundo); font: 15px var(--sans); box-shadow: var(--sombra-folha);
+  max-width: calc(100% - 32px);
+}
+.aviso-desfazer span { white-space: nowrap; }
+.aviso-desfazer button { border: 0; border-radius: 10px; padding: 8px 12px; background: var(--ouro); color: var(--sobre-ouro); font: 600 15px var(--sans); }

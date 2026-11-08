@@ -147,7 +147,8 @@ No modo IA, quando a IA não responde (sem internet, HTTP 429 por cota/limite, H
   - Mostrar "Parágrafos consultados" abaixo de cada resposta.
   - Tela de configuração: código de convite (salvo em `localStorage`).
   - Aviso: "Respostas geradas por IA com base no Catecismo; confira sempre o texto citado."
-  - Botão "Nova conversa"; histórico local opcional.
+  - Histórico salvo neste aparelho até "Nova conversa" (teto de 500 mensagens; sem espaço, descarta as mais antigas). "Nova conversa" mostra "Conversa apagada · Desfazer" por 6 s.
+- **Gestos (celular)**: arrastar para o lado troca de aba (Início ⇄ Ler ⇄ Conversar ⇄ Mais); desligado no leitor, com folha aberta, em campos de texto, na lista de fontes e na beirada da tela.
 - **PWA**
   - `manifest.webmanifest` e service worker com `scope`/`start_url` em `/<repo>/`.
   - Cache offline do app, do `catecismo.json` e do `compendio.json` (leitor e modo sem IA 100% offline); o chat com IA exige conexão.

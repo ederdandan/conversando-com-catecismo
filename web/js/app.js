@@ -5,6 +5,7 @@ import { sairDaIA, telaConversar, telaEntrar, temIA } from './chat.js';
 import { criarIndice, buscar, numerosCitados, radicaisDaPergunta, trecho } from './busca.js';
 import { esc, partesHtml } from './html.js';
 import { aoMudar, htmlInstrucoesIOS, iniciarInstalacao, instalar, modoInstalacao } from './instalar.js';
+import { iniciarGestos } from './gestos.js';
 
 const $ = (s, el = document) => el.querySelector(s);
 const main = $('#conteudo');
@@ -370,7 +371,19 @@ document.addEventListener('keydown', (ev) => {
   fecharFolha(ajustes);
 });
 
-window.addEventListener('hashchange', () => { fecharFolha(painel); fecharFolha(ajustes); rotear(); });
+window.addEventListener('hashchange', async () => {
+  fecharFolha(painel); fecharFolha(ajustes);
+  // Troca de aba por gesto: a tela nova entra pelo lado para onde o dedo foi.
+  const entrada = document.body.dataset.entrada;
+  delete document.body.dataset.entrada;
+  await rotear();
+  if (entrada) {
+    main.classList.remove('entra-dir', 'entra-esq');
+    void main.offsetWidth; // reinicia a animação
+    main.classList.add(entrada === 'dir' ? 'entra-dir' : 'entra-esq');
+  }
+});
+iniciarGestos({ rotaAtual: () => document.body.dataset.rota });
 rotear();
 
 // ---------- PWA ----------

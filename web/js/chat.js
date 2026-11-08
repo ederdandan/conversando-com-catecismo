@@ -4,6 +4,7 @@ import { selecionarParagrafos } from './busca.js';
 import { avaliarResposta, htmlResposta, MENSAGEM_RECUSA } from './citacoes.js';
 import { esc } from './html.js';
 import { carregarCompendio, criarIndiceCompendio, htmlRespostaCompendio, responderPeloCompendio } from './compendio.js';
+import { salvarLista } from './historico.js';
 
 const SUGESTOES = [
   'O que é a graça?',
@@ -28,7 +29,8 @@ const armazenamento = {
 
 let conversa = [];
 try { conversa = JSON.parse(armazenamento.ler('conversa', '[]')) || []; } catch { conversa = []; }
-const salvarConversa = () => armazenamento.gravar('conversa', JSON.stringify(conversa.slice(-30)));
+// A conversa fica guardada neste aparelho até a pessoa tocar em "Nova conversa" (ver historico.js).
+const salvarConversa = () => salvarLista(conversa, (txt) => localStorage.setItem('conversa', txt));
 
 let emAndamento = null; // AbortController da resposta atual
 let indiceCompendio = null;
@@ -176,6 +178,7 @@ function htmlChat() {
 
 function atualizarMensagem(main, i) {
   const el = main.querySelector(`.msg[data-i="${i}"]`);
+  if (!conversa[i]) return;
   if (el) el.outerHTML = htmlMensagem(conversa[i], i);
   else main.querySelector('#mensagens')?.insertAdjacentHTML('beforeend', htmlMensagem(conversa[i], i));
 }
@@ -195,6 +198,21 @@ function mostrarCota(main, restantes) {
   el.hidden = restantes > AVISAR_COTA_ABAIXO;
 }
 
+// Aviso temporário com "Desfazer" (some sozinho em alguns segundos).
+function avisoDesfazer(texto, desfazer, ms = 6000) {
+  document.getElementById('aviso-desfazer')?.remove();
+  const el = document.createElement('div');
+  el.id = 'aviso-desfazer';
+  el.className = 'aviso-desfazer';
+  el.setAttribute('role', 'status');
+  el.innerHTML = `<span>${esc(texto)}</span><button type="button">Desfazer</button>`;
+  const fechar = () => { clearTimeout(t); el.remove(); };
+  const t = setTimeout(fechar, ms);
+  el.querySelector('button').addEventListener('click', () => { fechar(); desfazer(); });
+  window.addEventListener('hashchange', fechar, { once: true });
+  document.body.append(el);
+}
+
 // ---------- fluxo de pergunta ----------
 async function perguntar(main, texto, ctx) {
   const pergunta = texto.trim().slice(0, 500);
@@ -206,7 +224,10 @@ async function perguntar(main, texto, ctx) {
   atualizarMensagem(main, conversa.length - 1);
 
   if (!temIA()) {
-    const i = conversa.push(await respostaCompendio(pergunta, '')) - 1;
+    const daqui = conversa;
+    const resposta = await respostaCompendio(pergunta, '');
+    if (conversa !== daqui) return; // "Nova conversa" no meio do caminho
+    const i = conversa.push(resposta) - 1;
     atualizarMensagem(main, i);
     rolarParaFim(main);
     salvarConversa();
@@ -216,11 +237,12 @@ async function perguntar(main, texto, ctx) {
   const d = await ctx.carregar();
   const { paragrafos } = selecionarParagrafos(ctx.obterIndice(d), pergunta, { anterior: anteriores.at(-1)?.texto || '' });
   const i = conversa.push({ papel: 'assistente', texto: '', paragrafos, estado: 'escrevendo' }) - 1;
+  const lista = conversa; // se a pessoa tocar em "Nova conversa" durante a resposta, não mistura
   atualizarMensagem(main, i);
   rolarParaFim(main);
 
   if (!paragrafos.length) {
-    Object.assign(conversa[i], { texto: MENSAGEM_RECUSA, estado: 'local' });
+    Object.assign(lista[i], { texto: MENSAGEM_RECUSA, estado: 'local' });
     atualizarMensagem(main, i);
     salvarConversa();
     return;
@@ -243,30 +265,30 @@ async function perguntar(main, texto, ctx) {
     const r = await chamarApi('/api/chat', { metodo: 'POST', corpo: { pergunta, paragrafos, historico }, sinal: emAndamento.signal });
     await lerEventos(r, (ev) => {
       if (ev.tipo === 'inicio') {
-        conversa[i].paragrafos = ev.paragrafos;
-        conversa[i].modelo = ev.modelo;
+        lista[i].paragrafos = ev.paragrafos;
+        lista[i].modelo = ev.modelo;
         mostrarCota(main, ev.restantes);
       } else if (ev.tipo === 'texto') {
-        conversa[i].texto += ev.t;
+        lista[i].texto += ev.t;
         const agora = performance.now();
         if (agora - ultimoDesenho > 60) { atualizarMensagem(main, i); rolarParaFim(main); ultimoDesenho = agora; }
       } else if (ev.tipo === 'erro') {
         throw Object.assign(new Error(ev.mensagem || 'A IA parou de responder.'), { semIA: true });
       }
     });
-    conversa[i].estado = conversa[i].texto ? 'pronto' : 'erro';
-    if (!conversa[i].texto) conversa[i].texto = 'A IA não enviou resposta. Tente novamente.';
+    lista[i].estado = lista[i].texto ? 'pronto' : 'erro';
+    if (!lista[i].texto) lista[i].texto = 'A IA não enviou resposta. Tente novamente.';
   } catch (e) {
     if (e.name === 'AbortError') {
-      conversa[i].estado = conversa[i].texto ? 'pronto' : 'erro';
-      if (!conversa[i].texto) conversa[i].texto = 'Resposta interrompida.';
+      lista[i].estado = lista[i].texto ? 'pronto' : 'erro';
+      if (!lista[i].texto) lista[i].texto = 'Resposta interrompida.';
     } else {
-      conversa[i] = e.semIA
+      lista[i] = e.semIA
         ? await respostaCompendio(pergunta, e.message)
         : { papel: 'assistente', texto: e.message, estado: 'erro' };
       if (e.status === 401) {
         armazenamento.gravar('codigo', null);
-        conversa[i] = await respostaCompendio(pergunta, 'Seu código de convite não vale mais; para voltar a usar a IA, entre de novo pela aba Mais.');
+        lista[i] = await respostaCompendio(pergunta, 'Seu código de convite não vale mais; para voltar a usar a IA, entre de novo pela aba Mais.');
         main.querySelector('.cab-chat .cota')?.replaceWith(Object.assign(document.createElement('span'), { className: 'cota modo', textContent: 'Compêndio' }));
       }
     }
@@ -274,6 +296,7 @@ async function perguntar(main, texto, ctx) {
     emAndamento = null;
     form?.classList.remove('ocupado');
   }
+  if (conversa !== lista) return;
   atualizarMensagem(main, i);
   rolarParaFim(main);
   salvarConversa();
@@ -338,10 +361,17 @@ function telaChat(main, ctx) {
   btEnviar.addEventListener('pointerdown', manterFoco);
   btEnviar.addEventListener('mousedown', manterFoco);
   main.querySelector('#bt-nova').addEventListener('click', () => {
+    if (!conversa.length) return;
     emAndamento?.abort();
+    const anterior = conversa;
     conversa = [];
     salvarConversa();
     telaChat(main, ctx);
+    avisoDesfazer('Conversa apagada', () => {
+      conversa = anterior.filter((m) => m.estado !== 'escrevendo');
+      salvarConversa();
+      if (document.body.contains(main) && main.querySelector('#form-pergunta')) telaChat(main, ctx);
+    });
   });
   main.querySelector('.sugestoes')?.addEventListener('click', (ev) => {
     const b = ev.target.closest('.sugestao');
