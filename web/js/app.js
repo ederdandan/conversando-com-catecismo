@@ -1,9 +1,10 @@
 // Roteamento, telas e preferências.
 import { carregar } from './dados.js';
 import { htmlSumario, htmlCapitulo, htmlNota, htmlParagrafo, nomeParte, partesDe } from './leitor.js';
-import { telaConversar } from './chat.js';
+import { sairDaIA, telaConversar, telaEntrar, temIA } from './chat.js';
 import { criarIndice, buscar, numerosCitados, radicaisDaPergunta, trecho } from './busca.js';
 import { esc, partesHtml } from './html.js';
+import { aoMudar, htmlInstrucoesIOS, iniciarInstalacao, instalar, modoInstalacao } from './instalar.js';
 
 const $ = (s, el = document) => el.querySelector(s);
 const main = $('#conteudo');
@@ -108,7 +109,7 @@ function telaInicio(d) {
   }).join('');
   main.innerHTML = `
     <header class="cab cab-marca">
-      <a class="marca" href="#/" aria-label="Início"><img src="icone.svg" alt="" width="30" height="30" /><span>Catecismo</span></a>
+      <a class="marca" href="#/" aria-label="Início"><img src="icones/icone-192.png" alt="" width="30" height="30" /><span>Catecismo</span></a>
       ${botaoAa}
     </header>
     <section class="inicio">
@@ -120,7 +121,7 @@ function telaInicio(d) {
       ${cartaoLeitura}
       <a class="cartao-acao" href="#/conversar">
         <span class="icone-caixa">${icone('chat')}</span>
-        <span class="t"><strong>Tire uma dúvida</strong><small>Um catequista responde com o Catecismo</small></span>
+        <span class="t"><strong>Tire uma dúvida</strong><small>${temIA() ? 'Um catequista responde com o Catecismo' : 'Respostas oficiais do Compêndio do Catecismo'}</small></span>
         ${icone('dir')}
       </a>
       <div>
@@ -209,12 +210,31 @@ function telaBusca(d, q) {
   document.title = `${q} · Busca · Catecismo`;
 }
 
+// Linha "Instalar o app" na aba Mais (aparece só quando dá para instalar).
+function preencherInstalar() {
+  const el = $('#linha-instalar');
+  if (!el) return;
+  const modo = modoInstalacao();
+  el.innerHTML = !modo ? '' : `
+    <button type="button" class="linha-acao" id="bt-instalar"><span class="icone-caixa"><img src="icones/icone-192.png" alt="" width="28" height="28" /></span><span class="t"><strong>Instalar o app</strong><small>Na tela inicial, funciona sem internet</small></span>${icone(modo === 'ios' ? 'baixo' : 'dir')}</button>
+    ${modo === 'ios' ? `<div class="instrucoes-ios" hidden>${htmlInstrucoesIOS()}</div>` : ''}`;
+  $('#bt-instalar')?.addEventListener('click', () => {
+    if (modo === 'nativo') instalar();
+    else { const i = $('.instrucoes-ios'); i.hidden = !i.hidden; }
+  });
+}
+aoMudar(preencherInstalar);
+iniciarInstalacao();
+
 function telaSobre(d) {
-  const temCodigo = Boolean(pref.ler('codigo', ''));
+  const ia = temIA();
   main.innerHTML = `${cabecalho('Mais')}<div class="tela">
     <div class="lista-acoes">
+      <div id="linha-instalar"></div>
       <button type="button" class="linha-acao abrir-ajustes"><span class="icone-caixa"><span class="aa">Aa</span></span><span class="t"><strong>Aparência do texto</strong><small>Tamanho da letra e tema</small></span>${icone('dir')}</button>
-      ${temCodigo ? `<button type="button" class="linha-acao" id="bt-trocar-codigo"><span class="icone-caixa">${icone('chat')}</span><span class="t"><strong>Trocar código de convite</strong><small>Sai do chat neste aparelho</small></span>${icone('dir')}</button>` : ''}
+      ${ia
+    ? `<button type="button" class="linha-acao" id="bt-sair-ia"><span class="icone-caixa">${icone('chat')}</span><span class="t"><strong>Sair do modo IA</strong><small>O chat volta a responder só pelo Compêndio</small></span>${icone('dir')}</button>`
+    : `<a class="linha-acao" href="#/entrar"><span class="icone-caixa">${icone('chat')}</span><span class="t"><strong>Usar o catequista com IA</strong><small>Entre com seu código de convite</small></span>${icone('dir')}</a>`}
     </div>
     <section class="sobre">
       <h2>Sobre</h2>
@@ -223,15 +243,19 @@ function telaSobre(d) {
         © Libreria Editrice Vaticana. Uso não comercial.</p>
       <p>O leitor funciona sem internet depois da primeira visita.</p>
       <h2>Sobre o chat</h2>
-      <p>As respostas do chat são geradas por inteligência artificial (Google Gemini; Groq como reserva),
+      <p>Sem código de convite, o chat responde com o <strong>Compêndio do Catecismo da Igreja Católica</strong>
+        (Santa Sé, 2005): a pergunta oficial mais parecida com a sua, com os parágrafos do Catecismo indicados.
+        Funciona sem internet e não usa inteligência artificial.</p>
+      <p>Com código de convite, as respostas do catequista com IA são geradas por inteligência artificial (Google Gemini; Groq como reserva),
         usando apenas os parágrafos do Catecismo enviados junto com a pergunta. A IA pode errar:
         confira sempre os parágrafos citados (§), que são a fonte de verdade.</p>
       <p>A pergunta e os parágrafos são enviados a esses serviços para gerar a resposta. Nos planos gratuitos,
         eles podem usar esses dados para melhorar os seus modelos — não escreva dados pessoais nas perguntas.</p>
       <p class="nota-sistema">Dados gerados em ${esc(d.geradoEm)}.</p>
     </section></div>`;
-  $('#bt-trocar-codigo')?.addEventListener('click', () => {
-    pref.gravar('codigo', null);
+  preencherInstalar();
+  $('#bt-sair-ia')?.addEventListener('click', () => {
+    sairDaIA();
     location.hash = '#/conversar';
   });
 }
@@ -241,7 +265,7 @@ async function rotear() {
   const h = decodeURIComponent(location.hash.replace(/^#\/?/, ''));
   const [rota, ...resto] = h.split('/');
   const arg = resto.join('/');
-  const atual = rota === 'p' || rota === 'busca' ? 'sumario' : (rota || 'inicio');
+  const atual = rota === 'p' || rota === 'busca' ? 'sumario' : rota === 'entrar' ? 'sobre' : (rota || 'inicio');
   document.querySelectorAll('.nav a, .abas a').forEach((a) => {
     const ativo = a.dataset.rota === atual;
     a.classList.toggle('ativo', ativo);
@@ -250,6 +274,7 @@ async function rotear() {
   document.body.dataset.rota = rota || 'inicio';
   if (rota !== 'p') { capituloAtual = null; window.scrollTo({ top: 0 }); document.title = 'Catecismo da Igreja Católica'; }
   if (rota === 'conversar') return telaConversar(main, { carregar, obterIndice });
+  if (rota === 'entrar') return telaEntrar(main, { carregar, obterIndice });
   let d;
   try {
     if (!main.querySelector('.texto, .inicio, .sumario, .resultados')) telaCarregando();

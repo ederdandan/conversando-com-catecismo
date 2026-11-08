@@ -1,15 +1,24 @@
 {
+  "id": "./",
   "name": "Catecismo da Igreja Católica",
   "short_name": "Catecismo",
-  "description": "Leia o Catecismo da Igreja Católica parágrafo por parágrafo e converse com ele.",
+  "description": "Leia o Catecismo da Igreja Católica parágrafo por parágrafo e tire dúvidas com um catequista que responde pelo Catecismo.",
   "lang": "pt-BR",
+  "dir": "ltr",
   "start_url": "./",
   "scope": "./",
   "display": "standalone",
+  "orientation": "any",
   "background_color": "#fbf8f3",
-  "theme_color": "#7a3b12",
+  "theme_color": "#fbf8f3",
+  "categories": ["books", "education", "lifestyle"],
   "icons": [
-    { "src": "icone.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" },
-    { "src": "icone.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "maskable" }
+    { "src": "icones/icone-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "icones/icone-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "icones/icone-maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ],
+  "shortcuts": [
+    { "name": "Ler o Catecismo", "short_name": "Ler", "url": "./#/sumario", "icons": [{ "src": "icones/icone-192.png", "sizes": "192x192" }] },
+    { "name": "Conversar", "short_name": "Conversar", "url": "./#/conversar", "icons": [{ "src": "icones/icone-192.png", "sizes": "192x192" }] }
   ]
 }

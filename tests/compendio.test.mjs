@@ -57,3 +57,17 @@ test('renderiza a resposta do Compêndio com citações clicáveis', () => {
   const vazio = htmlRespostaCompendio({ motivo: 'Sem conexão.', itens: [] });
   assert.match(vazio, /Não encontrei no Compêndio/);
 });
+
+test('"Explique o § N" traz as perguntas do Compêndio que citam esse §', () => {
+  const r = responderPeloCompendio(indice, 'Explique o § 1849');
+  assert.ok(r.length >= 1);
+  assert.ok(r.every((x) => x.refs.includes(1849)));
+  assert.ok(r.some((x) => x.n === 392)); // O que é o pecado?
+});
+
+test('modo Compêndio (sem motivo) não mostra aviso de IA indisponível; sem resultado oferece a busca', () => {
+  const html = htmlRespostaCompendio({ motivo: '', pergunta: 'O que é o purgatório?', itens: [dados.itens[209]] });
+  assert.doesNotMatch(html, /comp-aviso|indisponível/);
+  const vazio = htmlRespostaCompendio({ motivo: '', pergunta: 'capital da França', itens: [] });
+  assert.match(vazio, /href="#\/busca\/capital%20da%20Fran%C3%A7a"/);
+});

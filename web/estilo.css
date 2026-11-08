@@ -436,3 +436,30 @@ p.digitando span:nth-child(3) { animation-delay: .3s; }
   .alca { display: block; }
   .painel-caixa header { padding-top: 10px; }
 }
+
+/* Convite para instalar o app (PWA) */
+.aviso-instalar {
+  position: fixed; z-index: 15; right: 16px; bottom: calc(16px + env(safe-area-inset-bottom) + var(--abas-h));
+  width: min(380px, calc(100% - 32px)); display: flex; align-items: flex-start; gap: 12px; padding: 14px;
+  background: var(--superficie); color: var(--texto); border: 1px solid var(--linha); border-radius: 18px;
+  box-shadow: var(--sombra-folha); opacity: 0; transform: translateY(16px); transition: opacity .2s, transform .2s;
+}
+.aviso-instalar.visivel { opacity: 1; transform: none; }
+.aviso-instalar > img { flex: none; border-radius: 12px; }
+.aviso-instalar .t { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 3px; font: .875rem/1.4 var(--sans); }
+.aviso-instalar .t strong { font-size: 1rem; }
+.aviso-instalar .t span { color: var(--suave); }
+.aviso-instalar summary { margin-top: 4px; color: var(--acento); font-weight: 600; cursor: pointer; }
+.aviso-instalar .acoes { display: flex; align-items: center; gap: 4px; }
+.aviso-instalar .bt-pri { height: 40px; padding: 0 16px; }
+.passos-ios { margin: 8px 0 0; padding-left: 1.2em; display: grid; gap: 4px; font: .875rem/1.45 var(--sans); }
+.ic-compartilhar { width: 18px; height: 18px; vertical-align: -3px; color: var(--acento); }
+.instrucoes-ios { padding: 4px 16px 8px; }
+.icone-caixa img { border-radius: 7px; }
+@media (max-width: 760px) {
+  .aviso-instalar { left: 16px; right: 16px; width: auto; }
+  body[data-rota="p"] .aviso-instalar { bottom: calc(88px + env(safe-area-inset-bottom)); }
+}
+#linha-instalar { display: contents; }
+.chat-vazio .convite-ia { margin-top: 18px; text-align: left; }
+.cota.modo { background: var(--acento-suave); color: var(--acento); }

@@ -26,11 +26,15 @@ const salvarConversa = () => armazenamento.gravar('conversa', JSON.stringify(con
 let emAndamento = null; // AbortController da resposta atual
 let indiceCompendio = null;
 
+// Modo do chat: sem código de convite, responde pelo Compêndio (local, offline, sem cota);
+// com código (aba Mais → Entrar), usa o catequista com IA e cai no Compêndio se a IA falhar.
+export const temIA = () => Boolean(API_URL && armazenamento.ler('codigo'));
+
 // Sem IA (cota esgotada, IA fora do ar, sem internet): a pergunta oficial mais parecida do Compêndio.
 async function respostaCompendio(pergunta, motivo) {
   try {
     indiceCompendio ??= criarIndiceCompendio(await carregarCompendio());
-    return { papel: 'assistente', estado: 'compendio', motivo, itens: responderPeloCompendio(indiceCompendio, pergunta) };
+    return { papel: 'assistente', estado: 'compendio', motivo, pergunta, itens: responderPeloCompendio(indiceCompendio, pergunta) };
   } catch {
     return { papel: 'assistente', texto: motivo, estado: 'erro' };
   }
@@ -111,12 +115,12 @@ function htmlMensagem(m, i) {
 }
 
 function htmlCodigo(erro = '') {
-  return `<header class="cab"><h1>Conversar</h1></header>
+  return `<header class="cab"><a class="bt-icone" href="#/sobre" aria-label="Voltar">${icone('esq')}</a><h1>Catequista com IA</h1></header>
   <section class="chat-codigo tela">
     <div class="boas-vindas">
       <span class="selo grande">${icone('chat')}</span>
       <h2>Converse com um catequista</h2>
-      <p>Respostas baseadas <strong>somente</strong> no Catecismo da Igreja Católica, sempre com os parágrafos citados.</p>
+      <p>Com o código de convite, as respostas são explicadas por um catequista (IA) com base <strong>somente</strong> no Catecismo, sempre com os parágrafos citados. Sem código, o chat continua respondendo pelo Compêndio.</p>
     </div>
     <form id="form-codigo" class="form-codigo">
       <label for="campo-codigo">Código de convite</label>
@@ -124,24 +128,30 @@ function htmlCodigo(erro = '') {
       <button type="submit" class="bt-pri">Entrar</button>
     </form>
     ${erro ? `<p class="msg-erro" role="alert">${esc(erro)}</p>` : ''}
-    <p class="nota-sistema">O acesso ao chat é por convite. O leitor do Catecismo é livre.</p>
+    <p class="nota-sistema">O acesso à IA é por convite. O leitor e as respostas do Compêndio são livres.</p>
   </section>`;
 }
 
 function htmlChat() {
+  const ia = temIA();
+  const convite = !ia && API_URL
+    ? `<a class="linha-acao convite-ia" href="#/entrar"><span class="icone-caixa">${icone('chat')}</span><span class="t"><strong>Quer respostas explicadas?</strong><small>Entre com um código de convite para usar o catequista com IA</small></span>${icone('dir')}</a>`
+    : '';
   const vazio = !conversa.length
     ? `<div class="chat-vazio">
         <div class="boas-vindas">
-          <span class="selo grande">${icone('chat')}</span>
+          <span class="selo grande">${icone(ia ? 'chat' : 'livro')}</span>
           <h2>Qual é a sua dúvida sobre a fé?</h2>
-          <p>Um catequista responde usando apenas o Catecismo e mostra de qual parágrafo veio cada resposta.</p>
-        </div>
+          <p>${ia
+    ? 'Um catequista responde usando apenas o Catecismo e mostra de qual parágrafo veio cada resposta.'
+    : 'A resposta vem do <strong>Compêndio do Catecismo</strong> — as perguntas e respostas oficiais da Igreja — com os parágrafos do Catecismo para aprofundar.'}</p>
+        </div>${convite}
         <span class="rotulo">Experimente perguntar</span>
         <div class="sugestoes">${SUGESTOES.map((s) => `<button type="button" class="sugestao"><span>${esc(s)}</span>${icone('enviar')}</button>`).join('')}</div>
       </div>` : '';
   return `<header class="cab cab-chat">
       <h1>Conversar</h1>
-      <span class="cota" id="cota" hidden></span>
+      ${ia ? '<span class="cota" id="cota" hidden></span>' : '<span class="cota modo" title="Respostas oficiais do Compêndio do Catecismo">Compêndio</span>'}
       <button type="button" class="bt-icone" id="bt-nova" aria-label="Nova conversa" title="Nova conversa">${icone('novo')}</button>
     </header>
     <section class="chat">
@@ -151,7 +161,7 @@ function htmlChat() {
         <textarea name="pergunta" rows="1" maxlength="500" placeholder="Escreva sua pergunta…" aria-label="Sua pergunta" required></textarea>
         <button type="submit" class="bt-enviar" aria-label="Enviar">${icone('enviar')}</button>
       </form>
-      <p class="aviso-ia">Resposta gerada por IA. Confira os parágrafos citados.</p>
+      <p class="aviso-ia">${ia ? 'Resposta gerada por IA. Confira os parágrafos citados.' : 'Respostas oficiais do Compêndio do Catecismo (2005).'}</p>
     </div>
   </section>`;
 }
@@ -185,6 +195,14 @@ async function perguntar(main, texto, ctx) {
   const anteriores = conversa.filter((m) => m.papel === 'usuario');
   conversa.push({ papel: 'usuario', texto: pergunta });
   atualizarMensagem(main, conversa.length - 1);
+
+  if (!temIA()) {
+    const i = conversa.push(await respostaCompendio(pergunta, '')) - 1;
+    atualizarMensagem(main, i);
+    rolarParaFim(main);
+    salvarConversa();
+    return;
+  }
 
   const d = await ctx.carregar();
   const { paragrafos } = selecionarParagrafos(ctx.obterIndice(d), pergunta, { anterior: anteriores.at(-1)?.texto || '' });
@@ -239,11 +257,8 @@ async function perguntar(main, texto, ctx) {
         : { papel: 'assistente', texto: e.message, estado: 'erro' };
       if (e.status === 401) {
         armazenamento.gravar('codigo', null);
-        conversa.splice(i - 1, 2);
-        salvarConversa();
-        main.innerHTML = htmlCodigo('Código de convite inválido ou revogado.');
-        ligarCodigo(main, ctx);
-        return;
+        conversa[i] = await respostaCompendio(pergunta, 'Seu código de convite não vale mais; para voltar a usar a IA, entre de novo pela aba Mais.');
+        main.querySelector('.cab-chat .cota')?.replaceWith(Object.assign(document.createElement('span'), { className: 'cota modo', textContent: 'Compêndio' }));
       }
     }
   } finally {
@@ -265,9 +280,8 @@ function ligarCodigo(main, ctx) {
     armazenamento.gravar('codigo', codigo);
     try {
       const r = await chamarApi('/api/cota');
-      const c = await r.json();
-      telaChat(main, ctx);
-      mostrarCota(main, c.restantes);
+      await r.json();
+      location.hash = '#/conversar';
     } catch (e) {
       armazenamento.gravar('codigo', null);
       main.innerHTML = htmlCodigo(e.status === 401 ? 'Código de convite inválido.' : e.message);
@@ -321,21 +335,25 @@ function telaChat(main, ctx) {
   } else if (matchMedia('(min-width: 761px)').matches) {
     caixa.focus({ preventScroll: true }); // no celular, não abre o teclado sozinho
   }
-  chamarApi('/api/cota').then((r) => r.json()).then((c) => mostrarCota(main, c.restantes)).catch(() => {});
+  if (temIA()) chamarApi('/api/cota').then((r) => r.json()).then((c) => mostrarCota(main, c.restantes)).catch(() => {});
 }
 
 export function telaConversar(main, ctx) {
   document.title = 'Conversar · Catecismo';
-  if (!API_URL) {
-    main.innerHTML = '<header class="cab"><h1>Conversar</h1></header><section class="tela"><div class="aviso"><p>O chat ainda não está disponível neste endereço.</p></div></section>';
-    return;
-  }
-  if (!armazenamento.ler('codigo')) {
-    main.innerHTML = htmlCodigo();
-    ligarCodigo(main, ctx);
-    return;
-  }
   telaChat(main, ctx);
 }
+
+// Aba Mais → "Usar o catequista com IA".
+export function telaEntrar(main, ctx) {
+  document.title = 'Catequista com IA · Catecismo';
+  if (!API_URL) {
+    main.innerHTML = '<header class="cab"><h1>Catequista com IA</h1></header><section class="tela"><div class="aviso"><p>A IA ainda não está disponível neste endereço.</p></div></section>';
+    return;
+  }
+  main.innerHTML = htmlCodigo();
+  ligarCodigo(main, ctx);
+}
+
+export const sairDaIA = () => { emAndamento?.abort(); armazenamento.gravar('codigo', null); };
 
 export const cancelarResposta = () => emAndamento?.abort();

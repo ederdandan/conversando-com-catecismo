@@ -111,8 +111,10 @@ Resultado atual: **2865/2865 §**, sem duplicados, 3623 de 3646 referências de 
 ### 4.2. Mensagem padrão de recusa
 > "Não encontrei no Catecismo da Igreja Católica uma resposta para essa pergunta. Tente reformular ou pesquisar no leitor."
 
-### 4.3. Modo sem IA — Compêndio do Catecismo
-Quando a IA não responde (sem internet, HTTP 429 por cota/limite, HTTP 5xx, ou erro no meio do stream), o chat mostra a resposta **oficial** do Compêndio do Catecismo (598 perguntas e respostas, Santa Sé 2005) mais parecida com a pergunta, com os § do Catecismo indicados pelo próprio Compêndio (clicáveis). Funciona offline.
+### 4.3. Modo Compêndio (padrão) e modo IA
+O chat funciona **sem código de convite** pelo Compêndio (local, offline, sem custo). O código de convite fica na aba **Mais → Usar o catequista com IA** (rota `#/entrar`); com ele, o chat usa a IA e o Compêndio vira o plano B. "Sair do modo IA" apaga o código. Se o Worker devolver 401, o código é apagado e a resposta vem do Compêndio. "Explique o § N" (botão do leitor) no modo Compêndio traz as perguntas que citam esse §.
+
+No modo IA, quando a IA não responde (sem internet, HTTP 429 por cota/limite, HTTP 5xx, ou erro no meio do stream), o chat mostra a resposta **oficial** do Compêndio do Catecismo (598 perguntas e respostas, Santa Sé 2005) mais parecida com a pergunta, com os § do Catecismo indicados pelo próprio Compêndio (clicáveis). Funciona offline.
 - Dados: `npm run dados:compendio` → `web/data/compendio.json` (`{ fonte, total, itens: [{ n, pergunta, resposta, refs }] }`), gerado de `vatican.va/archive/compendium_ccc/documents/archive_2005_compendium-ccc_po.html`. O script valida 598 itens em ordem, respostas não vazias e refs em 1–2865; corrige 5 erros de digitação de referências da página em português (tabela `CORRECOES`).
 - Busca (`web/js/compendio.js`): BM25 sobre pergunta (peso 2) + resposta; perguntas dependentes ("deste sacramento") herdam a pergunta anterior; "O que é X?" prioriza a pergunta oficial "O que é X…". Para não responder fora do tema, exige pontuação ≥ 3 **e** cobertura ≥ 50% dos termos da pergunta (ponderada por raridade); sem item parecido, diz que não encontrou.
 - Não roda em 400/401/403/413 (erro do pedido ou do código de convite).
@@ -138,7 +140,7 @@ Quando a IA não responde (sem internet, HTTP 429 por cota/limite, HTTP 5xx, ou 
   - Ir para § por número; links compartilháveis `#/p/N`.
   - Notas de rodapé: `(N)` clicável → mostra a nota.
   - Busca textual (mesmo índice do chat), ignorando acentos.
-  - Tamanho de fonte ajustável, tema claro/escuro.
+  - Tamanho de fonte ajustável (5 níveis, com prévia na folha de ajustes); temas Claro, Escuro, Sépia (modo leitura) e Auto.
 - **Chat**
   - Mensagens do usuário à direita, assistente à esquerda; streaming.
   - `[§ N]` como botões; clicar abre o § (painel lateral no desktop, folha inferior no celular).
@@ -148,7 +150,9 @@ Quando a IA não responde (sem internet, HTTP 429 por cota/limite, HTTP 5xx, ou 
   - Botão "Nova conversa"; histórico local opcional.
 - **PWA**
   - `manifest.webmanifest` e service worker com `scope`/`start_url` em `/<repo>/`.
-  - Cache offline do app e do `catecismo.json` (leitor 100% offline); o chat exige conexão.
+  - Cache offline do app, do `catecismo.json` e do `compendio.json` (leitor e modo sem IA 100% offline); o chat com IA exige conexão.
+  - Ícone (`web/icones/`): arte do usuário (`iconOk_v2.jpg`: Bom Pastor com livro, balão com cruz, árvore e ovelhas, sobre amarelo-ouro). PNG gerados por recorte em canvas: comum 192/512 e favicon 32 (cantos transparentes + borda dourada), maskable 512 (desenho em 74%, fundo = média da borda do recorte) e apple-touch 180.
+  - Convite para instalar (`js/instalar.js`): Chrome/Edge/Android usam `beforeinstallprompt` com aviso próprio e botão "Instalar"; iPhone/iPad mostram o passo a passo (Compartilhar → Adicionar à Tela de Início). "Agora não" pausa o aviso por 14 dias; a opção "Instalar o app" fica sempre na aba Mais. Não aparece quando já está aberto como app.
   - Nunca cachear `/api/*`.
 - **Busca (v1)**: BM25 (ex.: MiniSearch) com normalização de acentos, stopwords PT e radicalização simples; índice gerado no build ou na primeira carga.
 - **Busca (v2, se necessário)**: embeddings pré-calculados no build + embedding da pergunta no navegador (transformers.js) para perguntas conceituais.

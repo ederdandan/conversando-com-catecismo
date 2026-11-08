@@ -1,6 +1,6 @@
 // Modo sem IA: responde com a pergunta mais parecida do Compêndio do Catecismo (598 perguntas e respostas
 // oficiais), mostrando os parágrafos do Catecismo indicados pelo próprio Compêndio.
-import { buscar, criarIndice, expandirPergunta, normalizar, radical, termos } from './busca.js';
+import { buscar, criarIndice, expandirPergunta, normalizar, numerosCitados, radical, termos } from './busca.js';
 import { esc } from './html.js';
 
 const RELATIVO_MINIMO = 0.75; // 2ª sugestão só se estiver perto da 1ª
@@ -66,6 +66,13 @@ const RE_DEF = /^(?:o )?que (?:e|sao|significa|significam) (?:(?:o|a|os|as) )?(.
 export function responderPeloCompendio(indice, pergunta, { limite = 2 } = {}) {
   const q = limparQ(pergunta);
   if (!q) return [];
+  // "Explique o § 1849" (botão do leitor): perguntas do Compêndio que citam esse §, das mais específicas.
+  const citados = numerosCitados(pergunta);
+  if (citados.length) {
+    const achados = indice.itens.filter((x) => citados.some((n) => x.refs.includes(n)))
+      .sort((a, b) => a.refs.length - b.refs.length);
+    if (achados.length) return achados.slice(0, limite);
+  }
   const qs = termosCobertura(indice, pergunta);
   const exata = indice.perguntasNorm.findIndex((p) => p === q);
   const def = q.match(RE_DEF)?.[1];
@@ -76,9 +83,12 @@ export function responderPeloCompendio(indice, pergunta, { limite = 2 } = {}) {
     .map((r) => ({ ...r, cob: cobertura(indice, qs, r.n - 1) }))
     .filter((r) => r.score >= SCORE_MINIMO && r.cob >= COBERTURA_MINIMA);
   const melhor = res[0]?.score || 1;
+  const todos = buscar(indice, pergunta, 40).map((r) => r.n);
+  const posicao = (n) => (todos.includes(n) ? todos.indexOf(n) : Infinity);
   const ns = [
     ...(exata >= 0 ? [exata + 1] : []),
-    ...definicoes.map((i) => i + 1),
+    // Várias definições ("graça sacramental", "graça que justifica"): a mais relevante na busca primeiro.
+    ...definicoes.map((i) => i + 1).sort((a, b) => posicao(a) - posicao(b)),
     ...res.filter((r) => r.score / melhor >= RELATIVO_MINIMO).map((r) => r.n),
   ];
   return [...new Set(ns)].slice(0, limite).map((n) => indice.itens[n - 1]);
@@ -106,11 +116,14 @@ export function htmlItemCompendio(x) {
 // Mensagem do chat no modo sem IA.
 export function htmlRespostaCompendio(m) {
   const [primeiro, ...outros] = m.itens || [];
-  const aviso = `<p class="nota-sistema comp-aviso">${esc(m.motivo || 'O catequista (IA) está indisponível agora.')}
-    Enquanto isso, veja a resposta oficial do <strong>Compêndio do Catecismo</strong>:</p>`;
+  // Sem motivo = modo Compêndio normal (sem código); com motivo = a IA falhou e o Compêndio a substitui.
+  const aviso = m.motivo
+    ? `<p class="nota-sistema comp-aviso">${esc(m.motivo)} Enquanto isso, veja a resposta oficial do <strong>Compêndio do Catecismo</strong>:</p>`
+    : '';
   if (!primeiro) {
-    return `<div class="balao"><p class="nota-sistema">${esc(m.motivo || 'O catequista (IA) está indisponível agora.')}</p>
-      <p>Não encontrei no Compêndio do Catecismo uma pergunta parecida com a sua. Tente com outras palavras ou pesquise no Catecismo.</p></div>`;
+    const busca = m.pergunta ? ` ou <a href="#/busca/${encodeURIComponent(m.pergunta.slice(0, 120))}">pesquise no Catecismo</a>` : ' ou pesquise no Catecismo';
+    return `<div class="balao">${m.motivo ? `<p class="nota-sistema">${esc(m.motivo)}</p>` : ''}
+      <p>Não encontrei no Compêndio do Catecismo uma pergunta parecida com a sua. Tente com outras palavras${busca}.</p></div>`;
   }
   const extras = outros.map((x) => `<details class="comp-outro"><summary>Veja também: ${esc(x.pergunta)}</summary>
       ${htmlItemCompendio(x)}<div class="fontes-lista">${htmlRefs(x.refs)}</div></details>`).join('');
