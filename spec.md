@@ -206,4 +206,4 @@ Rodar com a IA real: `cd worker && npm run avaliar` (todos os modelos) ou `npm r
 3. ✅ Worker com Gemini, CORS, códigos e limites (`worker/`; testado com `wrangler dev` e chave real).
 4. ✅ Chat no frontend (streaming, citações, validação, sinônimos, painel do §).
 5. ✅ Groq como reserva (2 modelos); testes de aceite da seção 9 com a IA real (`npm run avaliar`).
-6. Deploy (GitHub Actions para Pages; `wrangler deploy` para o Worker).
+6. ✅ Deploy: site em https://ederdandan.github.io/conversando-com-catecismo/ (GitHub Actions publica `web/` a cada push na main, após os testes); Worker em https://catecismo-api.catecismo-api.workers.dev (`cd worker && npm run deploy`; segredos com `npx wrangler secret bulk .dev.vars`).
