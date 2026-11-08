@@ -1,5 +1,6 @@
 // Service worker: leitor 100% offline. Nunca intercepta a API do chat (outro domínio / /api/).
-const VERSAO = 'catecismo-v4';
+// Ao mudar qualquer arquivo do site, troque a VERSAO: os aparelhos baixam tudo de novo e recarregam.
+const VERSAO = 'catecismo-v5';
 const ARQUIVOS = [
   './', 'index.html', 'estilo.css', 'icone.svg', 'manifest.webmanifest',
   'js/app.js', 'js/dados.js', 'js/leitor.js', 'js/busca.js', 'js/html.js',
@@ -8,7 +9,13 @@ const ARQUIVOS = [
 ];
 
 self.addEventListener('install', (ev) => {
-  ev.waitUntil(caches.open(VERSAO).then((c) => c.addAll(ARQUIVOS)).then(() => self.skipWaiting()));
+  // cache: 'reload' ignora o cache HTTP do navegador (o GitHub Pages manda guardar por 10 min),
+  // senão a versão nova poderia ser montada com arquivos antigos.
+  ev.waitUntil(
+    caches.open(VERSAO)
+      .then((c) => c.addAll(ARQUIVOS.map((u) => new Request(u, { cache: 'reload' }))))
+      .then(() => self.skipWaiting()),
+  );
 });
 
 self.addEventListener('activate', (ev) => {
@@ -20,13 +27,14 @@ self.addEventListener('activate', (ev) => {
 });
 
 // Stale-while-revalidate para arquivos do próprio site; o resto passa direto.
+// A revalidação usa cache: 'no-cache' (pergunta ao servidor se mudou; resposta 304 é barata).
 self.addEventListener('fetch', (ev) => {
   const url = new URL(ev.request.url);
   if (ev.request.method !== 'GET' || url.origin !== self.location.origin || url.pathname.includes('/api/')) return;
   ev.respondWith(
     caches.open(VERSAO).then(async (cache) => {
       const salvo = await cache.match(ev.request, { ignoreSearch: true });
-      const rede = fetch(ev.request)
+      const rede = fetch(ev.request, { cache: 'no-cache' })
         .then((r) => { if (r.ok) cache.put(ev.request, r.clone()); return r; })
         .catch(() => salvo);
       return salvo || rede;

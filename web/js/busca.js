@@ -204,6 +204,35 @@ export function expandirPergunta(pergunta) {
 // Por isso o filtro local só descarta quando não há resultado; a recusa por tema fica com a IA.
 export const SCORE_MINIMO = 1;
 
+// Perguntas de definição ("O que é o pecado?", "O que significa graça?"): o BM25 prefere §
+// que repetem a palavra, e não o que a define. Aqui procuramos frases no formato do Catecismo:
+// "O pecado é…", "A graça é…", "O santo Baptismo é…", "Os sacramentos de cura são…".
+const RE_DEFINICAO = /\bo que (?:e|sao|significa|significam|quer dizer)\s+(?:(?:o|a|os|as|um|uma)\s+)?([a-z][a-z ]*?)\s*$/;
+
+// Ordem: definição que abre o § primeiro; depois as que o BM25 também acha relevantes.
+export function definicoes(indice, pergunta, limite = 3, relevantes = []) {
+  const m = normalizar(pergunta).replace(/[^a-z0-9 ]+/g, ' ').replace(/\s+/g, ' ').trim().match(RE_DEFINICAO);
+  if (!m) return [];
+  const termo = m[1].trim();
+  if (!termo || termo.split(' ').length > 4) return [];
+  indice.normalizados ??= indice.paragrafos.map((p) => normalizar(semMarcas(p.texto)));
+  const frase = `(?:o|a|os|as)\\s+(?:[a-z]+\\s+)?${termo.replace(/ /g, '\\s+')}\\s+(?:e|sao)\\s`;
+  const reInicio = new RegExp(`^[\\s«"(]*${frase}`);
+  const reMeio = new RegExp(`[.!?;:»]\\s+${frase}`);
+  const rank = new Map(relevantes.map((n, i) => [n, i]));
+  const achados = [];
+  indice.paragrafos.forEach((p, i) => {
+    const t = indice.normalizados[i];
+    const inicio = reInicio.test(t);
+    if (!inicio && !reMeio.test(t)) return;
+    achados.push({ n: p.n, peso: (inicio ? 2 : 0) + (rank.has(p.n) ? 1 : 0), pos: rank.get(p.n) ?? Infinity });
+  });
+  return achados
+    .sort((a, b) => b.peso - a.peso || a.pos - b.pos || a.n - b.n)
+    .slice(0, limite)
+    .map((a) => a.n);
+}
+
 // Escolhe os § que vão como contexto para a IA.
 //   anterior: pergunta anterior da conversa (ajuda em perguntas de seguimento: "e por quê?")
 export function selecionarParagrafos(indice, pergunta, { anterior = '', limite = 8, maximo = 12, total = 2865 } = {}) {
@@ -214,6 +243,7 @@ export function selecionarParagrafos(indice, pergunta, { anterior = '', limite =
   }
   const melhor = res[0]?.score ?? 0;
   const relevantes = melhor >= SCORE_MINIMO ? res.filter((r) => r.relativo >= 0.4).slice(0, limite).map((r) => r.n) : [];
-  const paragrafos = [...new Set([...diretos, ...relevantes])].slice(0, maximo);
+  const defs = definicoes(indice, pergunta, 3, res.map((r) => r.n));
+  const paragrafos = [...new Set([...diretos, ...defs, ...relevantes])].slice(0, maximo);
   return { paragrafos, melhor, diretos };
 }

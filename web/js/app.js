@@ -240,5 +240,14 @@ rotear();
 
 // ---------- PWA ----------
 if ('serviceWorker' in navigator && location.protocol !== 'file:') {
-  navigator.serviceWorker.register('./sw.js').catch(() => { /* offline indisponível */ });
+  // Versão nova do app assumiu (sw.js com outra VERSAO): recarrega uma vez para usar os arquivos novos.
+  // Na primeira visita não há controlador anterior, então não recarrega.
+  const tinhaVersao = Boolean(navigator.serviceWorker.controller);
+  let recarregou = false;
+  navigator.serviceWorker.addEventListener('controllerchange', () => {
+    if (!tinhaVersao || recarregou) return;
+    recarregou = true;
+    location.reload();
+  });
+  navigator.serviceWorker.register('./sw.js', { updateViaCache: 'none' }).catch(() => { /* offline indisponível */ });
 }

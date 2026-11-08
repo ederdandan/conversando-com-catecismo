@@ -2,7 +2,7 @@ import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import { extrairCitacoes, avaliarResposta, htmlResposta, MENSAGEM_RECUSA } from '../web/js/citacoes.js';
-import { criarIndice, expandirPergunta, selecionarParagrafos } from '../web/js/busca.js';
+import { criarIndice, expandirPergunta, selecionarParagrafos, definicoes } from '../web/js/busca.js';
 
 const dados = JSON.parse(fs.readFileSync(new URL('../web/data/catecismo.json', import.meta.url), 'utf8'));
 const indice = criarIndice(dados.paragrafos);
@@ -70,4 +70,16 @@ test('colchetes largos do gpt-oss (【§ N】) contam como citação e viram bot
   assert.deepEqual(extrairCitacoes('Graça 【§ 1996】 e ［§ 2024］.'), [1996, 2024]);
   assert.equal(avaliarResposta('Graça 【§ 1996】.', [1996]).semFonte, false);
   assert.match(htmlResposta('Graça 【§ 1996】.', [1996]), /<button[^>]*data-n="1996"/);
+});
+
+test('perguntas de definição trazem primeiro o § que define o termo', () => {
+  const indice = criarIndice(dados.paragrafos);
+  const primeiros = (q) => selecionarParagrafos(indice, q).paragrafos.slice(0, 3);
+  assert.ok(primeiros('O que é o pecado?').includes(1849), 'pecado → §1849');
+  assert.ok(primeiros('O que é a graça?').includes(1996), 'graça → §1996');
+  assert.equal(primeiros('O que é a oração?')[0], 2559, 'oração → §2559');
+  assert.equal(primeiros('o que e a caridade')[0], 1822, 'sem acento e sem interrogação');
+  assert.ok(primeiros('O que são os sacramentos?').includes(1131), 'sacramentos → §1131');
+  assert.ok(primeiros('O que é o Batismo?').includes(1213), 'grafia BR acha "Baptismo"');
+  assert.deepEqual(definicoes(indice, 'Quais são os sacramentos de cura?'), [], 'só vale para "o que é/são/significa"');
 });
