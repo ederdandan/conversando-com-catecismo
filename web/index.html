@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Catecismo da Igreja Católica</title>
+  <meta name="description" content="Leia o Catecismo da Igreja Católica parágrafo por parágrafo e converse com ele." />
+  <meta name="theme-color" content="#7a3b12" media="(prefers-color-scheme: light)" />
+  <meta name="theme-color" content="#1b1714" media="(prefers-color-scheme: dark)" />
+  <link rel="manifest" href="manifest.webmanifest" />
+  <link rel="icon" href="icone.svg" type="image/svg+xml" />
+  <link rel="apple-touch-icon" href="icone.svg" />
+  <link rel="stylesheet" href="estilo.css" />
+</head>
+<body>
+  <header class="topo">
+    <a class="marca" href="#/" aria-label="Início">
+      <img src="icone.svg" alt="" width="28" height="28" />
+      <span>Catecismo</span>
+    </a>
+    <nav class="nav" aria-label="Principal">
+      <a href="#/sumario" data-rota="sumario">Ler</a>
+      <a href="#/conversar" data-rota="conversar">Conversar</a>
+      <a href="#/sobre" data-rota="sobre">Sobre</a>
+    </nav>
+    <div class="ajustes">
+      <button type="button" id="bt-menor" title="Diminuir letra" aria-label="Diminuir letra">A−</button>
+      <button type="button" id="bt-maior" title="Aumentar letra" aria-label="Aumentar letra">A+</button>
+      <button type="button" id="bt-tema" title="Tema" aria-label="Alternar tema">◐</button>
+    </div>
+  </header>
+  <main id="conteudo" tabindex="-1"></main>
+  <div id="painel" class="painel" hidden>
+    <aside class="painel-caixa" role="dialog" aria-modal="false" aria-labelledby="painel-titulo">
+      <header>
+        <div>
+          <h2 id="painel-titulo"></h2>
+          <p id="painel-local"></p>
+        </div>
+        <button type="button" id="painel-fechar" aria-label="Fechar">✕</button>
+      </header>
+      <div id="painel-corpo"></div>
+      <a id="painel-ler" class="painel-ler" href="#/">Ler no contexto →</a>
+    </aside>
+  </div>
+  <noscript><p class="aviso">Ative o JavaScript para ler o Catecismo.</p></noscript>
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>

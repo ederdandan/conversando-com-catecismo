@@ -1,0 +1,48 @@
+name = "catecismo-api"
+main = "src/index.js"
+compatibility_date = "2025-09-01"
+
+# Variáveis públicas (não são segredos).
+# Segredos — NUNCA aqui; use `npx wrangler secret put NOME` (produção) ou `.dev.vars` (local):
+#   GEMINI_API_KEY, GROQ_API_KEY, CODIGOS_CONVITE ("nome:codigo,nome2:codigo2")
+[vars]
+# Origens que podem chamar a API (site publicado + teste local), separadas por vírgula
+ORIGENS_PERMITIDAS = "https://ederdandan.github.io,http://localhost:5173"
+PROVEDOR_PRINCIPAL_URL = "https://generativelanguage.googleapis.com/v1beta/openai/chat/completions"
+# Lista em ordem de preferência (mesma chave). No plano gratuito CADA modelo tem cota diária
+# própria (ex.: gemini-3.6-flash = 20/dia); esgotado um, o Worker pula para o próximo até o
+# horário de liberação informado pelo Google. Os "-latest" mais novos estavam sobrecarregados
+# em 2026-11-07. Liste com: npm run modelos — avalie com: npm run avaliar -- NOME
+MODELO_PRINCIPAL = "gemini-3.6-flash,gemini-3.5-flash,gemini-flash-lite-latest,gemini-3.1-flash-lite"
+# Raciocínio interno: no padrão ele consome o limite de tokens e a resposta sai cortada.
+# "low" = resposta completa e fiel (~5 s); "none" = mais rápida (~2,5 s)
+ESFORCO_PRINCIPAL = "low"
+# Tempo para a IA começar a responder antes de tentar o próximo modelo
+TEMPO_LIMITE_MS = "25000"
+PROVEDOR_RESERVA_URL = "https://api.groq.com/openai/v1/chat/completions"
+# Reserva (Groq, plano gratuito), usada só se todos os Gemini falharem.
+# "modelo@esforço" por item (gpt-oss aceita low/medium/high; qwen aceita none/default). Vazio = sem reserva.
+MODELO_RESERVA = "openai/gpt-oss-120b@low,qwen/qwen3.8-27b@none"
+LIMITE_DIARIO_POR_CODIGO = "30"
+LIMITE_DIARIO_GLOBAL = "300"
+
+# Contadores diários (Durable Object com SQLite — disponível no plano gratuito)
+[[durable_objects.bindings]]
+name = "COTA"
+class_name = "Cota"
+
+[[migrations]]
+tag = "v1"
+new_sqlite_classes = ["Cota"]
+
+# Rajadas por IP: no máximo 10 perguntas por minuto
+[[ratelimits]]
+name = "LIMITE_IP"
+namespace_id = "1001"
+
+  [ratelimits.simple]
+  limit = 10
+  period = 60
+
+[observability]
+enabled = true

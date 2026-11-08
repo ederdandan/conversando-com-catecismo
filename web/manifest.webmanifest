@@ -1,0 +1,15 @@
+{
+  "name": "Catecismo da Igreja Católica",
+  "short_name": "Catecismo",
+  "description": "Leia o Catecismo da Igreja Católica parágrafo por parágrafo e converse com ele.",
+  "lang": "pt-BR",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#fbf8f3",
+  "theme_color": "#7a3b12",
+  "icons": [
+    { "src": "icone.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" },
+    { "src": "icone.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "maskable" }
+  ]
+}

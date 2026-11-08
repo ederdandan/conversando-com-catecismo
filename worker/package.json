@@ -1,0 +1,17 @@
+{
+  "name": "catecismo-api",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Cloudflare Worker do chat: guarda a chave da IA, valida convites, aplica limites e monta o contexto com o Catecismo.",
+  "scripts": {
+    "dev": "wrangler dev --port 8787",
+    "deploy": "wrangler deploy",
+    "modelos": "node scripts/listar-modelos.mjs",
+    "test": "node --test \"test/**/*.test.mjs\"",
+    "avaliar": "node scripts/avaliar-modelos.mjs"
+  },
+  "devDependencies": {
+    "wrangler": "^4.158.0"
+  }
+}

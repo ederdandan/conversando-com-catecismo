@@ -1,0 +1,16 @@
+{
+  "name": "conversando-com-catecismo",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Leitor do Catecismo da Igreja Católica com chat que responde apenas com base no Catecismo.",
+  "scripts": {
+    "dados": "node scripts/gerar-catecismo.mjs",
+    "dados:atualizar": "node scripts/gerar-catecismo.mjs --sem-cache",
+    "servir": "node scripts/servir.mjs",
+    "test": "node --test \"tests/**/*.test.mjs\""
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

@@ -1,0 +1,8 @@
+# Copie este arquivo para ".dev.vars" (mesma pasta; NÃO use nomes como .dev.vars.example — o wrangler também os lê) e preencha. O .dev.vars NÃO vai para o git.
+# Usado só no teste local (npm run dev). Em produção use: npx wrangler secret put NOME
+
+GEMINI_API_KEY=cole-aqui-a-chave-do-ai-studio
+# Códigos de convite: nome:codigo separados por vírgula (código com 6+ caracteres)
+CODIGOS_CONVITE=eder:troque-este-codigo
+# Fase 5 (opcional)
+# GROQ_API_KEY=
