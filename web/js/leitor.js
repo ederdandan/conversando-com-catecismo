@@ -74,7 +74,8 @@ export function htmlSumario(d, { aberta = null, ultimo = 0 } = {}) {
   </nav>`;
 }
 
-export function htmlCapitulo(d, cap) {
+// comIA: "Perguntar sobre este trecho" só aparece com o catequista (IA); sem ele, o centro da barra leva ao sumário.
+export function htmlCapitulo(d, cap, { comIA = false } = {}) {
   const ps = [];
   for (let n = cap.ini; n <= cap.fim; n++) ps.push(htmlParagrafo(d.porN.get(n)));
   const ant = d.capitulos[cap.indice - 1];
@@ -98,7 +99,9 @@ export function htmlCapitulo(d, cap) {
     <div class="texto">${ps.join('')}</div>${nav}
     <div class="barra-leitura">
       ${seta(ant, 'esq', 'Capítulo anterior')}
-      <a class="perguntar" href="#/conversar" data-perguntar>${icone('chat')}<span>Perguntar sobre este trecho</span></a>
+      ${comIA
+    ? `<a class="perguntar" href="#/conversar" data-perguntar>${icone('chat')}<span>Perguntar sobre este trecho</span></a>`
+    : `<a class="perguntar" href="#/sumario/${cap.parte}">${icone('livro')}<span>Sumário</span></a>`}
       ${seta(prox, 'dir', 'Próximo capítulo')}
     </div>`;
 }

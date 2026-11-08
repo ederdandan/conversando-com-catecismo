@@ -11,6 +11,13 @@ const SUGESTOES = [
   'Por que rezamos o Pai-Nosso?',
   'O que acontece depois da morte?',
 ];
+// Sem IA: perguntas que o Compêndio responde diretamente (itens 271, 210, 392, 205).
+const SUGESTOES_COMPENDIO = [
+  'O que é a Eucaristia?',
+  'O que é o purgatório?',
+  'O que é o pecado?',
+  'O que acontece depois da morte?',
+];
 const icone = (nome) => `<svg class="ic" aria-hidden="true"><use href="#i-${nome}"/></svg>`;
 const MAX_HISTORICO_CHARS = 1400;
 
@@ -147,7 +154,7 @@ function htmlChat() {
     : 'A resposta vem do <strong>Compêndio do Catecismo</strong> — as perguntas e respostas oficiais da Igreja — com os parágrafos do Catecismo para aprofundar.'}</p>
         </div>${convite}
         <span class="rotulo">Experimente perguntar</span>
-        <div class="sugestoes">${SUGESTOES.map((s) => `<button type="button" class="sugestao"><span>${esc(s)}</span>${icone('enviar')}</button>`).join('')}</div>
+        <div class="sugestoes">${(ia ? SUGESTOES : SUGESTOES_COMPENDIO).map((s) => `<button type="button" class="sugestao"><span>${esc(s)}</span>${icone('enviar')}</button>`).join('')}</div>
       </div>` : '';
   return `<header class="cab cab-chat">
       <a class="cab-icone" href="#/" aria-label="Início"><img src="icones/icone-192.png" alt="" width="28" height="28" /></a>

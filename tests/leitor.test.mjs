@@ -63,10 +63,17 @@ test('sumário em sanfona: abre a parte pedida e marca onde a pessoa parou', asy
 
 test('capítulo tem cabeçalho com voltar, progresso e barra de leitura', () => {
   const cap = capitulos.find((c) => c.ini <= 1849 && c.fim >= 1849);
-  const html = htmlCapitulo(d, cap);
+  const html = htmlCapitulo(d, cap, { comIA: true });
   assert.match(html, /href="#\/sumario\/3" aria-label="Voltar ao sumário"/);
   assert.match(html, /<small>3ª Parte · A Vida em Cristo<\/small>/);
   assert.match(html, /class="progresso"/);
   assert.match(html, /data-perguntar/);
   assert.match(html, /aria-label="Próximo capítulo: /);
+});
+
+test('sem IA, a barra de leitura não oferece "Perguntar sobre este trecho" (leva ao sumário)', () => {
+  const cap = d.capitulos[10];
+  const html = htmlCapitulo(d, cap);
+  assert.doesNotMatch(html, /data-perguntar|Perguntar sobre este trecho/);
+  assert.match(html, new RegExp(`class="perguntar" href="#/sumario/${cap.parte}"`));
 });

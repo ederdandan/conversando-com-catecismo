@@ -155,7 +155,7 @@ function telaLeitor(d, n) {
   }
   const cap = d.capituloDe(n);
   if (capituloAtual !== cap || !$('.texto', main)) {
-    main.innerHTML = htmlCapitulo(d, cap);
+    main.innerHTML = htmlCapitulo(d, cap, { comIA: temIA() });
     capituloAtual = cap;
     observarLeitura(d);
   }
