@@ -66,7 +66,7 @@ export function htmlSumario(d, { aberta = null, ultimo = 0 } = {}) {
       <ol>${pt.caps.map((c) => {
         const aqui = ultimo >= c.ini && ultimo <= c.fim;
         return `
-        <li data-fim="${c.fim}"><a href="#/p/${aqui ? ultimo : c.ini}"${aqui ? ' class="atual"' : ''}><span>${esc(c.titulo || pt.titulo)}${aqui ? `<small class="parou">Você parou aqui · § ${ultimo}</small>` : ''}</span><small>§ ${c.ini}</small></a></li>`;
+        <li data-ini="${c.ini}" data-fim="${c.fim}"><a href="#/p/${aqui ? ultimo : c.ini}"${aqui ? ' class="atual"' : ''}><span>${esc(c.titulo || pt.titulo)}${aqui ? `<small class="parou">Você parou aqui · § ${ultimo}</small>` : ''}</span><small>§ ${c.ini}</small></a></li>`;
       }).join('')}
       </ol>
     </details>`;

@@ -7,12 +7,14 @@ test('gestos: cada rota pertence a uma aba; o leitor não tem gesto', () => {
   assert.equal(abaDaRota(''), 'inicio');
   assert.equal(abaDaRota('busca'), 'sumario');
   assert.equal(abaDaRota('entrar'), 'sobre');
+  assert.equal(abaDaRota('duvidas'), 'duvidas');
   assert.equal(abaDaRota('p'), null);
 });
 
-test('gestos: vizinhas na ordem Início → Ler → Conversar → Mais, sem dar a volta', () => {
+test('gestos: vizinhas na ordem Início → Ler → Dúvidas → Conversar → Mais, sem dar a volta', () => {
   assert.equal(abaVizinha('inicio', 1), 'sumario');
-  assert.equal(abaVizinha('conversar', -1), 'sumario');
+  assert.equal(abaVizinha('sumario', 1), 'duvidas');
+  assert.equal(abaVizinha('conversar', -1), 'duvidas');
   assert.equal(abaVizinha('sobre', 1), null);
   assert.equal(abaVizinha('inicio', -1), null);
 });

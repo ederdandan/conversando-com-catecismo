@@ -64,6 +64,20 @@ export function criarIndiceFaq(faq) {
   return faq;
 }
 
+// Perguntas frequentes relacionadas a uma resposta do Compêndio: as que tratam do que a pessoa perguntou
+// (as palavras dela aparecem na pergunta frequente) e, de preferência, citam os mesmos § do Catecismo.
+// refs: § da resposta do Compêndio; excluir: ids já mostrados.
+export function relacionadasFaq(faq, pergunta, refs = [], { limite = 3, excluir = [] } = {}) {
+  const cita = (q) => q.cic.some(([a, b]) => refs.some((n) => n >= a && n <= b));
+  return faq.comparador.todas(pergunta)
+    .map((x) => ({ ...x, q: faq.perguntas[x.i] }))
+    .filter(({ q, sim, cob }) => !excluir.includes(q.id) && (cita(q) ? cob >= 0.5 : (cob >= 0.99 && sim >= 0.2) || (cob >= 0.8 && sim >= 0.3)))
+    .map((x) => ({ ...x, score: x.sim + x.cob + (cita(x.q) ? 0.3 : 0) }))
+    .sort((a, b) => b.score - a.score)
+    .slice(0, limite)
+    .map((x) => x.q);
+}
+
 export const htmlCicFaq = (cic) => cic.map(([a, b]) =>
   `<button type="button" class="cita fonte" data-n="${a}">§ ${a}${b > a ? `–${b}` : ''}</button>`).join('');
 
@@ -81,8 +95,9 @@ export function htmlPergunta(q) {
 }
 
 // No chat: a pergunta frequente como resposta (mesmo visual do item do Compêndio).
-export function htmlItemFaq(q) {
-  return `<p class="comp-pergunta"><span class="comp-n">Perguntas frequentes</span> ${esc(q.p)}</p>
+// comPergunta: false quando a pergunta já está no título (item que abre e fecha).
+export function htmlItemFaq(q, { comPergunta = true } = {}) {
+  return `${comPergunta ? `<p class="comp-pergunta"><span class="comp-n">Perguntas frequentes</span> ${esc(q.p)}</p>` : ''}
     <p>${esc(q.r)}</p>
     ${q.a ? `<p class="faq-analogia"><strong>Para entender:</strong> ${esc(q.a)}</p>` : ''}
     ${q.b?.length ? `<p class="faq-biblia"><strong>Na Bíblia:</strong> ${q.b.map(esc).join(' · ')}</p>` : ''}`;

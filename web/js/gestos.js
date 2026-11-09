@@ -1,16 +1,17 @@
-// Gestos de arrastar para o lado, no celular, para trocar de aba: Início ⇄ Ler ⇄ Conversar ⇄ Mais.
+// Gestos de arrastar para o lado, no celular, para trocar de aba: Início ⇄ Ler ⇄ Dúvidas ⇄ Conversar ⇄ Mais.
 // Arrastar para a esquerda → próxima aba; para a direita → aba anterior.
 // Desligado: no leitor (arrastar o texto é fácil de acontecer sem querer; lá as setas trocam de capítulo),
 // com folha aberta, em campos de texto, em listas que rolam para o lado e na beirada da tela
 // (no iPhone, a beirada é o "voltar" do Safari).
 
-export const ABAS = ['inicio', 'sumario', 'conversar', 'sobre'];
-const HREF = { inicio: '#/', sumario: '#/sumario', conversar: '#/conversar', sobre: '#/sobre' };
+export const ABAS = ['inicio', 'sumario', 'duvidas', 'conversar', 'sobre'];
+const HREF = { inicio: '#/', sumario: '#/sumario', duvidas: '#/duvidas', conversar: '#/conversar', sobre: '#/sobre' };
 
 // Aba a que cada rota pertence (a busca é parte de "Ler"; "Entrar" é parte de "Mais"). null = sem gesto.
 export function abaDaRota(rota) {
   if (!rota || rota === 'inicio') return 'inicio';
   if (rota === 'sumario' || rota === 'busca') return 'sumario';
+  if (rota === 'duvidas') return 'duvidas'; // inclui temas, capítulo e busca das perguntas frequentes
   if (rota === 'conversar') return 'conversar';
   if (rota === 'sobre' || rota === 'entrar') return 'sobre';
   return null; // leitor (p) e outras

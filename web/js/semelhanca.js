@@ -27,8 +27,19 @@ export function criarComparador(textos) {
     for (const t of q) if (conjuntos[i].has(t)) comum += peso(t) ** 2;
     return comum / (n + totais[i] - comum);
   };
+  // Para todas as perguntas: { sim, cob }, em que cob = quanto (pelo peso) da consulta aparece nelas.
+  const todas = (consulta) => {
+    const p = preparar(consulta);
+    return conjuntos.map((c, i) => {
+      if (!p.n) return { i, sim: 0, cob: 0 };
+      let comum = 0;
+      for (const t of p.q) if (c.has(t)) comum += peso(t) ** 2;
+      return { i, sim: comum / (p.n + totais[i] - comum), cob: comum / p.n };
+    });
+  };
   return {
     sim: (consulta, i) => simPreparada(preparar(consulta), i),
+    todas,
     melhores(consulta, n = 3) {
       const p = preparar(consulta);
       return conjuntos.map((_, i) => ({ i, sim: simPreparada(p, i) }))

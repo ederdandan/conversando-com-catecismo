@@ -152,16 +152,18 @@ function telaSumario(d, parte) {
   preencherFaqSumario();
 }
 
-// No sumário, depois do último capítulo de cada seção: "Perguntas frequentes · Seção N".
+// No sumário, em cada capítulo que tem perguntas frequentes: "N perguntas frequentes" → dúvidas do capítulo.
 async function preencherFaqSumario() {
   let faq;
   try { faq = await carregarFaq(); } catch { return; }
-  for (const s of faq.secoes) {
-    const li = $(`.sumario li[data-fim="${s.fim}"]`);
-    if (!li || li.nextElementSibling?.classList.contains('faq-li')) continue;
-    const n = faq.perguntas.filter((q) => q.s === s.id).length;
-    li.insertAdjacentHTML('afterend', `<li class="faq-li"><a href="#/duvidas/${s.id}">${icone('duvida')}<span>Perguntas frequentes · ${esc(nomeSecao(s))}<small>${n} dúvidas sobre esta seção</small></span>${icone('dir')}</a></li>`);
-  }
+  document.querySelectorAll('.sumario li[data-ini]').forEach((li) => {
+    if (li.querySelector('.faq-cap-link')) return;
+    const ini = Number(li.dataset.ini);
+    const n = perguntasDoCapitulo(faq, ini, Number(li.dataset.fim)).length;
+    if (!n) return;
+    li.classList.add('tem-faq');
+    li.insertAdjacentHTML('beforeend', `<a class="faq-cap-link" href="#/duvidas/cap/${ini}">${icone('duvida')}${plural(n, 'pergunta frequente', 'perguntas frequentes')}</a>`);
+  });
 }
 
 // ---------- perguntas frequentes ----------
@@ -377,7 +379,7 @@ async function rotear() {
   const h = decodeURIComponent(location.hash.replace(/^#\/?/, ''));
   const [rota, ...resto] = h.split('/');
   const arg = resto.join('/');
-  const atual = rota === 'p' || rota === 'busca' || rota === 'duvidas' ? 'sumario' : rota === 'entrar' ? 'sobre' : (rota || 'inicio');
+  const atual = rota === 'p' || rota === 'busca' ? 'sumario' : rota === 'entrar' ? 'sobre' : (rota || 'inicio');
   document.querySelectorAll('.nav a, .abas a').forEach((a) => {
     const ativo = a.dataset.rota === atual;
     a.classList.toggle('ativo', ativo);
