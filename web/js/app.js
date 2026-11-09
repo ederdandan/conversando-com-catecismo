@@ -114,26 +114,16 @@ function telaInicio(d) {
   }).join('');
   main.innerHTML = `
     <header class="cab cab-marca">
-      <a class="marca" href="#/" aria-label="Início"><img src="icones/icone-192.png" alt="" width="30" height="30" /><span>Catecismo</span></a>
+      <a class="marca" href="#/" aria-label="Início"><img src="icones/icone-192.png" alt="" width="30" height="30" /><span>Catecismo da Igreja Católica</span></a>
       ${botaoAa}
     </header>
     <section class="inicio">
       <div>
-        <h1>Catecismo da Igreja Católica</h1>
+        <h1 class="so-leitor">Catecismo da Igreja Católica</h1>
         <p class="sub">${d.totalParagrafos.toLocaleString('pt-BR')} parágrafos · texto integral</p>
       </div>
       ${formBusca()}
       ${cartaoLeitura}
-      <a class="cartao-acao" href="#/conversar">
-        <span class="icone-caixa">${icone('chat')}</span>
-        <span class="t"><strong>Tire uma dúvida</strong><small>${temIA() ? 'Um catequista responde com o Catecismo' : 'Respostas oficiais do Compêndio do Catecismo'}</small></span>
-        ${icone('dir')}
-      </a>
-      <a class="cartao-acao" href="#/duvidas">
-        <span class="icone-caixa">${icone('duvida')}</span>
-        <span class="t"><strong>Perguntas frequentes</strong><small>Dúvidas comuns sobre a fé, com a Bíblia e o Catecismo</small></span>
-        ${icone('dir')}
-      </a>
       <div>
         <h2 class="rotulo">As quatro partes</h2>
         <div class="grade-partes">${partes}</div>
