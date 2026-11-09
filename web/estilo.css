@@ -495,3 +495,32 @@ main.entra-esq { animation: entra-esq .2s ease-out; }
 }
 .aviso-desfazer span { white-space: nowrap; }
 .aviso-desfazer button { border: 0; border-radius: 10px; padding: 8px 12px; background: var(--ouro); color: var(--sobre-ouro); font: 600 15px var(--sans); }
+
+/* ---------- perguntas frequentes ---------- */
+.faq-secao { display: flex; flex-direction: column; gap: 10px; }
+.faq-lista { display: flex; flex-direction: column; gap: 8px; }
+.faq-item { background: var(--superficie); border: 1px solid var(--linha); border-radius: 14px; }
+.faq-item[open] { border-color: color-mix(in srgb, var(--acento) 45%, var(--linha)); }
+.faq-item summary {
+  display: flex; align-items: flex-start; gap: 10px; padding: 14px; cursor: pointer; list-style: none;
+  font: 600 calc(1rem * var(--escala))/1.4 var(--serif);
+}
+.faq-item summary::-webkit-details-marker { display: none; }
+.faq-item summary span { flex: 1; }
+.faq-item summary .ic { width: 20px; height: 20px; margin-top: 1px; color: var(--suave); transition: transform .15s; }
+.faq-item[open] summary .ic { transform: rotate(180deg); color: var(--acento); }
+.faq-item[open] summary { color: var(--acento); }
+.faq-corpo { padding: 0 14px 14px; display: flex; flex-direction: column; gap: 10px; }
+.faq-corpo > p { margin: 0; font: calc(1rem * var(--escala))/1.6 var(--serif); }
+.faq-analogia { padding: 10px 12px; border-radius: 10px; background: var(--alvo); }
+.faq-biblia { color: var(--suave); }
+.faq-corpo strong { font: 600 .8125rem var(--sans); letter-spacing: .03em; color: var(--acento); }
+.faq-cap { margin-top: 28px; }
+.faq-li a { color: var(--acento); font-weight: 600; }
+.faq-li a > .ic { width: 20px; height: 20px; flex: none; }
+.faq-li a > .ic:last-child { color: var(--suave); }
+.faq-li span small { display: block; font: 400 13px var(--sans); color: var(--suave); margin-top: 2px; }
+
+/* Resposta pronta no chat com IA: pedir a explicação do catequista mesmo assim */
+.pedir-ia { align-self: flex-start; margin-top: 4px; height: 40px; font-size: 14px; }
+.msg.compendio .faq-analogia { font-size: .95em; }

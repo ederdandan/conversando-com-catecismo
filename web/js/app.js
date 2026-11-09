@@ -6,6 +6,7 @@ import { criarIndice, buscar, numerosCitados, radicaisDaPergunta, trecho } from 
 import { esc, partesHtml } from './html.js';
 import { aoMudar, htmlInstrucoesIOS, iniciarInstalacao, instalar, modoInstalacao } from './instalar.js';
 import { iniciarGestos } from './gestos.js';
+import { buscarFaq, carregarFaq, htmlListaPerguntas, perguntasDoCapitulo, perguntasDoTema } from './faq.js';
 
 const $ = (s, el = document) => el.querySelector(s);
 const main = $('#conteudo');
@@ -128,6 +129,11 @@ function telaInicio(d) {
         <span class="t"><strong>Tire uma dúvida</strong><small>${temIA() ? 'Um catequista responde com o Catecismo' : 'Respostas oficiais do Compêndio do Catecismo'}</small></span>
         ${icone('dir')}
       </a>
+      <a class="cartao-acao" href="#/duvidas">
+        <span class="icone-caixa">${icone('duvida')}</span>
+        <span class="t"><strong>Perguntas frequentes</strong><small>Dúvidas comuns sobre a fé, com a Bíblia e o Catecismo</small></span>
+        ${icone('dir')}
+      </a>
       <div>
         <h2 class="rotulo">As quatro partes</h2>
         <div class="grade-partes">${partes}</div>
@@ -143,6 +149,105 @@ function telaSumario(d, parte) {
   ligarFormBusca();
   const alvo = $(`.parte[data-parte="${aberta}"]`);
   if (Number.isInteger(parte) && alvo) alvo.scrollIntoView({ block: 'start' });
+  preencherFaqSumario();
+}
+
+// No sumário, depois do último capítulo de cada seção: "Perguntas frequentes · Seção N".
+async function preencherFaqSumario() {
+  let faq;
+  try { faq = await carregarFaq(); } catch { return; }
+  for (const s of faq.secoes) {
+    const li = $(`.sumario li[data-fim="${s.fim}"]`);
+    if (!li || li.nextElementSibling?.classList.contains('faq-li')) continue;
+    const n = faq.perguntas.filter((q) => q.s === s.id).length;
+    li.insertAdjacentHTML('afterend', `<li class="faq-li"><a href="#/duvidas/${s.id}">${icone('duvida')}<span>Perguntas frequentes · ${esc(nomeSecao(s))}<small>${n} dúvidas sobre esta seção</small></span>${icone('dir')}</a></li>`);
+  }
+}
+
+// ---------- perguntas frequentes ----------
+// "Seção 1: 'Eu creio' – 'Nós cremos'" → "Seção 1"
+const nomeSecao = (s) => s.titulo.split(':')[0];
+const plural = (n, um, varios) => `${n} ${n === 1 ? um : varios}`;
+
+const cabVoltar = (href, rotulo, titulo, sub = '') => `<header class="cab cab-leitor">
+    <a class="bt-icone" href="${href}" aria-label="${esc(rotulo)}">${icone('esq')}</a>
+    <div class="cab-titulos">${sub ? `<small>${esc(sub)}</small>` : ''}<strong>${esc(titulo)}</strong></div>
+    ${botaoAa}
+  </header>`;
+
+const formFaq = (valor = '') => `<form class="busca" id="form-faq" role="search">
+    <label>${icone('busca')}
+      <input type="search" name="q" value="${esc(valor)}" placeholder="Buscar nas perguntas frequentes" aria-label="Buscar nas perguntas frequentes" autocomplete="off" enterkeyhint="search" />
+    </label>
+    <button type="submit">Buscar</button>
+  </form>`;
+
+function ligarFormFaq() {
+  $('#form-faq')?.addEventListener('submit', (ev) => {
+    ev.preventDefault();
+    const q = new FormData(ev.target).get('q').toString().trim();
+    if (q) location.hash = `#/duvidas/busca/${encodeURIComponent(q)}`;
+  });
+}
+
+function htmlTemas(faq, s) {
+  return `<div class="lista-acoes">${s.temas.map((t) => {
+    const n = perguntasDoTema(faq, s.id, t.c).length;
+    return `<a class="linha-acao" href="#/duvidas/${s.id}/${t.c}"><span class="t"><strong>${esc(t.titulo)}</strong><small>${esc(t.faixa)} · ${plural(n, 'pergunta', 'perguntas')}</small></span>${icone('dir')}</a>`;
+  }).join('')}</div>`;
+}
+
+// #/duvidas · #/duvidas/s1 · #/duvidas/s1/3 · #/duvidas/cap/26 · #/duvidas/busca/<texto>
+async function telaFaq(d, arg) {
+  let faq;
+  try { faq = await carregarFaq(); } catch (e) { return telaErro(e); }
+  const [a, ...resto] = arg.split('/');
+  const b = resto.join('/');
+  const secao = faq.secoes.find((s) => s.id === a);
+  let html;
+  if (a === 'busca' && b) {
+    const lista = buscarFaq(faq, b);
+    html = `${cabVoltar('#/duvidas', 'Voltar às perguntas frequentes', 'Buscar', 'Perguntas frequentes')}<div class="tela faq">${formFaq(b)}
+      <p class="contagem">${lista.length ? `${plural(lista.length, 'pergunta', 'perguntas')} sobre <strong>${esc(b)}</strong>` : `Nenhuma pergunta frequente sobre <strong>${esc(b)}</strong>. <a href="#/busca/${encodeURIComponent(b)}">Buscar no texto do Catecismo</a>.`}</p>
+      ${htmlListaPerguntas(lista)}</div>`;
+    document.title = `${b} · Perguntas frequentes`;
+  } else if (a === 'cap' && d.capituloDe(Number(b))) {
+    const cap = d.capituloDe(Number(b));
+    const lista = perguntasDoCapitulo(faq, cap.ini, cap.fim).sort((x, y) => x.principal - y.principal);
+    html = `${cabVoltar(`#/p/${cap.ini}`, 'Voltar ao capítulo', cap.titulo || cap.tituloParte, 'Dúvidas sobre o capítulo')}<div class="tela faq">
+      <p class="contagem">${plural(lista.length, 'pergunta', 'perguntas')} · § ${cap.ini}–${cap.fim}, na ordem do texto</p>
+      ${htmlListaPerguntas(lista)}</div>`;
+  } else if (secao && b) {
+    const tema = secao.temas.find((t) => String(t.c) === b);
+    if (!tema) { location.replace(`#/duvidas/${secao.id}`); return; }
+    const lista = perguntasDoTema(faq, secao.id, tema.c);
+    html = `${cabVoltar(`#/duvidas/${secao.id}`, `Voltar à ${nomeSecao(secao)}`, tema.titulo, `${secao.parte}ª Parte · ${nomeSecao(secao)}`)}<div class="tela faq">
+      <p class="contagem">${plural(lista.length, 'pergunta', 'perguntas')} · ${esc(tema.faixa)}</p>
+      ${htmlListaPerguntas(lista)}</div>`;
+  } else if (secao) {
+    html = `${cabVoltar('#/duvidas', 'Voltar às perguntas frequentes', nomeSecao(secao), `${secao.parte}ª Parte · Perguntas frequentes`)}<div class="tela faq">
+      <p class="sub">${esc(secao.titulo)} · § ${secao.ini}–${secao.fim}</p>${formFaq()}${htmlTemas(faq, secao)}</div>`;
+  } else {
+    html = `${cabecalho('Perguntas frequentes')}<div class="tela faq">
+      <p class="sub">Dúvidas comuns de católicos, respondidas com o Catecismo, com passagens da Bíblia e uma comparação para ajudar a entender. Toque num § para ler o texto oficial.</p>
+      ${formFaq()}
+      ${faq.secoes.map((s) => `<section class="faq-secao"><h2 class="rotulo">${s.parte}ª Parte · ${esc(s.titulo)}</h2>${htmlTemas(faq, s)}</section>`).join('')}
+      <p class="nota-sistema">As demais partes do Catecismo ainda estão sendo preparadas.</p></div>`;
+  }
+  main.innerHTML = html;
+  ligarFormFaq();
+}
+
+// Fim do capítulo no leitor: "Dúvidas sobre este capítulo", se houver perguntas frequentes dele.
+async function preencherFaqCapitulo(cap) {
+  let faq;
+  try { faq = await carregarFaq(); } catch { return; }
+  const el = $('.faq-cap', main);
+  if (!el || capituloAtual !== cap) return;
+  const n = perguntasDoCapitulo(faq, cap.ini, cap.fim).length;
+  if (!n) return;
+  el.innerHTML = `<a class="linha-acao" href="#/duvidas/cap/${cap.ini}"><span class="icone-caixa">${icone('duvida')}</span><span class="t"><strong>Dúvidas sobre este capítulo</strong><small>${plural(n, 'pergunta frequente', 'perguntas frequentes')}, com a Bíblia e o Catecismo</small></span>${icone('dir')}</a>`;
+  el.hidden = false;
 }
 
 let capituloAtual = null;
@@ -159,6 +264,7 @@ function telaLeitor(d, n) {
     main.innerHTML = htmlCapitulo(d, cap, { comIA: temIA() });
     capituloAtual = cap;
     observarLeitura(d);
+    preencherFaqCapitulo(cap);
   }
   const alvo = document.getElementById(`p${n}`);
   document.querySelectorAll('.par.alvo').forEach((el) => el.classList.remove('alvo'));
@@ -248,8 +354,10 @@ function telaSobre(d) {
       <p>O leitor funciona sem internet depois da primeira visita.</p>
       <h2>Sobre o chat</h2>
       <p>Sem código de convite, o chat responde com o <strong>Compêndio do Catecismo da Igreja Católica</strong>
-        (Santa Sé, 2005): a pergunta oficial mais parecida com a sua, com os parágrafos do Catecismo indicados.
-        Funciona sem internet e não usa inteligência artificial.</p>
+        (Santa Sé, 2005) ou com as <strong>perguntas frequentes</strong> deste site: a pergunta mais parecida com a sua,
+        com os parágrafos do Catecismo indicados. Funciona sem internet e não usa inteligência artificial.</p>
+      <p>Com o catequista com IA, uma pergunta que já existe quase igual no Compêndio ou nas perguntas frequentes
+        é respondida na hora, sem gastar a cota; se quiser, toque em "Pedir explicação ao catequista".</p>
       <p>Com código de convite, as respostas do catequista com IA são geradas por inteligência artificial (Google Gemini; Groq como reserva),
         usando apenas os parágrafos do Catecismo enviados junto com a pergunta. A IA pode errar:
         confira sempre os parágrafos citados (§), que são a fonte de verdade.</p>
@@ -269,7 +377,7 @@ async function rotear() {
   const h = decodeURIComponent(location.hash.replace(/^#\/?/, ''));
   const [rota, ...resto] = h.split('/');
   const arg = resto.join('/');
-  const atual = rota === 'p' || rota === 'busca' ? 'sumario' : rota === 'entrar' ? 'sobre' : (rota || 'inicio');
+  const atual = rota === 'p' || rota === 'busca' || rota === 'duvidas' ? 'sumario' : rota === 'entrar' ? 'sobre' : (rota || 'inicio');
   document.querySelectorAll('.nav a, .abas a').forEach((a) => {
     const ativo = a.dataset.rota === atual;
     a.classList.toggle('ativo', ativo);
@@ -281,12 +389,13 @@ async function rotear() {
   if (rota === 'entrar') return telaEntrar(main, { carregar, obterIndice });
   let d;
   try {
-    if (!main.querySelector('.texto, .inicio, .sumario, .resultados')) telaCarregando();
+    if (!main.querySelector('.texto, .inicio, .sumario, .resultados, .faq')) telaCarregando();
     d = await carregar();
   } catch (e) { return telaErro(e); }
   if (rota === 'p') return telaLeitor(d, Number(arg));
   if (rota === 'sumario') return telaSumario(d, arg === '' ? null : Number(arg));
   if (rota === 'busca' && arg) return telaBusca(d, arg);
+  if (rota === 'duvidas') return telaFaq(d, arg);
   if (rota === 'sobre') return telaSobre(d);
   return telaInicio(d);
 }

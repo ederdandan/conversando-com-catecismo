@@ -2,6 +2,8 @@
 // oficiais), mostrando os parágrafos do Catecismo indicados pelo próprio Compêndio.
 import { buscar, criarIndice, expandirPergunta, normalizar, numerosCitados, radical, termos } from './busca.js';
 import { esc } from './html.js';
+import { htmlCicFaq, htmlItemFaq } from './faq.js';
+import { criarComparador } from './semelhanca.js';
 
 const RELATIVO_MINIMO = 0.75; // 2ª sugestão só se estiver perto da 1ª
 const SCORE_MINIMO = 3; // abaixo disso a semelhança é casual ("capital da França")
@@ -27,6 +29,7 @@ export function criarIndiceCompendio(dados) {
   });
   const indice = criarIndice(docs);
   indice.itens = itens;
+  indice.comparador = criarComparador(itens.map((x) => x.pergunta));
   indice.perguntasNorm = itens.map((x) => normalizar(x.pergunta).replace(/[^a-z0-9 ]+/g, ' ').replace(/\s+/g, ' ').trim());
   return indice;
 }
@@ -94,6 +97,37 @@ export function responderPeloCompendio(indice, pergunta, { limite = 2 } = {}) {
   return [...new Set(ns)].slice(0, limite).map((n) => indice.itens[n - 1]);
 }
 
+// ---------- resposta sem IA: Compêndio + perguntas frequentes ----------
+// Semelhança (0–1, ver semelhanca.js) a partir da qual a pergunta é "a mesma" já respondida:
+// com o catequista (IA), só nesse caso a resposta sai daqui, sem gastar a cota.
+export const MESMA_PERGUNTA = 0.85;
+const FAQ_PRINCIPAL = 0.45; // pergunta frequente parecida o bastante para aparecer junto do Compêndio
+const FAQ_SOZINHA = 0.35; // ... ou sozinha, quando o Compêndio não tem nada
+
+// faq: dados de faq.js com comparador (criarIndiceFaq), ou null se não carregou.
+// estrita: só responde se a pergunta já existir (quase igual); senão retorna null.
+// Retorno: { principal: 'compendio' | 'faq', itens: [itens do Compêndio], faq: [perguntas frequentes] }.
+export function responderLocal(indice, faq, pergunta, { estrita = false } = {}) {
+  const mf = faq?.comparador.melhores(pergunta, 1)[0];
+  const qFaq = mf && faq.perguntas[mf.i];
+  const simFaq = mf?.sim || 0;
+  if (estrita) {
+    const mc = indice.comparador.melhores(pergunta, 1)[0];
+    const simComp = mc?.sim || 0;
+    if (Math.max(simComp, simFaq) < MESMA_PERGUNTA) return null;
+    if (simFaq > simComp) return { principal: 'faq', itens: [], faq: [qFaq] };
+    return { principal: 'compendio', itens: [indice.itens[mc.i]], faq: simFaq >= FAQ_PRINCIPAL ? [qFaq] : [] };
+  }
+  const itens = responderPeloCompendio(indice, pergunta);
+  const simComp = itens[0] ? indice.comparador.sim(pergunta, itens[0].n - 1) : 0;
+  const faqOk = simFaq >= (itens.length ? FAQ_PRINCIPAL : FAQ_SOZINHA);
+  return {
+    principal: faqOk && simFaq > simComp ? 'faq' : 'compendio',
+    itens,
+    faq: faqOk ? [qFaq] : [],
+  };
+}
+
 // [1030, 1031, 1054] → [[1030, 1031], [1054, 1054]]
 export function agruparRefs(refs) {
   const grupos = [];
@@ -113,21 +147,27 @@ export function htmlItemCompendio(x) {
     ${x.resposta.split('\n').map((t) => `<p>${esc(t)}</p>`).join('')}`;
 }
 
-// Mensagem do chat no modo sem IA.
+// Mensagem do chat respondida sem IA (Compêndio e/ou perguntas frequentes).
+// m: { motivo, pergunta, itens, faq, principal, podeIA }
 export function htmlRespostaCompendio(m) {
-  const [primeiro, ...outros] = m.itens || [];
-  // Sem motivo = modo Compêndio normal (sem código); com motivo = a IA falhou e o Compêndio a substitui.
+  const comp = (m.itens || []).map((x) => ({ titulo: x.pergunta, html: htmlItemCompendio(x), fontes: htmlRefs(x.refs) }));
+  const faq = (m.faq || []).map((q) => ({ titulo: q.p, html: htmlItemFaq(q), fontes: htmlCicFaq(q.cic) }));
+  const [primeiro, ...outros] = m.principal === 'faq' ? [...faq, ...comp] : [...comp, ...faq];
+  // Sem motivo = resposta local normal; com motivo = a IA falhou e a resposta local a substitui.
   const aviso = m.motivo
-    ? `<p class="nota-sistema comp-aviso">${esc(m.motivo)} Enquanto isso, veja a resposta oficial do <strong>Compêndio do Catecismo</strong>:</p>`
+    ? `<p class="nota-sistema comp-aviso">${esc(m.motivo)} Enquanto isso, veja a resposta já pronta:</p>`
     : '';
   if (!primeiro) {
     const busca = m.pergunta ? ` ou <a href="#/busca/${encodeURIComponent(m.pergunta.slice(0, 120))}">pesquise no Catecismo</a>` : ' ou pesquise no Catecismo';
     return `<div class="balao">${m.motivo ? `<p class="nota-sistema">${esc(m.motivo)}</p>` : ''}
-      <p>Não encontrei no Compêndio do Catecismo uma pergunta parecida com a sua. Tente com outras palavras${busca}.</p></div>`;
+      <p>Não encontrei no Compêndio do Catecismo nem nas perguntas frequentes uma pergunta parecida com a sua. Tente com outras palavras${busca}.</p></div>`;
   }
-  const extras = outros.map((x) => `<details class="comp-outro"><summary>Veja também: ${esc(x.pergunta)}</summary>
-      ${htmlItemCompendio(x)}<div class="fontes-lista">${htmlRefs(x.refs)}</div></details>`).join('');
-  return `<div class="balao">${aviso}${htmlItemCompendio(primeiro)}${extras}</div>
+  const extras = outros.map((x) => `<details class="comp-outro"><summary>Veja também: ${esc(x.titulo)}</summary>
+      ${x.html}<div class="fontes-lista">${x.fontes}</div></details>`).join('');
+  const ia = m.podeIA && m.pergunta
+    ? `<button type="button" class="bt-sec pedir-ia" data-pergunta="${esc(m.pergunta)}">Pedir explicação ao catequista (IA)</button>`
+    : '';
+  return `<div class="balao">${aviso}${primeiro.html}${extras}</div>
     <div class="fontes"><span class="rotulo">No Catecismo · toque para ler</span>
-      <div class="fontes-lista">${htmlRefs(primeiro.refs)}</div></div>`;
+      <div class="fontes-lista">${primeiro.fontes}</div></div>${ia}`;
 }

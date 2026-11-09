@@ -3,7 +3,8 @@ import { API_URL } from './config.js';
 import { selecionarParagrafos } from './busca.js';
 import { avaliarResposta, htmlResposta, MENSAGEM_RECUSA } from './citacoes.js';
 import { esc } from './html.js';
-import { carregarCompendio, criarIndiceCompendio, htmlRespostaCompendio, responderPeloCompendio } from './compendio.js';
+import { carregarCompendio, criarIndiceCompendio, htmlRespostaCompendio, responderLocal } from './compendio.js';
+import { carregarFaq, criarIndiceFaq } from './faq.js';
 import { salvarLista } from './historico.js';
 
 const SUGESTOES = [
@@ -39,13 +40,19 @@ let indiceCompendio = null;
 // com código (aba Mais → Entrar), usa o catequista com IA e cai no Compêndio se a IA falhar.
 export const temIA = () => Boolean(API_URL && armazenamento.ler('codigo'));
 
-// Sem IA (cota esgotada, IA fora do ar, sem internet): a pergunta oficial mais parecida do Compêndio.
-async function respostaCompendio(pergunta, motivo) {
+// Resposta já pronta: a pergunta mais parecida do Compêndio (oficial) ou das perguntas frequentes.
+// Sem IA (modo Compêndio, cota esgotada, IA fora do ar, sem internet): sempre responde daqui.
+// Com IA (estrita): só se a pergunta já existir quase igual; senão retorna null e a IA responde.
+async function respostaLocal(pergunta, motivo, { estrita = false } = {}) {
   try {
     indiceCompendio ??= criarIndiceCompendio(await carregarCompendio());
-    return { papel: 'assistente', estado: 'compendio', motivo, pergunta, itens: responderPeloCompendio(indiceCompendio, pergunta) };
+    // As perguntas frequentes são um extra: se não carregarem, segue só com o Compêndio.
+    const faq = await carregarFaq().then(criarIndiceFaq).catch(() => null);
+    const r = responderLocal(indiceCompendio, faq, pergunta, { estrita });
+    if (!r) return null;
+    return { papel: 'assistente', estado: 'compendio', motivo, pergunta, ...r, podeIA: estrita };
   } catch {
-    return { papel: 'assistente', texto: motivo, estado: 'erro' };
+    return estrita ? null : { papel: 'assistente', texto: motivo, estado: 'erro' };
   }
 }
 
@@ -101,8 +108,9 @@ async function lerEventos(resposta, onEvento) {
 function htmlMensagem(m, i) {
   if (m.papel === 'usuario') return `<div class="msg usuario"><div class="balao">${esc(m.texto)}</div></div>`;
   if (m.estado === 'compendio') {
+    const faq = m.principal === 'faq' && m.faq?.length;
     return `<article class="msg assistente compendio" data-i="${i}">
-      <div class="autor"><span class="selo">${icone('livro')}</span>Compêndio do Catecismo</div>
+      <div class="autor"><span class="selo">${icone(faq ? 'duvida' : 'livro')}</span>${faq ? 'Perguntas frequentes' : 'Compêndio do Catecismo'}</div>
       ${htmlRespostaCompendio(m)}</article>`;
   }
   const aval = m.estado === 'pronto' ? avaliarResposta(m.texto, m.paragrafos || []) : null;
@@ -152,8 +160,8 @@ function htmlChat() {
           <span class="selo grande">${icone(ia ? 'chat' : 'livro')}</span>
           <h2>Qual é a sua dúvida sobre a fé?</h2>
           <p>${ia
-    ? 'Um catequista responde usando apenas o Catecismo e mostra de qual parágrafo veio cada resposta.'
-    : 'A resposta vem do <strong>Compêndio do Catecismo</strong> — as perguntas e respostas oficiais da Igreja — com os parágrafos do Catecismo para aprofundar.'}</p>
+    ? 'Um catequista responde usando apenas o Catecismo e mostra de qual parágrafo veio cada resposta. Perguntas que já têm resposta pronta (Compêndio ou perguntas frequentes) são respondidas na hora.'
+    : 'A resposta vem do <strong>Compêndio do Catecismo</strong> — as perguntas e respostas oficiais da Igreja — ou das <strong>perguntas frequentes</strong>, com os parágrafos do Catecismo para aprofundar.'}</p>
         </div>${convite}
         <span class="rotulo">Experimente perguntar</span>
         <div class="sugestoes">${(ia ? SUGESTOES : SUGESTOES_COMPENDIO).map((s) => `<button type="button" class="sugestao"><span>${esc(s)}</span>${icone('enviar')}</button>`).join('')}</div>
@@ -171,7 +179,7 @@ function htmlChat() {
         <textarea name="pergunta" rows="1" maxlength="500" placeholder="Escreva sua pergunta…" aria-label="Sua pergunta" enterkeyhint="send"></textarea>
         <button type="submit" class="bt-enviar" aria-label="Enviar">${icone('enviar')}</button>
       </form>
-      <p class="aviso-ia">${ia ? 'Resposta gerada por IA. Confira os parágrafos citados.' : 'Respostas oficiais do Compêndio do Catecismo (2005).'}</p>
+      <p class="aviso-ia">${ia ? 'Resposta gerada por IA. Confira os parágrafos citados.' : 'Respostas do Compêndio do Catecismo (2005) e das perguntas frequentes.'}</p>
     </div>
   </section>`;
 }
@@ -214,7 +222,8 @@ function avisoDesfazer(texto, desfazer, ms = 6000) {
 }
 
 // ---------- fluxo de pergunta ----------
-async function perguntar(main, texto, ctx) {
+// forcarIA: "Pedir explicação ao catequista" numa resposta já pronta — vai direto à IA.
+async function perguntar(main, texto, ctx, { forcarIA = false } = {}) {
   const pergunta = texto.trim().slice(0, 500);
   if (!pergunta || emAndamento) return;
   main.querySelector('.chat-vazio')?.remove();
@@ -223,15 +232,18 @@ async function perguntar(main, texto, ctx) {
   conversa.push({ papel: 'usuario', texto: pergunta });
   atualizarMensagem(main, conversa.length - 1);
 
-  if (!temIA()) {
+  // Sem IA, sempre a resposta pronta; com IA, só se a pergunta já existir (não gasta a cota).
+  if (!temIA() || !forcarIA) {
     const daqui = conversa;
-    const resposta = await respostaCompendio(pergunta, '');
+    const resposta = await respostaLocal(pergunta, '', { estrita: temIA() });
     if (conversa !== daqui) return; // "Nova conversa" no meio do caminho
-    const i = conversa.push(resposta) - 1;
-    atualizarMensagem(main, i);
-    rolarParaFim(main);
-    salvarConversa();
-    return;
+    if (resposta) {
+      const i = conversa.push(resposta) - 1;
+      atualizarMensagem(main, i);
+      rolarParaFim(main);
+      salvarConversa();
+      return;
+    }
   }
 
   const d = await ctx.carregar();
@@ -284,11 +296,11 @@ async function perguntar(main, texto, ctx) {
       if (!lista[i].texto) lista[i].texto = 'Resposta interrompida.';
     } else {
       lista[i] = e.semIA
-        ? await respostaCompendio(pergunta, e.message)
+        ? await respostaLocal(pergunta, e.message)
         : { papel: 'assistente', texto: e.message, estado: 'erro' };
       if (e.status === 401) {
         armazenamento.gravar('codigo', null);
-        lista[i] = await respostaCompendio(pergunta, 'Seu código de convite não vale mais; para voltar a usar a IA, entre de novo pela aba Mais.');
+        lista[i] = await respostaLocal(pergunta, 'Seu código de convite não vale mais; para voltar a usar a IA, entre de novo pela aba Mais.');
         main.querySelector('.cab-chat .cota')?.replaceWith(Object.assign(document.createElement('span'), { className: 'cota modo', textContent: 'Compêndio' }));
       }
     }
@@ -372,6 +384,15 @@ function telaChat(main, ctx) {
       salvarConversa();
       if (document.body.contains(main) && main.querySelector('#form-pergunta')) telaChat(main, ctx);
     });
+  });
+  // Resposta já pronta → a pessoa pode pedir a explicação da IA mesmo assim.
+  main.querySelector('#mensagens').addEventListener('click', (ev) => {
+    const b = ev.target.closest('.pedir-ia');
+    if (!b || emAndamento) return;
+    const art = b.closest('.msg');
+    const m = conversa[Number(art?.dataset.i)];
+    if (m) { m.podeIA = false; atualizarMensagem(main, Number(art.dataset.i)); }
+    perguntar(main, b.dataset.pergunta, ctx, { forcarIA: true });
   });
   main.querySelector('.sugestoes')?.addEventListener('click', (ev) => {
     const b = ev.target.closest('.sugestao');

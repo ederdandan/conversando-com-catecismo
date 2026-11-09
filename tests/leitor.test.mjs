@@ -32,7 +32,7 @@ test('todos os capítulos renderizam com todos os §', () => {
 });
 
 test('sumário lista os 26 capítulos', () => {
-  assert.equal([...htmlSumario(d).matchAll(/<li>/g)].length, 26);
+  assert.equal([...htmlSumario(d).matchAll(/<li[ >]/g)].length, 26);
 });
 
 test('texto é escapado', () => {

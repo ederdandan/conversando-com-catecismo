@@ -66,7 +66,7 @@ export function htmlSumario(d, { aberta = null, ultimo = 0 } = {}) {
       <ol>${pt.caps.map((c) => {
         const aqui = ultimo >= c.ini && ultimo <= c.fim;
         return `
-        <li><a href="#/p/${aqui ? ultimo : c.ini}"${aqui ? ' class="atual"' : ''}><span>${esc(c.titulo || pt.titulo)}${aqui ? `<small class="parou">Você parou aqui · § ${ultimo}</small>` : ''}</span><small>§ ${c.ini}</small></a></li>`;
+        <li data-fim="${c.fim}"><a href="#/p/${aqui ? ultimo : c.ini}"${aqui ? ' class="atual"' : ''}><span>${esc(c.titulo || pt.titulo)}${aqui ? `<small class="parou">Você parou aqui · § ${ultimo}</small>` : ''}</span><small>§ ${c.ini}</small></a></li>`;
       }).join('')}
       </ol>
     </details>`;
@@ -96,7 +96,7 @@ export function htmlCapitulo(d, cap, { comIA = false } = {}) {
       <button type="button" class="bt-icone bt-aa" aria-label="Ajustes de leitura">Aa</button>
       <div class="progresso" aria-hidden="true"><span style="width:${pct}%"></span></div>
     </header>
-    <div class="texto">${ps.join('')}</div>${nav}
+    <div class="texto">${ps.join('')}</div><div class="faq-cap" hidden></div>${nav}
     <div class="barra-leitura">
       ${seta(ant, 'esq', 'Capítulo anterior')}
       ${comIA
