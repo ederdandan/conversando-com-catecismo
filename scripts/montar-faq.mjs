@@ -74,9 +74,73 @@ const SECOES = {
       8: { titulo: 'Capítulo 4: Os sacramentais e as exéquias cristãs', faixa: '§ 1667–1690' },
     },
   },
-};const chave = process.argv[2];
+  s5: {
+    prefixoId: 'P3-S1',
+    saida: 'faq-parte3-secao1.json',
+    parte: 3,
+    faixa: [1691, 2051],
+    secao: 'Seção 1: A vocação do homem: a vida no Espírito',
+    titulo: 'Perguntas Frequentes – Parte III, Seção 1: A vocação do homem: a vida no Espírito',
+    descricao: 'Dúvidas de católicos sobre a Primeira Seção da Terceira Parte do Catecismo da Igreja Católica (§ 1691–2051): a dignidade da pessoa, a liberdade, a consciência, as virtudes, o pecado, a comunidade humana, a lei moral e a graça. Cada resposta cita os parágrafos do Catecismo e passagens bíblicas, com uma analogia para facilitar a compreensão.',
+    categorias: {
+      1: { titulo: 'Capítulo 1, Artigos 1–3: Imagem de Deus, bem-aventurança e liberdade', faixa: '§ 1691–1748' },
+      2: { titulo: 'Capítulo 1, Artigos 4–6: Moralidade dos atos, paixões e consciência', faixa: '§ 1749–1802' },
+      3: { titulo: 'Capítulo 1, Artigos 7–8: As virtudes e o pecado', faixa: '§ 1803–1876' },
+      4: { titulo: 'Capítulo 2: A comunidade humana', faixa: '§ 1877–1948' },
+      5: { titulo: 'Capítulo 3: A salvação de Deus: a lei e a graça', faixa: '§ 1949–2051' },
+    },
+  },
+  s6: {
+    prefixoId: 'P3-S2',
+    saida: 'faq-parte3-secao2.json',
+    parte: 3,
+    faixa: [2052, 2557],
+    secao: 'Seção 2: Os dez mandamentos',
+    titulo: 'Perguntas Frequentes – Parte III, Seção 2: Os dez mandamentos',
+    descricao: 'Dúvidas de católicos sobre a Segunda Seção da Terceira Parte do Catecismo da Igreja Católica (§ 2052–2557): os dez mandamentos, do amor a Deus ao amor ao próximo. Cada resposta cita os parágrafos do Catecismo e passagens bíblicas, com uma analogia para facilitar a compreensão.',
+    categorias: {
+      1: { titulo: 'Introdução e 1º mandamento', faixa: '§ 2052–2141' },
+      2: { titulo: '2º e 3º mandamentos', faixa: '§ 2142–2195' },
+      3: { titulo: '4º mandamento', faixa: '§ 2196–2257' },
+      4: { titulo: '5º mandamento', faixa: '§ 2258–2330' },
+      5: { titulo: '6º mandamento', faixa: '§ 2331–2400' },
+      6: { titulo: '7º mandamento', faixa: '§ 2401–2463' },
+      7: { titulo: '8º mandamento', faixa: '§ 2464–2513' },
+      8: { titulo: '9º e 10º mandamentos', faixa: '§ 2514–2557' },
+    },
+  },
+  s7: {
+    prefixoId: 'P4-S1',
+    saida: 'faq-parte4-secao1.json',
+    parte: 4,
+    faixa: [2558, 2758],
+    secao: 'Seção 1: A oração na vida cristã',
+    titulo: 'Perguntas Frequentes – Parte IV, Seção 1: A oração na vida cristã',
+    descricao: 'Dúvidas de católicos sobre a Primeira Seção da Quarta Parte do Catecismo da Igreja Católica (§ 2558–2758): o que é a oração, como ela foi revelada, a tradição da oração e a vida de oração. Cada resposta cita os parágrafos do Catecismo e passagens bíblicas, com uma analogia para facilitar a compreensão.',
+    categorias: {
+      1: { titulo: 'Capítulo 1: A revelação da oração', faixa: '§ 2558–2649' },
+      2: { titulo: 'Capítulo 2: A tradição da oração', faixa: '§ 2650–2696' },
+      3: { titulo: 'Capítulo 3: A vida de oração', faixa: '§ 2697–2758' },
+    },
+  },
+  s8: {
+    prefixoId: 'P4-S2',
+    saida: 'faq-parte4-secao2.json',
+    parte: 4,
+    faixa: [2759, 2865],
+    secao: 'Seção 2: A oração do Senhor: o Pai-Nosso',
+    titulo: 'Perguntas Frequentes – Parte IV, Seção 2: A oração do Senhor: o Pai-Nosso',
+    descricao: 'Dúvidas de católicos sobre a Segunda Seção da Quarta Parte do Catecismo da Igreja Católica (§ 2759–2865): o Pai-Nosso, o resumo de todo o Evangelho, e os seus sete pedidos. Cada resposta cita os parágrafos do Catecismo e passagens bíblicas, com uma analogia para facilitar a compreensão.',
+    categorias: {
+      1: { titulo: '"Pai nosso que estais nos céus"', faixa: '§ 2759–2802' },
+      2: { titulo: 'Os sete pedidos e a doxologia final', faixa: '§ 2803–2865' },
+    },
+  },
+};
+const NOME_PARTE = { 1: 'Parte I: A Profissão da Fé', 2: 'Parte II: A Celebração do Mistério Cristão', 3: 'Parte III: A Vida em Cristo', 4: 'Parte IV: A Oração Cristã' };
+const chave = process.argv[2];
 const cfg = SECOES[chave];
-if (!cfg) { console.log('Uso: node scripts/montar-faq.mjs s1|s2|s3|s4'); process.exit(1); }
+if (!cfg) { console.log('Uso: node scripts/montar-faq.mjs s1…s8'); process.exit(1); }
 
 const raiz = join(dirname(fileURLToPath(import.meta.url)), '..');
 const pastaLotes = join(raiz, 'data', `fonte-${chave}`);
@@ -168,7 +232,7 @@ const doc = {
   fonte: 'Catecismo da Igreja Católica (texto integral em vatican.va)',
   total_perguntas: perguntas.length,
   categorias: Object.entries(cfg.categorias).map(([k, v]) => ({ categoria: `${cfg.secao} (${v.titulo})`, paragrafos: v.faixa, quantidade: contagem[k] || 0 })),
-  partes: [{ parte: (cfg.parte || 1) === 2 ? 'Parte II: A Celebração do Mistério Cristão' : 'Parte I: A Profissão da Fé', secao: cfg.secao, quantidade: perguntas.length, perguntas }],
+  partes: [{ parte: NOME_PARTE[cfg.parte || 1], secao: cfg.secao, quantidade: perguntas.length, perguntas }],
 };
 
 console.log(`Itens: ${itens.length} | por categoria:`, contagem);

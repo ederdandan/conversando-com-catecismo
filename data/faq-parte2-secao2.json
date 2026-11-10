@@ -2,7 +2,7 @@
   "titulo": "Perguntas Frequentes – Parte II, Seção 2: Os sete sacramentos da Igreja",
   "descricao": "Dúvidas de católicos sobre a Segunda Seção da Segunda Parte do Catecismo da Igreja Católica (§ 1210–1690): Batismo, Confirmação, Eucaristia, Penitência, Unção dos Enfermos, Ordem, Matrimônio, os sacramentais e as exéquias. Cada resposta cita os parágrafos do Catecismo e passagens bíblicas, com uma analogia para facilitar a compreensão.",
   "fonte": "Catecismo da Igreja Católica (texto integral em vatican.va)",
-  "total_perguntas": 384,
+  "total_perguntas": 522,
   "categorias": [
     {
       "categoria": "Seção 2: Os sete sacramentos da Igreja (Capítulo 1, Artigo 1: O sacramento do Batismo)",
@@ -32,24 +32,24 @@
     {
       "categoria": "Seção 2: Os sete sacramentos da Igreja (Capítulo 3, Artigo 6: O sacramento da Ordem)",
       "paragrafos": "§ 1533–1600",
-      "quantidade": 0
+      "quantidade": 49
     },
     {
       "categoria": "Seção 2: Os sete sacramentos da Igreja (Capítulo 3, Artigo 7: O sacramento do Matrimônio)",
       "paragrafos": "§ 1601–1666",
-      "quantidade": 0
+      "quantidade": 58
     },
     {
       "categoria": "Seção 2: Os sete sacramentos da Igreja (Capítulo 4: Os sacramentais e as exéquias cristãs)",
       "paragrafos": "§ 1667–1690",
-      "quantidade": 0
+      "quantidade": 31
     }
   ],
   "partes": [
     {
       "parte": "Parte II: A Celebração do Mistério Cristão",
       "secao": "Seção 2: Os sete sacramentos da Igreja",
-      "quantidade": 384,
+      "quantidade": 522,
       "perguntas": [
         {
           "id": "P2-S2-Q001",
@@ -7010,6 +7010,2537 @@
           },
           "analogias": [
             "Como o abraço protetor da mãe que envolve o filho acamado na colcha quente para mantê-lo protegido da tempestade."
+          ]
+        },
+        {
+          "id": "P2-S2-Q385",
+          "categoria": "Seção 2: Os sete sacramentos da Igreja (Capítulo 3, Artigo 6: O sacramento da Ordem)",
+          "pergunta": "O que distingue os sacramentos da Ordem e do Matrimônio em relação aos sacramentos da iniciação cristã?",
+          "resposta_texto": "Os sacramentos da Ordem e do Matrimônio são ordenados à salvação dos outros e ao serviço da comunhão na Igreja. Enquanto os sacramentos da iniciação fundamentam a vida cristã pessoal, a Ordem e o Matrimônio conferem uma missão particular para a edificação do Povo de Deus. Eles servem para construir a comunidade eclesial e salvar o próximo.",
+          "referencias": {
+            "biblia": [
+              "1Pd 4,10",
+              "1Cor 12,7"
+            ],
+            "cic": [
+              "CIC 1533",
+              "CIC 1534",
+              "CIC 1535"
+            ]
+          },
+          "analogias": [
+            "Como a diferença entre obter a própria carteira de motorista e assumir a condução do ônibus escolar para transportar todos os alunos em segurança."
+          ]
+        },
+        {
+          "id": "P2-S2-Q386",
+          "categoria": "Seção 2: Os sete sacramentos da Igreja (Capítulo 3, Artigo 6: O sacramento da Ordem)",
+          "pergunta": "Por que o sacramento dos ministros ordenados é chamado de 'Ordem'?",
+          "resposta_texto": "O sacramento é chamado de Ordem porque integra o fiel num 'corpo' ou estamento constituído na Igreja por uma consagração sagrada. Na tradição eclesial, a palavra designa um grupo estruturado cujos membros são investidos por um ato litúrgico chamado ordenação. Esse ato confere um poder sagrado do Espírito Santo para o serviço de todos.",
+          "referencias": {
+            "biblia": [
+              "1Tm 4,14",
+              "2Tm 1,6"
+            ],
+            "cic": [
+              "CIC 1536",
+              "CIC 1537",
+              "CIC 1538"
+            ]
+          },
+          "analogias": [
+            "Como ingressar formalmente em um corpo de magistrados aprovados através de um ato público de posse solene."
+          ]
+        },
+        {
+          "id": "P2-S2-Q387",
+          "categoria": "Seção 2: Os sete sacramentos da Igreja (Capítulo 3, Artigo 6: O sacramento da Ordem)",
+          "pergunta": "Qual era o significado da palavra 'Ordo' na antiguidade romana e como a Igreja a assumiu?",
+          "resposta_texto": "Na antiguidade romana, a palavra 'ordo' designava corpos constituídos em sentido civil, especialmente os governantes e autoridades organizadas. A Igreja assumiu esse termo para indicar os corpos integrados pela liturgia, como a ordem dos bispos, dos presbíteros e dos diáconos. A entrada em uma 'ordo' eclesial faz-se através de um ato litúrgico de consagração.",
+          "referencias": {
+            "biblia": [
+              "1Cor 14,40",
+              "Tt 1,5"
+            ],
+            "cic": [
+              "CIC 1537"
+            ]
+          },
+          "analogias": [
+            "Como a nomenclatura republicana de 'corpo diplomático' adaptada para nomear os representantes oficiais de uma missão de paz."
+          ]
+        },
+        {
+          "id": "P2-S2-Q388",
+          "categoria": "Seção 2: Os sete sacramentos da Igreja (Capítulo 3, Artigo 6: O sacramento da Ordem)",
+          "pergunta": "O que significa o ato de 'ordinatio' ou ordenação na Igreja Católica?",
+          "resposta_texto": "A ordenação é a integração sacramental de um fiel na ordem dos bispos, dos presbíteros ou dos diáconos. Trata-se de um ato litúrgico que ultrapassa uma simples eleição, designação ou nomeação humana pela comunidade. A ordenação confere um dom do Espírito Santo que permite exercer um poder sagrado em nome de Cristo.",
+          "referencias": {
+            "biblia": [
+              "At 6,6",
+              "1Tm 5,22"
+            ],
+            "cic": [
+              "CIC 1538"
+            ]
+          },
+          "analogias": [
+            "Como a investidura de um oficial militar feita pelo comando supremo, que lhe outorga autoridade real e farda oficial."
+          ]
+        },
+        {
+          "id": "P2-S2-Q389",
+          "categoria": "Seção 2: Os sete sacramentos da Igreja (Capítulo 3, Artigo 6: O sacramento da Ordem)",
+          "pergunta": "Como o sacerdócio da Antiga Aliança prefigurava o ministério ordenado da Nova Aliança?",
+          "resposta_texto": "O sacerdócio do Antigo Testamento prefigurava a Ordem através da escolha da tribo de Levi, da consagração de Aarão e do serviço do Tabernáculo. Os sacerdotes antigos eram constituídos para oferecer dons e sacrifícios pelas faltas do povo. Contudo, suas ofertas eram incapazes de realizar a salvação definitiva, a qual só viria com o sacrifício de Cristo.",
+          "referencias": {
+            "biblia": [
+              "Ex 29,1-9",
+              "Hb 5,1-4"
+            ],
+            "cic": [
+              "CIC 1539",
+              "CIC 1540"
+            ]
+          },
+          "analogias": [
+            "Como o projeto impresso em papel pelo arquiteto que antecipa com precisão a estrutura física do edifício que será erguido."
+          ]
+        },
+        {
+          "id": "P2-S2-Q390",
+          "categoria": "Seção 2: Os sete sacramentos da Igreja (Capítulo 3, Artigo 6: O sacramento da Ordem)",
+          "pergunta": "Qual era o papel da tribo de Levi e da descendência de Aarão no Antigo Testamento?",
+          "resposta_texto": "A tribo de Levi foi separada por Deus entre as doze tribos de Israel para o serviço do santuário e do culto da Aliança. Dentro dessa tribo, a família de Aarão recebeu a consagração sacerdotal específica para oferecer os sacrifícios no altar. O Senhor era a herança própria dos levitas, que não receberam partilha de terras em Canaã.",
+          "referencias": {
+            "biblia": [
+              "Nm 1,48-53",
+              "Dt 10,8-9"
+            ],
+            "cic": [
+              "CIC 1539"
+            ]
+          },
+          "analogias": [
+            "Como uma equipe médica especializada dedicada exclusivamente à gestão da UTI, sem acumular outras funções no hospital."
+          ]
+        },
+        {
+          "id": "P2-S2-Q391",
+          "categoria": "Seção 2: Os sete sacramentos da Igreja (Capítulo 3, Artigo 6: O sacramento da Ordem)",
+          "pergunta": "Por que o sacerdócio do Antigo Testamento não conseguia operar a salvação definitiva?",
+          "resposta_texto": "O sacerdócio antigo não alcançava a salvação definitiva porque seus sacrifícios repetidos de animais não podiam purificar a consciência humana do pecado. Os sacerdotes eram homens pecadores que precisavam oferecer vítimas primeiro por seus próprios erros. Tratava-se de uma preparação pedagógica para o único sacrifício perfeito de Cristo.",
+          "referencias": {
+            "biblia": [
+              "Hb 7,27",
+              "Hb 10,1-4"
+            ],
+            "cic": [
+              "CIC 1540"
+            ]
+          },
+          "analogias": [
+            "Como um tratamento sintomático paliativo que alivia temporariamente o incômodo sem eliminar a causa da doença."
+          ]
+        },
+        {
+          "id": "P2-S2-Q392",
+          "categoria": "Seção 2: Os sete sacramentos da Igreja (Capítulo 3, Artigo 6: O sacramento da Ordem)",
+          "pergunta": "De que maneira a liturgia da Igreja enxerga nas bênçãos aaroníticas prefigurações dos ministérios do Novo Testamento?",
+          "resposta_texto": "A liturgia eclesial reconhece na escolha dos setenta anciãos por Moisés e na instituição dos levitas prefigurações dos presbíteros e diáconos. As orações consecratórias da Ordenação recordam que Deus espalhou os auxílios sagrados em cada etapa da história da salvação. Assim, o sacerdócio novo cumpre em plenitude os tipos e figuras do Antigo Testamento.",
+          "referencias": {
+            "biblia": [
+              "Nm 11,24-25",
+              "Ex 28,1"
+            ],
+            "cic": [
+              "CIC 1541",
+              "CIC 1542"
+            ]
+          },
+          "analogias": [
+            "Como os degraus de uma escadaria antiga que conduzem metodicamente a pessoa até o topo do mirante."
+          ]
+        },
+        {
+          "id": "P2-S2-Q393",
+          "categoria": "Seção 2: Os sete sacramentos da Igreja (Capítulo 3, Artigo 6: O sacramento da Ordem)",
+          "pergunta": "Por que Jesus Cristo é reconhecido como o único e perfeito Sumo Sacerdote segundo a ordem de Melquisedec?",
+          "resposta_texto": "Jesus é o único Sumo Sacerdote porque ofereceu a Si mesmo na Cruz como vítima imaculada e perfeita para reconciliar a humanidade com Deus. Ele não precisou de sucessores nem de repetição de sacrifícios, pois sua oblação tem valor eterno e universal. Sendo rei de justiça e paz, Ele realiza a figura do sacerdote Melquisedec.",
+          "referencias": {
+            "biblia": [
+              "Hb 7,15-17",
+              "Hb 9,11-12"
+            ],
+            "cic": [
+              "CIC 1544"
+            ]
+          },
+          "analogias": [
+            "Como o médico mestre que desenvolve a cura definitiva para uma epidemia, eliminando a necessidade de buscas por novos remédios."
+          ]
+        },
+        {
+          "id": "P2-S2-Q394",
+          "categoria": "Seção 2: Os sete sacramentos da Igreja (Capítulo 3, Artigo 6: O sacramento da Ordem)",
+          "pergunta": "De que maneira o sacrifício redentor de Cristo é único e perfeitamente suficiente para a salvação?",
+          "resposta_texto": "O sacrifício de Cristo é único porque foi oferecido uma vez por todas na Cruz e possui uma eficácia infinita perante o Pai. Todo o sacerdócio da Nova Aliança é uma participação nesse único sacerdócio de Jesus. Por essa razão, a Missa não repete nem multiplica o sacrifício do Calvário, mas torna-o sacramentalmente presente.",
+          "referencias": {
+            "biblia": [
+              "Hb 9,25-28",
+              "Hb 10,14"
+            ],
+            "cic": [
+              "CIC 1545"
+            ]
+          },
+          "analogias": [
+            "Como uma nascente de água puríssima e inesgotável que supre com facilidade o consumo de todas as cidades ao redor."
+          ]
+        },
+        {
+          "id": "P2-S2-Q395",
+          "categoria": "Seção 2: Os sete sacramentos da Igreja (Capítulo 3, Artigo 6: O sacramento da Ordem)",
+          "pergunta": "O que é o sacerdócio comum dos fiéis e como ele é recebido por todos os batizados?",
+          "resposta_texto": "O sacerdócio comum dos fiéis é a participação na missão sacerdotal de Cristo conferida a todos os batizados pelo sacramento do Batismo e da Crisma. Por essa unção, cada cristão torna-se templo do Espírito Santo e é capacitado a oferecer sacrifícios espirituais agradáveis a Deus. Esse sacerdócio é exercido na vida diária de fé e caridade.",
+          "referencias": {
+            "biblia": [
+              "1Pd 2,5.9",
+              "Ap 1,6"
+            ],
+            "cic": [
+              "CIC 1546"
+            ]
+          },
+          "analogias": [
+            "Como os membros de uma nação livre que possuem todos a cidadania plena e o direito de participar do destino do país."
+          ]
+        },
+        {
+          "id": "P2-S2-Q396",
+          "categoria": "Seção 2: Os sete sacramentos da Igreja (Capítulo 3, Artigo 6: O sacramento da Ordem)",
+          "pergunta": "Qual é a diferença essencial entre o sacerdócio comum dos fiéis e o sacerdócio ministerial dos ordenados?",
+          "resposta_texto": "A diferença é de essência e não apenas de grau: enquanto o sacerdócio comum realiza-se no desenvolvimento da graça batismal, o ministerial confere um poder sagrado para agir na pessoa de Cristo Cabeça. O sacerdócio ministerial está a serviço do sacerdócio comum para fazer crescer a graça dos batizados. Ambos derivam do único sacerdócio de Cristo.",
+          "referencias": {
+            "biblia": [
+              "1Cor 4,1",
+              "Hb 5,1"
+            ],
+            "cic": [
+              "CIC 1547"
+            ]
+          },
+          "analogias": [
+            "Como a diferença entre o conjunto dos passageiros de um navio e os oficiais qualificados para guiar a embarcação."
+          ]
+        },
+        {
+          "id": "P2-S2-Q397",
+          "categoria": "Seção 2: Os sete sacramentos da Igreja (Capítulo 3, Artigo 6: O sacramento da Ordem)",
+          "pergunta": "O que significa afirmar que o ministro ordenado age 'in persona Christi Capitis'?",
+          "resposta_texto": "Significa que no exercício dos seus ministérios sagrados, o bispo ou presbítero age em nome e com a autoridade de Cristo, Cabeça e Pastor da Igreja. Quando o sacerdote ensina, absolve os pecados ou celebra a Eucaristia, é o próprio Jesus Cristo quem atua através dele. O ministro é o instrumento visível do único Sacerdote invisível.",
+          "referencias": {
+            "biblia": [
+              "2Cor 2,10",
+              "2Cor 5,20"
+            ],
+            "cic": [
+              "CIC 1548"
+            ]
+          },
+          "analogias": [
+            "Como o porta-voz oficial que lê na tribuna a declaração formal escrita e assinada pelo próprio presidente da nação."
+          ]
+        },
+        {
+          "id": "P2-S2-Q398",
+          "categoria": "Seção 2: Os sete sacramentos da Igreja (Capítulo 3, Artigo 6: O sacramento da Ordem)",
+          "pergunta": "Como a presença sacramental de Cristo Cabeça se manifesta através do bispo e do padre?",
+          "resposta_texto": "Manifesta-se porque o bispo e o presbítero são configurados a Cristo de modo sacramental para servirem como pastores da comunidade de fé. Através da pregação da Palavra e da administração dos sacramentos, o Senhor exerce o seu poder de santificar e guiar o rebanho. A comunidade enxerga no ministro o sinal vivo do seu Pastor eterno.",
+          "referencias": {
+            "biblia": [
+              "1Pd 5,2-4",
+              "1Cor 11,1"
+            ],
+            "cic": [
+              "CIC 1549"
+            ]
+          },
+          "analogias": [
+            "Como os faróis do carro que projetam na pista escura a luz gerada pelo motor da viatura."
+          ]
+        },
+        {
+          "id": "P2-S2-Q399",
+          "categoria": "Seção 2: Os sete sacramentos da Igreja (Capítulo 3, Artigo 6: O sacramento da Ordem)",
+          "pergunta": "A indignidade moral do ministro ordenado impede que Cristo atue eficazmente no sacramento?",
+          "resposta_texto": "Não, a indignidade moral do ministro não impede a eficácia do sacramento, pois Cristo age através do ministro independentemente de sua santidade pessoal. O Espírito Santo garante a validade do ato sacramental para que os fiéis não sejam prejudicados pela fraqueza humana do padre. Contudo, a falta de santidade do ministro fere o testemunho da Igreja.",
+          "referencias": {
+            "biblia": [
+              "1Cor 3,7",
+              "Fl 1,15-18"
+            ],
+            "cic": [
+              "CIC 1550"
+            ]
+          },
+          "analogias": [
+            "Como a água potável e limpa que flui perfeitamente pela tubulação, mesmo que o cano externo precise de pintura nova."
+          ]
+        },
+        {
+          "id": "P2-S2-Q400",
+          "categoria": "Seção 2: Os sete sacramentos da Igreja (Capítulo 3, Artigo 6: O sacramento da Ordem)",
+          "pergunta": "O que significa dizer que o sacerdote age também 'em nome de toda a Igreja'?",
+          "resposta_texto": "Significa que o ministro ordenado apresenta a Deus a oração e o sacrifício de toda a comunidade católica riunida em torno do altar. Ele não age como um delegado eleito pela assembleia, mas como representante constituído por Cristo para interceder pela Igreja. Sua oração sacramental reúne e eleva os louvores do Corpo Místico ao Pai.",
+          "referencias": {
+            "biblia": [
+              "Hb 5,1",
+              "1Tm 2,1-2"
+            ],
+            "cic": [
+              "CIC 1552"
+            ]
+          },
+          "analogias": [
+            "Como o regente da orquestra que coordena e apresenta ao público o som combinado de todos os músicos da sala."
+          ]
+        },
+        {
+          "id": "P2-S2-Q401",
+          "categoria": "Seção 2: Os sete sacramentos da Igreja (Capítulo 3, Artigo 6: O sacramento da Ordem)",
+          "pergunta": "Por que a oração e a oblação do ministro ordenado são apresentadas em nome de todo o Corpo Místico?",
+          "resposta_texto": "Porque o sacerdote está unido a Cristo Cabeça e age em comunhão com todos os membros do Corpo da Igreja. Ao oferecer o sacrifício eucarístico, ele une as dores, esperanças e orações dos fiéis ao sacrifício perfeito de Jesus. É a oferta da Igreja inteira que sobe a Deus pelas mãos do ministro consacrado.",
+          "referencias": {
+            "biblia": [
+              "1Cor 10,16-17",
+              "Rm 12,1"
+            ],
+            "cic": [
+              "CIC 1553"
+            ]
+          },
+          "analogias": [
+            "Como o embaixador que entrega ao monarca estrangeiro a carta oficial contendo o pedido de paz formulado por seu povo."
+          ]
+        },
+        {
+          "id": "P2-S2-Q402",
+          "categoria": "Seção 2: Os sete sacramentos da Igreja (Capítulo 3, Artigo 6: O sacramento da Ordem)",
+          "pergunta": "Quais são os três graus do ministério ordenado instituídos desde a antiguidade apostólica?",
+          "resposta_texto": "Os três graus do ministério ordenado são o episcopado (bispos), o presbiterado (presbíteros ou padres) e o diaconato (diáconos). Esses três graus foram estabelecidos desde os tempos dos Apóstolos para o serviço litúrgico, doutrinal e pastoral da Igreja. Sem eles, não se pode falar propriamente de Igreja organizada na tradição católica.",
+          "referencias": {
+            "biblia": [
+              "1Tm 3,1.8",
+              "Tt 1,5"
+            ],
+            "cic": [
+              "CIC 1554"
+            ]
+          },
+          "analogias": [
+            "Como a estrutura administrativa de um país composta por governo nacional, governo estadual e gestão municipal."
+          ]
+        },
+        {
+          "id": "P2-S2-Q403",
+          "categoria": "Seção 2: Os sete sacramentos da Igreja (Capítulo 3, Artigo 6: O sacramento da Ordem)",
+          "pergunta": "Por que a ordenação episcopal confere a plenitude do sacramento da Ordem?",
+          "resposta_texto": "A ordenação episcopal confere a plenitude da Ordem porque transmite o múnus supremo do sacerdócio apostólico e a totalidade do ministério de ensinar, santificar e governar. O bispo recebe a plenitude da graça para ser o sucessor direto dos Apóstolos e o pastor visível da sua Igreja particular. Ele torna-se o princípio de unidade da sua diocese.",
+          "referencias": {
+            "biblia": [
+              "2Tm 1,6-7",
+              "At 20,28"
+            ],
+            "cic": [
+              "CIC 1555",
+              "CIC 1557"
+            ]
+          },
+          "analogias": [
+            "Como o diploma de doutorado pleno que confere o nível máximo de titulação e autoridade acadêmica no sistema universitário."
+          ]
+        },
+        {
+          "id": "P2-S2-Q404",
+          "categoria": "Seção 2: Os sete sacramentos da Igreja (Capítulo 3, Artigo 6: O sacramento da Ordem)",
+          "pergunta": "O que a ordenação episcopal confere além da função de ensinar e governar a diocese?",
+          "resposta_texto": "A ordenação episcopal confere também o múnus de santificar, outorgando ao bispo o poder de administrar todos os sacramentos, inclusive a Ordenação de novos padres e bispos. Ela imprime um caráter sacramental pleno e confere uma graça de especial coragem do Espírito Santo. O bispo é constituído como verdadeiro embaixador de Cristo.",
+          "referencias": {
+            "biblia": [
+              "1Pd 5,2-3",
+              "2Tm 4,1-2"
+            ],
+            "cic": [
+              "CIC 1556",
+              "CIC 1558"
+            ]
+          },
+          "analogias": [
+            "Como a posse de um chanceler com plenos poderes governamentais para nomear novos ministros e expedir atos de Estado."
+          ]
+        },
+        {
+          "id": "P2-S2-Q405",
+          "categoria": "Seção 2: Os sete sacramentos da Igreja (Capítulo 3, Artigo 6: O sacramento da Ordem)",
+          "pergunta": "De que modo o bispo exerce a tríplice missão de Cristo no meio do Povo de Deus?",
+          "resposta_texto": "O bispo exerce a tríplice missão pregando o Evangelho com autoridade apostólica (ensinar), celebrando a Eucaristia e os sacramentos (santificar) e guiando o rebanho com amor paternal (governar). Ele cumpre essa missão em união com o Papa e com o presbitério da sua diocese. Sua atuação visível busca a salvação de todas as almas.",
+          "referencias": {
+            "biblia": [
+              "At 6,4",
+              "1Pd 5,1-4"
+            ],
+            "cic": [
+              "CIC 1558"
+            ]
+          },
+          "analogias": [
+            "Como o diretor de escola que atua como professor titular, gestor pedagógico e orientador disciplinar dos alunos."
+          ]
+        },
+        {
+          "id": "P2-S2-Q406",
+          "categoria": "Seção 2: Os sete sacramentos da Igreja (Capítulo 3, Artigo 6: O sacramento da Ordem)",
+          "pergunta": "De que maneira alguém é tornado membro do Colégio dos Bispos na Igreja Católica?",
+          "resposta_texto": "Alguém se torna membro do Colégio episcopal em virtude da consecração episcopal legítima e pela comunhão hierárquica com a cabeça e os membros do Colégio. Exige-se a aprovação expressa do Papa, Bispo de Roma, para que a ordenação seja legítima e em plena comunhão. Sem essa união com o Papa, o bispo não pode exercer a autoridade.",
+          "referencias": {
+            "biblia": [
+              "At 1,21-22",
+              "Gl 2,9"
+            ],
+            "cic": [
+              "CIC 1559"
+            ]
+          },
+          "analogias": [
+            "Como a inclusão de um novo ministro no Supremo Tribunal através da aprovação do presidente e juramento constitucional."
+          ]
+        },
+        {
+          "id": "P2-S2-Q407",
+          "categoria": "Seção 2: Os sete sacramentos da Igreja (Capítulo 3, Artigo 6: O sacramento da Ordem)",
+          "pergunta": "Qual é a relação de comunhão que cada bispo deve ter com o Papa e com seus irmãos no episcopado?",
+          "resposta_texto": "Cada bispo deve viver em estreita comunhão fraterna com o Papa e com todos os bispos do mundo, partilhando a solicitude por todas as Igrejas. Essa colegialidade expressa a universalidade da Igreja de Cristo e o cuidado comunitário da fé. O bispo é responsável não apenas pela sua diocese, mas pela missão global da Igreja.",
+          "referencias": {
+            "biblia": [
+              "2Cor 11,28",
+              "At 15,6"
+            ],
+            "cic": [
+              "CIC 1560"
+            ]
+          },
+          "analogias": [
+            "Como os governadores de estado que mantêm alinhamento permanente com o governo federal para garantir a coesão do país."
+          ]
+        },
+        {
+          "id": "P2-S2-Q408",
+          "categoria": "Seção 2: Os sete sacramentos da Igreja (Capítulo 3, Artigo 6: O sacramento da Ordem)",
+          "pergunta": "Qual é a função própria dos presbíteros no segundo grau do sacramento da Ordem?",
+          "resposta_texto": "Os presbíteros são ordenados como cooperadores sábios da ordem episcopal para servirem o Povo de Deus na pregação, no culto e no governo pastoral. Embora não possuam a plenitude do pontificado, eles dependem dos bispos no exercício da sua autoridade. Eles são consagrados para pregar o Evangelho e celebrar os sacramentos.",
+          "referencias": {
+            "biblia": [
+              "1Tm 5,17",
+              "Tt 1,5"
+            ],
+            "cic": [
+              "CIC 1562",
+              "CIC 1563"
+            ]
+          },
+          "analogias": [
+            "Como os médicos especialistas de uma clínica que atuam sob a direção do diretor-geral do hospital."
+          ]
+        },
+        {
+          "id": "P2-S2-Q409",
+          "categoria": "Seção 2: Os sete sacramentos da Igreja (Capítulo 3, Artigo 6: O sacramento da Ordem)",
+          "pergunta": "Por que os presbíteros necessitam da unção do Espírito Santo e do caráter próprio na ordenação?",
+          "resposta_texto": "Necessitam da unção e do caráter próprio porque a ordenação os assinala com um selo indelével que os configura a Cristo Sacerdote. Essa graça os capacita a agir em nome de Cristo Cabeça para oferecer o sacrifício eucarístico e perdoar os pecados. O caráter habilita o presbítero para uma missão permanente de serviço.",
+          "referencias": {
+            "biblia": [
+              "2Cor 1,21-22",
+              "Hb 5,6"
+            ],
+            "cic": [
+              "CIC 1563"
+            ]
+          },
+          "analogias": [
+            "Como a gravação oficial feita no metal da moeda que lhe confere valor comercial definitivo em todo o território."
+          ]
+        },
+        {
+          "id": "P2-S2-Q410",
+          "categoria": "Seção 2: Os sete sacramentos da Igreja (Capítulo 3, Artigo 6: O sacramento da Ordem)",
+          "pergunta": "De que forma os presbíteros dependem do bispo no exercício do seu sacerdócio?",
+          "resposta_texto": "Os presbíteros dependem do bispo porque exercem seu ministério em comunhão hierárquica com ele e sob a sua autoridade pastoral. Cada padre promete obediência ao seu bispo no dia da ordenação e recebe dele a provisão de sua paróquia ou função. Em cada comunidade local, o presbítero torna visível a presença do seu bispo.",
+          "referencias": {
+            "biblia": [
+              "1Tm 4,14",
+              "Hb 13,17"
+            ],
+            "cic": [
+              "CIC 1564"
+            ]
+          },
+          "analogias": [
+            "Como os gerentes regionais de filial que operam legitimamente com a credencial concedida pela diretoria executiva."
+          ]
+        },
+        {
+          "id": "P2-S2-Q411",
+          "categoria": "Seção 2: Os sete sacramentos da Igreja (Capítulo 3, Artigo 6: O sacramento da Ordem)",
+          "pergunta": "O que é o 'presbitério' e como os padres de uma diocese formam uma fraternidade sacerdotal?",
+          "resposta_texto": "O presbitério é o corpo de todos os sacerdotes que, unidos ao seu bispo, formam uma única família e comunidade de ministros na diocese. Essa fraternidade sacerdotal manifesta-se no apoio mútuo, na oração em comum, no trabalho pastoral conjunto e na concelebração litúrgica. Todos partilham a mesma missão recebida de Cristo.",
+          "referencias": {
+            "biblia": [
+              "1Tm 4,14",
+              "At 4,32"
+            ],
+            "cic": [
+              "CIC 1567",
+              "CIC 1568"
+            ]
+          },
+          "analogias": [
+            "Como o conselho docente dos professores de um colégio que se reúnem semanalmente para planejar as diretrizes das aulas."
+          ]
+        },
+        {
+          "id": "P2-S2-Q412",
+          "categoria": "Seção 2: Os sete sacramentos da Igreja (Capítulo 3, Artigo 6: O sacramento da Ordem)",
+          "pergunta": "Como a comunhão fraterna entre os padres de uma mesma diocese deve se manifestar na prática?",
+          "resposta_texto": "Deve se manifestar pela ajuda mútua material e espiritual, pela acolhida fraterna aos padres idosos ou doentes e pela partilha de experiências. Os presbíteros devem cultivar a amizade sincera, a correção fraterna e a cooperação pastoral nas tarefas difíceis. Essa união fraterna é um poderoso testemunho para o povo fiel.",
+          "referencias": {
+            "biblia": [
+              "Sl 133,1",
+              "Jn 13,34-35"
+            ],
+            "cic": [
+              "CIC 1568"
+            ]
+          },
+          "analogias": [
+            "Como irmãos de sangue que se ajudam na manutenção da casa paterna e cuidam da saúde uns dos outros nas crises."
+          ]
+        },
+        {
+          "id": "P2-S2-Q413",
+          "categoria": "Seção 2: Os sete sacramentos da Igreja (Capítulo 3, Artigo 6: O sacramento da Ordem)",
+          "pergunta": "Qual é a missão específica dos diáconos no terceiro grau do sacramento da Ordem?",
+          "resposta_texto": "Os diáconos são ordenados não para o sacerdócio, mas para o serviço da caridade, da Palavra e da liturgia na Igreja. Eles recebem a imposição das mãos para exercerem um ministério de auxílio ao bispo e ao seu presbitério. A sua missão visa manifestar a Cristo que se fez servo de todos no meio da comunidade.",
+          "referencias": {
+            "biblia": [
+              "At 6,1-6",
+              "1Tm 3,8-10"
+            ],
+            "cic": [
+              "CIC 1569",
+              "CIC 1570"
+            ]
+          },
+          "analogias": [
+            "Como o assistente social de bordo que atende aos passageiros e auxilia a tripulação sem pilotar a aeronave."
+          ]
+        },
+        {
+          "id": "P2-S2-Q414",
+          "categoria": "Seção 2: Os sete sacramentos da Igreja (Capítulo 3, Artigo 6: O sacramento da Ordem)",
+          "pergunta": "Quais são os serviços litúrgicos e caritativos confiados aos diáconos pela Igreja?",
+          "resposta_texto": "Aos diáconos cabe assistir ao bispo e aos padres na celebração da Eucaristia, distribuir a Comunhão, assistir e abençoar o Matrimônio e proclamar o Evangelho. Podem também presidir aos funerais, administrar o Batismo e dedicar-se aos serviços de caridade e assistência aos pobres. Eles são a mão caridosa do bispo.",
+          "referencias": {
+            "biblia": [
+              "At 6,3-4",
+              "1Tm 3,12-13"
+            ],
+            "cic": [
+              "CIC 1570"
+            ]
+          },
+          "analogias": [
+            "Como o socorrista credenciado que atende os feridos, organiza a distribuição de alimentos e auxilia a equipe de médicos."
+          ]
+        },
+        {
+          "id": "P2-S2-Q415",
+          "categoria": "Seção 2: Os sete sacramentos da Igreja (Capítulo 3, Artigo 6: O sacramento da Ordem)",
+          "pergunta": "O que é o diaconato permanente restaurado pelo Concílio Vaticano II?",
+          "resposta_texto": "O diaconato permanente é o grau do ministério ordenado conferido a homens que não pretendem avançar para o sacerdócio presbiteral. Ele pode ser conferido a homens solteiros ou a homens já casados que vivem na estabilidade matrimonial. Essa restauração enriqueceu a Igreja com ministros consagrados dedicados ao serviço.",
+          "referencias": {
+            "biblia": [
+              "1Tm 3,8-10",
+              "At 6,6"
+            ],
+            "cic": [
+              "CIC 1571"
+            ]
+          },
+          "analogias": [
+            "Como um profissional especialista nomeado para um encargo público definitivo sem necessidade de promoção a cargos superiores."
+          ]
+        },
+        {
+          "id": "P2-S2-Q416",
+          "categoria": "Seção 2: Os sete sacramentos da Igreja (Capítulo 3, Artigo 6: O sacramento da Ordem)",
+          "pergunta": "Como deve ser celebrada a ordenação episcopal, presbiteral e diaconal na liturgia diocesana?",
+          "resposta_texto": "A ordenação deve ser celebrada preferencialmente no Domingo e na catedral diocesana, com a presença solene do povo fiel e do clero. A celebração insere-se no seio da Santa Missa para manifestar que a Ordem está orientada para o sacrifício eucarístico. A participação da comunidade expressa a alegria da Igreja pelo novo ministro.",
+          "referencias": {
+            "biblia": [
+              "At 1,15.24",
+              "1Tm 4,14"
+            ],
+            "cic": [
+              "CIC 1572"
+            ]
+          },
+          "analogias": [
+            "Como a cerimônia pública de formatura realizada no auditório central com a presença de familiares e professores."
+          ]
+        },
+        {
+          "id": "P2-S2-Q417",
+          "categoria": "Seção 2: Os sete sacramentos da Igreja (Capítulo 3, Artigo 6: O sacramento da Ordem)",
+          "pergunta": "Qual é o rito essencial e central da celebração do sacramento da Ordem para os três graus?",
+          "resposta_texto": "O rito essencial consiste na imposição das mãos realizada pelo bispo sobre a cabeça do ordinando e na oração consecratória específica. Essa oração pede a Deus Pai as graças do Espírito Santo necessárias para o exercício do ministério episcopal, presbiteral ou diaconal. A imposição transmite o dom sagrado do Espírito.",
+          "referencias": {
+            "biblia": [
+              "At 6,6",
+              "2Tm 1,6"
+            ],
+            "cic": [
+              "CIC 1573"
+            ]
+          },
+          "analogias": [
+            "Como a aposição da assinatura e do selo oficial do reitor no diploma que valida a concessão do título."
+          ]
+        },
+        {
+          "id": "P2-S2-Q418",
+          "categoria": "Seção 2: Os sete sacramentos da Igreja (Capítulo 3, Artigo 6: O sacramento da Ordem)",
+          "pergunta": "Quais são os ritos complementares que acompanham a ordenação e seus significados simbólicos?",
+          "resposta_texto": "Os ritos incluem a unção do Santo Crisma (mãos do padre, cabeça do bispo), a entrega do Livro dos Evangelhos, do anel, da mitra e do báculo ao bispo, e da patena e cálice ao padre. Além disso, a veste das vestes litúrgicas próprias sinaliza o novo estado. Esses ritos exprimem a beleza da missão recebida.",
+          "referencias": {
+            "biblia": [
+              "Ex 29,7",
+              "Is 61,1"
+            ],
+            "cic": [
+              "CIC 1574"
+            ]
+          },
+          "analogias": [
+            "Como a entrega da chave oficial da cidade, da faixa de autoridade e do brasão público ao novo governante."
+          ]
+        },
+        {
+          "id": "P2-S2-Q419",
+          "categoria": "Seção 2: Os sete sacramentos da Igreja (Capítulo 3, Artigo 6: O sacramento da Ordem)",
+          "pergunta": "Por que somente o bispo validamente ordenado pode administrar o sacramento da Ordem?",
+          "resposta_texto": "Somente os bispos são os ministros da Ordem porque receberam o sacerdócio na sua plenitude e são os sucessores dos Apóstolos. Como as ordens sagradas transmitem a dádiva do Espírito e a sucessão apostólica, cabe exclusivamente aos bispos conferir esse dom. Nenhum padre ou leigo possui a faculdade de ordenar.",
+          "referencias": {
+            "biblia": [
+              "1Tm 5,22",
+              "Tt 1,5"
+            ],
+            "cic": [
+              "CIC 1575",
+              "CIC 1576"
+            ]
+          },
+          "analogias": [
+            "Como o presidente da Suprema Corte que é o único constitucionalmente autorizado a empossar novos magistrados."
+          ]
+        },
+        {
+          "id": "P2-S2-Q420",
+          "categoria": "Seção 2: Os sete sacramentos da Igreja (Capítulo 3, Artigo 6: O sacramento da Ordem)",
+          "pergunta": "Uma comunidade católica ou conselho de fiéis pode ordenar um sacerdote sem o bispo?",
+          "resposta_texto": "Não, uma comunidade ou conselho jamais pode conferir a ordenação sacerdotal por autoridade própria ou por aclamação. O ministério ordenado é um dom de Cristo recebido sacramentalmente através da Igreja e pela imposição das mãos do bispo. Sem o bispo, a tentativa de ordenação é totalmente nula de valor.",
+          "referencias": {
+            "biblia": [
+              "Hb 5,4",
+              "1Tm 4,14"
+            ],
+            "cic": [
+              "CIC 1575",
+              "CIC 1576"
+            ]
+          },
+          "analogias": [
+            "Como um grupo de cidadãos que tenta fabricar a sua própria cédula de dinheiro sem autorização do Banco Central."
+          ]
+        },
+        {
+          "id": "P2-S2-Q421",
+          "categoria": "Seção 2: Os sete sacramentos da Igreja (Capítulo 3, Artigo 6: O sacramento da Ordem)",
+          "pergunta": "Por que a Igreja Católica só confere a ordenação sacerdotal a homens (vir) batizados?",
+          "resposta_texto": "A Igreja ordena apenas homens batizados porque foi a conduta estabelecida por Jesus ao escolher os Doze Apóstolos e mantida pela tradição apostólica. Jesus não chamou mulheres para o grupo dos Doze, nem mesmo a sua Mãe Santíssima. A Igreja reconhece-se vinculada a essa escolha soberana do seu Senhor e não tem poder para alterá-la.",
+          "referencias": {
+            "biblia": [
+              "Mc 3,13-14",
+              "1Tm 2,12"
+            ],
+            "cic": [
+              "CIC 1577"
+            ]
+          },
+          "analogias": [
+            "Como o cumprimento rigoroso da fórmula de uma receita original deixada pelo mestre fundador sem modificações."
+          ]
+        },
+        {
+          "id": "P2-S2-Q422",
+          "categoria": "Seção 2: Os sete sacramentos da Igreja (Capítulo 3, Artigo 6: O sacramento da Ordem)",
+          "pergunta": "Alguém tem o direito absoluto de exigir a recepção do sacramento da Ordem?",
+          "resposta_texto": "Ninguém tem o direito subjectivo de receber o sacramento da Ordem, pois a vocação sacerdotal é um dom de Deus que não se exige nem se compra. O candidato é chamado por Deus e deve ter a sua aptidão e idoneidade verificadas pela autoridade da Igreja. Cabe unicamente à Igreja convocar e admitir o candidato às Ordens.",
+          "referencias": {
+            "biblia": [
+              "Hb 5,4",
+              "Jo 15,16"
+            ],
+            "cic": [
+              "CIC 1578"
+            ]
+          },
+          "analogias": [
+            "Como o convite pessoal para ingressar na academia militar diplomática que depende de aprovação prévia dos avaliadores."
+          ]
+        },
+        {
+          "id": "P2-S2-Q423",
+          "categoria": "Seção 2: Os sete sacramentos da Igreja (Capítulo 3, Artigo 6: O sacramento da Ordem)",
+          "pergunta": "Qual é o fundamento evangélico e o sentido do celibato sacerdotal no Rito Latino?",
+          "resposta_texto": "O celibato fundamenta-se no exemplo do próprio Jesus e no seu convite a abraçar a castidade por amor do Reino dos céus. No Rito Latino, os ministros são escolhidos entre homens solteiros que se dispõem a viver com coração indiviso a dedicação total a Deus. O celibato é sinal da vida futura e da entrega pastoral inteira.",
+          "referencias": {
+            "biblia": [
+              "Mt 19,12",
+              "1Cor 7,32-34"
+            ],
+            "cic": [
+              "CIC 1579"
+            ]
+          },
+          "analogias": [
+            "Como o cientista que se dedica em tempo integral a uma pesquisa de cura sem dividir sua atenção com outros negócios."
+          ]
+        },
+        {
+          "id": "P2-S2-Q424",
+          "categoria": "Seção 2: Os sete sacramentos da Igreja (Capítulo 3, Artigo 6: O sacramento da Ordem)",
+          "pergunta": "Como o celibato ou matrimônio é vivenciado pelos sacerdotes nas Igrejas Católicas de Rito Oriental?",
+          "resposta_texto": "Nas Igrejas Orientais, ao lado de bispos celibatários, existem presbíteros e diáconos casados que receberam a ordenação após o matrimônio. Contudo, aqueles que já foram ordenados solteiros não podem mais contrair casamento. A tradição oriental respeita os sacerdotes casados que vivem na fidelidade e na vida espiritual.",
+          "referencias": {
+            "biblia": [
+              "1Tm 3,2",
+              "Tt 1,6"
+            ],
+            "cic": [
+              "CIC 1580"
+            ]
+          },
+          "analogias": [
+            "Como diferentes modelos de gestão em filiais regionais que mantêm a fidelidade integral aos valores da mesma empresa."
+          ]
+        },
+        {
+          "id": "P2-S2-Q425",
+          "categoria": "Seção 2: Os sete sacramentos da Igreja (Capítulo 3, Artigo 6: O sacramento da Ordem)",
+          "pergunta": "O que é o caráter indelével impresso pelo sacramento da Ordem na alma do ordinando?",
+          "resposta_texto": "O caráter indelével é um sinal espiritual permanente impresso pela unção do Espírito Santo na alma do bispo, padre ou diácono. Essa marca configura o ordinando a Cristo para sempre de modo irrepetível e definitivo. Por essa razão, o sacramento da Ordem jamais pode ser repetido ou apagado da alma.",
+          "referencias": {
+            "biblia": [
+              "2Cor 1,21-22",
+              "Ef 4,30"
+            ],
+            "cic": [
+              "CIC 1581",
+              "CIC 1582"
+            ]
+          },
+          "analogias": [
+            "Como a marca de fogo cravada na estrutura do metal que permanece visível mesmo se o objeto for submerso."
+          ]
+        },
+        {
+          "id": "P2-S2-Q426",
+          "categoria": "Seção 2: Os sete sacramentos da Igreja (Capítulo 3, Artigo 6: O sacramento da Ordem)",
+          "pergunta": "Um padre ou bispo pode deixar de ser sacerdote depois de ter recebido a ordenação válida?",
+          "resposta_texto": "Não, alguém validamente ordenado nunca mais pode voltar a ser leigo em sentido estrito, porque o caráter da Ordem é definitivo e indelével. Mesmo que o ministro seja dispensado dos seus deveres clericais ou punido com penas canônicas, a marca da ordenação permanece na sua alma. Ele é sacerdote para sempre.",
+          "referencias": {
+            "biblia": [
+              "Sl 110,4",
+              "Rm 11,29"
+            ],
+            "cic": [
+              "CIC 1582",
+              "CIC 1583"
+            ]
+          },
+          "analogias": [
+            "Como a pessoa batizada que pode se afastar da prática, mas continua carregando a marca do Batismo em sua alma."
+          ]
+        },
+        {
+          "id": "P2-S2-Q427",
+          "categoria": "Seção 2: Os sete sacramentos da Igreja (Capítulo 3, Artigo 6: O sacramento da Ordem)",
+          "pergunta": "O padre dispensado das obrigações do ministério volta a ser leigo?",
+          "resposta_texto": "Não no sentido estrito. Por motivos graves, quem foi validamente ordenado pode ser dispensado das obrigações e funções ligadas à ordenação, ou ser proibido de exercê-las. Mas não pode voltar a ser leigo no sentido estrito, porque o caráter impresso pela ordenação permanece para sempre: a vocação e a missão recebidas no dia da ordenação o marcam de modo permanente.",
+          "referencias": {
+            "biblia": [
+              "Jo 6,37",
+              "2Tm 2,13"
+            ],
+            "cic": [
+              "CIC 1583"
+            ]
+          },
+          "analogias": [
+            "Como o médico aposentado ou fora de exercício que retoma o dever de aplicar o salvamento quando presencia um acidente."
+          ]
+        },
+        {
+          "id": "P2-S2-Q428",
+          "categoria": "Seção 2: Os sete sacramentos da Igreja (Capítulo 3, Artigo 6: O sacramento da Ordem)",
+          "pergunta": "Qual é a graça própria do Espírito Santo concedida ao bispo na sua ordenação?",
+          "resposta_texto": "A graça própria do bispo é o Espírito de liderança e fortaleza para guiar, defender e amar a sua Igreja com generosidade e sabedoria. Essa graça o capacita a ser modelo para o rebanho, defender a fé católica contra os erros e interceder pelos necessitados. O bispo recebe o dom de amar a todos com coração de pai.",
+          "referencias": {
+            "biblia": [
+              "2Tm 1,7-8",
+              "1Pd 5,2"
+            ],
+            "cic": [
+              "CIC 1585",
+              "CIC 1586"
+            ]
+          },
+          "analogias": [
+            "Como o sopro de coragem e firmeza dado ao capitão da nau para mantê-lo firme no leme durante o mar revolto."
+          ]
+        },
+        {
+          "id": "P2-S2-Q429",
+          "categoria": "Seção 2: Os sete sacramentos da Igreja (Capítulo 3, Artigo 6: O sacramento da Ordem)",
+          "pergunta": "Qual é a graça espiritual concedida ao presbítero durante a sua ordenação sacerdotal?",
+          "resposta_texto": "A graça concedida ao presbítero é a capacidade do Espírito Santo para oferecer o sacrifício da Missa com devoção, perdoar os pecados e pregar a Palavra de Deus com clareza. Essa graça fortalece o padre para renovar diariamente a sua oferta espiritual e cuidar das almas que lhe foram confiadas. O padre é fortalecido na caridade pastoral.",
+          "referencias": {
+            "biblia": [
+              "1Tm 4,12-14",
+              "2Tm 2,1-2"
+            ],
+            "cic": [
+              "CIC 1586",
+              "CIC 1587"
+            ]
+          },
+          "analogias": [
+            "Como a luz de um farol reforçado que ilumina a rota dos barcos locais sem se apagar com a força do vento."
+          ]
+        },
+        {
+          "id": "P2-S2-Q430",
+          "categoria": "Seção 2: Os sete sacramentos da Igreja (Capítulo 3, Artigo 6: O sacramento da Ordem)",
+          "pergunta": "Qual é a graça específica concedida ao diácono na ordenação para o serviço da comunidade?",
+          "resposta_texto": "Ao diácono é concedida a graça do Espírito Santo para viver a caridade com prontidão, servir ao altar com dedicação e proclamar o Evangelho de Cristo com fidelidade. Essa graça o ajuda a aproximar a Igreja dos pobres e a servir a comunidade com humildade. O diácono vive a graça do Cristo Servo.",
+          "referencias": {
+            "biblia": [
+              "At 6,8",
+              "1Tm 3,13"
+            ],
+            "cic": [
+              "CIC 1588"
+            ]
+          },
+          "analogias": [
+            "Como a energia dada ao socorrista de resgate para carregar os suprimentos pesados sem se cansar pelo caminho."
+          ]
+        },
+        {
+          "id": "P2-S2-Q431",
+          "categoria": "Seção 2: Os sete sacramentos da Igreja (Capítulo 3, Artigo 6: O sacramento da Ordem)",
+          "pergunta": "Como a humildade do ministro ordenado deve responder à grandeza inefável do sacerdócio de Cristo?",
+          "resposta_texto": "Diante da imensidão do dom sacerdotal, o ministro deve recordar que é apenas um vaso de argila a carregar um tesouro divino inestimável. São João Maria Vianney ensinava que o padre só se compreenderia bem no céu, pois na terra morreria de amor e pasmo. Essa grandeza exige do ministro uma vida de profunda humildade e conversão diária.",
+          "referencias": {
+            "biblia": [
+              "2Cor 4,7",
+              "Lc 17,10"
+            ],
+            "cic": [
+              "CIC 1589"
+            ]
+          },
+          "analogias": [
+            "Como um servo simples encarregado de segurar a lâmpada de cristal do rei sem se gloriar pelo brilho da luz."
+          ]
+        },
+        {
+          "id": "P2-S2-Q432",
+          "categoria": "Seção 2: Os sete sacramentos da Igreja (Capítulo 3, Artigo 6: O sacramento da Ordem)",
+          "pergunta": "Como o sacerdócio comum dos fiéis e o sacerdócio ministerial se relacionam?",
+          "resposta_texto": "O sacerdócio comum dos fiéis e o sacerdócio ministerial derivam do único sacerdócio de Cristo, mas diferem na essência. O ministerial está a serviço do sacerdócio comum para que a graça dos batizados se desenvolva no amor. Ambos cooperam intimamente para a edificação do Corpo de Cristo.",
+          "referencias": {
+            "biblia": [
+              "1Cor 12,4-6",
+              "Ef 4,11-12"
+            ],
+            "cic": [
+              "CIC 1591",
+              "CIC 1592"
+            ]
+          },
+          "analogias": [
+            "Como o sistema circulatório do corpo humano onde as veias principais e os vasos capilares trabalham juntos na nutrição."
+          ]
+        },
+        {
+          "id": "P2-S2-Q433",
+          "categoria": "Seção 2: Os sete sacramentos da Igreja (Capítulo 3, Artigo 6: O sacramento da Ordem)",
+          "pergunta": "Em que graus se exerce o sacramento da Ordem e quem pode recebê-lo?",
+          "resposta_texto": "A Ordem é o sacramento pelo qual a missão confiada por Cristo aos Apóstolos continua a ser exercida na Igreja nos graus de bispo, presbítero e diácono. Apenas o homem batizado pode receber a ordenação válida, e no Rito Latino os presbíteros são escolhidos entre fiéis celibatários. O sacramento imprime um caráter permanente.",
+          "referencias": {
+            "biblia": [
+              "1Tm 3,1-13",
+              "Hb 5,1-4"
+            ],
+            "cic": [
+              "CIC 1593",
+              "CIC 1594",
+              "CIC 1595",
+              "CIC 1596",
+              "CIC 1597",
+              "CIC 1598",
+              "CIC 1599",
+              "CIC 1600"
+            ]
+          },
+          "analogias": [
+            "Como o resumo da constituição que estabelece a estrutura de um país, definindo quem governa e como os cargos são mantidos."
+          ]
+        },
+        {
+          "id": "P2-S2-Q434",
+          "categoria": "Seção 2: Os sete sacramentos da Igreja (Capítulo 3, Artigo 7: O sacramento do Matrimônio)",
+          "pergunta": "O que a Igreja Católica ensina sobre a natureza da aliança matrimonial e a sua instituição divina?",
+          "resposta_texto": "A Igreja ensina que a aliança matrimonial, pela qual o homem e a mulher constituem entre si uma comunidade de toda a vida, foi fundada e estruturada com leis próprias pelo próprio Criador. O Matrimônio é ordenado por sua índole natural ao bem dos cônjuges e à procriação e educação dos filhos.",
+          "referencias": {
+            "biblia": [
+              "Gn 1,27-28",
+              "Gn 2,18"
+            ],
+            "cic": [
+              "CIC 1601"
+            ]
+          },
+          "analogias": [
+            "É como a pedra angular esculpida pelo próprio arquiteto para sustentar com firmeza toda a arquitetura da casa da família."
+          ]
+        },
+        {
+          "id": "P2-S2-Q435",
+          "categoria": "Seção 2: Os sete sacramentos da Igreja (Capítulo 3, Artigo 7: O sacramento do Matrimônio)",
+          "pergunta": "Por que a vocação para o Matrimônio está inscrita na própria natureza do homem e da mulher?",
+          "resposta_texto": "Está inscrita na própria natureza porque o homem e a mulher foram criados por Deus por amor e chamados ao amor. O Criador inscreveu na constituição da pessoa humana a capacidade e a necessidade de comunhão e doação mútua que se realizam de modo único na união conjugal.",
+          "referencias": {
+            "biblia": [
+              "Gn 1,27",
+              "1Jo 4,8-11"
+            ],
+            "cic": [
+              "CIC 1604"
+            ]
+          },
+          "analogias": [
+            "É como as duas metades de um selo de bronze que se encaixam com perfeição para revelar a imagem inteira da promessa."
+          ]
+        },
+        {
+          "id": "P2-S2-Q436",
+          "categoria": "Seção 2: Os sete sacramentos da Igreja (Capítulo 3, Artigo 7: O sacramento do Matrimônio)",
+          "pergunta": "Como a criação do homem e da mulher como seres complementares revela a bondade do projeto de Deus?",
+          "resposta_texto": "Revela a bondade de Deus porque o homem e a mulher foram criados em perfeita igualdade de dignidade pessoal e em mútua complementaridade. Deus não criou o homem para a solidão, mas para formar uma comunhão de amor em que ambos se auxiliam mutuamente.",
+          "referencias": {
+            "biblia": [
+              "Gn 2,18.23",
+              "Pr 18,22"
+            ],
+            "cic": [
+              "CIC 1605"
+            ]
+          },
+          "analogias": [
+            "É como a clave de sol e a clave de fá que se unem na mesma partitura para produzir a harmonia da sinfonia."
+          ]
+        },
+        {
+          "id": "P2-S2-Q437",
+          "categoria": "Seção 2: Os sete sacramentos da Igreja (Capítulo 3, Artigo 7: O sacramento do Matrimônio)",
+          "pergunta": "De que modo o primeiro pecado original alterou a harmonia inicial do relacionamento entre o casal?",
+          "resposta_texto": "O pecado original rompeu a comunhão original com Deus e feriu a união conjugal, introduzindo a discórdia, a infidelidade, a atração de dominação egoísta e os ciúmes entre os esposos. A união que era límpida ficou ameaçada pelo egoísmo da carne.",
+          "referencias": {
+            "biblia": [
+              "Gn 3,16",
+              "Rm 7,18-20"
+            ],
+            "cic": [
+              "CIC 1606",
+              "CIC 1607"
+            ]
+          },
+          "analogias": [
+            "É como a trinca no espelho cristalino que distorce a imagem refletida do casal antes límpida e perfeita."
+          ]
+        },
+        {
+          "id": "P2-S2-Q438",
+          "categoria": "Seção 2: Os sete sacramentos da Igreja (Capítulo 3, Artigo 7: O sacramento do Matrimônio)",
+          "pergunta": "Como a misericórdia de Deus amparou o Matrimônio mesmo sob as consequências penosas do pecado?",
+          "resposta_texto": "Amparou concedendo a Sua graça para que o casal pudesse vencer o desconcerto do pecado e manter a busca da união. A dor do parto e o suor do trabalho penoso tornaram-se remédios pedagógicos para ajudar o homem e a mulher a vencerem o egoísmo e se purificarem.",
+          "referencias": {
+            "biblia": [
+              "Gn 3,17-19",
+              "Rm 8,20-21"
+            ],
+            "cic": [
+              "CIC 1609"
+            ]
+          },
+          "analogias": [
+            "É como o suporte de gesso colocado no osso fraturado para permitir que ele se recompile na posição correta."
+          ]
+        },
+        {
+          "id": "P2-S2-Q439",
+          "categoria": "Seção 2: Os sete sacramentos da Igreja (Capítulo 3, Artigo 7: O sacramento do Matrimônio)",
+          "pergunta": "Por que a Lei de Moisés permitiu temporariamente o certificado de divórcio no Antigo Testamento?",
+          "resposta_texto": "A Lei de Moisés permitiu o divórcio por causa da dureza de coração do povo de Israel, que ainda não havia recebido a plenitude da graça da redenção. Contudo, essa permissão temporária não correspondia ao projeto original de indissolubilidade fixado pelo Criador no início.",
+          "referencias": {
+            "biblia": [
+              "Mt 19,8",
+              "Dt 24,1"
+            ],
+            "cic": [
+              "CIC 1610",
+              "CIC 1611"
+            ]
+          },
+          "analogias": [
+            "É como a rampa provisória de madeira instalada na construção até que a escadaria definitiva de mármore seja concluída."
+          ]
+        },
+        {
+          "id": "P2-S2-Q440",
+          "categoria": "Seção 2: Os sete sacramentos da Igreja (Capítulo 3, Artigo 7: O sacramento do Matrimônio)",
+          "pergunta": "De que maneira os profetas do Antigo Testamento compararam o amor de Deus por Israel ao amor conjugal?",
+          "resposta_texto": "Os profetas compararam a Aliança de Deus com Israel a um casamento fiel e incondicional, onde Deus é o Esposo apaixonado e Israel é a esposa amada. Essa imagem profética preparou a compreensão da Nova Aliança nupcial selada por Cristo.",
+          "referencias": {
+            "biblia": [
+              "Os 2,21-22",
+              "Is 54,5-8"
+            ],
+            "cic": [
+              "CIC 1611"
+            ]
+          },
+          "analogias": [
+            "É como o noivo fidelíssimo que continua esperando na porta da igreja pela noiva que se havia perdido no caminho."
+          ]
+        },
+        {
+          "id": "P2-S2-Q441",
+          "categoria": "Seção 2: Os sete sacramentos da Igreja (Capítulo 3, Artigo 7: O sacramento do Matrimônio)",
+          "pergunta": "Como Jesus Cristo restaurou a indissolubilidade original do Matrimônio em Seu ensinamento?",
+          "resposta_texto": "Jesus restaurou a indissolubilidade reafirmando solenemente que 'o que Deus uniu, o homem não separe'. Ele ensinou que a união conjugal é uma realidade sagrada e indissolúvel que retoma a perfeição do projeto inicial da criação.",
+          "referencias": {
+            "biblia": [
+              "Mt 19,6",
+              "Mc 10,9"
+            ],
+            "cic": [
+              "CIC 1614",
+              "CIC 1615"
+            ]
+          },
+          "analogias": [
+            "É como o artesão supremo que restaura a taça de cristal quebrada devolvendo-lhe a integridade e o brilho originais."
+          ]
+        },
+        {
+          "id": "P2-S2-Q442",
+          "categoria": "Seção 2: Os sete sacramentos da Igreja (Capítulo 3, Artigo 7: O sacramento do Matrimônio)",
+          "pergunta": "Por que a união matrimonial entre os batizados foi elevada por Cristo à dignidade de Sacramento?",
+          "resposta_texto": "Foi elevada porque Cristo faz do Matrimônio entre os batizados o sinal eficaz do Seu próprio amor nupcial pela Igreja. Ao dar a Sua vida na Cruz pela Esposa, Cristo confere aos esposos a graça de se amarem com o mesmo amor doador e fiel.",
+          "referencias": {
+            "biblia": [
+              "Ef 5,25-32",
+              "Ap 19,7-9"
+            ],
+            "cic": [
+              "CIC 1617"
+            ]
+          },
+          "analogias": [
+            "É como o contrato simples que recebe o selo real e a assinatura do rei, tornando-se um decreto de nobreza permanente."
+          ]
+        },
+        {
+          "id": "P2-S2-Q443",
+          "categoria": "Seção 2: Os sete sacramentos da Igreja (Capítulo 3, Artigo 7: O sacramento do Matrimônio)",
+          "pergunta": "De que forma a graça própria do Sacramento do Matrimônio auxilia os esposos na vida diária?",
+          "resposta_texto": "A graça sacramental destina-se a aperfeiçoar o amor dos cônjuges, a fortalecer a sua fidelidade indissolúvel e a santificá-los na acolhida e educação dos filhos. Cristo permanece com eles para dar-lhes a força de carregar a sua cruz e perdoar-se mutuamente.",
+          "referencias": {
+            "biblia": [
+              "Jo 15,5",
+              "Gl 6,2"
+            ],
+            "cic": [
+              "CIC 1615",
+              "CIC 1617"
+            ]
+          },
+          "analogias": [
+            "É como o óleo lubrificante de alta qualidade derramado nas engrenagens para impedir que o atrito desgaste as peças."
+          ]
+        },
+        {
+          "id": "P2-S2-Q444",
+          "categoria": "Seção 2: Os sete sacramentos da Igreja (Capítulo 3, Artigo 7: O sacramento do Matrimônio)",
+          "pergunta": "O que a Santa Igreja ensina sobre a profunda ligação entre o Matrimônio e a Virgindade pelo Reino dos Céus?",
+          "resposta_texto": "A Igreja ensina que o Matrimônio e a Virgindade pelo Reino são duas formas inseparáveis de viver o único mistério da Aliança de Deus com o Seu povo. Ambos se apoiam mutuamente: quem estima o Matrimônio valoriza a virgindade, e quem guarda a virgindade honra o Matrimônio.",
+          "referencias": {
+            "biblia": [
+              "Mt 19,12",
+              "1Cor 7,32-34"
+            ],
+            "cic": [
+              "CIC 1620"
+            ]
+          },
+          "analogias": [
+            "É como os dois pulmões do mesmo corpo humano que respiram o mesmo ar puro do Espírito Santo."
+          ]
+        },
+        {
+          "id": "P2-S2-Q445",
+          "categoria": "Seção 2: Os sete sacramentos da Igreja (Capítulo 3, Artigo 7: O sacramento do Matrimônio)",
+          "pergunta": "Por que a virgindade ou o celibato consagrado por Cristo é uma resposta de amor de valor proeminente?",
+          "resposta_texto": "Porque o celibato pelo Reino é um sinal profético de que Deus e a vida eterna devem ser amados sobre todas as coisas. Ele antecipa a realidade futura do Céu, onde os homens não se casarão, dedicando o coração indiviso ao Senhor.",
+          "referencias": {
+            "biblia": [
+              "Mt 22,30",
+              "1Cor 7,35"
+            ],
+            "cic": [
+              "CIC 1618",
+              "CIC 1619"
+            ]
+          },
+          "analogias": [
+            "É como a lâmpada acesa na janela da torre que avisa a todos a chegada iminente da aurora."
+          ]
+        },
+        {
+          "id": "P2-S2-Q446",
+          "categoria": "Seção 2: Os sete sacramentos da Igreja (Capítulo 3, Artigo 7: O sacramento do Matrimônio)",
+          "pergunta": "Por que a celebração do Matrimônio entre fiéis católicos deve normalmente ocorrer durante a Santa Missa?",
+          "resposta_texto": "Deve ocorrer durante a Santa Missa porque todos os sacramentos estão ligados ao mistério pascal de Cristo presente na Eucaristia. Na Eucaristia, o casal encontra a fonte do amor sacrificial que deve nutrir a sua própria aliança conjugal.",
+          "referencias": {
+            "biblia": [
+              "1Cor 10,16-17",
+              "Ef 5,2",
+              "Ap 19,9"
+            ],
+            "cic": [
+              "CIC 1621"
+            ]
+          },
+          "analogias": [
+            "É como acender a vela do casal diretamente na chama do Círio Pascal no altar da igreja."
+          ]
+        },
+        {
+          "id": "P2-S2-Q447",
+          "categoria": "Seção 2: Os sete sacramentos da Igreja (Capítulo 3, Artigo 7: O sacramento do Matrimônio)",
+          "pergunta": "Quem são os ministros do sacramento do Matrimônio no rito de tradição latina?",
+          "resposta_texto": "No rito latino, os próprios noivos são os ministros da graça matrimonial ao manifestarem o seu consentimento perante a Igreja. O sacerdote ou diácono assiste à celebração, recebe o consentimento e dá a bênção em nome da Igreja.",
+          "referencias": {
+            "biblia": [
+              "1Cor 12,4-7",
+              "1Pd 4,10"
+            ],
+            "cic": [
+              "CIC 1623"
+            ]
+          },
+          "analogias": [
+            "É como os dois sócios fundadores que assinam pessoalmente o contrato de sociedade diante da testemunha oficial."
+          ]
+        },
+        {
+          "id": "P2-S2-Q448",
+          "categoria": "Seção 2: Os sete sacramentos da Igreja (Capítulo 3, Artigo 7: O sacramento do Matrimônio)",
+          "pergunta": "Quem é o ministro da coroação e do Matrimônio nas tradições liturgicas orientais católicas?",
+          "resposta_texto": "Nas tradições orientais, o bispo ou o presbítero é o ministro que confere o sacramento ao abençoar e coroar os noivos. A bênção do sacerdote é considerada essencial para a validade do Matrimônio nessas liturgias.",
+          "referencias": {
+            "biblia": [
+              "Sl 21,4",
+              "Hb 2,7"
+            ],
+            "cic": [
+              "CIC 1623"
+            ]
+          },
+          "analogias": [
+            "É como o rei que coloca com as suas próprias mãos a coroa de nobreza sobre a cabeça dos príncipes."
+          ]
+        },
+        {
+          "id": "P2-S2-Q449",
+          "categoria": "Seção 2: Os sete sacramentos da Igreja (Capítulo 3, Artigo 7: O sacramento do Matrimônio)",
+          "pergunta": "O que constitui o elemento indispensável que 'faz o Matrimônio' surgir entre o homem e a mulher?",
+          "resposta_texto": "O elemento indispensável é a troca do consentimento matrimonial livre entre os esposos. Se faltar o consentimento verdadeiro, o Matrimônio não chega a existir de modo algum.",
+          "referencias": {
+            "biblia": [
+              "Gn 2,24",
+              "Mt 19,5"
+            ],
+            "cic": [
+              "CIC 1626"
+            ]
+          },
+          "analogias": [
+            "É como o aperto de mão irrevogável entre duas partes que sela a aliança definitiva da sociedade."
+          ]
+        },
+        {
+          "id": "P2-S2-Q450",
+          "categoria": "Seção 2: Os sete sacramentos da Igreja (Capítulo 3, Artigo 7: O sacramento do Matrimônio)",
+          "pergunta": "O que a Igreja entende exatamente por um consentimento matrimonial livre e autêntico?",
+          "resposta_texto": "Um consentimento livre significa ser um ato da vontade humana desprovido de coerção ou violência externa, e isento de medo grave provocado por terceiros. Além disso, a pessoa não pode estar impedida por nenhuma lei natural ou eclesiástica.",
+          "referencias": {
+            "biblia": [
+              "2Cor 9,7",
+              "Fm 1,14"
+            ],
+            "cic": [
+              "CIC 1628"
+            ]
+          },
+          "analogias": [
+            "É como o presente oferecido de coração aberto sem que haja nenhuma espada apontada para o doador."
+          ]
+        },
+        {
+          "id": "P2-S2-Q451",
+          "categoria": "Seção 2: Os sete sacramentos da Igreja (Capítulo 3, Artigo 7: O sacramento do Matrimônio)",
+          "pergunta": "Por que a Igreja exige que o consentimento dos noivos seja expresso de forma pública na celebração?",
+          "resposta_texto": "Exige a expressão pública porque o Matrimônio introduz o casal em um estado de vida eclesial e socialmente reconhecido, criando direitos e deveres na comunidade. A publicidade protege a fidelidade do 'sim' dado perante testemunhas.",
+          "referencias": {
+            "biblia": [
+              "Rt 4,9-11",
+              "Mt 18,16"
+            ],
+            "cic": [
+              "CIC 1631"
+            ]
+          },
+          "analogias": [
+            "É como a proclamação solene da posse perante todo o povo reunido na praça central da cidade."
+          ]
+        },
+        {
+          "id": "P2-S2-Q452",
+          "categoria": "Seção 2: Os sete sacramentos da Igreja (Capítulo 3, Artigo 7: O sacramento do Matrimônio)",
+          "pergunta": "O que é a 'forma canônica' da celebração do Matrimônio na Igreja Católica?",
+          "resposta_texto": "A forma canônica é o conjunto de normas jurídicas e litúrgicas exigidas pela Igreja para a validade do Matrimônio dos batizados. Ela exige a presença do bispo, pároco ou sacerdote delegado, juntamente com duas testemunhas fiéis.",
+          "referencias": {
+            "biblia": [
+              "1Cor 14,40",
+              "Tt 1,5"
+            ],
+            "cic": [
+              "CIC 1631"
+            ]
+          },
+          "analogias": [
+            "É como o protocolo oficial do registro civil indispensável para conferir validade jurídica ao ato."
+          ]
+        },
+        {
+          "id": "P2-S2-Q453",
+          "categoria": "Seção 2: Os sete sacramentos da Igreja (Capítulo 3, Artigo 7: O sacramento do Matrimônio)",
+          "pergunta": "Por que a preparação para o Matrimônio é de vital importância para os jovens e noivos?",
+          "resposta_texto": "É de vital importância para que os noivos compreendam a grandeza da vocação conjugal, amadureçam o amor humano e cristão e conheçam os compromissos de fidelidade indissolúvel e acolhimento da vida humana.",
+          "referencias": {
+            "biblia": [
+              "Pr 24,3-4",
+              "Lc 14,28"
+            ],
+            "cic": [
+              "CIC 1632"
+            ]
+          },
+          "analogias": [
+            "É como o curso intensivo de pilotagem e navegação feito antes de assumir o comando da embarcação em alto-mar."
+          ]
+        },
+        {
+          "id": "P2-S2-Q454",
+          "categoria": "Seção 2: Os sete sacramentos da Igreja (Capítulo 3, Artigo 7: O sacramento do Matrimônio)",
+          "pergunta": "Como a família e a comunidade cristã devem acompanhar os noivos na preparação do casório?",
+          "resposta_texto": "A comunidade cristã e a família devem acompanhar os noivos por meio do exemplo de vida amoroso, da catequese adequada, da oração comunitária e do apoio prático na formação do novo lar.",
+          "referencias": {
+            "biblia": [
+              "Tt 2,3-5",
+              "1Ts 5,11"
+            ],
+            "cic": [
+              "CIC 1632"
+            ]
+          },
+          "analogias": [
+            "É como o mutirão dos vizinhos experientes que ajudam os recém-casados a erguer as paredes da nova morada."
+          ]
+        },
+        {
+          "id": "P2-S2-Q455",
+          "categoria": "Seção 2: Os sete sacramentos da Igreja (Capítulo 3, Artigo 7: O sacramento do Matrimônio)",
+          "pergunta": "O que a Bíblia ensina sobre o homem deixar pai e mãe para se unir à sua mulher?",
+          "resposta_texto": "A Bíblia ensina que essa união cria uma nova unidade familiar indivisível onde os dois se tornam 'uma só carne'. Essa comunhão supera os laços de origem para fundar um novo lar autônomo e definitivo.",
+          "referencias": {
+            "biblia": [
+              "Gn 2,24",
+              "Mt 19,5"
+            ],
+            "cic": [
+              "CIC 1605"
+            ]
+          },
+          "analogias": [
+            "É como o enxerto do novo ramo na árvore que passa a nutrir-se e frutificar na nova cepa."
+          ]
+        },
+        {
+          "id": "P2-S2-Q456",
+          "categoria": "Seção 2: Os sete sacramentos da Igreja (Capítulo 3, Artigo 7: O sacramento do Matrimônio)",
+          "pergunta": "Por que a poligamia e a bigamia são contrárias à essência do amor matrimonial?",
+          "resposta_texto": "São contrárias porque o amor conjugal exige uma doação mútua total, exclusiva e definitiva entre um homem e uma mulher. A poligamia divide a comunhão pessoal e viola a igual dignidade dos esposos.",
+          "referencias": {
+            "biblia": [
+              "Gn 2,24",
+              "1Cor 7,2"
+            ],
+            "cic": [
+              "CIC 1610"
+            ]
+          },
+          "analogias": [
+            "É como tentar repartir a única chave mestra do cofre secreto entre vários estranhos ao mesmo tempo."
+          ]
+        },
+        {
+          "id": "P2-S2-Q457",
+          "categoria": "Seção 2: Os sete sacramentos da Igreja (Capítulo 3, Artigo 7: O sacramento do Matrimônio)",
+          "pergunta": "Como o amor de Cristo pela Igreja serve de modelo para o amor entre marido e mulher?",
+          "resposta_texto": "Serve de modelo porque Cristo amou a Igreja com um amor fiel, purificador, paciente e capaz de dar a própria vida. O marido é chamado a amar a mulher como ao seu próprio corpo, e a mulher a corresponder com confiança.",
+          "referencias": {
+            "biblia": [
+              "Ef 5,25-28",
+              "Ef 5,33"
+            ],
+            "cic": [
+              "CIC 1616",
+              "CIC 1617"
+            ]
+          },
+          "analogias": [
+            "É como o espelho d'água cristalina que reflete fielmente a imagem do sol brilhante no alto do céu."
+          ]
+        },
+        {
+          "id": "P2-S2-Q458",
+          "categoria": "Seção 2: Os sete sacramentos da Igreja (Capítulo 3, Artigo 7: O sacramento do Matrimônio)",
+          "pergunta": "Qual a relação entre o sacramento do Matrimônio e o acolhimento generoso dos filhos na família?",
+          "resposta_texto": "A relação consiste em que os filhos são o dom supremo do Matrimônio e a coroação do amor dos cônjuges. O consentimento matrimonial inclui por sua própria natureza a abertura à transmissão da vida humana.",
+          "referencias": {
+            "biblia": [
+              "Sl 127,3",
+              "Gn 1,28"
+            ],
+            "cic": [
+              "CIC 1604",
+              "CIC 1612"
+            ]
+          },
+          "analogias": [
+            "É como os frutos maduros e suculentos que nascem da árvore bem regada pela fonte de água viva."
+          ]
+        },
+        {
+          "id": "P2-S2-Q459",
+          "categoria": "Seção 2: Os sete sacramentos da Igreja (Capítulo 3, Artigo 7: O sacramento do Matrimônio)",
+          "pergunta": "O que a Igreja entende quando declara a nulidade de um casamento aparentemente celebrado?",
+          "resposta_texto": "Declara que, por diversas razões examinadas pelo tribunal eclesiástico competente (por exemplo, a falta de um consentimento livre), aquele casamento nunca chegou a existir validamente como sacramento perante Deus.",
+          "referencias": {
+            "biblia": [
+              "1Cor 7,15",
+              "Mt 19,9"
+            ],
+            "cic": [
+              "CIC 1629"
+            ]
+          },
+          "analogias": [
+            "É como a perícia técnica que atesta que o contrato de compra era nulo desde o início por falsificação de assinatura."
+          ]
+        },
+        {
+          "id": "P2-S2-Q460",
+          "categoria": "Seção 2: Os sete sacramentos da Igreja (Capítulo 3, Artigo 7: O sacramento do Matrimônio)",
+          "pergunta": "Como o medo grave ou a violência externa afetam a validade do consentimento matrimonial?",
+          "resposta_texto": "Afetam anulando a validade do consentimento, pois a pessoa privada da sua liberdade interna não pode emitir um 'sim' autêntico e responsável. A escolha conjugal deve ser plenamente voluntária.",
+          "referencias": {
+            "biblia": [
+              "2Cor 9,7",
+              "Fm 1,14"
+            ],
+            "cic": [
+              "CIC 1628"
+            ]
+          },
+          "analogias": [
+            "É como a assinatura feita com a mão forçada pelo agressor que não possui nenhum valor legal."
+          ]
+        },
+        {
+          "id": "P2-S2-Q461",
+          "categoria": "Seção 2: Os sete sacramentos da Igreja (Capítulo 3, Artigo 7: O sacramento do Matrimônio)",
+          "pergunta": "O que significa a presença de Jesus nas Bodas de Caná para o Matrimônio?",
+          "resposta_texto": "Ensina que ao participar e realizar o Seu primeiro milagre em uma festa de casamento, Jesus confirmou a bondade do Matrimônio e anunciou a transformação da união humana em sacramento da Nova Aliança.",
+          "referencias": {
+            "biblia": [
+              "Jo 2,1-11",
+              "Hb 13,4"
+            ],
+            "cic": [
+              "CIC 1613"
+            ]
+          },
+          "analogias": [
+            "É como transformar a água simples das talhas de pedra no vinho refinado e saboroso do banquete."
+          ]
+        },
+        {
+          "id": "P2-S2-Q462",
+          "categoria": "Seção 2: Os sete sacramentos da Igreja (Capítulo 3, Artigo 7: O sacramento do Matrimônio)",
+          "pergunta": "O que a Santa Igreja entende por casamento misto na sua disciplina matrimonial?",
+          "resposta_texto": "A Igreja entende por casamento misto a união matrimonial celebrada entre uma pessoa católica e uma pessoa batizada não católica (pertencente a outra comunidade cristã). Esse casamento exige uma permissão expressa da autoridade eclesiástica para ser celebrado licitamente.",
+          "referencias": {
+            "biblia": [
+              "1Cor 7,12-14",
+              "2Cor 6,14"
+            ],
+            "cic": [
+              "CIC 1633",
+              "CIC 1635"
+            ]
+          },
+          "analogias": [
+            "É como juntar dois instrumentos musicais de famílias diferentes que precisam de afinação prévia para tocar a mesma partitura."
+          ]
+        },
+        {
+          "id": "P2-S2-Q463",
+          "categoria": "Seção 2: Os sete sacramentos da Igreja (Capítulo 3, Artigo 7: O sacramento do Matrimônio)",
+          "pergunta": "O que caracteriza o casamento com disparidade de culto na doutrina católica?",
+          "resposta_texto": "A disparidade de culto ocorre quando um fiel católico se casa com uma pessoa não batizada (de outra religião ou sem religião). Para a validade desse matrimônio, exige-se uma dispensa explícita do impedimento outorgada pela autoridade competente da Igreja.",
+          "referencias": {
+            "biblia": [
+              "1Cor 7,15-16",
+              "2Cor 6,14-15"
+            ],
+            "cic": [
+              "CIC 1633",
+              "CIC 1635"
+            ]
+          },
+          "analogias": [
+            "É como plantar uma semente em solo de composição diferente onde se exige adubação especial para a planta germinar."
+          ]
+        },
+        {
+          "id": "P2-S2-Q464",
+          "categoria": "Seção 2: Os sete sacramentos da Igreja (Capítulo 3, Artigo 7: O sacramento do Matrimônio)",
+          "pergunta": "Quais são as promessas e obrigações assumidas pela parte católica ao solicitar a licença para um casamento misto?",
+          "resposta_texto": "A parte católica deve declarar que está disposta a afastar os perigos de desertar da fé e prometer sinceramente fazer tudo o que puder para que todos os filhos sejam batizados e educados na Santa Igreja Católica.",
+          "referencias": {
+            "biblia": [
+              "1Cor 7,16",
+              "Ef 6,4"
+            ],
+            "cic": [
+              "CIC 1635"
+            ]
+          },
+          "analogias": [
+            "É como o guardião que assume o compromisso solene de manter o farol da casa sempre aceso para orientar os navegantes."
+          ]
+        },
+        {
+          "id": "P2-S2-Q465",
+          "categoria": "Seção 2: Os sete sacramentos da Igreja (Capítulo 3, Artigo 7: O sacramento do Matrimônio)",
+          "pergunta": "Por que as diferenças de fé no matrimônio misto exigem um empenho renovado de diálogo e oração no lar?",
+          "resposta_texto": "Exigem um empenho renovado porque a diversidade de convicções religiosas pode introduzir tensões na vida diária, na educação dos filhos e na prática da fé. A oração em comum e o respeito mútuo ajudam a superar essas dificuldades.",
+          "referencias": {
+            "biblia": [
+              "1Pd 3,1-2",
+              "Rm 14,19"
+            ],
+            "cic": [
+              "CIC 1634"
+            ]
+          },
+          "analogias": [
+            "É como dois caminhantes de ritmos diferentes que precisam alinhar o passo com paciência para atingirem juntos o topo."
+          ]
+        },
+        {
+          "id": "P2-S2-Q466",
+          "categoria": "Seção 2: Os sete sacramentos da Igreja (Capítulo 3, Artigo 7: O sacramento do Matrimônio)",
+          "pergunta": "De que modo o ecumenismo e o matrimônio misto podem colaborar para a unidade dos cristãos?",
+          "resposta_texto": "Podem colaborar quando os esposos vivenciam com amor a sua fé comum no único Senhor Jesus Cristo, aprendendo a valorizar os bens espirituais presentes na outra tradição e promovendo a aproximação fraternal das famílias.",
+          "referencias": {
+            "biblia": [
+              "Jo 17,21",
+              "Ef 4,3-5"
+            ],
+            "cic": [
+              "CIC 1637"
+            ]
+          },
+          "analogias": [
+            "É como a construção de uma ponte de diálogo permanente que une as duas margens do mesmo rio cristalino."
+          ]
+        },
+        {
+          "id": "P2-S2-Q467",
+          "categoria": "Seção 2: Os sete sacramentos da Igreja (Capítulo 3, Artigo 7: O sacramento do Matrimônio)",
+          "pergunta": "O que constitui o vínculo matrimonial sagrado formado no sacramento do Matrimônio?",
+          "resposta_texto": "O vínculo matrimonial é a união perpétua e exclusiva estabelecida pelo próprio Deus a partir do consentimento irrevogável dos esposos. Sendo selado pelo Criador, o casamento válido entre batizados jamais pode ser dissolvido por nenhum poder humano.",
+          "referencias": {
+            "biblia": [
+              "Mt 19,6",
+              "Mc 10,9"
+            ],
+            "cic": [
+              "CIC 1638",
+              "CIC 1640"
+            ]
+          },
+          "analogias": [
+            "É como o nó de marinheiro feito em corda de aço que se aperta definitivamente com a tensão e não se desfaz mais."
+          ]
+        },
+        {
+          "id": "P2-S2-Q468",
+          "categoria": "Seção 2: Os sete sacramentos da Igreja (Capítulo 3, Artigo 7: O sacramento do Matrimônio)",
+          "pergunta": "Qual é o efeito permanente do sacramento do Matrimônio na alma e no estado de vida dos esposos?",
+          "resposta_texto": "O sacramento imprime um vínculo conjugal indissolúvel e confere aos esposos uma graça própria para aperfeiçoar o seu amor, fortalecer a sua fidelidade e santificar a vida familiar rumo ao Céu.",
+          "referencias": {
+            "biblia": [
+              "1Jo 4,12",
+              "Ef 5,25-27"
+            ],
+            "cic": [
+              "CIC 1638",
+              "CIC 1641"
+            ]
+          },
+          "analogias": [
+            "É como o selo régio gravado a fogo na estrutura que atesta a posse e a proteção permanente do rei."
+          ]
+        },
+        {
+          "id": "P2-S2-Q469",
+          "categoria": "Seção 2: Os sete sacramentos da Igreja (Capítulo 3, Artigo 7: O sacramento do Matrimônio)",
+          "pergunta": "Como a presença viva de Jesus Cristo acompanha e sustenta o casal na vida matrimonial cotidiana?",
+          "resposta_texto": "Jesus permanece com os esposos dando-lhes a força de carregar as suas cruzes, de se levantarem após as quedas, de perdoarem-se mutuamente e de vivenciarem o amor sacrificial até o fim da vida terrena.",
+          "referencias": {
+            "biblia": [
+              "Jo 15,5",
+              "2Cor 12,9"
+            ],
+            "cic": [
+              "CIC 1642"
+            ]
+          },
+          "analogias": [
+            "É como o guia experiente de caminhada que caminha ao lado dos viajantes segurando o peso da bagagem mais pesada."
+          ]
+        },
+        {
+          "id": "P2-S2-Q470",
+          "categoria": "Seção 2: Os sete sacramentos da Igreja (Capítulo 3, Artigo 7: O sacramento do Matrimônio)",
+          "pergunta": "O que a doutrina católica ensina sobre a unidade e a indissolubilidade como bens essenciais do Matrimônio?",
+          "resposta_texto": "A Igreja ensina que a unidade exige a doação exclusiva a um único cônjuge (rejeitando a poligamia), enquanto a indissolubilidade exige a permanência do vínculo até a morte (rejeitando o divórcio). Ambos derivam do plano original de Deus.",
+          "referencias": {
+            "biblia": [
+              "Gn 2,24",
+              "Mt 19,5-6"
+            ],
+            "cic": [
+              "CIC 1644",
+              "CIC 1645"
+            ]
+          },
+          "analogias": [
+            "São como as duas colunas principais de concreto armado que sustentam firmemente o teto de todo o edifício."
+          ]
+        },
+        {
+          "id": "P2-S2-Q471",
+          "categoria": "Seção 2: Os sete sacramentos da Igreja (Capítulo 3, Artigo 7: O sacramento do Matrimônio)",
+          "pergunta": "Por que a fidelidade conjugal é uma exigência inegociável do amor verdadeiro entre o marido e a mulher?",
+          "resposta_texto": "A fidelidade é inegociável porque o amor conjugal é por sua própria natureza total, exclusivo e definitivo. O compromisso assumido perante Deus exige a guarda do corpo e do coração para com o único cônjuge escolhido.",
+          "referencias": {
+            "biblia": [
+              "Ex 20,14",
+              "Pr 5,18-19"
+            ],
+            "cic": [
+              "CIC 1646",
+              "CIC 1647"
+            ]
+          },
+          "analogias": [
+            "É como manter a chave mestra do cofre em mãos de um único proprietário para preservar o tesouro intacto."
+          ]
+        },
+        {
+          "id": "P2-S2-Q472",
+          "categoria": "Seção 2: Os sete sacramentos da Igreja (Capítulo 3, Artigo 7: O sacramento do Matrimônio)",
+          "pergunta": "Qual a posição da Santa Igreja em relação à separação física dos corpos entre esposos legítimos?",
+          "resposta_texto": "A Igreja admite a separação física dos corpos quando a convivência conjugal se torna praticamente impossível por razões graves. Contudo, essa separação não dissolve o vínculo matrimonial perante Deus, e os esposos não estão livres para novo casamento.",
+          "referencias": {
+            "biblia": [
+              "1Cor 7,10-11",
+              "Mc 10,11-12"
+            ],
+            "cic": [
+              "CIC 1649"
+            ]
+          },
+          "analogias": [
+            "É como o recolhimento temporário das embarcações para porto seguro durante o furacão sem romper o contrato de armação."
+          ]
+        },
+        {
+          "id": "P2-S2-Q473",
+          "categoria": "Seção 2: Os sete sacramentos da Igreja (Capítulo 3, Artigo 7: O sacramento do Matrimônio)",
+          "pergunta": "Por que os católicos divorciados que contraem nova união civil não podem receber a Eucaristia?",
+          "resposta_texto": "Não podem receber a Eucaristia porque o seu estado e condição de vida contradizem objetivamente a união indissolúvel de amor entre Cristo e a Sua Igreja significada na Eucaristia. O primeiro vínculo matrimonial continua válido diante de Deus.",
+          "referencias": {
+            "biblia": [
+              "Mc 10,11-12",
+              "1Cor 11,27"
+            ],
+            "cic": [
+              "CIC 1650"
+            ]
+          },
+          "analogias": [
+            "É como a regra de trânsito que proíbe o cruzamento da via enquanto o sinal de interdição estiver aceso no painel."
+          ]
+        },
+        {
+          "id": "P2-S2-Q474",
+          "categoria": "Seção 2: Os sete sacramentos da Igreja (Capítulo 3, Artigo 7: O sacramento do Matrimônio)",
+          "pergunta": "Qual é a atitude pastoral da Igreja para com os fiéis divorciados que vivem em nova união civil?",
+          "resposta_texto": "A Igreja não os considera excomungados e exorta-os a participarem ativamente da vida eclesial ouvindo a Palavra de Deus, frequentando a Santa Missa, perseverando na oração, educando os filhos na fé e praticando a caridade.",
+          "referencias": {
+            "biblia": [
+              "Is 1,18",
+              "1Pd 5,7"
+            ],
+            "cic": [
+              "CIC 1651"
+            ]
+          },
+          "analogias": [
+            "É como o médico de plantão que continua acolhendo o paciente no ambulatório com carinho e cuidados constantes."
+          ]
+        },
+        {
+          "id": "P2-S2-Q475",
+          "categoria": "Seção 2: Os sete sacramentos da Igreja (Capítulo 3, Artigo 7: O sacramento do Matrimônio)",
+          "pergunta": "Como os casais divorciados recasados podem viver em plena harmonia com a lei moral se não puderem se separar por causa dos filhos?",
+          "resposta_texto": "Se a separação for inviável por motivos graves, eles são convidados pela Igreja a assumirem o compromisso de viverem em plena continência (como irmão e irmã), abstendo-se dos atos próprios dos cônjuges.",
+          "referencias": {
+            "biblia": [
+              "1Cor 7,5",
+              "Mt 19,12"
+            ],
+            "cic": [
+              "CIC 1650"
+            ]
+          },
+          "analogias": [
+            "É como transformar o ambiente de moradia em um espaço de fraternidade pura sob o amparo da caridade."
+          ]
+        },
+        {
+          "id": "P2-S2-Q476",
+          "categoria": "Seção 2: Os sete sacramentos da Igreja (Capítulo 3, Artigo 7: O sacramento do Matrimônio)",
+          "pergunta": "Por que os filhos são considerados o dom supremo do Sacramento do Matrimônio?",
+          "resposta_texto": "Os filhos são o dom supremo porque o amor conjugal tende por sua própria natureza a ser fecundo, prolongando-se na geração de novas vidas humanas. Os esposos cooperam livremente com o Amor do Criador.",
+          "referencias": {
+            "biblia": [
+              "Sl 127,3",
+              "Gn 1,28"
+            ],
+            "cic": [
+              "CIC 1652",
+              "CIC 1653"
+            ]
+          },
+          "analogias": [
+            "São como os brotos novos que desabrocham da árvore frutífera cobrindo o jardim de alegria e vida."
+          ]
+        },
+        {
+          "id": "P2-S2-Q477",
+          "categoria": "Seção 2: Os sete sacramentos da Igreja (Capítulo 3, Artigo 7: O sacramento do Matrimônio)",
+          "pergunta": "O que a Igreja ensina sobre o acolhimento generoso e responsável da paternidade pelos casais?",
+          "resposta_texto": "A Igreja ensina que os pais devem acolher com generosidade e responsabilidade os filhos que Deus lhes conceder, educando-os na fé católica e cuidando da sua formação moral, humana e espiritual.",
+          "referencias": {
+            "biblia": [
+              "Ef 6,4",
+              "1Tm 5,8"
+            ],
+            "cic": [
+              "CIC 1652",
+              "CIC 1653"
+            ]
+          },
+          "analogias": [
+            "É como o semeador prudente que prepara o solo e cuida com desvelo da plantação até à colheita fartíssima."
+          ]
+        },
+        {
+          "id": "P2-S2-Q478",
+          "categoria": "Seção 2: Os sete sacramentos da Igreja (Capítulo 3, Artigo 7: O sacramento do Matrimônio)",
+          "pergunta": "Como a Igreja consola e acompanha os casais católicos que sofrem com a esterilidade involuntária?",
+          "resposta_texto": "A Igreja ensina que o matrimônio desses casais conserva toda a sua dignidade e valor sacramental, convidando-os a exercerem uma profunda fecundidade espiritual através da adoção, das obras de caridade e do serviço aos pobres.",
+          "referencias": {
+            "biblia": [
+              "Hb 13,2",
+              "Lc 14,13-14"
+            ],
+            "cic": [
+              "CIC 1654"
+            ]
+          },
+          "analogias": [
+            "É como a nascente cristalina que não forma riacho direto mas irriga os campos vizinhos com abundância."
+          ]
+        },
+        {
+          "id": "P2-S2-Q479",
+          "categoria": "Seção 2: Os sete sacramentos da Igreja (Capítulo 3, Artigo 7: O sacramento do Matrimônio)",
+          "pergunta": "Por que a família cristã é chamada no Catecismo de 'Igreja Doméstica'?",
+          "resposta_texto": "É chamada de Igreja Doméstica porque a família é a primeira comunidade crente e evangelizadora, um verdadeiro santuário onde a fé é professada, a oração é praticada e o amor de Deus é vivenciado no dia a dia.",
+          "referencias": {
+            "biblia": [
+              "At 16,31-34",
+              "1Cor 16,19"
+            ],
+            "cic": [
+              "CIC 1655",
+              "CIC 1656"
+            ]
+          },
+          "analogias": [
+            "É como uma pequena capela viva erguida no coração do lar onde o altar da fé permanece aceso diariamente."
+          ]
+        },
+        {
+          "id": "P2-S2-Q480",
+          "categoria": "Seção 2: Os sete sacramentos da Igreja (Capítulo 3, Artigo 7: O sacramento do Matrimônio)",
+          "pergunta": "Qual a missão insubstituível dos pais na transmissão da fé cristã no seio da família?",
+          "resposta_texto": "Os pais são os primeiros e principais catequistas dos seus filhos, devendo transmitir-lhes o Evangelho pelo exemplo de vida moral, pela oração familiar e pela instrução nas verdades da fé católica.",
+          "referencias": {
+            "biblia": [
+              "Dt 6,6-7",
+              "2Tm 1,5"
+            ],
+            "cic": [
+              "CIC 1656",
+              "CIC 1657"
+            ]
+          },
+          "analogias": [
+            "É como a lanterna acesa do pai que guia com segurança os passos dos filhos no caminho da noite escura."
+          ]
+        },
+        {
+          "id": "P2-S2-Q481",
+          "categoria": "Seção 2: Os sete sacramentos da Igreja (Capítulo 3, Artigo 7: O sacramento do Matrimônio)",
+          "pergunta": "Como a vivência do perdão mútua na família reflete a graça da Igreja Doméstica?",
+          "resposta_texto": "Reflete porque a família é a escola primordial do perdão e da reconciliação, onde os membros aprendem a perdoar de coração as ofensas diárias imitando a misericórdia de Cristo para conosco.",
+          "referencias": {
+            "biblia": [
+              "Cl 3,13",
+              "Ef 4,32"
+            ],
+            "cic": [
+              "CIC 1657"
+            ]
+          },
+          "analogias": [
+            "É como a fonte de água limpa no quintal que lava a sujeira das roupas ao fim de cada jornada de trabalho."
+          ]
+        },
+        {
+          "id": "P2-S2-Q482",
+          "categoria": "Seção 2: Os sete sacramentos da Igreja (Capítulo 3, Artigo 7: O sacramento do Matrimônio)",
+          "pergunta": "Como o lar cristão se torna uma escola primária de virtudes humanas e sociais?",
+          "resposta_texto": "Torna-se uma escola porque é no lar que as crianças aprendem o respeito, o trabalho generoso, a fraternidade, o desapego dos bens materiais e o espírito de serviço fraterno em favor dos necessitados.",
+          "referencias": {
+            "biblia": [
+              "Gl 6,2",
+              "1Jo 3,18"
+            ],
+            "cic": [
+              "CIC 1657"
+            ]
+          },
+          "analogias": [
+            "É como o campo de treinamento nobre onde o jovem exercita todas as manobras antes da batalha oficial."
+          ]
+        },
+        {
+          "id": "P2-S2-Q483",
+          "categoria": "Seção 2: Os sete sacramentos da Igreja (Capítulo 3, Artigo 7: O sacramento do Matrimônio)",
+          "pergunta": "Por que a oração familiar diária é indispensável para proteger a união da Igreja Doméstica?",
+          "resposta_texto": "É indispensável porque a oração em comum coloca a família sob a bênção e a proteção de Deus, renovando a presença de Cristo no centro da casa e fortalecendo a concórdia entre os seus membros.",
+          "referencias": {
+            "biblia": [
+              "Mt 18,20",
+              "Lc 18,1"
+            ],
+            "cic": [
+              "CIC 1657"
+            ]
+          },
+          "analogias": [
+            "É como abastecer diariamente a lareira com lenha seca para manter a sala aquecida durante o inverno rigoroso."
+          ]
+        },
+        {
+          "id": "P2-S2-Q484",
+          "categoria": "Seção 2: Os sete sacramentos da Igreja (Capítulo 3, Artigo 7: O sacramento do Matrimônio)",
+          "pergunta": "Como a Igreja acolhe e ampara as pessoas solteiras ou sem família na comunidade católica?",
+          "resposta_texto": "A Igreja acolhe as pessoas solteiras lembrando que elas estão intimamente ligadas à grande família de Deus que é a Igreja. Elas podem dedicar-se com generosidade à oração, ao serviço apostólico e às obras de caridade.",
+          "referencias": {
+            "biblia": [
+              "1Cor 7,32-34",
+              "Sl 68,7"
+            ],
+            "cic": [
+              "CIC 1658"
+            ]
+          },
+          "analogias": [
+            "É como abrir as portas da mansão da família para acolher o viajante solitário com um lugar na mesa de jantar."
+          ]
+        },
+        {
+          "id": "P2-S2-Q485",
+          "categoria": "Seção 2: Os sete sacramentos da Igreja (Capítulo 3, Artigo 7: O sacramento do Matrimônio)",
+          "pergunta": "Por que o matrimônio entre dois batizados não católicos é reconhecido pela Igreja como verdadeiro sacramento?",
+          "resposta_texto": "É reconhecido porque o Batismo válido recebido por ambos os cônjuges os eleva à dignidade de membros de Cristo, fazendo com que o seu consentimento matrimonial legítimo seja um sacramento eficaz.",
+          "referencias": {
+            "biblia": [
+              "Gl 3,27-28",
+              "Ef 5,31-32"
+            ],
+            "cic": [
+              "CIC 1633",
+              "CIC 1640"
+            ]
+          },
+          "analogias": [
+            "É como dois vasos de valor que já trazem o selo de nobreza e por isso a sua aliança forma um par autêntico."
+          ]
+        },
+        {
+          "id": "P2-S2-Q486",
+          "categoria": "Seção 2: Os sete sacramentos da Igreja (Capítulo 3, Artigo 7: O sacramento do Matrimônio)",
+          "pergunta": "O que significa afirmar que o amor conjugal visa a uma 'comunhão de pessoas' indivisível?",
+          "resposta_texto": "Significa que o amor dos esposos busca a integração perfeita de toda a vida corporativa, afetiva, mental e espiritual dos dois, formando uma unidade profunda que espelha o amor de Cristo.",
+          "referencias": {
+            "biblia": [
+              "Gn 2,24",
+              "1Cor 6,16-17"
+            ],
+            "cic": [
+              "CIC 1643",
+              "CIC 1644"
+            ]
+          },
+          "analogias": [
+            "É como fundir duas gotas de mercúrio no mesmo recipiente criando uma única esfera prateada indissociável."
+          ]
+        },
+        {
+          "id": "P2-S2-Q487",
+          "categoria": "Seção 2: Os sete sacramentos da Igreja (Capítulo 3, Artigo 7: O sacramento do Matrimônio)",
+          "pergunta": "Por que a poligamia é absolutamente incompatível com o plano de Deus para o Matrimônio?",
+          "resposta_texto": "Porque a poligamia fere diretamente a igual dignidade pessoal do homem e da mulher e nega a exclusividade do amor conjugal, que exige uma doação total e recíproca a uma só pessoa.",
+          "referencias": {
+            "biblia": [
+              "Gn 2,24",
+              "Mt 19,4-5"
+            ],
+            "cic": [
+              "CIC 1645"
+            ]
+          },
+          "analogias": [
+            "É como tentar dividir a chave mestra original entre vários cadeados perdendo o segredo do cofre."
+          ]
+        },
+        {
+          "id": "P2-S2-Q488",
+          "categoria": "Seção 2: Os sete sacramentos da Igreja (Capítulo 3, Artigo 7: O sacramento do Matrimônio)",
+          "pergunta": "De que modo o sacramento do Matrimônio capacita os esposos a testemunharem a fé na sociedade secularizada?",
+          "resposta_texto": "Capacita-os infundindo a graça do Espírito Santo que torna a sua fidelidade, o seu amor incondicional e a sua abertura à vida em um testemunho profético da verdade e da beleza do Evangelho.",
+          "referencias": {
+            "biblia": [
+              "Mt 5,14-16",
+              "Jo 13,35"
+            ],
+            "cic": [
+              "CIC 1642",
+              "CIC 1656"
+            ]
+          },
+          "analogias": [
+            "É como uma lâmpada acesa na janela da montanha que ilumina o caminho dos viajantes na noite escura."
+          ]
+        },
+        {
+          "id": "P2-S2-Q489",
+          "categoria": "Seção 2: Os sete sacramentos da Igreja (Capítulo 3, Artigo 7: O sacramento do Matrimônio)",
+          "pergunta": "Por que o divórcio civil não rompe o vínculo sacramental do casamento perante a lei de Deus?",
+          "resposta_texto": "Porque o divórcio é apenas uma decisão da autoridade civil humana, incapaz de anular a união espiritual e corporal selada pelo próprio Deus na celebração do sacramento.",
+          "referencias": {
+            "biblia": [
+              "Mt 19,6",
+              "Rm 7,2-3"
+            ],
+            "cic": [
+              "CIC 1640",
+              "CIC 1650"
+            ]
+          },
+          "analogias": [
+            "É como tentar apagar a gravação feita na rocha firme passando uma vassoura de palha na superfície."
+          ]
+        },
+        {
+          "id": "P2-S2-Q490",
+          "categoria": "Seção 2: Os sete sacramentos da Igreja (Capítulo 3, Artigo 7: O sacramento do Matrimônio)",
+          "pergunta": "Por que o dever de educar os filhos na fé é um direito e dever inalienável dos pais cristãos?",
+          "resposta_texto": "É um dever inalienável porque deriva da própria missão de cooperadores da criação recebida de Deus. Ninguém pode substituir plenamente o testemunho moral dos pais no lar.",
+          "referencias": {
+            "biblia": [
+              "Pr 22,6",
+              "Ef 6,4"
+            ],
+            "cic": [
+              "CIC 1653"
+            ]
+          },
+          "analogias": [
+            "É como o jardineiro proprietário que possui a tarefa exclusiva de podar e regar as mudas da sua estufa."
+          ]
+        },
+        {
+          "id": "P2-S2-Q491",
+          "categoria": "Seção 2: Os sete sacramentos da Igreja (Capítulo 3, Artigo 7: O sacramento do Matrimônio)",
+          "pergunta": "Por que a abertura à fecundidade é essencial ao Matrimônio?",
+          "resposta_texto": "Invalida porque a abertura à procriação é uma propriedade essencial do Matrimônio. Excluir positivamente a geração de filhos contraria o próprio projeto de Deus para a aliança conjugal.",
+          "referencias": {
+            "biblia": [
+              "Gn 1,28",
+              "Sl 127,3-5"
+            ],
+            "cic": [
+              "CIC 1664"
+            ]
+          },
+          "analogias": [
+            "É como assinar um contrato de plantio recusando-se a colocar qualquer semente no solo fertilizado."
+          ]
+        },
+        {
+          "id": "P2-S2-Q492",
+          "categoria": "Seção 2: Os sete sacramentos da Igreja (Capítulo 4: Os sacramentais e as exéquias cristãs)",
+          "pergunta": "O que são os sacramentais na Igreja Católica e qual é a sua finalidade principal?",
+          "resposta_texto": "Os sacramentais são sinais sagrados instituídos pela Igreja para dispor os homens a receberem os efeitos dos sacramentos e para santificar as diversas circunstâncias da vida humana. Diferente dos sacramentos, eles foram criados pela autoridade eclesial para estender a santificação trazida por Cristo a todos os momentos da existência do fiel.",
+          "referencias": {
+            "biblia": [
+              "Mt 10,1",
+              "1Tm 4,5"
+            ],
+            "cic": [
+              "CIC 1667-1668"
+            ]
+          },
+          "analogias": [
+            "É como as janelas abertas da casa que deixam a luz do sol e o ar fresco entrarem em cada cômodo preparado."
+          ]
+        },
+        {
+          "id": "P2-S2-Q493",
+          "categoria": "Seção 2: Os sete sacramentos da Igreja (Capítulo 4: Os sacramentais e as exéquias cristãs)",
+          "pergunta": "Qual é a diferença fundamental entre os sacramentos e os sacramentais?",
+          "resposta_texto": "Os sacramentos foram instituídos diretamente por Jesus Cristo e conferem a graça por si mesmos, pelo próprio poder do rito celebrado. Já os sacramentais foram instituídos pela Igreja e não conferem a graça do Espírito Santo da mesma maneira, mas preparam a alma para acolhê-la e dispoem o fiel a cooperar com ela através da oração eclesial.",
+          "referencias": {
+            "biblia": [
+              "2Tm 1,6",
+              "1Pd 4,10"
+            ],
+            "cic": [
+              "CIC 1667-1670"
+            ]
+          },
+          "analogias": [
+            "É como a refeição nutritiva no prato em comparação com os talheres e pratos que preparam a mesa para o banquete."
+          ]
+        },
+        {
+          "id": "P2-S2-Q494",
+          "categoria": "Seção 2: Os sete sacramentos da Igreja (Capítulo 4: Os sacramentais e as exéquias cristãs)",
+          "pergunta": "Por que as bênçãos ocupam o lugar principal entre todos os sacramentais?",
+          "resposta_texto": "As bênçãos ocupam o primeiro lugar porque são louvores dirigidos a Deus Pai e súplicas para que Ele derrame os Seus dons sobre as pessoas ou coisas. Em cada bênção, a Igreja glorifica ao Criador por Suas obras e pede que os Seus filhos utilizem os bens terrenos segundo o espírito do Evangelho.",
+          "referencias": {
+            "biblia": [
+              "Ef 1,3",
+              "Gn 12,2"
+            ],
+            "cic": [
+              "CIC 1671"
+            ]
+          },
+          "analogias": [
+            "É como a chuva benfazeja que o agricultor pede aos céus antes de cultivar e colher os frutos do campo."
+          ]
+        },
+        {
+          "id": "P2-S2-Q495",
+          "categoria": "Seção 2: Os sete sacramentos da Igreja (Capítulo 4: Os sacramentais e as exéquias cristãs)",
+          "pergunta": "Quem tem a autoridade para ministrar as bênçãos na comunidade eclesial?",
+          "resposta_texto": "O sacerdócio comum dos batizados permite que os leigos celebrem certas bênçãos familiares e sociais em razão de sua missão no mundo. Contudo, quanto mais a bênção diz respeito à vida eclesial e sacramental, mais o seu ministério é reservado aos ministros ordenados, como bispos, presbíteros e diáconos.",
+          "referencias": {
+            "biblia": [
+              "Nm 6,22-26",
+              "1Pd 2,9"
+            ],
+            "cic": [
+              "CIC 1669"
+            ]
+          },
+          "analogias": [
+            "É como o pai de família que abençoa os seus filhos na mesa da casa em harmonia com a bênção do autoridade do bispo no templo."
+          ]
+        },
+        {
+          "id": "P2-S2-Q496",
+          "categoria": "Seção 2: Os sete sacramentos da Igreja (Capítulo 4: Os sacramentais e as exéquias cristãs)",
+          "pergunta": "O que significa a bênção e consagração duradoura de pessoas na Igreja?",
+          "resposta_texto": "Certos sacramentais têm um caráter permanente e consecratório, consagrando de modo definitivo pessoas a Deus. É o caso da bênção do abade ou abadessa de um mosteiro, da consagração das virgens, da profissão religiosa e da bênção dos leitores e acólitos para os ministérios eclesiais.",
+          "referencias": {
+            "biblia": [
+              "1Rs 19,16",
+              "Rm 12,1"
+            ],
+            "cic": [
+              "CIC 1672"
+            ]
+          },
+          "analogias": [
+            "É como dedicar solenemente um vaso nobre exclusivamente para o serviço de honra no palácio do rei."
+          ]
+        },
+        {
+          "id": "P2-S2-Q497",
+          "categoria": "Seção 2: Os sete sacramentos da Igreja (Capítulo 4: Os sacramentais e as exéquias cristãs)",
+          "pergunta": "Qual é o sentido de abençoar ou dedicar objetos e lugares para o uso litúrgico?",
+          "resposta_texto": "A bênção e dedicação de objetos e lugares destina-os de forma duradoura ao culto divino e ao serviço da Igreja. Ao dedicar uma igreja, um altar, os óleos sagrados, os cálices ou os sinos, a Igreja retira esses bens do uso profano cotidiano para torná-los instrumentos da presença e do louvor de Deus.",
+          "referencias": {
+            "biblia": [
+              "Ex 40,9",
+              "1Rs 8,10-11"
+            ],
+            "cic": [
+              "CIC 1672"
+            ]
+          },
+          "analogias": [
+            "É como separar e reservar a sala principal do castelo exclusivamente para as recepções solenes da corte."
+          ]
+        },
+        {
+          "id": "P2-S2-Q498",
+          "categoria": "Seção 2: Os sete sacramentos da Igreja (Capítulo 4: Os sacramentais e as exéquias cristãs)",
+          "pergunta": "O que é o rito do exorcismo e quando a Igreja o realiza oficialmente?",
+          "resposta_texto": "O exorcismo ocorre quando a Igreja pede publicamente e com autoridade, em nome de Jesus Cristo, que uma pessoa ou objeto seja protegido contra a influência do Maligno e libertado do seu domínio. Ele fundamenta-se no poder de expulsar demônios que Cristo confiou à Sua Igreja para a libertação das almas.",
+          "referencias": {
+            "biblia": [
+              "Mc 3,14-15",
+              "Mc 16,17"
+            ],
+            "cic": [
+              "CIC 1673"
+            ]
+          },
+          "analogias": [
+            "É como o resgatador oficial que entra no território invadido para retirar a vítima da influência do opressor."
+          ]
+        },
+        {
+          "id": "P2-S2-Q499",
+          "categoria": "Seção 2: Os sete sacramentos da Igreja (Capítulo 4: Os sacramentais e as exéquias cristãs)",
+          "pergunta": "Qual a diferença entre o exorcismo simples e o grande exorcismo na Igreja Católica?",
+          "resposta_texto": "O exorcismo simples é praticado durante a celebração do Batismo para libertar o candidato do poder do pecado original. Já o grande exorcismo é um rito solene praticado para libertar pessoas da possessão diabólica direta, e só pode ser realizado por um sacerdote autorizado expressamente pelo Bispo diocesano.",
+          "referencias": {
+            "biblia": [
+              "At 19,13-15",
+              "Mt 10,8"
+            ],
+            "cic": [
+              "CIC 1673"
+            ]
+          },
+          "analogias": [
+            "É como uma limpeza preventiva no portal de entrada em comparação com uma intervenção cirúrgica de emergência."
+          ]
+        },
+        {
+          "id": "P2-S2-Q500",
+          "categoria": "Seção 2: Os sete sacramentos da Igreja (Capítulo 4: Os sacramentais e as exéquias cristãs)",
+          "pergunta": "Por que é preciso distinguir a ação do demônio de uma doença antes de um exorcismo?",
+          "resposta_texto": "Porque o exorcismo tem por fim expulsar os demônios ou libertar do poder diabólico, enquanto as doenças, sobretudo psíquicas, são algo muito diferente, cujo tratamento depende da ciência médica. Por isso, antes de proceder ao exorcismo, é importante ter certeza de que se trata de uma presença diabólica e não de uma doença, agindo com prudência e observando estritamente as regras da Igreja.",
+          "referencias": {
+            "biblia": [
+              "1Jo 4,1",
+              "1Ts 5,21"
+            ],
+            "cic": [
+              "CIC 1673"
+            ]
+          },
+          "analogias": [
+            "É como o diagnóstico rigoroso do médico que identifica se a febre é causada por uma infecção física ou por outro mal antes de receitar o remédio."
+          ]
+        },
+        {
+          "id": "P2-S2-Q501",
+          "categoria": "Seção 2: Os sete sacramentos da Igreja (Capítulo 4: Os sacramentais e as exéquias cristãs)",
+          "pergunta": "De que modo a oração e a bênção dos objetos de piedade ajudam na vida diária do crente?",
+          "resposta_texto": "Os objetos de piedade abençoados, como crucifixos, terços, medalhas e escapulários, servem para recordar ao fiel a presença constante de Deus e intercessão dos santos. Eles estimulam a oração pessoal, o amor à Virgem Maria e a firmeza na fé no decorrer das atividades diárias.",
+          "referencias": {
+            "biblia": [
+              "Nm 15,38-39",
+              "Mc 6,56"
+            ],
+            "cic": [
+              "CIC 1674"
+            ]
+          },
+          "analogias": [
+            "É como carregar um retrato carinhoso da família no bolso para lembrar do compromisso de amor durante o dia de trabalho."
+          ]
+        },
+        {
+          "id": "P2-S2-Q502",
+          "categoria": "Seção 2: Os sete sacramentos da Igreja (Capítulo 4: Os sacramentais e as exéquias cristãs)",
+          "pergunta": "O que é a religiosidade ou piedade popular na tradição católica?",
+          "resposta_texto": "A religiosidade popular é o conjunto de expressões de fé e devoção com que o povo cristão manifesta a sua busca de Deus fora da liturgia oficial. Ela inclui o Santo Terço, a veneração das relíquias, as romarias aos santuários, as procissões, as novenas e as vias-sacras.",
+          "referencias": {
+            "biblia": [
+              "Sl 116,12-14",
+              "Mt 9,20-22"
+            ],
+            "cic": [
+              "CIC 1674"
+            ]
+          },
+          "analogias": [
+            "É como o canto espontâneo da família reunida no jardim da casa que prolonga a alegria da festa oficial da sala."
+          ]
+        },
+        {
+          "id": "P2-S2-Q503",
+          "categoria": "Seção 2: Os sete sacramentos da Igreja (Capítulo 4: Os sacramentais e as exéquias cristãs)",
+          "pergunta": "Como a religiosidade popular se relaciona com a liturgia oficial da Igreja?",
+          "resposta_texto": "A religiosidade popular não substitui nem supera a liturgia, que permanece a fonte e o cume da vida eclesial. O magistério ensina que os exercícios de piedade popular devem ser dispostos de modo que se harmonizem com a liturgia sagrada, derivem dela e a ela conduzam o povo de Deus.",
+          "referencias": {
+            "biblia": [
+              "1Cor 14,40",
+              "Jo 4,23-24"
+            ],
+            "cic": [
+              "CIC 1675"
+            ]
+          },
+          "analogias": [
+            "É como os riachos de água limpa que correm pelos vales para alimentar o grande rio principal e desaguar nele."
+          ]
+        },
+        {
+          "id": "P2-S2-Q504",
+          "categoria": "Seção 2: Os sete sacramentos da Igreja (Capítulo 4: Os sacramentais e as exéquias cristãs)",
+          "pergunta": "Quais são os valores espirituais e humanos presentes na piedade popular bem orientada?",
+          "resposta_texto": "A piedade popular traduz uma sede genuína de Deus e manifesta virtudes como a humildade, a generosidade, a resignação nas provações e a confiança na providência divina. Ela enriquece a cultura do povo com a sensibilidade cristã para os mistérios de Cristo e o amor à Virgem Maria.",
+          "referencias": {
+            "biblia": [
+              "Mt 11,25",
+              "Lc 1,48-49"
+            ],
+            "cic": [
+              "CIC 1676"
+            ]
+          },
+          "analogias": [
+            "É como a poesia sincera escrita pelo povo simples que expressa a verdade do amor com beleza e profundidade."
+          ]
+        },
+        {
+          "id": "P2-S2-Q505",
+          "categoria": "Seção 2: Os sete sacramentos da Igreja (Capítulo 4: Os sacramentais e as exéquias cristãs)",
+          "pergunta": "Por que a Igreja enfatiza a necessidade de evangelizar e purificar a religiosidade popular?",
+          "resposta_texto": "A purificação pastoral é necessária para evitar que a piedade popular caia na superstição, no sincretismo religioso, no mero exibicionismo ou em desvios doutrinais. O discernimento da Igreja purifica essas práticas para que a fé do povo permaneça centrada em Jesus Cristo e na Palavra de Deus.",
+          "referencias": {
+            "biblia": [
+              "Cl 2,8",
+              "1Tm 1,5"
+            ],
+            "cic": [
+              "CIC 1676"
+            ]
+          },
+          "analogias": [
+            "É como o jardineiro cuidadoso que poda as folhas secas da planta para que as flores desabrochem com força e pureza."
+          ]
+        },
+        {
+          "id": "P2-S2-Q506",
+          "categoria": "Seção 2: Os sete sacramentos da Igreja (Capítulo 4: Os sacramentais e as exéquias cristãs)",
+          "pergunta": "Qual é a importância das peregrinações aos santuários na vida do povo católico?",
+          "resposta_texto": "As peregrinações aos santuários são expressões marcantes da piedade popular que simbolizam a caminhada terrena do cristão rumo ao céu. Elas proporcionam momentos fortes de conversão, oração intensa, reconciliação nos sacramentos e renovação da esperança nas promessas divinas.",
+          "referencias": {
+            "biblia": [
+              "Sl 122,1",
+              "Lc 2,41-42"
+            ],
+            "cic": [
+              "CIC 1674"
+            ]
+          },
+          "analogias": [
+            "É como o viajante que faz uma pausa no oásis para renovar as energias e ajustar o rumo da sua jornada."
+          ]
+        },
+        {
+          "id": "P2-S2-Q507",
+          "categoria": "Seção 2: Os sete sacramentos da Igreja (Capítulo 4: Os sacramentais e as exéquias cristãs)",
+          "pergunta": "De que modo a meditação do Santo Terço expressa o sentido da piedade popular cristã?",
+          "resposta_texto": "O Santo Terço é uma oração contemplativa na qual o povo fiel medita os mistérios da vida, morte e ressurreição de Jesus com os olhos de Maria. Ele une a simplicidade da oração vocal ao aprofundamento das verdades da salvação, fortalecendo a fé das famílias.",
+          "referencias": {
+            "biblia": [
+              "Lc 1,28",
+              "Lc 2,19"
+            ],
+            "cic": [
+              "CIC 1674"
+            ]
+          },
+          "analogias": [
+            "É como desfolhar uma rosa pétala por pétala enquanto se contempla a beleza da flor inteira no centro."
+          ]
+        },
+        {
+          "id": "P2-S2-Q508",
+          "categoria": "Seção 2: Os sete sacramentos da Igreja (Capítulo 4: Os sacramentais e as exéquias cristãs)",
+          "pergunta": "Como a prática das procissões fortalece o testemunho público da fé católica?",
+          "resposta_texto": "As procissões são manifestações públicas da fé comunitária em que o povo de Deus caminha unido pelas ruas cantando e rezando. Elas recordam que a Igreja é um povo peregrino no mundo e dão um testemunho visível do amor a Deus diante da sociedade.",
+          "referencias": {
+            "biblia": [
+              "Ex 13,21-22",
+              "2Sm 6,14-15"
+            ],
+            "cic": [
+              "CIC 1674"
+            ]
+          },
+          "analogias": [
+            "É como a marcha alegre dos cidadãos que saem em cortejo festivo para celebrar a vitória da sua pátria."
+          ]
+        },
+        {
+          "id": "P2-S2-Q509",
+          "categoria": "Seção 2: Os sete sacramentos da Igreja (Capítulo 4: Os sacramentais e as exéquias cristãs)",
+          "pergunta": "Qual o papel do discernimento dos bispos na orientação das devoções populares?",
+          "resposta_texto": "Cabe aos Bispos exercerem um discernimento amoroso e atento para apoiar, cultivar e orientar as devoções populares na sua diocese. Os pastores ajudam o povo a crescer na sabedoria cristã e protegem a fé das influências contrárias à verdadeira doutrina católica.",
+          "referencias": {
+            "biblia": [
+              "1Ts 5,19-21",
+              "At 20,28"
+            ],
+            "cic": [
+              "CIC 1676"
+            ]
+          },
+          "analogias": [
+            "É como o guia da expedição que assegura que o grupo permaneça no trilho correto sem se perder pelas veredas."
+          ]
+        },
+        {
+          "id": "P2-S2-Q510",
+          "categoria": "Seção 2: Os sete sacramentos da Igreja (Capítulo 4: Os sacramentais e as exéquias cristãs)",
+          "pergunta": "Por que a devoção às relíquias dos santos é valorizada pela tradição da Igreja?",
+          "resposta_texto": "A veneração das relíquias expressa o respeito pelos corpos dos santos, que foram templos do Espírito Santo e instrumentos de suas boas obras. Essa devoção recorda a vitória da graça divina nos humanos e renova a confiança na intercessão dos santos no céu.",
+          "referencias": {
+            "biblia": [
+              "2Rs 13,21",
+              "At 19,11-12"
+            ],
+            "cic": [
+              "CIC 1674"
+            ]
+          },
+          "analogias": [
+            "É como guardar com reverência a caneta com que o grande benfeitor assinou o decreto da libertação da cidade."
+          ]
+        },
+        {
+          "id": "P2-S2-Q511",
+          "categoria": "Seção 2: Os sete sacramentos da Igreja (Capítulo 4: Os sacramentais e as exéquias cristãs)",
+          "pergunta": "Qual é o significado pascal supremo da morte física para o cristão batizado?",
+          "resposta_texto": "Para o cristão, a morte corporal não é o fim trágico da existência, mas a participação na morte de Cristo para alcançar com Ele a vida plena na ressurreição. Pela graça do Batismo, a morte física torna-se a última etapa da jornada rumo à casa do Pai celestial.",
+          "referencias": {
+            "biblia": [
+              "Rm 6,8-9",
+              "Fl 1,21"
+            ],
+            "cic": [
+              "CIC 1677-1678"
+            ]
+          },
+          "analogias": [
+            "É como o cair da noite que encerra o dia de trabalho para dar lugar ao repouso no lar e ao alvorecer no novo dia."
+          ]
+        },
+        {
+          "id": "P2-S2-Q512",
+          "categoria": "Seção 2: Os sete sacramentos da Igreja (Capítulo 4: Os sacramentais e as exéquias cristãs)",
+          "pergunta": "O que a Igreja oferece aos seus filhos no momento da passagem da morte por meio dos sacramentos?",
+          "resposta_texto": "No momento da morte, a Igreja fortalece o cristão com a Unção dos Enfermos, o perdão dos pecados e a Eucaristia recebida como Viático. Esses auxílios sacramentais preparam a alma para enfrentar o combate final e entrar com confiança na Pátria eterna.",
+          "referencias": {
+            "biblia": [
+              "Tg 5,14-15",
+              "Jo 6,54"
+            ],
+            "cic": [
+              "CIC 1680"
+            ]
+          },
+          "analogias": [
+            "É como o mantimento precioso e a luz forte entregues ao viajante para o trecho final da sua caminhada noturna."
+          ]
+        },
+        {
+          "id": "P2-S2-Q513",
+          "categoria": "Seção 2: Os sete sacramentos da Igreja (Capítulo 4: Os sacramentais e as exéquias cristãs)",
+          "pergunta": "Por que o sentido das exéquias cristãs é considerado uma celebração de esperança e não de desespero?",
+          "resposta_texto": "As exéquias são marcadas pela esperança pascal porque a Igreja proclama a vitória de Cristo sobre o pecado e a morte. Embora a comunidade chora a separação dolorosa do ente querido, ela reza com a certeza inabalável de que a vida dos fiéis não é tirada, mas transformada.",
+          "referencias": {
+            "biblia": [
+              "1Ts 4,13-14",
+              "Jo 11,25-26"
+            ],
+            "cic": [
+              "CIC 1681-1682"
+            ]
+          },
+          "analogias": [
+            "É como as lágrimas de despedida na estação de trem misturadas com a alegria de saber que o amigo chegou ao destino glorioso."
+          ]
+        },
+        {
+          "id": "P2-S2-Q514",
+          "categoria": "Seção 2: Os sete sacramentos da Igreja (Capítulo 4: Os sacramentais e as exéquias cristãs)",
+          "pergunta": "Quais são as três grandes etapas ou momentos da celebração tradicional das exéquias?",
+          "resposta_texto": "A celebração das exéquias compreende habitualmente três momentos: a vigília de oração na casa do falecido ou velório, a Liturgia das Exéquias na igreja com a celebração da Santa Missa, e o rito da última encomenda e sepultamento no cemitério.",
+          "referencias": {
+            "biblia": [
+              "At 8,2",
+              "At 9,37-39"
+            ],
+            "cic": [
+              "CIC 1686-1690"
+            ]
+          },
+          "analogias": [
+            "É como os três atos solenes de uma despedida oficial que acompanham o cidadão honrado da sua casa até o monumento final."
+          ]
+        },
+        {
+          "id": "P2-S2-Q515",
+          "categoria": "Seção 2: Os sete sacramentos da Igreja (Capítulo 4: Os sacramentais e as exéquias cristãs)",
+          "pergunta": "Qual é a importância da celebração da Santa Missa de corpo presente nas exéquias?",
+          "resposta_texto": "A celebração da Santa Missa nas exéquias coloca a morte do cristão em unhão direta com o único Sacrifício de Cristo no Calvário. A Eucaristia oferece ao Pai o sacrifício redentor pela purificação do falecido e nutre a comunidade com o Pão da vida eterna.",
+          "referencias": {
+            "biblia": [
+              "1Cor 11,26",
+              "2Mc 12,45"
+            ],
+            "cic": [
+              "CIC 1689"
+            ]
+          },
+          "analogias": [
+            "É como apoiar a oferenda frágil do falecido sobre o grande altar do rei para que ela seja aceita pela dignidade do sacrifício real."
+          ]
+        },
+        {
+          "id": "P2-S2-Q516",
+          "categoria": "Seção 2: Os sete sacramentos da Igreja (Capítulo 4: Os sacramentais e as exéquias cristãs)",
+          "pergunta": "O que a Liturgia da Palavra projeta sobre o luto da família durante a celebração exequial?",
+          "resposta_texto": "A Liturgia da Palavra proclama as promessas divinas da ressurreição dos mortos e consolida os enlutados com a verdade do Evangelho. As leituras bíblicas revelam o mistério da vida eterna em Cristo e convidam a assembleia a viver na esperança do reencontro no céu.",
+          "referencias": {
+            "biblia": [
+              "Jo 14,1-3",
+              "Ap 21,3-4"
+            ],
+            "cic": [
+              "CIC 1688"
+            ]
+          },
+          "analogias": [
+            "É como acender um holofote potente sobre a escuridão da dor para revelar a beleza do destino que nos espera."
+          ]
+        },
+        {
+          "id": "P2-S2-Q517",
+          "categoria": "Seção 2: Os sete sacramentos da Igreja (Capítulo 4: Os sacramentais e as exéquias cristãs)",
+          "pergunta": "O que simboliza o rito da última encomenda e despedida no final das exéquias?",
+          "resposta_texto": "O rito da encomenda é o último adeus da comunidade cristã ao seu membro falecido antes do sepultamento. Ao aspergir a água benta e incensar o corpo, a Igreja honra o templo do Espírito Santo e entrega essa alma à misericórdia de Deus Pai.",
+          "referencias": {
+            "biblia": [
+              "Gn 3,19",
+              "1Cor 15,42-44"
+            ],
+            "cic": [
+              "CIC 1690"
+            ]
+          },
+          "analogias": [
+            "É como o gesto afetuoso de selar e entregar o envelope precioso nas mãos do carteiro de confiança que o levará ao destinatário."
+          ]
+        },
+        {
+          "id": "P2-S2-Q518",
+          "categoria": "Seção 2: Os sete sacramentos da Igreja (Capítulo 4: Os sacramentais e as exéquias cristãs)",
+          "pergunta": "Qual a relação entre o sepultamento de Jesus e o sepultamento dos corpos dos cristãos?",
+          "resposta_texto": "O sepultamento do cristão inspira-se na sepultura de Jesus no túmulo de pedra após a Sua Paixão. Assim como o corpo de Cristo repousou no sábado santo para ressuscitar na alvorada de Páscoa, o corpo do fiel repousa na terra abençoada aguardando a ressurreição final.",
+          "referencias": {
+            "biblia": [
+              "Lc 23,52-53",
+              "1Cor 15,42"
+            ],
+            "cic": [
+              "CIC 1683"
+            ]
+          },
+          "analogias": [
+            "É como a semente preciosa depositada no solo preparado durante o inverno na certeza de que germinará com a primavera."
+          ]
+        },
+        {
+          "id": "P2-S2-Q519",
+          "categoria": "Seção 2: Os sete sacramentos da Igreja (Capítulo 4: Os sacramentais e as exéquias cristãs)",
+          "pergunta": "Por que a Igreja Católica ensina a necessidade de rezar continuamente pelas almas dos fiéis defuntos?",
+          "resposta_texto": "A Igreja recomenda a oração pelos defuntos porque as almas que morreram na graça de Deus, mas ainda necessitam de purificação final no Purgatório, são ajudadas pelos sufrágios dos vivos. As nossas preces encurtam o tempo de sua purificação para que entrem na alegria do céu.",
+          "referencias": {
+            "biblia": [
+              "2Mc 12,44-45",
+              "1Cor 3,15"
+            ],
+            "cic": [
+              "CIC 1689-1690"
+            ]
+          },
+          "analogias": [
+            "É como enviar suprimentos e ajuda financeira ao amigo que está quitando os seus débitos na alfândega antes de entrar no país."
+          ]
+        },
+        {
+          "id": "P2-S2-Q520",
+          "categoria": "Seção 2: Os sete sacramentos da Igreja (Capítulo 4: Os sacramentais e as exéquias cristãs)",
+          "pergunta": "Qual é a forma mais sublime e eficaz de sufrágio pelas almas do Purgatório?",
+          "resposta_texto": "A forma suprema de sufrágio é a celebração do Santo Sacrifício da Missa oferecido pela intenção dos mortos. Como a Missa torna presente o próprio valor infinito da Paixão e Morte de Cristo, ela alcança para as almas o alívio e a purificação de suas faltas.",
+          "referencias": {
+            "biblia": [
+              "2Mc 12,43",
+              "1Jo 1,7"
+            ],
+            "cic": [
+              "CIC 1689"
+            ]
+          },
+          "analogias": [
+            "É como apresentar o tesouro inestimável do rei para quitar de uma só vez o saldo devedor do prisioneiro."
+          ]
+        },
+        {
+          "id": "P2-S2-Q521",
+          "categoria": "Seção 2: Os sete sacramentos da Igreja (Capítulo 4: Os sacramentais e as exéquias cristãs)",
+          "pergunta": "Como a Comunhão dos Santos garante a ajuda mútua entre os vivos e os fiéis defuntos?",
+          "resposta_texto": "A Comunhão dos Santos estabelece um laço espiritual indissolúvel entre a Igreja peregrina na terra, a Igreja padecente no Purgatório e a Igreja gloriosa no céu. Pelo amor de Cristo que nos une, as orações dos vivos ajudam os defuntos, e a intercessão dos santos nos protege.",
+          "referencias": {
+            "biblia": [
+              "1Cor 12,26",
+              "Hb 12,1"
+            ],
+            "cic": [
+              "CIC 1689-1690"
+            ]
+          },
+          "analogias": [
+            "É como a rede familiar em que os irmãos do andar de cima e os do andar de baixo trocam correspondências e se auxiliam continuamente."
+          ]
+        },
+        {
+          "id": "P2-S2-Q522",
+          "categoria": "Seção 2: Os sete sacramentos da Igreja (Capítulo 4: Os sacramentais e as exéquias cristãs)",
+          "pergunta": "Como a fé na ressurreição transforma o desespero do luto em consolo Cristão?",
+          "resposta_texto": "A fé na ressurreição garante que os laços de amor construídos na terra não são destruídos pela morte, mas purificados e eternizados em Deus. O cristão chora com saudade, mas o seu coração permanece consolado pela certeza de que se reencontrará com os seus amados na glória do céu.",
+          "referencias": {
+            "biblia": [
+              "1Ts 4,14.18",
+              "Ap 21,4"
+            ],
+            "cic": [
+              "CIC 1681-1683"
+            ]
+          },
+          "analogias": [
+            "É como ver a embarcação partir na névoa sabendo com certeza de que ela aportará num continente ensolarado onde voltaremos a nos abraçar."
           ]
         }
       ]
