@@ -10,6 +10,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { grafiaBRProfunda } from './grafia-br.mjs';
 
 const RAIZ = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const CACHE = path.join(RAIZ, '.cache', 'compendio', 'po.html');
@@ -129,5 +130,6 @@ if (erros.length) {
   console.error(erros.slice(0, 40).join('\n'));
   process.exit(1);
 }
-fs.writeFileSync(SAIDA, JSON.stringify({ fonte: URL_FONTE, total: itens.length, itens }));
+// Grafia do Brasil (o vatican.va publica a edição de Portugal).
+fs.writeFileSync(SAIDA, JSON.stringify(grafiaBRProfunda({ fonte: URL_FONTE, total: itens.length, itens })));
 console.log(`ok: ${itens.length} perguntas → ${path.relative(RAIZ, SAIDA)} (${(fs.statSync(SAIDA).size / 1024).toFixed(0)} KB)`);

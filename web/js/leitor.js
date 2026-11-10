@@ -6,7 +6,7 @@ function htmlTitulo(t) {
   const s = esc(t);
   if (t.length > 140) return `<blockquote class="epigrafe">${s}</blockquote>`;
   if (/^(PR[ÓO]LOGO|(PRIMEIRA|SEGUNDA|TERCEIRA|QUARTA) PARTE)/i.test(t)) return `<h2 class="t-parte">${s}</h2>`;
-  if (/^(PRIMEIRA|SEGUNDA|TERCEIRA|QUARTA)? ?SEC[ÇC][ÃA]O\b|^CAP[ÍI]TULO\b|^ARTIGO\b|^PAR[ÁA]GRAFO\b/i.test(t)) return `<p class="t-rotulo">${s}</p>`;
+  if (/^(PRIMEIRA|SEGUNDA|TERCEIRA|QUARTA)? ?SEC?[ÇC][ÃA]O\b|^CAP[ÍI]TULO\b|^ARTIGO\b|^PAR[ÁA]GRAFO\b/i.test(t)) return `<p class="t-rotulo">${s}</p>`;
   if (t === t.toUpperCase() && /[A-ZÁÉÍÓÚÂÊÔÃÕÇ]{3}/.test(t)) return `<h3 class="t-secao">${s}</h3>`;
   if (/^[IVXL]+\.\s/.test(t)) return `<h4 class="t-sub">${s}</h4>`;
   return `<h5 class="t-menor">${s}</h5>`;
@@ -88,7 +88,7 @@ export function htmlCapitulo(d, cap, { comIA = false } = {}) {
     ${prox ? `<a href="#/p/${prox.ini}" rel="next">${esc(prox.titulo)} →</a>` : '<span></span>'}
   </nav>`;
   const seta = (c, dir, rotuloSeta) => (c
-    ? `<a class="bt-icone" href="#/p/${c.ini}" aria-label="${rotuloSeta}: ${esc(c.titulo)}">${icone(dir)}</a>`
+    ? `<a class="bt-icone" href="#/p/${c.ini}" aria-label="${rotuloSeta}: ${esc(c.titulo)}" title="${rotuloSeta}: ${esc(c.titulo)}">${icone(dir)}</a>`
     : `<span class="bt-icone" aria-hidden="true"></span>`);
   return `<header class="cab cab-leitor">
       <a class="bt-icone" href="#/sumario/${cap.parte}" aria-label="Voltar ao sumário">${icone('esq')}</a>
