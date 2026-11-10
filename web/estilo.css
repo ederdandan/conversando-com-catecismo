@@ -581,3 +581,4 @@ main.entra-esq { animation: entra-esq .2s ease-out; }
 /* Área de toque maior nos chips de § e nas notas, sem mudar o tamanho visual (mínimo ~44px) */
 .nota-ref, button.cita { position: relative; }
 .nota-ref::after, button.cita:not(.fonte)::after { content: ''; position: absolute; inset: -9px -3px; }.faq-grupo > summary strong { font: 600 16px/1.3 var(--serif); }
+.bt-reportar { align-self: flex-start; margin-top: -4px; font: 600 13px var(--sans); color: var(--suave); text-decoration: underline; padding: 8px 0; }

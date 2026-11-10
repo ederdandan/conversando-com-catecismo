@@ -4,6 +4,10 @@ import { termos } from './busca.js';
 import { esc } from './html.js';
 import { criarComparador } from './semelhanca.js';
 
+// Email que recebe os avisos "Reportar erro". Vazio: o botão não aparece.
+// Fica visível no código do site: use um endereço só para isso.
+export const EMAIL_ERROS = 'catequeseemcancao@gmail.com';
+
 let carregando = null;
 export function carregarFaq(url = 'data/faq.json') {
   carregando ??= fetch(url).then((r) => {
@@ -81,7 +85,14 @@ export function relacionadasFaq(faq, pergunta, refs = [], { limite = 3, excluir 
 export const htmlCicFaq = (cic) => cic.map(([a, b]) =>
   `<button type="button" class="cita fonte" data-n="${a}">§ ${a}${b > a ? `–${b}` : ''}</button>`).join('');
 
-// Uma pergunta, em sanfona: a resposta, a analogia, a Bíblia e os § (que abrem o painel do leitor).
+// "Reportar erro": abre o email do leitor com o código da pergunta (só se EMAIL_ERROS estiver configurado).
+function htmlReportar(q, email = EMAIL_ERROS) {
+  if (!email) return '';
+  const assunto = encodeURIComponent(`Erro na pergunta ${q.id}`);
+  const corpo = encodeURIComponent(`Pergunta: ${q.p}\n\nO que está errado:\n\n`);
+  return `<a class="bt-reportar" href="mailto:${esc(email)}?subject=${assunto}&amp;body=${corpo}">Reportar erro</a>`;
+}
+
 // Aspas tipográficas nos títulos ("'Eu creio'" → "“Eu creio”").
 export const aspas = (t) => String(t).replace(/'([^']+)'/g, '“$1”');
 
@@ -95,6 +106,7 @@ export function htmlPergunta(q, opcoes) {
       ${q.b.length ? `<p class="faq-biblia"><strong>Na Bíblia:</strong> ${q.b.map(esc).join(' · ')}</p>` : ''}
       <div class="fontes"><span class="rotulo">No Catecismo · toque para ler</span><div class="fontes-lista">${htmlCicFaq(q.cic)}</div></div>
       <button type="button" class="bt-sec bt-compartilhar" data-compartilhar="${esc(q.id)}"><svg class="ic" aria-hidden="true"><use href="#i-compartilhar"/></svg>Compartilhar</button>
+      ${htmlReportar(q)}
     </div>
   </details>`;
 }

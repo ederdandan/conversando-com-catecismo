@@ -62,7 +62,10 @@ function palavraBR(p) {
 export function grafiaBR(texto) {
   if (typeof texto !== 'string' || /^https?:/.test(texto)) return texto;
   return texto.replace(/\p{L}+/gu, palavraBR)
-    .replace(/(?<!\p{L})(hei|hás|há|hão|haveis|hemos)-de(?!\p{L})/giu, '$1 de'); // "hei-de fazer" → "hei de fazer"
+    .replace(/(?<!\p{L})(hei|hás|há|hão|haveis|hemos)-de(?!\p{L})/giu, '$1 de') // "hei-de fazer" → "hei de fazer"
+    // grego e latim citados no texto voltam ao original ("baptizein, em grego"; "Baptismus est sacramentum")
+    .replace(/\(batizeis, em grego\)/g, '(baptizein, em grego)')
+    .replace(/«Batismos est/g, '«Baptismus est');
 }
 
 // Aplica em todas as strings de um objeto JSON (exceto URLs).
