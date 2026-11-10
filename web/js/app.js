@@ -225,8 +225,7 @@ async function telaFaq(d, arg) {
     html = `${cabecalho('Perguntas frequentes')}<div class="tela faq">
       <p class="sub">Dúvidas comuns de católicos, respondidas com o Catecismo, com passagens da Bíblia e uma comparação para ajudar a entender. Toque num § para ler o texto oficial.</p>
       ${formFaq()}
-      ${faq.secoes.map((s) => `<section class="faq-secao"><h2 class="rotulo">${s.parte}ª Parte · ${esc(s.titulo)}</h2>${htmlTemas(faq, s)}</section>`).join('')}
-      <p class="nota-sistema">As demais partes do Catecismo ainda estão sendo preparadas.</p></div>`;
+      ${faq.secoes.map((s) => `<section class="faq-secao"><h2 class="rotulo">${s.parte}ª Parte · ${esc(s.titulo)}</h2>${htmlTemas(faq, s)}</section>`).join('')}</div>`;
   }
   main.innerHTML = html;
   ligarFormFaq();
