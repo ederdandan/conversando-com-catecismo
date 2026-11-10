@@ -1,0 +1,2381 @@
+{
+  "titulo": "Perguntas Frequentes – Parte IV, Seção 1: A oração na vida cristã",
+  "descricao": "Dúvidas de católicos sobre a Primeira Seção da Quarta Parte do Catecismo da Igreja Católica (§ 2558–2758): o que é a oração, como ela foi revelada, a tradição da oração e a vida de oração. Cada resposta cita os parágrafos do Catecismo e passagens bíblicas, com uma analogia para facilitar a compreensão.",
+  "fonte": "Catecismo da Igreja Católica (texto integral em vatican.va)",
+  "total_perguntas": 129,
+  "categorias": [
+    {
+      "categoria": "Seção 1: A oração na vida cristã (Capítulo 1: A revelação da oração)",
+      "paragrafos": "§ 2558–2649",
+      "quantidade": 65
+    },
+    {
+      "categoria": "Seção 1: A oração na vida cristã (Capítulo 2: A tradição da oração)",
+      "paragrafos": "§ 2650–2696",
+      "quantidade": 24
+    },
+    {
+      "categoria": "Seção 1: A oração na vida cristã (Capítulo 3: A vida de oração)",
+      "paragrafos": "§ 2697–2758",
+      "quantidade": 40
+    }
+  ],
+  "partes": [
+    {
+      "parte": "Parte IV: A Oração Cristã",
+      "secao": "Seção 1: A oração na vida cristã",
+      "quantidade": 129,
+      "perguntas": [
+        {
+          "id": "P4-S1-Q001",
+          "categoria": "Seção 1: A oração na vida cristã (Capítulo 1: A revelação da oração)",
+          "pergunta": "O que é a oração segundo a célebre definição de Santa Teresinha do Menino Jesus?",
+          "resposta_texto": "Santa Teresinha define a oração como um impulso do coração, um simples olhar lançado para o céu, um grito de gratidão e de amor, abraçando tanto a provação como a alegria.",
+          "referencias": {
+            "biblia": [
+              "Sl 42,2-3",
+              "1Ts 5,16-18"
+            ],
+            "cic": [
+              "CIC 2558"
+            ]
+          },
+          "analogias": [
+            "É como o olhar afetuoso do filho que busca os olhos dos pais para expressar amor em qualquer momento do dia."
+          ]
+        },
+        {
+          "id": "P4-S1-Q002",
+          "categoria": "Seção 1: A oração na vida cristã (Capítulo 1: A revelação da oração)",
+          "pergunta": "Por que a humilde disposição do coração é considerada o fundamento da oração?",
+          "resposta_texto": "A humildade é o fundamento da oração porque o homem é um mendigo de Deus e não sabe pedir como convém. Diante de Deus, a atitude humilde reconhece a própria fraqueza e se dispõe a receber gratuitamente o dom da oração.",
+          "referencias": {
+            "biblia": [
+              "Lc 18,13",
+              "Rm 8,26"
+            ],
+            "cic": [
+              "CIC 2559"
+            ]
+          },
+          "analogias": [
+            "É como estender as mãos vazias e abertas para receber o presente sem presunção de mérito."
+          ]
+        },
+        {
+          "id": "P4-S1-Q003",
+          "categoria": "Seção 1: A oração na vida cristã (Capítulo 1: A revelação da oração)",
+          "pergunta": "O que revela o encontro de Jesus com a Samaritana junto ao poço sobre a sede de Deus na oração?",
+          "resposta_texto": "O encontro no poço revela que a oração é o encontro entre a sede de Deus e a sede do homem. Jesus pede de beber à mulher Samaritana porque Deus tem sede de que o homem tenha sede d'Ele e venha acolher a água viva.",
+          "referencias": {
+            "biblia": [
+              "Jo 4,7.10.14",
+              "Sl 63,2"
+            ],
+            "cic": [
+              "CIC 2560"
+            ]
+          },
+          "analogias": [
+            "É como o pai que pede um abraço ao filho porque tem sede do amor e da companhia do pequeno."
+          ]
+        },
+        {
+          "id": "P4-S1-Q004",
+          "categoria": "Seção 1: A oração na vida cristã (Capítulo 1: A revelação da oração)",
+          "pergunta": "De que fonte profunda do ser humano brota a verdadeira oração segundo a Bíblia?",
+          "resposta_texto": "Segundo a Bíblia, a oração brota do coração humano, que é o centro oculto do ser, inacessível à razão e aos outros. Se o coração estiver longe de Deus, as palavras articuladas na oração permanecem vazias.",
+          "referencias": {
+            "biblia": [
+              "Mt 15,8",
+              "1Sm 16,7"
+            ],
+            "cic": [
+              "CIC 2562-2563"
+            ]
+          },
+          "analogias": [
+            "É como a água límpida que jorra da nascente oculta nas profundezas da rocha."
+          ]
+        },
+        {
+          "id": "P4-S1-Q005",
+          "categoria": "Seção 1: A oração na vida cristã (Capítulo 1: A revelação da oração)",
+          "pergunta": "Por que a oração cristã é definida como uma relação de aliança e comunhão com a Santíssima Trindade?",
+          "resposta_texto": "Porque a oração cristã é a relação viva e pessoal dos filhos de Deus com o Pai celestial, com o Seu Filho Jesus Cristo e com o Espírito Santo. Ela vive da comunhão amorosa instaurada no Batismo.",
+          "referencias": {
+            "biblia": [
+              "Rm 8,15",
+              "2Cor 13,13"
+            ],
+            "cic": [
+              "CIC 2564-2565"
+            ]
+          },
+          "analogias": [
+            "É como a conversa calorosa e contínua dos membros reunidos ao redor da mesa da família."
+          ]
+        },
+        {
+          "id": "P4-S1-Q006",
+          "categoria": "Seção 1: A oração na vida cristã (Capítulo 1: A revelação da oração)",
+          "pergunta": "Como a criação manifesta o chamado universal do homem à oração?",
+          "resposta_texto": "A criação revela Deus ao homem e desperta nele a busca pelo Criador. Embora todas as religiões testemunhem essa busca do ser humano por Deus, é o próprio Deus quem primeiro chama o homem para o diálogo de amor.",
+          "referencias": {
+            "biblia": [
+              "Gn 3,9",
+              "Sl 19,2-4"
+            ],
+            "cic": [
+              "CIC 2566-2567"
+            ]
+          },
+          "analogias": [
+            "É como o eco nas montanhas que responde ao brado do viajante que procura a sua casa."
+          ]
+        },
+        {
+          "id": "P4-S1-Q007",
+          "categoria": "Seção 1: A oração na vida cristã (Capítulo 1: A revelação da oração)",
+          "pergunta": "Como a oração se manifestou na aurora da história da salvação com Abel, Enoque e Noé?",
+          "resposta_texto": "Abel ofereceu a Deus os primogênitos do seu rebanho em oração de oferenda acolhida; Enoque distinguiu-se por caminhar com Deus; e Noé agradou ao Senhor e caminhou na justiça, erguendo um altar de louvor após o dilúvio.",
+          "referencias": {
+            "biblia": [
+              "Gn 4,4",
+              "Gn 6,9"
+            ],
+            "cic": [
+              "CIC 2569"
+            ]
+          },
+          "analogias": [
+            "É como os primeiros passos confiantes do garoto que caminha segurando a mão firme do pai."
+          ]
+        },
+        {
+          "id": "P4-S1-Q008",
+          "categoria": "Seção 1: A oração na vida cristã (Capítulo 1: A revelação da oração)",
+          "pergunta": "Como a obediência e os atos de Abraão expressaram a sua vida de oração?",
+          "resposta_texto": "A oração de Abraão expressou-se em primeiro lugar pela obediência pronta ao chamado de Deus, partindo em viagem sem saber para onde ia. Em cada etapa da jornada, Abraão erguia um altar para invocar o nome do Senhor.",
+          "referencias": {
+            "biblia": [
+              "Gn 12,1-4.7",
+              "Hb 11,8"
+            ],
+            "cic": [
+              "CIC 2570"
+            ]
+          },
+          "analogias": [
+            "É como o peregrino que segue o mapa do guia sem vacilar e acende fogueiras de luz a cada acampamento."
+          ]
+        },
+        {
+          "id": "P4-S1-Q009",
+          "categoria": "Seção 1: A oração na vida cristã (Capítulo 1: A revelação da oração)",
+          "pergunta": "O que a intercessão de Abraão por Sodoma ensina sobre a audácia da oração de fé?",
+          "resposta_texto": "A intercessão por Sodoma ensina que a oração de fé exige audácia, confiança e perseverança na misericórdia de Deus. Abraão suplicou com insistência filial em favor dos justos e dos pecadores da cidade.",
+          "referencias": {
+            "biblia": [
+              "Gn 18,22-32",
+              "Hb 7,25"
+            ],
+            "cic": [
+              "CIC 2571"
+            ]
+          },
+          "analogias": [
+            "É como o advogado zeloso que insiste junto ao juiz pedindo clemência e perdão para o réu."
+          ]
+        },
+        {
+          "id": "P4-S1-Q010",
+          "categoria": "Seção 1: A oração na vida cristã (Capítulo 1: A revelação da oração)",
+          "pergunta": "O que simboliza a luta noturna de Jacó com o anjo no vau do Jaboque?",
+          "resposta_texto": "A luta de Jacó simboliza a oração como um combate de fé e uma prova de perseverança espiritual. Ao perseverar na luta até receber a bênção divina, Jacó tornou-se modelo do orante que não desiste na provação.",
+          "referencias": {
+            "biblia": [
+              "Gn 32,25-30",
+              "Lc 18,1"
+            ],
+            "cic": [
+              "CIC 2573"
+            ]
+          },
+          "analogias": [
+            "É como o atleta que se empenha com vigor até cruzar a linha de chegada e receber a coroa."
+          ]
+        },
+        {
+          "id": "P4-S1-Q011",
+          "categoria": "Seção 1: A oração na vida cristã (Capítulo 1: A revelação da oração)",
+          "pergunta": "Como Deus se revelou a Moisés na sarça ardente e como isso transformou a sua oração?",
+          "resposta_texto": "Deus revelou-se a Moisés como o Deus vivo, santo e fiel, que ouve o clamor do Seu povo escravizado. Essa revelação transformou a oração de Moisés em uma missão de libertação e intercessão constante.",
+          "referencias": {
+            "biblia": [
+              "Ex 3,4-7",
+              "Ex 3,14"
+            ],
+            "cic": [
+              "CIC 2574-2575"
+            ]
+          },
+          "analogias": [
+            "É como o resgatador que ouve o pedido de socorro dos soterrados e mobiliza toda a equipe para a libertação."
+          ]
+        },
+        {
+          "id": "P4-S1-Q012",
+          "categoria": "Seção 1: A oração na vida cristã (Capítulo 1: A revelação da oração)",
+          "pergunta": "Por que a oração de Moisés é considerada um modelo de intercessão conversada 'face a face'?",
+          "resposta_texto": "Porque a Bíblia relata que Deus falava com Moisés face a face, como um homem fala com o seu amigo. Moisés esquecia-se de si mesmo para suplicar pelo povo, intercedendo com audácia quando Israel caía na infidelidade.",
+          "referencias": {
+            "biblia": [
+              "Ex 33,11",
+              "Ex 32,11-14"
+            ],
+            "cic": [
+              "CIC 2576-2577"
+            ]
+          },
+          "analogias": [
+            "É como o amigo leal que conversa abertamente com o governante para defender e salvar os seus companheiros."
+          ]
+        },
+        {
+          "id": "P4-S1-Q013",
+          "categoria": "Seção 1: A oração na vida cristã (Capítulo 1: A revelação da oração)",
+          "pergunta": "O que o gesto de Moisés com as mãos erguidas durante a batalha contra Amalec representa para a oração?",
+          "resposta_texto": "O gesto das mãos erguidas representa a força imensa da oração de intercessão. Enquanto Moisés mantinha as mãos levantadas para o céu, Israel prevalecia na batalha, mostrando que a oração sustenta a luta espiritual.",
+          "referencias": {
+            "biblia": [
+              "Ex 17,11-12",
+              "1Tm 2,8"
+            ],
+            "cic": [
+              "CIC 2577"
+            ]
+          },
+          "analogias": [
+            "É como manter a antena erguida no alto da torre para garantir a conexão sem falhas durante a travessia."
+          ]
+        },
+        {
+          "id": "P4-S1-Q014",
+          "categoria": "Seção 1: A oração na vida cristã (Capítulo 1: A revelação da oração)",
+          "pergunta": "Como o Rei Davi se tornou o modelo por excelência da oração do Antigo Testamento?",
+          "resposta_texto": "Davi é o modelo de orante por ser o rei segundo o coração de Deus, que reza por seu povo, louva o Senhor com cânticos, dança diante da Arca e se humilha com arrependimento sincero quando comete pecado.",
+          "referencias": {
+            "biblia": [
+              "2Sm 6,14",
+              "2Sm 12,13"
+            ],
+            "cic": [
+              "CIC 2579"
+            ]
+          },
+          "analogias": [
+            "É como o pastor dedicado que guia as ovelhas cantando hinos e pedindo perdão de joelhos quando erra a trilha."
+          ]
+        },
+        {
+          "id": "P4-S1-Q015",
+          "categoria": "Seção 1: A oração na vida cristã (Capítulo 1: A revelação da oração)",
+          "pergunta": "O que marcou a oração do Rei Salomão na dedicação do Templo de Jerusalém?",
+          "resposta_texto": "A oração de Salomão caracterizou-se pela sabedoria, pelo pedido de um coração ouvinte para governar o povo e pela súplica para que o Templo fosse casa de oração aberta a todas as nações e ao perdão dos pecados.",
+          "referencias": {
+            "biblia": [
+              "1Rs 3,9",
+              "1Rs 8,22-53"
+            ],
+            "cic": [
+              "CIC 2580"
+            ]
+          },
+          "analogias": [
+            "É como abrir as portas da grande casa da cidade e convidar todos os transeuntes a encontrarem abrigo e paz."
+          ]
+        },
+        {
+          "id": "P4-S1-Q016",
+          "categoria": "Seção 1: A oração na vida cristã (Capítulo 1: A revelação da oração)",
+          "pergunta": "Qual era a missão espiritual do Templo de Jerusalém na vida de oração do povo de Israel?",
+          "resposta_texto": "O Templo era a morada da glória de Deus e o lugar de educação do povo na oração. Nele se ofereciam os sacrifícios de louvor, se escutava a Lei divina e se fazia a experiência da presença do Altíssimo.",
+          "referencias": {
+            "biblia": [
+              "Sl 27,4",
+              "Is 56,7"
+            ],
+            "cic": [
+              "CIC 2581"
+            ]
+          },
+          "analogias": [
+            "É como o farol luminoso erguido no porto que reúne e orienta todos os barcos em alto-mar."
+          ]
+        },
+        {
+          "id": "P4-S1-Q017",
+          "categoria": "Seção 1: A oração na vida cristã (Capítulo 1: A revelação da oração)",
+          "pergunta": "Como o Profeta Elias manifestou o poder da oração no Monte Carmelo?",
+          "resposta_texto": "No Monte Carmelo, Elias suplicou a Deus que mostrasse o Seu poder perante o povo enganado pelos falsos profetas. A oração de Elias fez descer o fogo do céu que consumiu o sacrifício, convertendo o coração do povo.",
+          "referencias": {
+            "biblia": [
+              "1Rs 18,36-39",
+              "Tg 5,17-18"
+            ],
+            "cic": [
+              "CIC 2582"
+            ]
+          },
+          "analogias": [
+            "É como o raio luminoso que rasga a tempestade escura e acende a fogueira no meio da praça."
+          ]
+        },
+        {
+          "id": "P4-S1-Q018",
+          "categoria": "Seção 1: A oração na vida cristã (Capítulo 1: A revelação da oração)",
+          "pergunta": "De que modo Deus se revelou ao Profeta Elias no Monte Horebe durante a sua fuga?",
+          "resposta_texto": "Deus não se revelou a Elias no vento forte, nem no terremoto, nem no fogo, mas na brisa suave e murmúrio de um vento ligeiro. Isso ensinou que a oração profunda exige escuta silenciosa e recolhimento interior.",
+          "referencias": {
+            "biblia": [
+              "1Rs 19,11-13",
+              "Sl 46,11"
+            ],
+            "cic": [
+              "CIC 2583"
+            ]
+          },
+          "analogias": [
+            "É como o sussurro carinhoso ao ouvido que só consegue escutar quem faz silêncio no quarto."
+          ]
+        },
+        {
+          "id": "P4-S1-Q019",
+          "categoria": "Seção 1: A oração na vida cristã (Capítulo 1: A revelação da oração)",
+          "pergunta": "Qual foi o papel dos profetas na educação da oração interior do povo de Deus?",
+          "resposta_texto": "Os profetas combateram o ritualismo superficial e ensinaram que a verdadeira oração exige a conversão do coração, a prática da justiça social, o amor aos pobres e a fidelidade sincera à aliança com Deus.",
+          "referencias": {
+            "biblia": [
+              "Is 1,15-17",
+              "Os 6,6"
+            ],
+            "cic": [
+              "CIC 2584"
+            ]
+          },
+          "analogias": [
+            "É como limpar o filtro da fonte para garantir que a água servida seja pura e potável por dentro."
+          ]
+        },
+        {
+          "id": "P4-S1-Q020",
+          "categoria": "Seção 1: A oração na vida cristã (Capítulo 1: A revelação da oração)",
+          "pergunta": "Por que o Livro dos Salmos é considerado a obra-prima da oração do Antigo Testamento?",
+          "resposta_texto": "Os Salmos são a obra-prima porque foram inspirados pelo Espírito Santo para condensar a oração do homem de todos os tempos. Neles a Palavra de Deus se torna oração humana, reunindo louvor, lamentação, ação de graças e súplica.",
+          "referencias": {
+            "biblia": [
+              "Sl 150,6",
+              "Lc 24,44"
+            ],
+            "cic": [
+              "CIC 2585-2586"
+            ]
+          },
+          "analogias": [
+            "É como uma coletânea perfeita de melodias celestes que expressa todas as emoções da alma diante do Criador."
+          ]
+        },
+        {
+          "id": "P4-S1-Q021",
+          "categoria": "Seção 1: A oração na vida cristã (Capítulo 1: A revelação da oração)",
+          "pergunta": "Como o duplo caráter humano e divino se manifesta na oração dos Salmos?",
+          "resposta_texto": "Os Salmos possuem caráter duplo porque são simultaneamente Palavra de Deus revelada e resposta de fé do ser humano. Eles expressam a experiência concreta do Povo de Deus sob a inspiração divina do Espírito Santo.",
+          "referencias": {
+            "biblia": [
+              "2Sm 23,2",
+              "Ef 5,19"
+            ],
+            "cic": [
+              "CIC 2587"
+            ]
+          },
+          "analogias": [
+            "É como a carta de amor em que as palavras escritas pelo autor são motivadas pelo amor sincero do destinatário."
+          ]
+        },
+        {
+          "id": "P4-S1-Q022",
+          "categoria": "Seção 1: A oração na vida cristã (Capítulo 1: A revelação da oração)",
+          "pergunta": "O que significa dizer que os Salmos mantêm uma atualidade permanente para a Igreja de hoje?",
+          "resposta_texto": "Significa que os Salmos expressam sentimentos universais da existência humana que não envelhecem com o tempo. A Igreja continua a rezá-los diariamente na Liturgia das Horas, encontrando neles a voz da Esposa que fala ao Esposo.",
+          "referencias": {
+            "biblia": [
+              "Cl 3,16",
+              "Hb 3,7-8"
+            ],
+            "cic": [
+              "CIC 2588-2589"
+            ]
+          },
+          "analogias": [
+            "É como o pão diário e nutritivo que sustenta as gerações sem perder o sabor e a vitalidade."
+          ]
+        },
+        {
+          "id": "P4-S1-Q023",
+          "categoria": "Seção 1: A oração na vida cristã (Capítulo 1: A revelação da oração)",
+          "pergunta": "Por que a oração cristã é sempre uma resposta à iniciativa primogênita de Deus?",
+          "resposta_texto": "Porque é sempre Deus quem toma a iniciativa de nos buscar e chamar em primeiro lugar. A oração humana nasce quando o coração do homem responde ao toque interior e à voz amorosa do Criador.",
+          "referencias": {
+            "biblia": [
+              "1Jo 4,19",
+              "Is 65,1"
+            ],
+            "cic": [
+              "CIC 2567",
+              "CIC 2591"
+            ]
+          },
+          "analogias": [
+            "É como a flor que se abre ao amanhecer estimulada pelos primeiros raios do sol que a tocam."
+          ]
+        },
+        {
+          "id": "P4-S1-Q024",
+          "categoria": "Seção 1: A oração na vida cristã (Capítulo 1: A revelação da oração)",
+          "pergunta": "Como a oração do Filho de Deus se revela plenamente na Encarnação?",
+          "resposta_texto": "O drama da oração revela-se plenamente no Verbo feito carne que habita entre nós. A oração do Filho de Deus feito homem torna-se a oração filial perfeita, na qual o coração humano de Jesus aprende a rezar e adere de modo absoluto à vontade do Pai.",
+          "referencias": {
+            "biblia": [
+              "Jo 1,14",
+              "Hb 5,7"
+            ],
+            "cic": [
+              "CIC 2598"
+            ]
+          },
+          "analogias": [
+            "Como a voz afinada do filho que canta em perfeita sintonia com a melodia iniciada por seu pai."
+          ]
+        },
+        {
+          "id": "P4-S1-Q025",
+          "categoria": "Seção 1: A oração na vida cristã (Capítulo 1: A revelação da oração)",
+          "pergunta": "Como Jesus aprendeu a rezar na Sua natureza e condição humana?",
+          "resposta_texto": "Jesus aprendeu a rezar segundo o Seu coração humano nas fórmulas e ritos do Seu povo, na sinagoga e no Templo, bem como no seio da Sagrada Família com Maria e José. Contudo, Sua oração brotava de uma fonte secreta e transcendente: Sua filiação divina e Sua união íntima e eterna com o Pai.",
+          "referencias": {
+            "biblia": [
+              "Lc 2,40.52",
+              "Mc 1,35"
+            ],
+            "cic": [
+              "CIC 2599"
+            ]
+          },
+          "analogias": [
+            "Como uma criança que aprende o idioma de sua terra natal com os pais, mas expressa pensamentos de uma sabedoria extraordinária."
+          ]
+        },
+        {
+          "id": "P4-S1-Q026",
+          "categoria": "Seção 1: A oração na vida cristã (Capítulo 1: A revelação da oração)",
+          "pergunta": "Em quais momentos decisivos da Sua missão Jesus costumava se retirar para orar?",
+          "resposta_texto": "Jesus orava nos momentos decisivos da Sua missão: no Seu Batismo no Jordão, na Transfiguração, antes da escolha dos Doze Apóstolos, na Última Ceia, na Agonia do Getsêmani e antes de realizar grandes milagres ou pedir a fé a Pedro diante da provação.",
+          "referencias": {
+            "biblia": [
+              "Lc 3,21",
+              "Lc 6,12",
+              "Lc 9,28",
+              "Lc 22,32"
+            ],
+            "cic": [
+              "CIC 2600"
+            ]
+          },
+          "analogias": [
+            "Como o capitão de um navio que se ajoelha para consultar o mapa antes de ordenar as manobras decisivas em alto-mar."
+          ]
+        },
+        {
+          "id": "P4-S1-Q027",
+          "categoria": "Seção 1: A oração na vida cristã (Capítulo 1: A revelação da oração)",
+          "pergunta": "De que modo a oração silenciosa e solitária de Jesus despertava o desejo de orar nos discípulos?",
+          "resposta_texto": "Ao contemplarem Jesus em oração silenciosa e prolongada na solidão da montanha ou na noite, os discípulos viam a profundidade da Sua comunhão com o Pai. Essa contemplação transformava-os e suscitava o pedido humilde: 'Senhor, ensina-nos a rezar'.",
+          "referencias": {
+            "biblia": [
+              "Lc 11,1",
+              "Mc 1,35"
+            ],
+            "cic": [
+              "CIC 2601"
+            ]
+          },
+          "analogias": [
+            "Como o aprendiz que observa em silêncio o mestre esculpir uma obra de arte e sente o desejo ardente de aprender a usar o cinzel."
+          ]
+        },
+        {
+          "id": "P4-S1-Q028",
+          "categoria": "Seção 1: A oração na vida cristã (Capítulo 1: A revelação da oração)",
+          "pergunta": "Qual é o segredo profundo da oração de Jesus na solidão e no retiro?",
+          "resposta_texto": "O segredo da oração de Jesus é a Sua comunhão amorosa e contínua com o Pai em Sua natureza divina e humana. No retiro e na solidão, Jesus entrega a Sua vontade humana ao amor do Pai e oferece a vida da humanidade inteira ao Criador.",
+          "referencias": {
+            "biblia": [
+              "Mt 6,6",
+              "Jo 8,29"
+            ],
+            "cic": [
+              "CIC 2602"
+            ]
+          },
+          "analogias": [
+            "Como o encontro reservado a portas fechadas onde dois aliados leais ajustam em segredo o plano da vitória."
+          ]
+        },
+        {
+          "id": "P4-S1-Q029",
+          "categoria": "Seção 1: A oração na vida cristã (Capítulo 1: A revelação da oração)",
+          "pergunta": "Como os Evangelhos registram a oração de ação de graças e bênção pronunciada por Jesus?",
+          "resposta_texto": "Os Evangelhos mostram Jesus bendizendo e dando graças ao Pai por revelar os mistérios do Reino aos pequeninos e ocultá-los aos sábios do mundo. Jesus também dá graças ao Pai antes de ressuscitar Lázaro, sabendo que é sempre ouvido por Ele.",
+          "referencias": {
+            "biblia": [
+              "Mt 11,25-27",
+              "Jo 11,41-42"
+            ],
+            "cic": [
+              "CIC 2603"
+            ]
+          },
+          "analogias": [
+            "Como o herdeiro generoso que agradece publicamente ao pai pelas doações feitas aos servos mais humildes da casa."
+          ]
+        },
+        {
+          "id": "P4-S1-Q030",
+          "categoria": "Seção 1: A oração na vida cristã (Capítulo 1: A revelação da oração)",
+          "pergunta": "De que maneira a oração de Jesus revela a Sua adesão total à vontade do Pai?",
+          "resposta_texto": "A oração de Jesus é um 'Sim' filial e incondicional ao projeto de salvação do Pai. Ao dizer 'Sim, Pai, porque assim foi do Teu agrado', Jesus acolhe amorosamente a missão redentora e ensina que o cumprimento da vontade divina é o alimento da alma.",
+          "referencias": {
+            "biblia": [
+              "Mt 11,26",
+              "Jo 4,34"
+            ],
+            "cic": [
+              "CIC 2604"
+            ]
+          },
+          "analogias": [
+            "Como o soldado fiel que responde prontamente ao comando do seu general com alegria e obediência total."
+          ]
+        },
+        {
+          "id": "P4-S1-Q031",
+          "categoria": "Seção 1: A oração na vida cristã (Capítulo 1: A revelação da oração)",
+          "pergunta": "Como a oração de Jesus atinge o seu ápice na Última Ceia e no Getsêmani?",
+          "resposta_texto": "Na Última Ceia, Jesus pronuncia a Sua oração sacerdotal de intercessão pelos discípulos e pela Igreja. No Getsêmani, em profunda agonia, Ele aceita o cálice do sofrimento e submete a Sua vontade humana à vontade do Pai, dizendo: 'Aba! Pai... não se faça o que Eu quero, mas o que Tu queres'.",
+          "referencias": {
+            "biblia": [
+              "Jo 17,1-26",
+              "Mc 14,36"
+            ],
+            "cic": [
+              "CIC 2605"
+            ]
+          },
+          "analogias": [
+            "Como o doador que assina de próprio punho o documento de entrega total de seus bens para salvar a família da ruína."
+          ]
+        },
+        {
+          "id": "P4-S1-Q032",
+          "categoria": "Seção 1: A oração na vida cristã (Capítulo 1: A revelação da oração)",
+          "pergunta": "O que significam as últimas palavras e orações de Jesus no alto da Cruz?",
+          "resposta_texto": "As últimas palavras de Jesus na Cruz contêm o perdão aos carrascos, a entrega da Sua Mãe ao discípulo e o grito de abandono que assume a dor do pecado humano. Ao bradar 'Pai, em Tuas mãos entrego o Meu espírito' e 'Tudo está consumado', Jesus entrega a Sua vida e consuma o sacrifício redentor.",
+          "referencias": {
+            "biblia": [
+              "Lc 23,34.46",
+              "Jo 19,30",
+              "Mt 27,46"
+            ],
+            "cic": [
+              "CIC 2606"
+            ]
+          },
+          "analogias": [
+            "Como o último suspiro vitorioso do atleta na linha de chegada, entregando o troféu das suas dores nas mãos do seu mestre."
+          ]
+        },
+        {
+          "id": "P4-S1-Q033",
+          "categoria": "Seção 1: A oração na vida cristã (Capítulo 1: A revelação da oração)",
+          "pergunta": "De que modo Jesus ensina os Seus discípulos a rezar?",
+          "resposta_texto": "Jesus ensina a rezar não apenas transmitindo a oração do Pai-Nosso, mas mostrando pelo Seu próprio exemplo como a alma deve se dirigir a Deus. Suas atitudes em oração servem de pedagogia viva para formar o coração dos fiéis na oração filial.",
+          "referencias": {
+            "biblia": [
+              "Mt 6,9",
+              "Lc 11,1-2"
+            ],
+            "cic": [
+              "CIC 2607"
+            ]
+          },
+          "analogias": [
+            "Como o pai que pega a mão do filho pequeno e faz junto com ele os primeiros traços da escrita no papel."
+          ]
+        },
+        {
+          "id": "P4-S1-Q034",
+          "categoria": "Seção 1: A oração na vida cristã (Capítulo 1: A revelação da oração)",
+          "pergunta": "Qual é a primeira exigência ensinada por Jesus para uma oração autêntica?",
+          "resposta_texto": "A primeira exigência é a conversão do coração. Jesus ensina que para orar é preciso reconciliar-se com o irmão antes de apresentar a oferta no altar, amar e orar pelos inimigos, rezar no segredo do quarto e perdoar as ofensas do fundo da alma.",
+          "referencias": {
+            "biblia": [
+              "Mt 5,23-24",
+              "Mt 5,44",
+              "Mt 6,6"
+            ],
+            "cic": [
+              "CIC 2608"
+            ]
+          },
+          "analogias": [
+            "Como lavar e purificar as mãos sujas antes de tocar em objetos sagrados na mesa de banquete."
+          ]
+        },
+        {
+          "id": "P4-S1-Q035",
+          "categoria": "Seção 1: A oração na vida cristã (Capítulo 1: A revelação da oração)",
+          "pergunta": "Como a fé transforma a qualidade e a eficácia da oração do cristão?",
+          "resposta_texto": "O coração convertido pela fé adere totalmente a Deus e reconhece o Seu poder e amor paterno. A fé viva na oração não se prende apenas a palavras externas, mas confia que Deus tudo pode e atende os pedidos que visam a salvação e o bem da alma.",
+          "referencias": {
+            "biblia": [
+              "Mc 11,24",
+              "Mt 21,22"
+            ],
+            "cic": [
+              "CIC 2609"
+            ]
+          },
+          "analogias": [
+            "Como acender a lâmpada conectada ao fio de energia: a luz brilha imediatamente na sala escura."
+          ]
+        },
+        {
+          "id": "P4-S1-Q036",
+          "categoria": "Seção 1: A oração na vida cristã (Capítulo 1: A revelação da oração)",
+          "pergunta": "O que significa orar com a confiança filial exigida por Jesus nos Evangelhos?",
+          "resposta_texto": "Significa aproximar-se de Deus não com medo servil, mas com a certeza amorosa de um filho que se dirige a um Pai infinitamente bom. Essa confiança supera a ansiedade pelas necessidades materiais e faz a pessoa buscar em primeiro lugar o Reino de Deus e a Sua justiça.",
+          "referencias": {
+            "biblia": [
+              "Mt 6,31-33",
+              "Mt 7,7-11"
+            ],
+            "cic": [
+              "CIC 2610"
+            ]
+          },
+          "analogias": [
+            "Como a criança que pede um pedaço de pão ao pai, sabendo com certeza absoluta que não receberá uma pedra."
+          ]
+        },
+        {
+          "id": "P4-S1-Q037",
+          "categoria": "Seção 1: A oração na vida cristã (Capítulo 1: A revelação da oração)",
+          "pergunta": "De que modo a audácia e a perseverança devem marcar a oração do crente?",
+          "resposta_texto": "A oração do crente deve ser audaciosa e perseverante, mantendo-se firme mesmo quando a resposta parece demorar. Jesus convida os fiéis a baterem à porta sem cessar, pois a oração constante exercita a fé e dilata o coração para receber os dons divinos.",
+          "referencias": {
+            "biblia": [
+              "Lc 11,8",
+              "Lc 18,1-8"
+            ],
+            "cic": [
+              "CIC 2611"
+            ]
+          },
+          "analogias": [
+            "Como bater na porta de um amigo à meia-noite insistindo com confiança até que a luz da janela se acenda."
+          ]
+        },
+        {
+          "id": "P4-S1-Q038",
+          "categoria": "Seção 1: A oração na vida cristã (Capítulo 1: A revelação da oração)",
+          "pergunta": "Qual é o sentido da oração de vigília e expectativa no tempo da Igreja?",
+          "resposta_texto": "No tempo da Igreja, a oração do discípulo é marcada pela atitude de vigilância e esperança. Orar vigiando significa manter o coração desperto e atento à vinda do Senhor, combatendo as tentações e aguardando o cumprimento final do Reino de Deus.",
+          "referencias": {
+            "biblia": [
+              "Mc 13,33-37",
+              "Mt 26,41"
+            ],
+            "cic": [
+              "CIC 2612"
+            ]
+          },
+          "analogias": [
+            "Como o vigia que permanece acordado no posto durante a noite para saudar os primeiros raios da alvorada."
+          ]
+        },
+        {
+          "id": "P4-S1-Q039",
+          "categoria": "Seção 1: A oração na vida cristã (Capítulo 1: A revelação da oração)",
+          "pergunta": "Quais são as três parábolas sobre a oração narradas por São Lucas e o que elas ensinam?",
+          "resposta_texto": "As três parábolas são: o amigo importuno (ensina a pedir com insistência); a viúva persistente (ensina a orar sempre sem desanimar com paciência); e o fariseu e o publicano (ensina que a oração autêntica exige a humildade do coração arrependido).",
+          "referencias": {
+            "biblia": [
+              "Lc 11,5-13",
+              "Lc 18,1-8",
+              "Lc 18,9-14"
+            ],
+            "cic": [
+              "CIC 2613"
+            ]
+          },
+          "analogias": [
+            "Como três lições de um mestre de obras que ensina a insistir na busca, perseverar na construção e manter o alicerce firme na humildade."
+          ]
+        },
+        {
+          "id": "P4-S1-Q040",
+          "categoria": "Seção 1: A oração na vida cristã (Capítulo 1: A revelação da oração)",
+          "pergunta": "O que significa apresentar as nossas petições ao Pai 'em nome de Jesus'?",
+          "resposta_texto": "Significa orar unidos à Pessoa de Cristo e confiando nos Seus méritos infinitos. Quando pedimos ao Pai no Nome de Jesus, o Espírito Santo une a nossa voz à oração do próprio Filho de Deus, garantindo que o Pai ouça e atenda às nossas súplicas.",
+          "referencias": {
+            "biblia": [
+              "Jo 14,13-14",
+              "Jo 16,23-24"
+            ],
+            "cic": [
+              "CIC 2614"
+            ]
+          },
+          "analogias": [
+            "Como apresentar um cheque assinado pelo herdeiro legítimo, cuja assinatura garante o saque do valor no banco."
+          ]
+        },
+        {
+          "id": "P4-S1-Q041",
+          "categoria": "Seção 1: A oração na vida cristã (Capítulo 1: A revelação da oração)",
+          "pergunta": "Qual é o papel do Espírito Santo quando os fiéis rezam unidos a Jesus?",
+          "resposta_texto": "Quando os fiéis oram em Nome de Jesus e no amor fraterno, o Espírito Santo habita em seus corações e torna a oração eficaz. O próprio Pai concede o dom do Espírito Santo àqueles que O pedem, pois o Espírito é o Mestre da oração que nos ensina a clamar 'Aba, Pai'.",
+          "referencias": {
+            "biblia": [
+              "Lc 11,13",
+              "Rm 8,26"
+            ],
+            "cic": [
+              "CIC 2615"
+            ]
+          },
+          "analogias": [
+            "Como o sopro vital que preenche os pulmões do cantor para que ele consiga emitir uma melodia perfeita."
+          ]
+        },
+        {
+          "id": "P4-S1-Q042",
+          "categoria": "Seção 1: A oração na vida cristã (Capítulo 1: A revelação da oração)",
+          "pergunta": "De que maneira Jesus acolhia e ouvia a oração daqueles que Se aproximavam d'Ele nos Evangelhos?",
+          "resposta_texto": "Jesus atendia prontamente a oração daqueles que Se aproximavam d'Ele com fé, como os cegos, os leprosos, a mulher cananeia e o centurião. Jesus respondia à súplica humilde com o perdão, a cura física e a salvação, mostrando que a oração tocava o Seu Coração misericordioso.",
+          "referencias": {
+            "biblia": [
+              "Mt 9,27-30",
+              "Mc 10,46-52",
+              "Lc 23,42-43"
+            ],
+            "cic": [
+              "CIC 2616"
+            ]
+          },
+          "analogias": [
+            "Como o médico amoroso que para o seu caminho ao ouvir o chamado aflito do doente que pede socorro."
+          ]
+        },
+        {
+          "id": "P4-S1-Q043",
+          "categoria": "Seção 1: A oração na vida cristã (Capítulo 1: A revelação da oração)",
+          "pergunta": "Como a oração da Virgem Maria se manifestou na Anunciação e na Encarnação do Verbo?",
+          "resposta_texto": "A oração de Maria manifestou-se na doação total de fé do seu ser ao plano salvífico de Deus no momento da Anunciação. Ao pronunciar o seu 'Fiat' ('Faça-se em mim segundo a tua palavra'), Maria ofereceu o seu coração e o seu corpo para acolher o Filho de Deus, tornando-se modelo de oração obediente.",
+          "referencias": {
+            "biblia": [
+              "Lc 1,38",
+              "Lc 1,45"
+            ],
+            "cic": [
+              "CIC 2617"
+            ]
+          },
+          "analogias": [
+            "Como a terra limpa e acolhedora que se abre inteiramente para receber a semente do céu."
+          ]
+        },
+        {
+          "id": "P4-S1-Q044",
+          "categoria": "Seção 1: A oração na vida cristã (Capítulo 1: A revelação da oração)",
+          "pergunta": "Como a intercessão da Virgem Maria se revela nas bodas de Caná e junto à Cruz?",
+          "resposta_texto": "Nas bodas de Caná, a oração de intercessão de Maria antecipa a 'Hora' de Jesus, apresentando com delicadeza as necessidades dos noivos ('Eles não têm vinho') e orientando os serventes a fazerem tudo o que Ele disser. Junto à Cruz, Maria é dada como Mãe de toda a Igreja e da humanidade.",
+          "referencias": {
+            "biblia": [
+              "Jo 2,1-11",
+              "Jo 19,25-27"
+            ],
+            "cic": [
+              "CIC 2618"
+            ]
+          },
+          "analogias": [
+            "Como a mãe atenciosa que percebe a falta de alimento na festa e pede discretamente ao filho que providencie o socorro."
+          ]
+        },
+        {
+          "id": "P4-S1-Q045",
+          "categoria": "Seção 1: A oração na vida cristã (Capítulo 1: A revelação da oração)",
+          "pergunta": "O que é o cântico do 'Magnificat' e qual é o seu valor na oração da Igreja?",
+          "resposta_texto": "O 'Magnificat' é o cântico de louvor e ação de graças da Virgem Maria ao contemplar as maravilhas operadas por Deus na história e nos humildes. É a oração da Mãe de Deus e da Igreja, onde a exultação pela salvação se une ao reconhecimento da misericórdia divina.",
+          "referencias": {
+            "biblia": [
+              "Lc 1,46-55",
+              "1Sm 2,1-10"
+            ],
+            "cic": [
+              "CIC 2619"
+            ]
+          },
+          "analogias": [
+            "Como um hino de vitória entoado pela rainha mãe em nome de todos os súditos libertados do cativeiro."
+          ]
+        },
+        {
+          "id": "P4-S1-Q046",
+          "categoria": "Seção 1: A oração na vida cristã (Capítulo 1: A revelação da oração)",
+          "pergunta": "Como o Catecismo resume o modelo de oração oferecido por Jesus no Seu coração humano?",
+          "resposta_texto": "O resumo ensina que Jesus, no Seu coração humano, aprendeu a rezar no seio de Sua Mãe e na tradição de Israel. Contudo, Sua oração brota de uma fonte mais alta: é a oração do Filho único que vive em constante e perfeita comunhão filial com o Pai.",
+          "referencias": {
+            "biblia": [
+              "Mc 1,35",
+              "Lc 6,12"
+            ],
+            "cic": [
+              "CIC 2620"
+            ]
+          },
+          "analogias": [
+            "Como uma nascente de água cristalina que flui ininterruptamente do alto da rocha para abastecer os vales."
+          ]
+        },
+        {
+          "id": "P4-S1-Q047",
+          "categoria": "Seção 1: A oração na vida cristã (Capítulo 1: A revelação da oração)",
+          "pergunta": "Qual é a síntese do ensino de Jesus sobre as disposições necessárias para a oração?",
+          "resposta_texto": "A síntese do ensino de Jesus mostra que a oração exige a conversão do coração, a fé viva no amor do Pai, a confiança audaciosa e perseverante, a humildade e o pedido confiante feito no Seu Nome.",
+          "referencias": {
+            "biblia": [
+              "Mt 6,6",
+              "Mt 7,7",
+              "Jo 16,23"
+            ],
+            "cic": [
+              "CIC 2621"
+            ]
+          },
+          "analogias": [
+            "Como os passos ordenados de um caminhante que prepara os suprimentos, ajusta o calçado e segue firme pela trilha correta."
+          ]
+        },
+        {
+          "id": "P4-S1-Q048",
+          "categoria": "Seção 1: A oração na vida cristã (Capítulo 1: A revelação da oração)",
+          "pergunta": "Como o Catecismo resume a oração da Virgem Maria e o seu papel na Igreja?",
+          "resposta_texto": "O resumo destaca que a oração de Maria se caracteriza pela adesão total da fé no 'Fiat' da Anunciação, pela constante ponderação dos mistérios no seu coração e pela sua intercessão materna que acompanha a Igreja desde o início até a eternidade.",
+          "referencias": {
+            "biblia": [
+              "Lc 1,38",
+              "Lc 2,19",
+              "At 1,14"
+            ],
+            "cic": [
+              "CIC 2622"
+            ]
+          },
+          "analogias": [
+            "Como a lâmpada acesa no santuário que nunca se apaga e ilumina os passos da família reunida ao redor da mesa."
+          ]
+        },
+        {
+          "id": "P4-S1-Q049",
+          "categoria": "Seção 1: A oração na vida cristã (Capítulo 1: A revelação da oração)",
+          "pergunta": "Quais são as cinco formas principais de oração que o Espírito Santo ensina e suscita na Santa Igreja?",
+          "resposta_texto": "A tradição e a liturgia da Igreja revelam cinco formas fundamentais de oração: a bênção e adoração, a petição, a intercessão, a ação de graças e o louvor. Todas elas expressam o dinamismo da vida de oração do cristão.",
+          "referencias": {
+            "biblia": [
+              "At 2,42",
+              "Ef 5,19-20"
+            ],
+            "cic": [
+              "CIC 2623",
+              "CIC 2624",
+              "CIC 2625"
+            ]
+          },
+          "analogias": [
+            "É como as cinco cordas do instrumento nobre que produzem a harmonia completa da melodia sagrada."
+          ]
+        },
+        {
+          "id": "P4-S1-Q050",
+          "categoria": "Seção 1: A oração na vida cristã (Capítulo 1: A revelação da oração)",
+          "pergunta": "O que caracteriza a oração de bênção no diálogo de amor entre Deus e o homem?",
+          "resposta_texto": "A oração de bênção é a resposta do homem aos dons de Deus. Como Deus abençoa o coração humano, o coração do homem responde bendizendo Aquele que é a fonte de toda a bênção e de toda a graça.",
+          "referencias": {
+            "biblia": [
+              "Ef 1,3",
+              "2Cor 1,3"
+            ],
+            "cic": [
+              "CIC 2626"
+            ]
+          },
+          "analogias": [
+            "É como o eco suave da voz que devolve da montanha a saudação afetuosa emitida pelo viajante."
+          ]
+        },
+        {
+          "id": "P4-S1-Q051",
+          "categoria": "Seção 1: A oração na vida cristã (Capítulo 1: A revelação da oração)",
+          "pergunta": "O que constitui a atitude essencial da oração de adoração perante a majestade divina?",
+          "resposta_texto": "A adoração é a primeira atitude do homem que se reconhece criatura diante do seu Criador. Ela prostra a alma em humildade, exalta a grandeza e o poder de Deus e reconhece o nada do homem sem o Senhor.",
+          "referencias": {
+            "biblia": [
+              "Sl 95,6",
+              "Ap 4,11"
+            ],
+            "cic": [
+              "CIC 2628"
+            ]
+          },
+          "analogias": [
+            "É como dobrar os joelhos com reverência no salão do trono na presença majestosa do rei."
+          ]
+        },
+        {
+          "id": "P4-S1-Q052",
+          "categoria": "Seção 1: A oração na vida cristã (Capítulo 1: A revelação da oração)",
+          "pergunta": "Qual é a intenção primeira e o objetivo fundamental da oração de petição?",
+          "resposta_texto": "A oração de petição exprime o reconhecimento da nossa dependência de Deus. O seu primeiro movimento é o pedido de perdão pelas nossas faltas, pois o arrependimento sincero é o pressuposto para a oração justa.",
+          "referencias": {
+            "biblia": [
+              "Lc 18,13",
+              "Mt 6,12"
+            ],
+            "cic": [
+              "CIC 2629",
+              "CIC 2631"
+            ]
+          },
+          "analogias": [
+            "É como o filho que pede o perdão afetuoso ao pai antes de solicitar o auxílio para as suas necessidades diárias."
+          ]
+        },
+        {
+          "id": "P4-S1-Q053",
+          "categoria": "Seção 1: A oração na vida cristã (Capítulo 1: A revelação da oração)",
+          "pergunta": "Por que o pedido do Reino de Deus ocupa o lugar central na oração de petição cristã?",
+          "resposta_texto": "Porque Jesus ensinou a buscar em primeiro lugar o Reino de Deus e a Sua justiça, prometendo que tudo o mais será acrescentado. Pedir o Reino é desejar a realização da vontade do Pai na terra.",
+          "referencias": {
+            "biblia": [
+              "Mt 6,33",
+              "Lc 11,2"
+            ],
+            "cic": [
+              "CIC 2632"
+            ]
+          },
+          "analogias": [
+            "É como fixar o olhar na estrela polar que orienta toda a rota do navio no mar."
+          ]
+        },
+        {
+          "id": "P4-S1-Q054",
+          "categoria": "Seção 1: A oração na vida cristã (Capítulo 1: A revelação da oração)",
+          "pergunta": "O que distingue especificamente a oração de intercessão da oração de petição pessoal?",
+          "resposta_texto": "A oração de intercessão consiste num pedido em favor de outrem. Ela não busca os próprios interesses, mas conforma o coração do cristão à misericórdia de Cristo, que intercede por todos os homens.",
+          "referencias": {
+            "biblia": [
+              "1Tm 2,1",
+              "Fl 2,4"
+            ],
+            "cic": [
+              "CIC 2634",
+              "CIC 2635"
+            ]
+          },
+          "analogias": [
+            "É como o embaixador dedicado que apresenta perante o monarca as necessidades urgentes do povo."
+          ]
+        },
+        {
+          "id": "P4-S1-Q055",
+          "categoria": "Seção 1: A oração na vida cristã (Capítulo 1: A revelação da oração)",
+          "pergunta": "Por que os cristãos devem interceder inclusive por aqueles que os perseguem ou lhes fazem mal?",
+          "resposta_texto": "Porque a intercessão cristã não conhece limites e segue o exemplo e o mandamento de Jesus, que nos ordenou amar os inimigos e orar por aqueles que nos perseguem.",
+          "referencias": {
+            "biblia": [
+              "Mt 5,44",
+              "Lc 23,34"
+            ],
+            "cic": [
+              "CIC 2635"
+            ]
+          },
+          "analogias": [
+            "É como abrir a porta do abrigo para proteger do temporal aquele que atirou pedras na janela."
+          ]
+        },
+        {
+          "id": "P4-S1-Q056",
+          "categoria": "Seção 1: A oração na vida cristã (Capítulo 1: A revelação da oração)",
+          "pergunta": "Qual é o fundamento e a motivação constante da oração de ação de graças?",
+          "resposta_texto": "A oração de ação de graças reconhece que todo dom e toda a bênção provêm do amor de Deus. A própria vida, a salvação em Cristo e as alegrias e provações são ocasiões para dar graças ao Pai.",
+          "referencias": {
+            "biblia": [
+              "1Ts 5,18",
+              "Cl 3,17"
+            ],
+            "cic": [
+              "CIC 2637",
+              "CIC 2638"
+            ]
+          },
+          "analogias": [
+            "É como o devedor resgatado que expressa a sua gratidão sem fim ao benfeitor que pagou a sua dívida."
+          ]
+        },
+        {
+          "id": "P4-S1-Q057",
+          "categoria": "Seção 1: A oração na vida cristã (Capítulo 1: A revelação da oração)",
+          "pergunta": "Como a celebração da Eucaristia encarna e eleva a oração de ação de graças?",
+          "resposta_texto": "A Eucaristia significa literalmente 'ação de graças'. Nela, a Igreja une a sua oração de louvor e gratidão ao Sacrifício redentor de Cristo, dando graças ao Pai por toda a criação e redenção.",
+          "referencias": {
+            "biblia": [
+              "1Cor 11,24",
+              "Lc 22,19"
+            ],
+            "cic": [
+              "CIC 2637"
+            ]
+          },
+          "analogias": [
+            "É como a fonte cristalina que recolhe todos os riachos de gratidão para depositá-los no grande oceano divino."
+          ]
+        },
+        {
+          "id": "P4-S1-Q058",
+          "categoria": "Seção 1: A oração na vida cristã (Capítulo 1: A revelação da oração)",
+          "pergunta": "O que caracteriza a oração de louvor no relacionamento da alma com Deus?",
+          "resposta_texto": "O louvor é a forma de oração que reconhece a Deus por Ele mesmo e Lhe dá glória, não apenas pelo que Ele faz, mas porque Ele É. É a oração mais desinteressada que canta a grandeza divina.",
+          "referencias": {
+            "biblia": [
+              "Sl 150,1-6",
+              "Ef 1,6"
+            ],
+            "cic": [
+              "CIC 2639"
+            ]
+          },
+          "analogias": [
+            "É como admirar a beleza radiante do sol no firmamento puramente pelo fascínio da sua luz."
+          ]
+        },
+        {
+          "id": "P4-S1-Q059",
+          "categoria": "Seção 1: A oração na vida cristã (Capítulo 1: A revelação da oração)",
+          "pergunta": "De que maneira a oração de louvor antecipa a vida futura e a glória dos escolhidos no Céu?",
+          "resposta_texto": "O louvor antecipa a vida futura porque une o nosso coração ao canto eterno dos anjos e dos santos na Jerusalém celeste, onde toda a criação louvará eternamente a glória de Deus.",
+          "referencias": {
+            "biblia": [
+              "Ap 4,8-11",
+              "Ap 19,1-6"
+            ],
+            "cic": [
+              "CIC 2639",
+              "CIC 2642"
+            ]
+          },
+          "analogias": [
+            "É como ensaiar os primeiros acordes do grande hino solene antes do ingresso no palácio real."
+          ]
+        },
+        {
+          "id": "P4-S1-Q060",
+          "categoria": "Seção 1: A oração na vida cristã (Capítulo 1: A revelação da oração)",
+          "pergunta": "De que modo o Espírito Santo inspira e atua em todas as formas de oração do cristão?",
+          "resposta_texto": "O Espírito Santo é o Mestre da oração que habita no coração dos fiéis e nos ensina a orar como convém. É Ele quem suscita os gemidos inefáveis e nos faz clamar 'Abba, Pai!'.",
+          "referencias": {
+            "biblia": [
+              "Rm 8,26-27",
+              "Gl 4,6"
+            ],
+            "cic": [
+              "CIC 2623",
+              "CIC 2625"
+            ]
+          },
+          "analogias": [
+            "É como a brisa fresca do alto que sopra e movimenta as velas do navio conduzindo-o pelo canal."
+          ]
+        },
+        {
+          "id": "P4-S1-Q061",
+          "categoria": "Seção 1: A oração na vida cristã (Capítulo 1: A revelação da oração)",
+          "pergunta": "Como o exemplo das primeiras comunidades cristãs dos Atos dos Apóstolos inspira a oração?",
+          "resposta_texto": "Inspiram porque os primeiros fiéis eram perseverantes na doutrina dos apóstolos, na comunhão fraterna, na fração do pão e nas orações, vivendo a vida comunitária na alegria e simplicidade de coração.",
+          "referencias": {
+            "biblia": [
+              "At 2,42",
+              "At 4,32"
+            ],
+            "cic": [
+              "CIC 2624"
+            ]
+          },
+          "analogias": [
+            "É como os alicerces firmes de pedra sobre os quais toda a arquitetura do edifício é erguida."
+          ]
+        },
+        {
+          "id": "P4-S1-Q062",
+          "categoria": "Seção 1: A oração na vida cristã (Capítulo 1: A revelação da oração)",
+          "pergunta": "Por que a petição das necessidades materiais legítimas está incluída na oração cristã?",
+          "resposta_texto": "Está incluída porque Deus é o Pai providente que cuida dos Seus filhos. Jesus nos ensinou a pedir o pão de cada dia, abrangendo todas as necessidades do corpo e da alma com confiança filial.",
+          "referencias": {
+            "biblia": [
+              "Mt 6,11",
+              "Fl 4,6"
+            ],
+            "cic": [
+              "CIC 2633"
+            ]
+          },
+          "analogias": [
+            "É como a criança que pede ao pai o pão na mesa do almoço confiando na sua generosidade."
+          ]
+        },
+        {
+          "id": "P4-S1-Q063",
+          "categoria": "Seção 1: A oração na vida cristã (Capítulo 1: A revelação da oração)",
+          "pergunta": "Qual é a relação entre o perdão pedido a Deus e o perdão oferecido aos nossos devedores?",
+          "resposta_texto": "A oração de petição exige que o nosso coração seja purificado pelo perdão aos nossos irmãos. Não podemos receber a misericórdia de Deus se recusarmos o perdão a quem nos ofendeu.",
+          "referencias": {
+            "biblia": [
+              "Mt 6,14-15",
+              "Mc 11,25"
+            ],
+            "cic": [
+              "CIC 2631"
+            ]
+          },
+          "analogias": [
+            "É como abrir as mãos trancadas para soltar o rancor para poder receber o presente limpo do Pai."
+          ]
+        },
+        {
+          "id": "P4-S1-Q064",
+          "categoria": "Seção 1: A oração na vida cristã (Capítulo 1: A revelação da oração)",
+          "pergunta": "Como a oração pelas autoridades e pela sociedade integra a missão da oração de intercessão?",
+          "resposta_texto": "Integra a missão porque a Escritura recomenda que se façam intercessões por todos os homens, pelos governantes e por quem exerce autoridade, para que vivamos uma vida tranquila e pacífica em toda a piedade.",
+          "referencias": {
+            "biblia": [
+              "1Tm 2,1-2",
+              "Jr 29,7"
+            ],
+            "cic": [
+              "CIC 2636"
+            ]
+          },
+          "analogias": [
+            "É como pedir a proteção divina sobre o piloto da embarcação comunitária para garantir a navegação segura de todos."
+          ]
+        },
+        {
+          "id": "P4-S1-Q065",
+          "categoria": "Seção 1: A oração na vida cristã (Capítulo 1: A revelação da oração)",
+          "pergunta": "Em resumo, quais são as formas de oração na Igreja?",
+          "resposta_texto": "O resumo ensina que a oração cristã se desenvolve sob a ação do Espírito Santo nas formas fundamentais de bênção e adoração, petição, intercessão, ação de graças e louvor, encontrando na Eucaristia o seu ápice e modelo supremo.",
+          "referencias": {
+            "biblia": [
+              "At 2,42",
+              "Ef 5,19"
+            ],
+            "cic": [
+              "CIC 2644"
+            ]
+          },
+          "analogias": [
+            "É como o arco-íris radiante cujas cores variadas expressam a beleza única da única luz do sol."
+          ]
+        },
+        {
+          "id": "P4-S1-Q066",
+          "categoria": "Seção 1: A oração na vida cristã (Capítulo 2: A tradição da oração)",
+          "pergunta": "O que são as fontes da oração na tradição da Igreja Católica?",
+          "resposta_texto": "As fontes da oração são os meios sagrados pelos quais o Espírito Santo comunica a água viva do dom da oração aos crentes. Incluem a Palavra de Deus, a Liturgia da Igreja, as virtudes teologais da fé, esperança e caridade, e a vida cotidiana vivida na presença de Deus.",
+          "referencias": {
+            "biblia": [
+              "Jo 4,14",
+              "Jo 7,37-38"
+            ],
+            "cic": [
+              "CIC 2652"
+            ]
+          },
+          "analogias": [
+            "É como as nascentes e aquedutos limpos que trazem a água fresca da montanha para abastecer todas as casas da cidade."
+          ]
+        },
+        {
+          "id": "P4-S1-Q067",
+          "categoria": "Seção 1: A oração na vida cristã (Capítulo 2: A tradição da oração)",
+          "pergunta": "Por que a Palavra de Deus é considerada uma fonte primordial da oração cristã?",
+          "resposta_texto": "A Palavra de Deus é fonte primordial porque é viva e eficaz, contendo o diálogo de Deus com a humanidade. A meditação frequente das Sagradas Escrituras, acompanhada de oração, estabelece o diálogo filial onde o crente escuta a Deus quando lê e Lhe responde quando reza.",
+          "referencias": {
+            "biblia": [
+              "Hb 4,12",
+              "1Ts 2,13"
+            ],
+            "cic": [
+              "CIC 2653-2654"
+            ]
+          },
+          "analogias": [
+            "É como a carta pessoal do Rei lida com atenção no aposento, onde cada frase desperta uma resposta do coração do súdito."
+          ]
+        },
+        {
+          "id": "P4-S1-Q068",
+          "categoria": "Seção 1: A oração na vida cristã (Capítulo 2: A tradição da oração)",
+          "pergunta": "De que modo a Liturgia da Igreja alimenta a oração pessoal e comunitária dos fiéis?",
+          "resposta_texto": "A Liturgia da Igreja alimenta a oração porque torna presente o Mistério de Cristo através dos sacramentos e dos ritos sagrados. Na celebração litúrgica, o Espírito Santo une a oração pessoal da alma à grande oração do Corpo Místico de Cristo.",
+          "referencias": {
+            "biblia": [
+              "At 2,42",
+              "Ef 5,19-20"
+            ],
+            "cic": [
+              "CIC 2655"
+            ]
+          },
+          "analogias": [
+            "É como a grande sinfonia executada no auditório, na qual o instrumento de cada músico se une à melodia principal da orquestra."
+          ]
+        },
+        {
+          "id": "P4-S1-Q069",
+          "categoria": "Seção 1: A oração na vida cristã (Capítulo 2: A tradição da oração)",
+          "pergunta": "Como a virtude da fé atua como fonte vibrante da oração cristã?",
+          "resposta_texto": "A fé é fonte da oração porque nos faz acolher a Deus que Se revela e nos dá acesso ao Seu mistério. A oração da fé consiste em aderir à presença invisível do Senhor e em confiar inteiramente na Sua bondade e verdade.",
+          "referencias": {
+            "biblia": [
+              "Hb 11,1",
+              "Mc 11,24"
+            ],
+            "cic": [
+              "CIC 2656"
+            ]
+          },
+          "analogias": [
+            "É como acender a lâmpada no quarto escuro para enxergar com clareza o rosto do Pai que já estava presente ali."
+          ]
+        },
+        {
+          "id": "P4-S1-Q070",
+          "categoria": "Seção 1: A oração na vida cristã (Capítulo 2: A tradição da oração)",
+          "pergunta": "Qual é a relação entre a virtude teologal da esperança e o dinamismo da oração?",
+          "resposta_texto": "A esperança impulsiona a oração porque mantém a alma voltada para a promessa da salvação e do Reino de Deus. A oração alimentada pela esperança aguarda com firmeza a realização dos dons celestes e a vinda definitiva de Cristo.",
+          "referencias": {
+            "biblia": [
+              "Rm 8,24-25",
+              "Hb 10,23"
+            ],
+            "cic": [
+              "CIC 2657"
+            ]
+          },
+          "analogias": [
+            "É como o vigia que permanece no alto da torre aguardando com certeza e alegria o primeiro raio da alvorada."
+          ]
+        },
+        {
+          "id": "P4-S1-Q071",
+          "categoria": "Seção 1: A oração na vida cristã (Capítulo 2: A tradição da oração)",
+          "pergunta": "Por que a caridade é descrita como a fonte e a meta de toda oração cristã?",
+          "resposta_texto": "A caridade é a fonte da oração porque brota do amor que o Espírito Santo derrama nos corações, e é também sua meta porque toda oração visa a fazer crescer o amor a Deus e ao próximo. Sem a caridade, a oração perde a sua seiva vital.",
+          "referencias": {
+            "biblia": [
+              "Rm 5,5",
+              "1Cor 13,1-3"
+            ],
+            "cic": [
+              "CIC 2658"
+            ]
+          },
+          "analogias": [
+            "É como o fogo ardente que aquenta a lareira e cuja chama se espalha para iluminar e aquecer todo o ambiente da casa."
+          ]
+        },
+        {
+          "id": "P4-S1-Q072",
+          "categoria": "Seção 1: A oração na vida cristã (Capítulo 2: A tradição da oração)",
+          "pergunta": "O que significa dizer que o 'hoje' das nossas vidas é o tempo oportuno para a oração?",
+          "resposta_texto": "Significa que o encontro com Deus acontece nos acontecimentos e no tempo presente do dia a dia. Deus não nos chama no passado que já passou ou no futuro que ainda não existe, mas no 'hoje' em que ouvimos a Sua voz.",
+          "referencias": {
+            "biblia": [
+              "Sl 95,7-8",
+              "Hb 3,7-8"
+            ],
+            "cic": [
+              "CIC 2659-2660"
+            ]
+          },
+          "analogias": [
+            "É como abrir a porta exatamente no momento em que o visitante bate, sem adiamentos ou nostalgias de visitas passadas."
+          ]
+        },
+        {
+          "id": "P4-S1-Q073",
+          "categoria": "Seção 1: A oração na vida cristã (Capítulo 2: A tradição da oração)",
+          "pergunta": "Por que a oração cristã é essencialmente dirigida ao Pai em nome de Jesus Cristo?",
+          "resposta_texto": "A oração é dirigida ao Pai porque Jesus nos revelou o Pai e tornou-Se o nosso Caminho. Em nome de Jesus e pela mediação do Seu Filho amado, os batizados têm acesso direto ao Pai no Espírito Santo.",
+          "referencias": {
+            "biblia": [
+              "Jo 14,6",
+              "Jo 16,23"
+            ],
+            "cic": [
+              "CIC 2664"
+            ]
+          },
+          "analogias": [
+            "É como usar o passe oficial selado pelo Filho do Rei para entrar com ousadia e confiança no Palácio real."
+          ]
+        },
+        {
+          "id": "P4-S1-Q074",
+          "categoria": "Seção 1: A oração na vida cristã (Capítulo 2: A tradição da oração)",
+          "pergunta": "Por que a invocação do Nome de Jesus tem uma eficácia espiritual tão profunda na oração?",
+          "resposta_texto": "A invocação do Nome de Jesus contém a própria presença divina do Salvador, que significa 'Deus salva'. Invocar com fé o Santo Nome de Jesus é acolher o Seu poder redentor, expulsar as trevas e unir o coração ao Senhor.",
+          "referencias": {
+            "biblia": [
+              "At 4,12",
+              "Fl 2,9-10"
+            ],
+            "cic": [
+              "CIC 2666-2668"
+            ]
+          },
+          "analogias": [
+            "É como pronunciar a senha sagrada que abre a porta do tesouro real e afasta os salteadores do caminho."
+          ]
+        },
+        {
+          "id": "P4-S1-Q075",
+          "categoria": "Seção 1: A oração na vida cristã (Capítulo 2: A tradição da oração)",
+          "pergunta": "Qual é a origem e o valor da piedosa 'Oração a Jesus' usada na tradição oriental e ocidental?",
+          "resposta_texto": "A 'Oração a Jesus', que repete a súplica 'Senhor Jesus Cristo, Filho de Deus, tem piedade de mim, pecador!', une a invocação do Nome divino ao clamor de humildade. Ela purifica o coração e mantém a alma em oração contínua.",
+          "referencias": {
+            "biblia": [
+              "Lc 18,13",
+              "Mt 9,27"
+            ],
+            "cic": [
+              "CIC 2667-2668"
+            ]
+          },
+          "analogias": [
+            "É como a respiração ritmada do peito que renova continuamente o ar puro no organismo sem cessar de pulsar."
+          ]
+        },
+        {
+          "id": "P4-S1-Q076",
+          "categoria": "Seção 1: A oração na vida cristã (Capítulo 2: A tradição da oração)",
+          "pergunta": "Qual é o papel do Espírito Santo como mestre interior da oração na alma do crente?",
+          "resposta_texto": "O Espírito Santo é o mestre interior que nos ensina a rezar e reza em nós com gemidos inefáveis. Ninguém pode dizer 'Jesus é o Senhor' senão pela ação do Espírito Santo, que atrai e forma a alma na oração filial.",
+          "referencias": {
+            "biblia": [
+              "Rm 8,26",
+              "1Cor 12,3"
+            ],
+            "cic": [
+              "CIC 2670-2672"
+            ]
+          },
+          "analogias": [
+            "É como o preceptor sábio que habita na casa para guiar a mão da criança enquanto ela aprende a desenhar as letras."
+          ]
+        },
+        {
+          "id": "P4-S1-Q077",
+          "categoria": "Seção 1: A oração na vida cristã (Capítulo 2: A tradição da oração)",
+          "pergunta": "Por que a oração a Maria é marcada pela cooperação singular da Virgem com o Espírito Santo?",
+          "resposta_texto": "A oração a Maria brota do fato de que Ela é a Mãe de Deus e a serva humilde do Senhor, em quem o Espírito Santo realizou as Suas maiores maravilhas. Em comunhão com Maria, a Igreja contempla as maravilhas da salvação.",
+          "referencias": {
+            "biblia": [
+              "Lc 1,48-49",
+              "Jo 19,26-27"
+            ],
+            "cic": [
+              "CIC 2673-2674"
+            ]
+          },
+          "analogias": [
+            "É como contemplar a beleza da aurora que anuncia o nascimento do sol radiante da justiça no horizonte."
+          ]
+        },
+        {
+          "id": "P4-S1-Q078",
+          "categoria": "Seção 1: A oração na vida cristã (Capítulo 2: A tradição da oração)",
+          "pergunta": "Qual é o significado teológico das duas partes que compõem a oração da Ave-Maria?",
+          "resposta_texto": "A primeira parte acolhe os elogios divinos proferidos pelo anjo Gabriel e por Isabel, glorificando o fruto do ventre de Maria, Jesus. A segunda parte confia à Mãe de Deus a nossa vida presente e a hora da nossa morte, pedindo a sua intercessão.",
+          "referencias": {
+            "biblia": [
+              "Lc 1,28.42",
+              "Jo 2,5"
+            ],
+            "cic": [
+              "CIC 2676-2677"
+            ]
+          },
+          "analogias": [
+            "É como primeiro saudar com flores e honras a rainha-mãe para depois lhe entregar o pedido de proteção do reino."
+          ]
+        },
+        {
+          "id": "P4-S1-Q079",
+          "categoria": "Seção 1: A oração na vida cristã (Capítulo 2: A tradição da oração)",
+          "pergunta": "Como o cântico do Magnificat expressa o modelo supremo de oração mariana?",
+          "resposta_texto": "O Magnificat é a oração mariana por excelência porque é o cântico de louvor e gratidão da Virgem pelos grandes feitos de Deus. Nele, Maria exalta a misericórdia do Senhor para com os humildes e fiéis de todas as gerações.",
+          "referencias": {
+            "biblia": [
+              "Lc 1,46-55",
+              "1Sm 2,1-10"
+            ],
+            "cic": [
+              "CIC 2679"
+            ]
+          },
+          "analogias": [
+            "É como a explosão de alegria e canto da filha amada que celebra na festa da casa a generosidade sem limites do pai."
+          ]
+        },
+        {
+          "id": "P4-S1-Q080",
+          "categoria": "Seção 1: A oração na vida cristã (Capítulo 2: A tradição da oração)",
+          "pergunta": "Como os santos no céu atuam como mestres e intercessores da nossa oração?",
+          "resposta_texto": "Os santos na glória celeste contemplam a Deus e intercedem continuamente por nós na terra. O seu exemplo de vida nos ensina caminhos de oração e o seu patrocínio fraterno fortalece a nossa caminhada para o céu.",
+          "referencias": {
+            "biblia": [
+              "Hb 12,1",
+              "Ap 5,8"
+            ],
+            "cic": [
+              "CIC 2683-2684"
+            ]
+          },
+          "analogias": [
+            "É como os alpinistas veteranos que já atingiram o cume da montanha e estendem as cordas para ajudar os companheiros da subida."
+          ]
+        },
+        {
+          "id": "P4-S1-Q081",
+          "categoria": "Seção 1: A oração na vida cristã (Capítulo 2: A tradição da oração)",
+          "pergunta": "Por que a família cristã é chamada de 'igreja doméstica' e primeiro lugar de educação na oração?",
+          "resposta_texto": "A família é a igreja doméstica porque nela as crianças aprendem a rezar, a escutar a Palavra de Deus e a praticar as virtudes desde a infância. O exemplo de oração diária dos pais forma a consciência dos filhos.",
+          "referencias": {
+            "biblia": [
+              "Dt 6,6-7",
+              "2Tm 1,5"
+            ],
+            "cic": [
+              "CIC 2685"
+            ]
+          },
+          "analogias": [
+            "É como o ninho acolhedor no qual os passarinhos aprendem a ensaiar o voo e o canto ouvindo os pais."
+          ]
+        },
+        {
+          "id": "P4-S1-Q082",
+          "categoria": "Seção 1: A oração na vida cristã (Capítulo 2: A tradição da oração)",
+          "pergunta": "Qual é o dever dos ministros ordenados (bispos, presbíteros e diáconos) na oração do Povo de Deus?",
+          "resposta_texto": "Os ministros ordenados têm a missão de guiar o povo na oração, de presidir as celebrações litúrgicas, de ensinar a catequese da oração e de interceder continuamente pela comunidade confiada aos seus cuidados.",
+          "referencias": {
+            "biblia": [
+              "At 6,4",
+              "1Tm 2,1-2"
+            ],
+            "cic": [
+              "CIC 2686"
+            ]
+          },
+          "analogias": [
+            "É como os mestres de capela e maestros que regem os ensaios do coro e conduzem a comunidade no canto solene."
+          ]
+        },
+        {
+          "id": "P4-S1-Q083",
+          "categoria": "Seção 1: A oração na vida cristã (Capítulo 2: A tradição da oração)",
+          "pergunta": "Qual é a missão dos religiosos e dos consagrados no cultivo da oração na Igreja?",
+          "resposta_texto": "Os religiosos e consagrados testemunham o primado de Deus através da oração contemplativa e comunitária. A sua vida entregue ao Senhor torna-se uma fonte constante de intercessão e renovação espiritual para toda a Igreja.",
+          "referencias": {
+            "biblia": [
+              "Lc 10,42",
+              "1Cor 7,34"
+            ],
+            "cic": [
+              "CIC 2687"
+            ]
+          },
+          "analogias": [
+            "É como os faróis acesos na costa que mantêm a iluminação permanente para orientar as rotas da navegação."
+          ]
+        },
+        {
+          "id": "P4-S1-Q084",
+          "categoria": "Seção 1: A oração na vida cristã (Capítulo 2: A tradição da oração)",
+          "pergunta": "Como os grupos de oração e os movimentos eclesiais ajudam na revitalização da oração?",
+          "resposta_texto": "Os grupos de oração e movimentos eclesiais oferecem um ambiente de fraternidade, partilha da Palavra e apoio mútuo na vida espiritual. Eles ajudam os fiéis a aprofundar o compromisso batismal e o fervor da oração.",
+          "referencias": {
+            "biblia": [
+              "Mt 18,20",
+              "At 2,46-47"
+            ],
+            "cic": [
+              "CIC 2689"
+            ]
+          },
+          "analogias": [
+            "É como reunir as brasas acesas no mesmo braseiro para que o calor se intensifique e a chama não se apague."
+          ]
+        },
+        {
+          "id": "P4-S1-Q085",
+          "categoria": "Seção 1: A oração na vida cristã (Capítulo 2: A tradição da oração)",
+          "pergunta": "O que é o acompanhamento ou direção espiritual na busca pelo crescimento da oração?",
+          "resposta_texto": "A direção espiritual é o auxílio oferecido por uma pessoa prudente e cheia de sabedoria que ajuda a alma a discernir a vontade de Deus, a superar as dificuldades e a crescer na fidelidade à graça do Espírito Santo.",
+          "referencias": {
+            "biblia": [
+              "Pr 11,14",
+              "1Ts 5,11"
+            ],
+            "cic": [
+              "CIC 2690"
+            ]
+          },
+          "analogias": [
+            "É como caminhar na trilha desconhecida acompanhado do guia experiente que aponta os atalhos e previne as armadilhas."
+          ]
+        },
+        {
+          "id": "P4-S1-Q086",
+          "categoria": "Seção 1: A oração na vida cristã (Capítulo 2: A tradição da oração)",
+          "pergunta": "Por que o templo ou igreja é considerado o lugar próprio da oração comunitária e sacramental?",
+          "resposta_texto": "A igreja é o lugar sagrado onde a comunidade se reúne para a celebração da Eucaristia e onde se reserva o Santíssimo Sacramento. Por ser a casa de Deus e casa de oração, favorece a adoração e o recolhimento.",
+          "referencias": {
+            "biblia": [
+              "1Rs 8,29",
+              "Mt 21,13"
+            ],
+            "cic": [
+              "CIC 2691",
+              "CIC 2696"
+            ]
+          },
+          "analogias": [
+            "É como o salão nobre do palácio onde o rei se reúne publicamente com todos os seus cidadãos para o banquete oficial."
+          ]
+        },
+        {
+          "id": "P4-S1-Q087",
+          "categoria": "Seção 1: A oração na vida cristã (Capítulo 2: A tradição da oração)",
+          "pergunta": "Qual é a importância de ter um 'cantinho de oração' ou oratório no lar cristão?",
+          "resposta_texto": "Ter um oratório doméstico ou cantinho da oração na casa ajuda a lembrar a presença de Deus no cotidiano. Com a Bíblia e imagens sagradas, esse espaço favorece a oração pessoal e familiar diária.",
+          "referencias": {
+            "biblia": [
+              "Mt 6,6",
+              "At 10,30"
+            ],
+            "cic": [
+              "CIC 2691"
+            ]
+          },
+          "analogias": [
+            "É como reservar uma poltrona confortável e iluminada no quarto dedicada exclusivamente às conversas de amor."
+          ]
+        },
+        {
+          "id": "P4-S1-Q088",
+          "categoria": "Seção 1: A oração na vida cristã (Capítulo 2: A tradição da oração)",
+          "pergunta": "Qual é o valor dos santuários e dos locais de peregrinação para o renovo da oração?",
+          "resposta_texto": "Os santuários são lugares privilegedos da piedade cristã onde os fiéis buscam renovar a fé, receber os sacramentos da Reconciliação e da Eucaristia e fazer a experiência da paz e da misericórdia divina em clima de peregrinação.",
+          "referencias": {
+            "biblia": [
+              "Sl 84,2-3",
+              "Lc 2,41-42"
+            ],
+            "cic": [
+              "CIC 2691"
+            ]
+          },
+          "analogias": [
+            "É como fazer uma pausa na viagem para beber da fonte de água pura no oásis do deserto."
+          ]
+        },
+        {
+          "id": "P4-S1-Q089",
+          "categoria": "Seção 1: A oração na vida cristã (Capítulo 2: A tradição da oração)",
+          "pergunta": "Como os mosteiros e casas de retiro servem como oásis de oração para os fiéis?",
+          "resposta_texto": "Os mosteiros e casas de retiro oferecem um clima de silêncio, recolhimento e oração contínua. Neles, os fiéis podem fazer pausas nas atribulações do mundo para escutar a Deus e reorientar a vida interior.",
+          "referencias": {
+            "biblia": [
+              "Mc 6,31",
+              "Lc 5,16"
+            ],
+            "cic": [
+              "CIC 2691"
+            ]
+          },
+          "analogias": [
+            "É como recolher-se no jardim botânico silencioso longe do barulho ensurdecedor do tráfego das avenidas."
+          ]
+        },
+        {
+          "id": "P4-S1-Q090",
+          "categoria": "Seção 1: A oração na vida cristã (Capítulo 3: A vida de oração)",
+          "pergunta": "Por que a Igreja propõe aos fiéis ritmos diários e semanais de oração?",
+          "resposta_texto": "A Igreja propõe ritmos de oração, como as orações da manhã e da noite, as bênçãos das refeições, a Liturgia das Horas e a Eucaristia dominical, para alimentar a oração contínua. Esses momentos lembram ao cristão que a oração é a vida do coração novo e deve ritmar a existência.",
+          "referencias": {
+            "biblia": [
+              "Lc 18,1",
+              "1Ts 5,17"
+            ],
+            "cic": [
+              "CIC 2697"
+            ]
+          },
+          "analogias": [
+            "Como as refeições diárias dispostas regularmente na rotina para nutrir o corpo e evitar o esgotamento físico."
+          ]
+        },
+        {
+          "id": "P4-S1-Q091",
+          "categoria": "Seção 1: A oração na vida cristã (Capítulo 3: A vida de oração)",
+          "pergunta": "Qual é o objetivo espiritual dos ritmos de oração na vida cristã?",
+          "resposta_texto": "Os ritmos de oração têm como objetivo manter o fiel habitualmente na presença de Deus e em comunhão com a Santíssima Trindade. Eles estruturam o tempo do cristão para que suas atividades cotidianas fiquem imbuídas da graça divina.",
+          "referencias": {
+            "biblia": [
+              "Sl 55,18",
+              "At 2,42"
+            ],
+            "cic": [
+              "CIC 2698"
+            ]
+          },
+          "analogias": [
+            "Como o bater constante e cadenciado do coração humano que mantém a circulação sanguínea ativa em todo o organismo."
+          ]
+        },
+        {
+          "id": "P4-S1-Q092",
+          "categoria": "Seção 1: A oração na vida cristã (Capítulo 3: A vida de oração)",
+          "pergunta": "Quais são as três grandes expressões da vida de oração na Tradição da Igreja?",
+          "resposta_texto": "As três grandes expressões da vida de oração são a oração vocal, a meditação e a oração contemplativa. Embora apresentem intensidades e formas variadas, todas elas possuem em comum o recolhimento do coração na presença de Deus.",
+          "referencias": {
+            "biblia": [
+              "1Cor 14,15",
+              "Ef 5,19"
+            ],
+            "cic": [
+              "CIC 2699"
+            ]
+          },
+          "analogias": [
+            "Como três níveis de profundidade no oceano, variando da superfície visível até as águas calmas das profundezas."
+          ]
+        },
+        {
+          "id": "P4-S1-Q093",
+          "categoria": "Seção 1: A oração na vida cristã (Capítulo 3: A vida de oração)",
+          "pergunta": "Por que a oração vocal é considerada uma necessidade inerente à natureza humana?",
+          "resposta_texto": "A oração vocal é uma necessidade porque o homem é corpo e espírito e sente a exigência de traduzir exteriormente seus sentimentos interiores. Como Deus Se revelou mediante a Palavra encarnada, a oração humana toma voz para louvar e suplicar ao Criador.",
+          "referencias": {
+            "biblia": [
+              "Sl 141,1-2",
+              "Os 14,3"
+            ],
+            "cic": [
+              "CIC 2700"
+            ]
+          },
+          "analogias": [
+            "Como o abraço e as palavras pronunciadas em voz alta por um filho para demonstrar seu afeto sincero ao pai."
+          ]
+        },
+        {
+          "id": "P4-S1-Q094",
+          "categoria": "Seção 1: A oração na vida cristã (Capítulo 3: A vida de oração)",
+          "pergunta": "Por que Jesus ensinou uma oração vocal específica aos Seus Apóstolos?",
+          "resposta_texto": "Jesus ensinou a oração vocal do Pai-Nosso porque os discípulos, ao contemplarem a Sua oração silenciosa, pediram-Lhe que os ensinasse a rezar. Ele deu-lhes uma oração formulada para associar a voz da humanidade à Sua própria oração filial.",
+          "referencias": {
+            "biblia": [
+              "Lc 11,1-4",
+              "Mt 6,9-13"
+            ],
+            "cic": [
+              "CIC 2701"
+            ]
+          },
+          "analogias": [
+            "Como um mestre de música que entrega a partitura escrita para que todos os alunos cantem em coro a mesma melodia."
+          ]
+        },
+        {
+          "id": "P4-S1-Q095",
+          "categoria": "Seção 1: A oração na vida cristã (Capítulo 3: A vida de oração)",
+          "pergunta": "A oração vocal se restringe ao culto comunitário ou se aplica também à oração pessoal?",
+          "resposta_texto": "A oração vocal não se limita ao culto público da assembleia litúrgica, sendo igualmente necessária na oração pessoal no segredo do quarto. Seja em grupo ou na solidão, as palavras formuladas servem de suporte para sustentarem o diálogo da alma com Deus.",
+          "referencias": {
+            "biblia": [
+              "Mt 6,6",
+              "At 4,24"
+            ],
+            "cic": [
+              "CIC 2702"
+            ]
+          },
+          "analogias": [
+            "Como uma carta de amor que pode ser lida em alta voz perante a família ou sussurrada a sós com a pessoa amada."
+          ]
+        },
+        {
+          "id": "P4-S1-Q096",
+          "categoria": "Seção 1: A oração na vida cristã (Capítulo 3: A vida de oração)",
+          "pergunta": "Qual é a condição essencial para que a oração vocal seja agradável a Deus?",
+          "resposta_texto": "A condição essencial é que as palavras pronunciadas pelos lábios procedam da atenção e do afeto do coração. Deus não busca a prolixidade das palavras externas, mas a intenção sincera e o amor da alma que O invoca.",
+          "referencias": {
+            "biblia": [
+              "Is 29,13",
+              "Mt 15,8"
+            ],
+            "cic": [
+              "CIC 2703"
+            ]
+          },
+          "analogias": [
+            "Como o envio de uma mensagem verdadeira cuja sinceridade de intenção vale mais do que um discurso longo e artificial."
+          ]
+        },
+        {
+          "id": "P4-S1-Q097",
+          "categoria": "Seção 1: A oração na vida cristã (Capítulo 3: A vida de oração)",
+          "pergunta": "Por que a oração vocal é descrita como uma forma inicial acessível a todos os fiéis?",
+          "resposta_texto": "A oração vocal é acessível porque se adapta facilmente à condição de qualquer pessoa, simples ou sábia. Ela é o ponto de partida da vida espiritual, ajudando a despertar o recolhimento interior e a conduzir a alma à meditação e à contemplação.",
+          "referencias": {
+            "biblia": [
+              "Mc 10,47",
+              "Lc 18,13"
+            ],
+            "cic": [
+              "CIC 2704"
+            ]
+          },
+          "analogias": [
+            "Como os primeiros passos de um bebê segurando na mão do pai antes de conseguir caminhar sem apoio."
+          ]
+        },
+        {
+          "id": "P4-S1-Q098",
+          "categoria": "Seção 1: A oração na vida cristã (Capítulo 3: A vida de oração)",
+          "pergunta": "O que caracteriza a meditação e o que a inteligência busca compreender por meio dela?",
+          "resposta_texto": "A meditação é uma procura orante em que o espírito humano busca compreender o porquê e o como da vida cristã. Ela mobiliza a reflexão para assimilar os ensinamentos divinos e responder com fidelidade ao que o Senhor pede na vida concreta.",
+          "referencias": {
+            "biblia": [
+              "Sl 1,2",
+              "Sl 119,97"
+            ],
+            "cic": [
+              "CIC 2705"
+            ]
+          },
+          "analogias": [
+            "Como um estudante concentrado que lê atentamente um manual valioso para extrair dele orientações práticas."
+          ]
+        },
+        {
+          "id": "P4-S1-Q099",
+          "categoria": "Seção 1: A oração na vida cristã (Capítulo 3: A vida de oração)",
+          "pergunta": "Quais são os suportes tradicionais oferecidos pela Igreja para auxiliar na meditação?",
+          "resposta_texto": "Os principais suportes são os textos da Sagrada Escritura (especialmente os Evangelhos), os ícones sagrados, as orações litúrgicas, os escritos dos Padres da Igreja e dos mestres espirituais, e a contemplação da própria criação.",
+          "referencias": {
+            "biblia": [
+              "2Tm 3,16-17",
+              "Sl 19,2"
+            ],
+            "cic": [
+              "CIC 2706"
+            ]
+          },
+          "analogias": [
+            "Como os mapas e cartas de navegação que o capitão consulta sobre a mesa para traçar a rota do navio."
+          ]
+        },
+        {
+          "id": "P4-S1-Q100",
+          "categoria": "Seção 1: A oração na vida cristã (Capítulo 3: A vida de oração)",
+          "pergunta": "Existe um único método obrigatório de meditação na tradição cristã?",
+          "resposta_texto": "Não existe um método único, pois a Igreja reconhece a variedade de métodos desenvolvidos pelas diversas escolas de espiritualidade. O essencial não reside no método em si, mas em progredir na fé e no amor sob a guia do Espírito Santo.",
+          "referencias": {
+            "biblia": [
+              "1Cor 12,4-6",
+              "Rm 8,26"
+            ],
+            "cic": [
+              "CIC 2707"
+            ]
+          },
+          "analogias": [
+            "Como diferentes trilhas em uma montanha que conduzem caminhantes de vários estilos ao mesmo cume iluminado."
+          ]
+        },
+        {
+          "id": "P4-S1-Q101",
+          "categoria": "Seção 1: A oração na vida cristã (Capítulo 3: A vida de oração)",
+          "pergunta": "Quais faculdades humanas são mobilizadas na meditação e qual é o seu objetivo espiritual?",
+          "resposta_texto": "A meditação mobiliza o pensamento, a imaginação, a emoção e o desejo. O seu objetivo é aprofundar as convicções de fé, promover a conversão do coração e fortalecer a vontade humana para seguir a Cristo.",
+          "referencias": {
+            "biblia": [
+              "Lc 2,19",
+              "Fl 4,8"
+            ],
+            "cic": [
+              "CIC 2708"
+            ]
+          },
+          "analogias": [
+            "Como a combinação de ingredientes variados no preparo de um prato que gera um alimento saboroso e nutritivo."
+          ]
+        },
+        {
+          "id": "P4-S1-Q102",
+          "categoria": "Seção 1: A oração na vida cristã (Capítulo 3: A vida de oração)",
+          "pergunta": "Como Santa Teresa de Jesus define a oração contemplativa no Catecismo?",
+          "resposta_texto": "Santa Teresa de Jesus define a oração contemplativa como um trato de amizade, em que conversamos a sós, muitas vezes, com Aquele que sabemos que nos ama. Trata-se da busca sincera de Deus por quem o coração é atraído.",
+          "referencias": {
+            "biblia": [
+              "Ct 1,7",
+              "Ct 3,1-4"
+            ],
+            "cic": [
+              "CIC 2709"
+            ]
+          },
+          "analogias": [
+            "Como dois amigos íntimos que se sentam juntos em silêncio, felizes apenas por estarem na companhia um do outro."
+          ]
+        },
+        {
+          "id": "P4-S1-Q103",
+          "categoria": "Seção 1: A oração na vida cristã (Capítulo 3: A vida de oração)",
+          "pergunta": "Qual deve ser a atitude do fiel quanto ao tempo e à fidelidade na oração de contemplação?",
+          "resposta_texto": "O fiel deve cultivar uma determinação resoluta e reservar um tempo fixo e inviolável para a contemplação. Ele não deve abandonar a oração diante de securas espirituais, distrações ou cansaço, mantendo-se fiel à sua entrega a Deus.",
+          "referencias": {
+            "biblia": [
+              "Dn 6,11",
+              "Mt 26,40"
+            ],
+            "cic": [
+              "CIC 2710"
+            ]
+          },
+          "analogias": [
+            "Como o guarda da fortaleza que cumpre rigorosamente seu turno de vigilância sem abandonar o posto."
+          ]
+        },
+        {
+          "id": "P4-S1-Q104",
+          "categoria": "Seção 1: A oração na vida cristã (Capítulo 3: A vida de oração)",
+          "pergunta": "Como a alma se prepara adequadamente para entrar na oração de contemplação?",
+          "resposta_texto": "A alma prepara-se recolhendo o coração, purificando a intenção e colocando-se na presença de Deus. Movida pelo Espírito Santo, a pessoa busca habitar na morada interior de Cristo para escutá-Lo e amá-Lo.",
+          "referencias": {
+            "biblia": [
+              "Sl 62,2",
+              "Mt 6,6"
+            ],
+            "cic": [
+              "CIC 2711"
+            ]
+          },
+          "analogias": [
+            "Como tirar os sapatos sujos de poeira na entrada da casa antes de pisar o tapete limpo do santuário."
+          ]
+        },
+        {
+          "id": "P4-S1-Q105",
+          "categoria": "Seção 1: A oração na vida cristã (Capítulo 3: A vida de oração)",
+          "pergunta": "O que ensina a resposta do camponês de Ars sobre a essência do olhar na contemplação?",
+          "resposta_texto": "A resposta 'Eu O olho e Ele me olha', dada por um camponês perante o Tabernáculo, ensina que a contemplação é um olhar de fé fixo em Jesus. Esse olhar purifica o coração e dispensa discursos elaborados, apoiando-se na certeza do amor de Deus.",
+          "referencias": {
+            "biblia": [
+              "Hb 12,2",
+              "2Cor 3,18"
+            ],
+            "cic": [
+              "CIC 2712"
+            ]
+          },
+          "analogias": [
+            "Como o olhar silencioso e profundo trocado entre mãe e filho que dispensa qualquer explicação verbal."
+          ]
+        },
+        {
+          "id": "P4-S1-Q106",
+          "categoria": "Seção 1: A oração na vida cristã (Capítulo 3: A vida de oração)",
+          "pergunta": "De que modo a escuta da Palavra de Deus se realiza na oração contemplativa?",
+          "resposta_texto": "A escuta da Palavra na contemplação se realiza no silêncio e na obediência da fé, e não em especulações intelectuais. O fiel acolhe a vontade de Deus no íntimo da alma e dispõe-se a cumpri-la com amor de filho.",
+          "referencias": {
+            "biblia": [
+              "1Sm 3,10",
+              "Lc 10,39"
+            ],
+            "cic": [
+              "CIC 2713"
+            ]
+          },
+          "analogias": [
+            "Como o solo seco que absorve suavemente as gotas da chuva mansa até ficar completamente irrigado."
+          ]
+        },
+        {
+          "id": "P4-S1-Q107",
+          "categoria": "Seção 1: A oração na vida cristã (Capítulo 3: A vida de oração)",
+          "pergunta": "Por que a oração contemplativa é descrita como a oração do filho de Deus e do pecador perdoado?",
+          "resposta_texto": "É a oração do filho porque expressa a confiança amorosa na filiação divina, e do pecador perdoado porque o fiel reconhece sua fraqueza humana, mas aceita ser transformado pelo amor misericordioso de Deus.",
+          "referencias": {
+            "biblia": [
+              "Lc 15,20-24",
+              "1Jo 4,19"
+            ],
+            "cic": [
+              "CIC 2714"
+            ]
+          },
+          "analogias": [
+            "Como o filho acolhido de braços abertos pelo pai após um longo desvio, reclinando a cabeça em seu peito."
+          ]
+        },
+        {
+          "id": "P4-S1-Q108",
+          "categoria": "Seção 1: A oração na vida cristã (Capítulo 3: A vida de oração)",
+          "pergunta": "Em quais aspectos da vida de Cristo a atenção da contemplação se fixa de modo especial?",
+          "resposta_texto": "A atenção fixa-se nos mistérios da vida de Jesus, desde o Seu nascimento e vida oculta até a Sua Paixão e Ressurreição. Contemplando a vida do Salvador, a alma aprende a 'Luz da verdade' e assimila o Seu modo de amar.",
+          "referencias": {
+            "biblia": [
+              "Jo 8,12",
+              "2Cor 4,6"
+            ],
+            "cic": [
+              "CIC 2715"
+            ]
+          },
+          "analogias": [
+            "Como a contemplação demorada de uma pintura sacra iluminada pela luz da alvorada que revela todas as suas nuances."
+          ]
+        },
+        {
+          "id": "P4-S1-Q109",
+          "categoria": "Seção 1: A oração na vida cristã (Capítulo 3: A vida de oração)",
+          "pergunta": "De que maneira a oração de contemplação nos une ao mistério e à oração de Jesus?",
+          "resposta_texto": "Unimo-nos à oração de Jesus participando da Sua obediência ao Pai, do Seu abandono na oração do Getsêmani e da Sua doação redentora na Cruz. O fiel aprende a conformar sua vontade humana ao projeto de salvação.",
+          "referencias": {
+            "biblia": [
+              "Lc 22,42",
+              "Fl 2,5"
+            ],
+            "cic": [
+              "CIC 2716"
+            ]
+          },
+          "analogias": [
+            "Como o barco que ajusta suas velas para captar o vento e navegar no mesmo rumo de uma grande nau capitânia."
+          ]
+        },
+        {
+          "id": "P4-S1-Q110",
+          "categoria": "Seção 1: A oração na vida cristã (Capítulo 3: A vida de oração)",
+          "pergunta": "Qual é o sentido e o valor do silêncio na oração de contemplação segundo São Isaac de Nínive?",
+          "resposta_texto": "São Isaac de Nínive ensina que o silêncio é o 'símbolo do mundo futuro' e a linguagem própria do amor. Na contemplação, as palavras cederam lugar a um amor silencioso, servindo apenas para manter aceso o fogo interior.",
+          "referencias": {
+            "biblia": [
+              "Hab 2,20",
+              "Zc 2,17"
+            ],
+            "cic": [
+              "CIC 2717"
+            ]
+          },
+          "analogias": [
+            "Como adicionar pequenos gravetos à lareira para manter acesa a chama sem cobrir o recinto de fumaça."
+          ]
+        },
+        {
+          "id": "P4-S1-Q111",
+          "categoria": "Seção 1: A oração na vida cristã (Capítulo 3: A vida de oração)",
+          "pergunta": "Como a oração contemplativa feita no segredo se torna fecunda para toda a Igreja?",
+          "resposta_texto": "A oração contemplativa é uma comunhão de amor que traz vida para toda a comunidade eclesial. Ao unir a alma intimamente a Cristo, a contemplação difunde a graça e a força espiritual para o Povo de Deus e o mundo.",
+          "referencias": {
+            "biblia": [
+              "Jo 15,5",
+              "Cl 4,12"
+            ],
+            "cic": [
+              "CIC 2718"
+            ]
+          },
+          "analogias": [
+            "Como o lençol freático invisível sob a terra que nutre o solo e faz florescer as plantas de todo o vale."
+          ]
+        },
+        {
+          "id": "P4-S1-Q112",
+          "categoria": "Seção 1: A oração na vida cristã (Capítulo 3: A vida de oração)",
+          "pergunta": "Por que a oração de contemplação é também descrita como um combate e uma noite escura?",
+          "resposta_texto": "É um combate porque exige esforço para vencer a aridez, as distrações e as tentações de desistir. É uma noite escura porque a alma passa pela purificação da fé, perseverando no amor a Deus mesmo quando desprovida de consolos sensíveis.",
+          "referencias": {
+            "biblia": [
+              "Ef 6,12",
+              "Sl 63,7"
+            ],
+            "cic": [
+              "CIC 2719"
+            ]
+          },
+          "analogias": [
+            "Como a travessia noturna por uma estrada escura onde o motorista se orienta unicamente pelos faróis e pela bússola."
+          ]
+        },
+        {
+          "id": "P4-S1-Q113",
+          "categoria": "Seção 1: A oração na vida cristã (Capítulo 3: A vida de oração)",
+          "pergunta": "Por que o Catecismo define a oração como um verdadeiro combate espiritual?",
+          "resposta_texto": "A oração é um combate espiritual porque orar exige lutar contra nós mesmos, contra as ciladas do Tentador e contra as concepções errôneas do mundo. O combate da oração é inseparável do combate espiritual necessário para viver habitualmente segundo o Espírito de Cristo.",
+          "referencias": {
+            "biblia": [
+              "Ef 6,12",
+              "Mt 26,41"
+            ],
+            "cic": [
+              "CIC 2725"
+            ]
+          },
+          "analogias": [
+            "É como uma batalha diária travada no campo de combate onde o soldado precisa manter a vigilância para defender a fortaleza."
+          ]
+        },
+        {
+          "id": "P4-S1-Q114",
+          "categoria": "Seção 1: A oração na vida cristã (Capítulo 3: A vida de oração)",
+          "pergunta": "Quais são as concepções errôneas do mundo sobre a oração que dificultam a vida orante?",
+          "resposta_texto": "Alguns veem a oração como uma simples operação psicológica, outros como um esforço de concentração para fazer o vazio mental, ou como um conjunto de atitudes e palavras rituais. Há também quem a considere inútil por não produzir resultados materiais produtivos imediatos.",
+          "referencias": {
+            "biblia": [
+              "1Cor 1,21",
+              "Mt 6,7"
+            ],
+            "cic": [
+              "CIC 2726"
+            ]
+          },
+          "analogias": [
+            "É como olhar para uma pintura valiosa julgando apenas o preço da moldura de madeira sem compreender a arte da tela."
+          ]
+        },
+        {
+          "id": "P4-S1-Q115",
+          "categoria": "Seção 1: A oração na vida cristã (Capítulo 3: A vida de oração)",
+          "pergunta": "Como a mentalidade secularizada de eficiência e produtividade afeta a vida de oração do cristão?",
+          "resposta_texto": "A mentalidade de produtividade reduz a oração a uma perda de tempo, porque avalia tudo pelo critério da utilidade material e da eficiência técnica. Contra esse desânimo, a fé recorda que a oração é uma busca do Reino de Deus e uma comunhão de amor inestimável.",
+          "referencias": {
+            "biblia": [
+              "Lc 10,41-42",
+              "Mt 6,33"
+            ],
+            "cic": [
+              "CIC 2727"
+            ]
+          },
+          "analogias": [
+            "É como o trabalhador apressado que considera perda de tempo parar para abastecer o reservatório de combustível do veículo."
+          ]
+        },
+        {
+          "id": "P4-S1-Q116",
+          "categoria": "Seção 1: A oração na vida cristã (Capítulo 3: A vida de oração)",
+          "pergunta": "O que constitui a tentação do desânimo ou da acídia na prática contínua da oração?",
+          "resposta_texto": "A acídia é uma forma de preguiça espiritual decorrente do relaxamento da vigilância e do descuido do coração. Ela leva a pessoa a achar que a oração não serve para nada e a abandonar a prática orante diante das dificuldades e da secura.",
+          "referencias": {
+            "biblia": [
+              "Mt 26,40",
+              "Hb 12,12"
+            ],
+            "cic": [
+              "CIC 2728",
+              "CIC 2733"
+            ]
+          },
+          "analogias": [
+            "É como a névoa fria que adormece o viajante na estrada fazendo-o sentar-se na margem do caminho antes de atingir o topo."
+          ]
+        },
+        {
+          "id": "P4-S1-Q117",
+          "categoria": "Seção 1: A oração na vida cristã (Capítulo 3: A vida de oração)",
+          "pergunta": "Como a pessoa deve reagir diante da tentação das distrações durante a oração?",
+          "resposta_texto": "As distrações revelam aquilo a que nosso coração está apegado. O cristão não deve lutar com violência contra as distrações, mas voltar suavemente o coração para o Senhor na fé e na humilde preferência por Deus sobre os pensamentos fúteis.",
+          "referencias": {
+            "biblia": [
+              "Mt 6,21",
+              "Sl 86,11"
+            ],
+            "cic": [
+              "CIC 2729"
+            ]
+          },
+          "analogias": [
+            "É como o condutor que afasta com calma os insetos do parabrisa e mantém os olhos fixos na estrada."
+          ]
+        },
+        {
+          "id": "P4-S1-Q118",
+          "categoria": "Seção 1: A oração na vida cristã (Capítulo 3: A vida de oração)",
+          "pergunta": "Qual é o sentido da 'secura espiritual' no combate da oração e como superá-la?",
+          "resposta_texto": "A secura espiritual faz parte da oração em que a alma se sente sem gosto pelos pensamentos e sentimentos espirituais. Ela permite aderir a Deus na pura fé, sem buscar consolações sensíveis, unindo-se a Jesus na Sua agonia no Horto.",
+          "referencias": {
+            "biblia": [
+              "Sl 63,2",
+              "Mc 14,34"
+            ],
+            "cic": [
+              "CIC 2731"
+            ]
+          },
+          "analogias": [
+            "É como caminhar firme pelo deserto árido sabendo que a nascente de água viva permanece inalterada no destino."
+          ]
+        },
+        {
+          "id": "P4-S1-Q119",
+          "categoria": "Seção 1: A oração na vida cristã (Capítulo 3: A vida de oração)",
+          "pergunta": "O que significa ter 'confiança filial' quando nos dirigimos a Deus na oração?",
+          "resposta_texto": "A confiança filial é a atitude do coração das crianças que sabem que o Pai Celestial é bom e deseja o seu verdadeiro bem. Ela se expressa na certeza humilde de que Deus atende às nossas preces da maneira mais conveniente para a nossa salvação.",
+          "referencias": {
+            "biblia": [
+              "Mt 7,9-11",
+              "Rm 8,15"
+            ],
+            "cic": [
+              "CIC 2734",
+              "CIC 2735"
+            ]
+          },
+          "analogias": [
+            "É como a criança pequena que descansa tranquila no colo do pai sabendo que nada lhe faltará."
+          ]
+        },
+        {
+          "id": "P4-S1-Q120",
+          "categoria": "Seção 1: A oração na vida cristã (Capítulo 3: A vida de oração)",
+          "pergunta": "Por que às vezes temos a impressão de que Deus não escuta ou não atende a nossa oração de petição?",
+          "resposta_texto": "Temos essa impressão quando pedimos mal, buscando bens passageiros em vez do Reino de Deus, ou quando queremos impor a nossa vontade ao Criador. Deus escuta sempre, mas transforma o nosso pedido para nos conceder o que realmente precisamos para a salvação.",
+          "referencias": {
+            "biblia": [
+              "Tg 4,3",
+              "1Jo 5,14"
+            ],
+            "cic": [
+              "CIC 2735",
+              "CIC 2737"
+            ]
+          },
+          "analogias": [
+            "É como o pai carinhoso que recusa o objeto cortante solicitado pelo filho pequeno para proteger a sua integridade."
+          ]
+        },
+        {
+          "id": "P4-S1-Q121",
+          "categoria": "Seção 1: A oração na vida cristã (Capítulo 3: A vida de oração)",
+          "pergunta": "O que o Catecismo ensina sobre a necessidade de 'perseverar no amor' durante o combate da oração?",
+          "resposta_texto": "Perseverar no amor exige orar sempre sem jamais esmorecer. A perseverança na oração é uma vitória do amor crucificado que não se rende às dificuldades, à aridez ou à aparente ausência de respostas sensíveis.",
+          "referencias": {
+            "biblia": [
+              "Lc 18,1",
+              "1Ts 5,17"
+            ],
+            "cic": [
+              "CIC 2742",
+              "CIC 2743"
+            ]
+          },
+          "analogias": [
+            "É como a chama da lâmpada que permanece acesa a noite inteira alimentada continuamente pelo óleo do reservatório."
+          ]
+        },
+        {
+          "id": "P4-S1-Q122",
+          "categoria": "Seção 1: A oração na vida cristã (Capítulo 3: A vida de oração)",
+          "pergunta": "O que se entende por 'A Oração da Hora de Jesus' contida no Evangelho de São João?",
+          "resposta_texto": "É a grande oração sacerdotal de Jesus na Última Ceia, na qual Ele recapitula toda a Sua obra da criação e da redenção. Nessa oração, Jesus Se oferece ao Pai pela santificação dos Seus discípulos e pela unidade da Igreja.",
+          "referencias": {
+            "biblia": [
+              "Jo 17,1-26",
+              "Hb 5,7"
+            ],
+            "cic": [
+              "CIC 2746",
+              "CIC 2747"
+            ]
+          },
+          "analogias": [
+            "É como o cume luminoso da montanha para onde convergem todos os caminhos da salvação."
+          ]
+        },
+        {
+          "id": "P4-S1-Q123",
+          "categoria": "Seção 1: A oração na vida cristã (Capítulo 3: A vida de oração)",
+          "pergunta": "Como a oração sacerdotal de Jesus realiza a petição pela unidade de todos os Seus discípulos?",
+          "resposta_texto": "Jesus pede ao Pai: 'Para que todos sejam um, como tu, Pai, estás em mim e eu em ti'. Essa unidade dos fiéis é fundada na unidade do Pai e do Filho, para que o mundo creia na missão redentora de Cristo.",
+          "referencias": {
+            "biblia": [
+              "Jo 17,21",
+              "Ef 4,3-5"
+            ],
+            "cic": [
+              "CIC 2748",
+              "CIC 2749"
+            ]
+          },
+          "analogias": [
+            "É como as várias cordas da harpa que tocam em perfeita consonância a mesma melodia sagrada."
+          ]
+        },
+        {
+          "id": "P4-S1-Q124",
+          "categoria": "Seção 1: A oração na vida cristã (Capítulo 3: A vida de oração)",
+          "pergunta": "De que maneira a oração constante do cristão se transforma em uma oração sacerdotal unida a Cristo?",
+          "resposta_texto": "Transforma-se ao unir os nossos pedidos, ações de graças e sofrimentos ao único Sacrifício e intercessão de Jesus diante do Pai, oferecendo a vida cotidiana como oferenda espiritual agradável a Deus.",
+          "referencias": {
+            "biblia": [
+              "1Pd 2,5",
+              "Rm 12,1"
+            ],
+            "cic": [
+              "CIC 2745",
+              "CIC 2751"
+            ]
+          },
+          "analogias": [
+            "É como a gota d'água purificada que se mistura ao vinho no cálice para ser oferecida no altar."
+          ]
+        },
+        {
+          "id": "P4-S1-Q125",
+          "categoria": "Seção 1: A oração na vida cristã (Capítulo 3: A vida de oração)",
+          "pergunta": "Como o Espírito Santo nos auxilia a orar quando não sabemos o que pedir nem como pedir?",
+          "resposta_texto": "O Espírito Santo vem em auxílio da nossa fraqueza e intercede por nós com gemidos inefáveis. Ele purifica os nossos desejos e transforma as nossas suplicas para que fiquem em perfeita sintonia com a Vontade de Deus.",
+          "referencias": {
+            "biblia": [
+              "Rm 8,26-27",
+              "Gl 4,6"
+            ],
+            "cic": [
+              "CIC 2736",
+              "CIC 2741"
+            ]
+          },
+          "analogias": [
+            "É como o mestre de canto que ajusta a voz desafinada do aluno até atingir a nota certa da partitura."
+          ]
+        },
+        {
+          "id": "P4-S1-Q126",
+          "categoria": "Seção 1: A oração na vida cristã (Capítulo 3: A vida de oração)",
+          "pergunta": "Por que a oração do cristão exige a vigilância contínua do coração contra o sono espiritual?",
+          "resposta_texto": "Exige vigilância porque o inimigo ronda procurando a quem devorar e a natureza humana é fraca perante a tentação. Estar atento na oração preserva a alma na graça e previne as quedas morais.",
+          "referencias": {
+            "biblia": [
+              "Mc 13,35-37",
+              "1Pd 5,8"
+            ],
+            "cic": [
+              "CIC 2730"
+            ]
+          },
+          "analogias": [
+            "É como o sentinela que permanece desperto na torre de vigia durante a escuridão da noite."
+          ]
+        },
+        {
+          "id": "P4-S1-Q127",
+          "categoria": "Seção 1: A oração na vida cristã (Capítulo 3: A vida de oração)",
+          "pergunta": "De que modo a oração incessante e o trabalho diário se harmonizam na vida do crente?",
+          "resposta_texto": "Harmonizam-se quando o trabalho é realizado na presença de Deus e oferecido por amor a Ele. Desse modo, o próprio trabalho se converte em oração, e a oração nutre a fidelidade no cumprimento do dever.",
+          "referencias": {
+            "biblia": [
+              "Cl 3,17",
+              "1Ts 5,17-18"
+            ],
+            "cic": [
+              "CIC 2742",
+              "CIC 2745"
+            ]
+          },
+          "analogias": [
+            "É como o bater regular do coração que irriga continuamente todos os membros durante as tarefas diárias."
+          ]
+        },
+        {
+          "id": "P4-S1-Q128",
+          "categoria": "Seção 1: A oração na vida cristã (Capítulo 3: A vida de oração)",
+          "pergunta": "Qual é a relação entre o combate da oração e o combate contra o pecado na vida espiritual?",
+          "resposta_texto": "A relação é inseparável: oramos como vivemos porque vivemos como oramos. Se não lutarmos contra o pecado no dia a dia, a oração se torna vazia; e sem o combate da oração, não temos força contra o pecado.",
+          "referencias": {
+            "biblia": [
+              "1Jo 3,22",
+              "Mt 26,41"
+            ],
+            "cic": [
+              "CIC 2725"
+            ]
+          },
+          "analogias": [
+            "É como as duas rodas da engrenagem que precisam girar em conjunto para manter o mecanismo em movimento."
+          ]
+        },
+        {
+          "id": "P4-S1-Q129",
+          "categoria": "Seção 1: A oração na vida cristã (Capítulo 3: A vida de oração)",
+          "pergunta": "O que significa afirmar que na Oração da Hora de Jesus o Nome do Pai é plenamente glorificado?",
+          "resposta_texto": "Significa que pela obediência amorosa de Jesus até à Morte de Cruz, a Santidade, a Misericórdia e o Amor do Pai são manifestados e revelados ao mundo inteiro para a salvação da humanidade.",
+          "referencias": {
+            "biblia": [
+              "Jo 17,4",
+              "Fl 2,8-11"
+            ],
+            "cic": [
+              "CIC 2749",
+              "CIC 2751"
+            ]
+          },
+          "analogias": [
+            "É como a luz potente do farol que dissipa toda a névoa e revela a grandeza da rocha costeira."
+          ]
+        }
+      ]
+    }
+  ]
+}
