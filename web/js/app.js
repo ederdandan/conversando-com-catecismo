@@ -34,14 +34,32 @@ function aplicarFonte(nivel = nivelFonte()) {
 }
 // Cor da barra do navegador no celular: segue o tema escolhido (no automático, as duas <meta> por media query).
 const metasCor = [...document.querySelectorAll('meta[name="theme-color"]')].map((m) => [m, m.content]);
+// Temas: cores sóbrias para leitura longa. As amostras usam as cores fixas de cada tema (não as atuais).
+const TEMAS = [
+  { id: 'light', nome: 'Claro', desc: 'Creme e dourado', fundo: '#fbf8f3', texto: '#2b2420', acento: '#7a5410' },
+  { id: 'dark', nome: 'Escuro', desc: 'Para a noite', fundo: '#1b1714', texto: '#ece4da', acento: '#e9c35a' },
+  { id: 'sepia', nome: 'Leitura', desc: 'Papel envelhecido', fundo: '#f3e9d2', texto: '#3b2e1f', acento: '#73500f' },
+  { id: 'oliva', nome: 'Oliveira', desc: 'Verde suave', fundo: '#f2f3ec', texto: '#26291f', acento: '#4a5a26' },
+  { id: 'quaresma', nome: 'Quaresma', desc: 'Roxo sóbrio', fundo: '#f4f1f5', texto: '#2b2430', acento: '#5d3d78' },
+  { id: 'manto', nome: 'Manto', desc: 'Azul mariano', fundo: '#121822', texto: '#e4e8ef', acento: '#dcbc63' },
+  { id: 'auto', nome: 'Automático', desc: 'Segue o aparelho', fundo: 'linear-gradient(135deg, #fbf8f3 50%, #1b1714 50%)', texto: '#8a7d70', acento: '#c79a2a' },
+];
+const htmlTemasCor = () => TEMAS.map((t) => `<button type="button" class="tema-bt" data-tema="${t.id}" aria-pressed="false">
+    <span class="tema-amostra" style="background:${t.fundo}" aria-hidden="true"><i style="background:${t.texto}"></i><i style="background:${t.texto}"></i><b style="background:${t.acento}"></b></span>
+    <span><span class="tema-nome">${t.nome}</span><small>${t.desc}</small></span>
+  </button>`).join('');
+$('#temas-ajustes').innerHTML = htmlTemasCor();
+function marcarTema(tema = pref.ler('tema', 'auto')) {
+  document.querySelectorAll('[data-tema]').forEach((b) => b.setAttribute('aria-pressed', String(b.dataset.tema === tema)));
+}
 function aplicarTema(tema) {
-  if (!['light', 'dark', 'sepia', 'auto'].includes(tema)) tema = 'auto';
+  if (!TEMAS.some((t) => t.id === tema)) tema = 'auto';
   if (tema === 'auto') delete document.documentElement.dataset.theme;
   else document.documentElement.dataset.theme = tema;
   const fundo = getComputedStyle(document.documentElement).getPropertyValue('--fundo').trim();
   metasCor.forEach(([m, original]) => { m.content = tema === 'auto' ? original : fundo; });
   pref.gravar('tema', tema);
-  document.querySelectorAll('#ajustes [data-tema]').forEach((b) => b.setAttribute('aria-pressed', String(b.dataset.tema === tema)));
+  marcarTema(tema);
 }
 aplicarFonte();
 aplicarTema(pref.ler('tema', 'auto'));
@@ -52,7 +70,11 @@ function mudarFonte(delta) {
 }
 $('#bt-menor').addEventListener('click', () => mudarFonte(-1));
 $('#bt-maior').addEventListener('click', () => mudarFonte(1));
-document.querySelectorAll('#ajustes [data-tema]').forEach((b) => b.addEventListener('click', () => aplicarTema(b.dataset.tema)));
+// Botões de tema existem na folha Aa e na aba Mais (que é redesenhada): um ouvinte só, no documento.
+document.addEventListener('click', (ev) => {
+  const b = ev.target.closest('[data-tema]');
+  if (b) aplicarTema(b.dataset.tema);
+});
 
 // ---------- índice de busca (criado sob demanda) ----------
 let indice = null;
@@ -425,9 +447,13 @@ iniciarInstalacao();
 function telaSobre(d) {
   const ia = temIA();
   main.innerHTML = `${cabecalho('Mais')}<div class="tela">
+    <section class="secao-mais" aria-labelledby="rot-tema-mais">
+      <h2 class="rotulo" id="rot-tema-mais">Tema de cores</h2>
+      <div class="temas" role="group" aria-labelledby="rot-tema-mais">${htmlTemasCor()}</div>
+    </section>
     <div class="lista-acoes">
       <div id="linha-instalar"></div>
-      <button type="button" class="linha-acao abrir-ajustes"><span class="icone-caixa"><span class="aa">Aa</span></span><span class="t"><strong>Aparência do texto</strong><small>Tamanho da letra e tema</small></span>${icone('dir')}</button>
+      <button type="button" class="linha-acao abrir-ajustes"><span class="icone-caixa"><span class="aa">Aa</span></span><span class="t"><strong>Tamanho da letra</strong><small>Letra maior ou menor para ler</small></span>${icone('dir')}</button>
       ${ia
     ? `<button type="button" class="linha-acao" id="bt-sair-ia"><span class="icone-caixa">${icone('chat')}</span><span class="t"><strong>Sair do modo IA</strong><small>O chat volta a responder só pelo Compêndio</small></span>${icone('dir')}</button>`
     : `<a class="linha-acao" href="#/entrar"><span class="icone-caixa">${icone('chat')}</span><span class="t"><strong>Usar o catequista com IA</strong><small>Entre com seu código de convite</small></span>${icone('dir')}</a>`}
@@ -451,6 +477,7 @@ function telaSobre(d) {
         eles podem usar esses dados para melhorar os seus modelos — não escreva dados pessoais nas perguntas.</p>
       <p class="nota-sistema">Dados gerados em ${esc(d.geradoEm)}.</p>
     </section></div>`;
+  marcarTema();
   preencherInstalar();
   $('#bt-sair-ia')?.addEventListener('click', () => {
     sairDaIA();
