@@ -54,9 +54,10 @@ const paragrafos = new Set(catecismo.paragrafos.map((p) => p.n));
 const LIVROS = new Set(('Gn Ex Lv Nm Dt Js Jz Rt 1Sm 2Sm 1Rs 2Rs 1Cr 2Cr Esd Ne Tb Jt Est 1Mc 2Mc Jó Sl Pr Ecl Ct Sb Eclo ' +
   'Is Jr Lm Br Ez Dn Os Jl Am Ab Jn Mq Na Hab Sf Ag Zc Ml ' +
   'Mt Mc Lc Jo At Rm 1Cor 2Cor Gl Ef Fl Cl 1Ts 2Ts 1Tm 2Tm Tt Fm Hb Tg 1Pd 2Pd 1Jo 2Jo 3Jo Jd Ap').split(' '));
-const ALIAS = { Gal: 'Gl', Heb: 'Hb', Jer: 'Jr', Jos: 'Js', Mal: 'Ml', Esdr: 'Esd', Jude: 'Jd', Act: 'At', Fil: 'Fl', Col: 'Cl',
+const ALIAS = { Gal: 'Gl', Heb: 'Hb', Jer: 'Jr', Jos: 'Js', Mal: 'Ml', Esdr: 'Esd', Jude: 'Jd', Miq: 'Mq', Tit: 'Tt', Tito: 'Tt', Tob: 'Tb', Act: 'At', Fil: 'Fl', Col: 'Cl',
   Ecle: 'Ecl', Sir: 'Eclo', Apoc: 'Ap', Job: 'Jó', '1Pe': '1Pd', '2Pe': '2Pd', '1Co': '1Cor', '2Co': '2Cor' };
-const REF_BIBLICA = /^(\S+) (\d+),(\d+)(-\d+)?$/;
+// "Lc 1,15.41" e "Jo 1,29.33-34": versículos separados por ponto (notação das Bíblias brasileiras).
+const REF_BIBLICA = /^(\S+) (\d+),(\d+)(-\d+)?((?:\.\d+(?:-\d+)?)*)$/;
 const REF_CAPITULO_UNICO = /^(Ab|Fm|2Jo|3Jo|Jd) (\d+)(-\d+)?$/;
 
 const erros = [];

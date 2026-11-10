@@ -4,3 +4,7 @@ node_modules/
 .dev.vars
 .env
 *.log
+
+# PDF do Catecismo usado como fonte no NotebookLM (não vai para o repositório)
+catecismo.pdf
+*.pdf

@@ -1,0 +1,402 @@
+[
+  {
+    "c": 4,
+    "p": "O que significa a expressão 'fiéis de Cristo' segundo o Catecismo?",
+    "r": "Os fiéis de Cristo são aqueles que foram incorporados a Cristo pelo Batismo e constituídos como Povo de Deus. Por essa razão, participam a seu modo das funções sacerdotal, profética e real de Jesus. Todos os batizados são chamados a exercer a missão que Deus confiou à Igreja no mundo.",
+    "b": ["1Pd 2,9", "1Cor 12,12-13"],
+    "cic": ["871"],
+    "a": "Como os cidadãos de um país que, ao receberem sua certidão de nascimento, ganham plenos direitos e deveres na sociedade."
+  },
+  {
+    "c": 4,
+    "p": "Como se realiza a verdadeira igualdade entre todos os fiéis na Igreja?",
+    "r": "Existe uma verdadeira igualdade quanto à dignidade e à ação comum de todos os fiéis em razão da sua regeneração em Cristo. Embora haja diversidade de ministérios e funções, todos os batizados possuem a mesma dignidade de filhos de Deus. Todos colaboram juntos na edificação do Corpo de Cristo segundo a sua própria condição.",
+    "b": ["Gl 3,28", "Ef 4,4-6"],
+    "cic": ["872"],
+    "a": "Como os membros de uma mesma família humana que possuem o mesmo valor e respeito, embora tenham idades e papéis diferentes em casa."
+  },
+  {
+    "c": 4,
+    "p": "Por que existe diversidade de funções entre os membros da Igreja se todos são iguais?",
+    "r": "A diversidade de funções foi estabelecida pelo próprio Cristo para garantir a ordem, o serviço e o crescimento espiritual do seu Corpo. Os ministros ordenados recebem um poder sagrado para servir os irmãos no ensino, no culto e no governo pastoral. Essa variedade de vocações enriquece a comunidade sem destruir a unidade da fé.",
+    "b": ["1Cor 12,28-30", "Ef 4,11-12"],
+    "cic": ["873"],
+    "a": "Como em uma tripulação de navio, onde o capitão, o maquinista e o marinheiro têm funções distintas para fazer a embarcação navegar com segurança."
+  },
+  {
+    "c": 4,
+    "p": "Por que Cristo instituiu a hierarquia e os ministérios sagrados na Igreja?",
+    "r": "Cristo instituiu a hierarquia para apascentar o Povo de Deus e fazê-lo crescer continuamente em santidade e verdade. Os ministros ordenados recebem a missão e o poder de agir na pessoa de Cristo Cabeça em favor de toda a comunidade. Esse serviço garante que a Igreja receba os sacramentos e a doutrina autêntica do Senhor.",
+    "b": ["Mt 28,18-20", "1Tm 3,1-7"],
+    "cic": ["874"],
+    "a": "Como os professores contratados por uma escola para ensinar aos alunos o conhecimento oficial e manter a organização das aulas."
+  },
+  {
+    "c": 4,
+    "p": "Por que nenhum fiel pode conferir a si mesmo o ministério ou a graça sacerdotal?",
+    "r": "Ninguém pode dar a si mesmo a autoridade nem a graça de agir em nome de Cristo para administrar os sacramentos. O ministério ordenado é um dom de Cristo recebido exclusivamente através do sacramento da Ordem pela Igreja. O ministro é enviado por Cristo e pela comunidade para servir, e não por autoridade própria.",
+    "b": ["Hb 5,4", "Rm 10,14-15"],
+    "cic": ["875"],
+    "a": "Como um juiz de direito que não pode nomear a si mesmo, necessitando de posse e nomeação oficial do poder público."
+  },
+  {
+    "c": 4,
+    "p": "O que significa o caráter de 'serviço' inerente a todo ministério eclesial?",
+    "r": "O ministério eclesial tem caráter de serviço porque é totalmente subordinado a Cristo e voltado para o bem dos fiéis. O próprio Jesus se apresentou como aquele que veio para servir e não para ser servido. A autoridade conferida aos pastores deve ser exercida com humildade, dedicação e amor paternal aos irmãos.",
+    "b": ["Mt 20,26-28", "Lc 22,26-27"],
+    "cic": ["876"],
+    "a": "Como um garçom atencioso que serve os pratos aos convidados de um banquete sem buscar o centro das atenções para si."
+  },
+  {
+    "c": 4,
+    "p": "O que significa o caráter 'colegial' do ministério ordenado?",
+    "r": "O caráter colegial significa que o ministério ordenado é exercido em fraternidade e comunhão mútua entre os bispos e padres. Assim como os Apóstolos formavam um único grupo sob a liderança de Pedro, os bispos constituem um único Colégio unido ao Papa. Essa comunhão colegial expressa a unidade de toda a Igreja de Cristo.",
+    "b": ["At 1,13-14", "At 15,6"],
+    "cic": ["877"],
+    "a": "Como uma junta médica de especialistas que se reúne para deliberar e cuidar da saúde do paciente em conjunto."
+  },
+  {
+    "c": 4,
+    "p": "Por que se diz que o ministério ordenado possui também um caráter 'pessoal'?",
+    "r": "O ministério tem caráter pessoal porque cada bispo, padre e diácono age em nome de Cristo de modo pessoal e responsável diante de Deus. Cada pastor é chamado individualmente pelo Senhor e responde pessoalmente pela sua missão de ensinar e santificar. Essa responsabilidade pessoal se vive sempre em comunhão com o Colégio episcopal.",
+    "b": ["Jo 21,15-17", "1Tm 4,14"],
+    "cic": ["878"],
+    "a": "Como um médico cirurgião que assume pessoalmente a responsabilidade por operar o paciente, embora trabalhe com uma equipe."
+  },
+  {
+    "c": 4,
+    "p": "Qual é a missão do Papa no Colégio dos Bispos e em toda a Igreja Católica?",
+    "r": "O Papa é o Bispo de Roma e o sucessor de São Pedro, sendo o princípio visível de unidade da Igreja universal. Ele possui o poder supremo, pleno, imediato e universal sobre toda a Igreja para apascentar todos os fiéis e bispos. Sua missão é confirmar os irmãos na fé e guardar a comunhão da Igreja de Cristo.",
+    "b": ["Mt 16,18-19", "Lc 22,32"],
+    "cic": ["880-882"],
+    "a": "Como o alicerce principal de um grande edifício que sustenta firmemente todas as colunas e vigas da construção."
+  },
+  {
+    "c": 4,
+    "p": "De que maneira o Colégio dos Bispos sucede ao grupo dos Doze Apóstolos?",
+    "r": "O Colégio dos Bispos sucede ao grupo dos Apóstolos na missão de ensinar, santificar e governar a Igreja Católica. Esse Colégio só possui autoridade suprema quando está unido ao Papa, que é a sua cabeça soberana. Juntos com o Papa, os bispos exercem o cuidado por todas as comunidades e pela transmissão da fé.",
+    "b": ["Mt 18,18", "At 20,28"],
+    "cic": ["880-883"],
+    "a": "Como o conselho executivo de uma fundação histórica que assume a direção continuada após os seus fundadores originais."
+  },
+  {
+    "c": 4,
+    "p": "Por que o Papa é chamado de Vigário de Cristo e Pastor de toda a Igreja?",
+    "r": "O Papa é chamado de Vigário de Cristo porque exerce na terra a autoridade visível em nome do próprio Jesus Cristo, a Cabeça invisível. Como pastor universal, ele cuida do rebanho de Cristo em todo o mundo com a assistência especial do Espírito Santo. Sua autoridade existe para servir à unidade e à salvação dos fiéis.",
+    "b": ["Jo 21,17", "Mt 16,19"],
+    "cic": ["882"],
+    "a": "Como o gestor nomeado pelo proprietário de uma empresa para administrar os negócios enquanto o dono está ausente."
+  },
+  {
+    "c": 4,
+    "p": "O Colégio dos Bispos pode tomar decisões válidas para a Igreja sem o consentimento do Papa?",
+    "r": "Não, o Colégio dos Bispos não tem autoridade sobre a Igreja universal sem a aprovação e união com o Papa, sua cabeça. A autoridade suprema do Colégio episcopal só se cumpre plenamente quando reconhecida e confirmada pelo Bispo de Roma. A comunhão com o Papa é condição indispensável para a validade de suas decisões universais.",
+    "b": ["Mt 16,18", "Lc 22,32"],
+    "cic": ["883"],
+    "a": "Como os diretores de um conselho escolar que não podem aprovar o estatuto da instituição sem a assinatura do presidente."
+  },
+  {
+    "c": 4,
+    "p": "Como o Colégio dos Bispos exerce a sua autoridade suprema de modo solene na Igreja?",
+    "r": "O Colégio episcopal exerce sua autoridade suprema sobre toda a Igreja de modo solene através dos Concílios Ecumênicos. Para ser ecumênico, o Concílio deve ser convocado, presidido ou ao menos aprovado pelo Papa. As decisões tomadas em um Concílio Ecumênico vinculam a fé e a disciplina de todos os católicos do mundo.",
+    "b": ["At 15,22-28", "1Tm 3,15"],
+    "cic": ["884"],
+    "a": "Como uma assembleia constituinte onde representantes legitimamente eleitos se reúnem para promulgar as leis do país."
+  },
+  {
+    "c": 4,
+    "p": "Qual é o papel de cada bispo em sua própria diocese e na Igreja universal?",
+    "r": "Cada bispo é o princípio visível e o fundamento da unidade em sua Igreja particular ou diocese. Ele governa a sua diocese como vigário e embaixador de Cristo, ensinando a doutrina e celebrando os sacramentos. Ao mesmo tempo, cada bispo compartilha a solicitude por todas as Igrejas do mundo junto do Papa.",
+    "b": ["1Pd 5,2-3", "At 20,28"],
+    "cic": ["886"],
+    "a": "Como o prefeito de uma cidade que cuida do município local e colabora com os projetos do governo nacional."
+  },
+  {
+    "c": 4,
+    "p": "Por que os bispos de um mesmo país se reúnem em Conferências Episcopais?",
+    "r": "Os bispos de uma mesma região ou nação se reúnem em Conferências Episcopais para exercerem juntos o seu encargo pastoral. Esse trabalho conjunto permite responder melhor aos desafios sociais, culturais e religiosos da sua sociedade. As Conferências promovem a unidade de ação pastoral entre as dioceses de uma mesma nação.",
+    "b": ["At 15,2", "1Cor 14,40"],
+    "cic": ["887"],
+    "a": "Como uma associação regional de prefeitos que se reúnem para alinhar soluções para os problemas comuns de seus municípios."
+  },
+  {
+    "c": 4,
+    "p": "Em que consiste o múnus primordial de ensinar confiado aos bispos e padres?",
+    "r": "O primeiro dever dos bispos e dos seus cooperadores sacerdotes é anunciar o Evangelho de Deus a todas as pessoas. Como testemunhas autênticas da fé apostólica, eles devem pregar a Palavra com fidelidade e coragem. O ensino dos pastores ilumina a consciência dos fiéis e os conduz à salvação em Cristo.",
+    "b": ["Mc 16,15", "2Tm 4,2"],
+    "cic": ["888"],
+    "a": "Como os guias de um parque de preservação ambiental que explicam os caminhos seguros e alertam os visitantes sobre os perigos."
+  },
+  {
+    "c": 4,
+    "p": "O que é o dom da infalibilidade concedido por Cristo ao Magistério da Igreja?",
+    "r": "A infalibilidade é um dom do Espírito Santo que garante que a Igreja não erre ao definir solenemente verdades de fé e de moral. Esse dom é exercido pelo Papa quando proclama um dogma definidor, ou pelo Colégio dos Bispos em Concílio Ecumênico. A infalibilidade assegura que os fiéis recebam a verdade revelada sem contaminação do erro.",
+    "b": ["Mt 16,18", "Jo 16,13"],
+    "cic": ["889-890"],
+    "a": "Como uma balança de precisão calibrada por um órgão de metragem oficial que nunca dá o peso errado de uma mercadoria."
+  },
+  {
+    "c": 4,
+    "p": "Quais são as condições para que uma declaração do Papa seja considerada infalível?",
+    "r": "Para ser infalível, o Papa deve falar 'ex cathedra', ou seja, atuando solenemente como pastor e doutor supremo de todos os cristãos. Além disso, ele deve definir com ato definitivo uma doutrina referente à fé ou aos costumes a ser professada por toda a Igreja. Essa assistência divina preserva a definição de qualquer falha moral ou erro.",
+    "b": ["Lc 22,32", "Jo 21,15-17"],
+    "cic": ["891"],
+    "a": "Como a sentença definitiva pronunciada pelo tribunal supremo de um país que encerra a discussão jurídica de um processo."
+  },
+  {
+    "c": 4,
+    "p": "Como os fiéis católicos devem acolher os ensinamentos ordinários do Papa e dos bispos?",
+    "r": "Os fiéis devem acolher os ensinamentos ordinários do Papa e dos bispos com um religioso assentimento da mente e da vontade. Mesmo quando o ensinamento não é proclamado como um dogma infalível, o Magistério ordinário merece respeito e adesão sincera. Essa atitude de fé filial manifesta a confiança na assistência do Espírito à Igreja.",
+    "b": ["Lc 10,16", "Hb 13,17"],
+    "cic": ["892"],
+    "a": "Como o conselho preventivo dado por um médico de confiança, que o paciente aceita de bom grado para preservar a sua saúde."
+  },
+  {
+    "c": 4,
+    "p": "Como o bispo exerce a sua função sagrada de santificar o povo católico?",
+    "r": "O bispo exerce o dever de santificar administrando os sacramentos, promovendo a liturgia e sendo modelo de santidade para a sua diocese. Ele é o dispensador da graça do supremo sacerdócio, especialmente através da celebração da Eucaristia e da Ordenação de novos padres. Pela oração e pelo trabalho pastoral, o bispo guia o rebanho ao céu.",
+    "b": ["1Pd 5,3", "1Tm 4,12"],
+    "cic": ["893"],
+    "a": "Como a nascente limpa de um reservatório que distribui água potável e pura a todas as residências da região."
+  },
+  {
+    "c": 4,
+    "p": "De que forma o bispo exerce o governo pastoral da sua diocese?",
+    "r": "O bispo governa a sua diocese com conselhos, persuasão, exemplo e autoridade sagrada exercida em nome de Cristo. Ele deve governar com coração de pai e servo, cuidando pessoalmente dos fiéis, dos pobres e dos sacerdotes. A sua autoridade pastoral visa unicamente edificar a comunidade na verdade e na caridade.",
+    "b": ["At 20,28", "2Tm 2,24-25"],
+    "cic": ["894-896"],
+    "a": "Como o pai de família amoroso que orienta, corrige e protege os filhos com sabedoria para mantê-los unidos e felizes."
+  },
+  {
+    "c": 4,
+    "p": "A autoridade que o bispo exerce em sua diocese é uma mera delegação do Papa?",
+    "r": "Não, a autoridade própria dos bispos em suas dioceses não é uma delegação do Papa, mas vem diretamente de Cristo pela ordenação episcopal. Eles são verdadeiros vigários e embaixadores de Cristo para o seu rebanho particular. O Papa apoia, fortalece e defende a autoridade legítima dos bispos em suas respectivas Igrejas.",
+    "b": ["At 20,28", "1Pd 5,2-4"],
+    "cic": ["895"],
+    "a": "Como o governador de um estado que possui autoridade constitucional própria para gerir seu território, em harmonia com o presidente."
+  },
+  {
+    "c": 4,
+    "p": "Quem são os fiéis leigos e qual é a sua marca distinta na Igreja?",
+    "r": "Os leigos são todos os fiéis batizados que não pertencem à ordem sagrada nem ao estado religioso aprovado pela Igreja. A marca distinta dos leigos é o seu caráter secular, vivendo imersos nas tarefas do mundo e nas estruturas sociais. Eles são chamados por Deus a santificar o mundo a partir de dentro das realidades cotidianas.",
+    "b": ["1Cor 7,20-24", "1Pd 2,9"],
+    "cic": ["897"],
+    "a": "Como os cidadãos comuns que trabalham nas fábricas, escritórios e comércios para fazer a economia e a sociedade funcionarem."
+  },
+  {
+    "c": 4,
+    "p": "Qual é a missão específica dos leigos em relação ao mundo temporal?",
+    "r": "A missão própria dos leigos é procurar o Reino de Deus tratando das coisas temporais e ordenando-as segundo a vontade divina. Eles atuam na família, na política, na economia, na cultura, na ciência e no trabalho diário. Onde quer que vivam, os leigos devem ser testemunhas de Cristo e transformadores da sociedade.",
+    "b": ["Mt 5,13-16", "Col 3,23-24"],
+    "cic": ["898"],
+    "a": "Como o fermento que é colocado na massa crua para fazê-la crescer e transformar o pão a partir do seu interior."
+  },
+  {
+    "c": 4,
+    "p": "Por que a presença dos leigos é vital para o cumprimento da missão da Igreja?",
+    "r": "A presença dos leigos é indispensável porque há lugares e ambientes onde a Igreja só pode ser sal e luz através deles. Nas famílias, nas empresas, na política e nas universidades, os leigos levam o Evangelho onde os padres muitas vezes não chegam. Sem o empenho dos leigos, a missão da Igreja no mundo ficaria incompleta.",
+    "b": ["1Cor 12,21-22", "Fl 2,15"],
+    "cic": ["899"],
+    "a": "Como os ramais de iluminação que levam a energia elétrica até as salas internas de uma grande casa inacessível por fora."
+  },
+  {
+    "c": 4,
+    "p": "Como os leigos exercem a sua participação no sacerdócio comum de Cristo no dia a dia?",
+    "r": "Os leigos participam do sacerdócio de Cristo oferecendo o seu trabalho diário, suas orações, sua vida familiar e até os sofrimentos como sacrifícios espirituais. Quando vivem na graça de Deus, todas as suas ações ordinárias são santificadas pelo Espírito Santo. Na celebração da Missa, eles unem essas ofertas diárias ao sacrifício de Jesus.",
+    "b": ["Rm 12,1", "1Pd 2,5"],
+    "cic": ["901"],
+    "a": "Como um artesão que dedica cada peça fabricada em sua oficina como um presente carinhoso ao seu pai."
+  },
+  {
+    "c": 4,
+    "p": "De que modo os pais de família exercem a missão sacerdotal na educação dos filhos?",
+    "r": "Os pais exercem essa missão transformando a vida doméstica em um constante culto de louvor a Deus e testemunho de fé. Ao ensinarem as primeiras orações, ao perdoarem-se mutuamente e ao praticarem as virtudes, eles santificam o lar. Essa dedicação transforma a casa da família em uma verdadeira Igreja doméstica.",
+    "b": ["Ef 6,4", "Dt 6,6-7"],
+    "cic": ["902"],
+    "a": "Como os jardineiros que regam e adubam diariamente as mudas jovens para que cresçam árvores fortes e frutíferas."
+  },
+  {
+    "c": 4,
+    "p": "Como os leigos podem colaborar nos ministérios e serviços da vida paroquial?",
+    "r": "Os leigos devidamente capacitados podem colaborar na catequese, na liturgia, na pastoral da caridade, na música e na administração da paróquia. Essa colaboração responde às necessidades da comunidade e manifesta a corresponsabilidade de todos os batizados na missão. Os leigos exercem esses serviços sob a coordenação do seu pároco.",
+    "b": ["1Cor 12,4-7", "Rm 12,6-8"],
+    "cic": ["903"],
+    "a": "Como voluntários de um bairro que organizam mutirões para reformar a praça comunitária da sua localidade."
+  },
+  {
+    "c": 4,
+    "p": "Como os leigos exercem a função profética de Cristo no anúncio do Evangelho?",
+    "r": "Os leigos exercem a função profética quando anunciam o Evangelho com o testemunho de vida e pela palavra falada na sociedade. Eles levam a luz de Cristo aos colegas de trabalho, aos amigos e aos familiares que não frequentam a Igreja. Essa evangelização leiga possui um alcance único nas realidades seculares.",
+    "b": ["At 8,4", "1Pd 3,15"],
+    "cic": ["904-905"],
+    "a": "Como um emissário enviado por um rei para dar boas notícias aos moradores dos povoados mais distantes do reino."
+  },
+  {
+    "c": 4,
+    "p": "Qual é o valor do testemunho silencioso de vida dos leigos na sociedade?",
+    "r": "O testemunho de uma vida honesta, caridosa e coerente exercido pelo leigo possui um poder de atração silencioso mas irresistível. Muitas pessoas que rejeitam pregações formais são tocadas ao verem a paz, a integridade e a alegria de um católico praticante. Essa coerência de vida abre as portas para o anúncio direto da fé.",
+    "b": ["Mt 5,16", "1Pd 2,12"],
+    "cic": ["905"],
+    "a": "Como o aroma agradável de pão fresco assado na padaria, que atrai as pessoas da rua sem precisar de alarde."
+  },
+  {
+    "c": 4,
+    "p": "Como os leigos especializados em ciências sagradas podem colaborar com o ensino da Igreja?",
+    "r": "Leigos diplomados em teologia e direito canônico podem lecionar em universidades católicas, escrever livros e colaborar na formação dos seminaristas. Eles colocam o seu talento intelectual a serviço da inteligência da fé e da defesa da doutrina católica. Essa contribuição teológica leiga enriquece o diálogo da Igreja com a cultura.",
+    "b": ["2Tm 2,2", "Tt 2,7-8"],
+    "cic": ["906"],
+    "a": "Como um arquiteto especialista consultado para reforçar os cálculos estruturais de uma grande ponte pública."
+  },
+  {
+    "c": 4,
+    "p": "É permitido aos fiéis leigos manifestarem a sua opinião aos pastores sobre o bem da Igreja?",
+    "r": "Sim, segundo a sua ciência, competência e prestígio, os leigos têm o direito e por vezes o dever de manifestar aos pastores a sua opinião sobre o bem da Igreja. Essa manifestação deve ser feita sempre com verdade, coragem, prudência e com o devido respeito aos pastores. Os leigos devem zelar pela reputação e unidade do Corpo de Cristo.",
+    "b": ["1Cor 14,26", "Gl 2,11"],
+    "cic": ["907"],
+    "a": "Como um filho adulto que conversa respeitosamente com os pais para propor melhorias na gestão da casa da família."
+  },
+  {
+    "c": 4,
+    "p": "De que modo o fiel leigo exerce a realeza de Cristo em sua vida cotidiana?",
+    "r": "O leigo exerce a realeza vencendo o pecado em si mesmo através da mortificação e da vida na graça de Deus. Ele reina quando domina as suas paixões e se recusa a ser escravo dos vícios e dos falsos valores do mundo. Além disso, o leigo reina ao servir com humildade aos irmãos necessitados.",
+    "b": ["Rm 6,12-13", "Mt 20,28"],
+    "cic": ["908"],
+    "a": "Como um cavaleiro destemido que doma um cavalo selvagem e arredio, mantendo o controle total sobre a montaria."
+  },
+  {
+    "c": 4,
+    "p": "Como os leigos devem atuar para sanar e transformar as estruturas sociais injustas?",
+    "r": "Os leigos devem unir forças para sanar as instituições e as condições de vida no mundo quando elas incitam ao pecado. Através do voto consciente, do trabalho honesto e da promoção da justiça, eles infundem valores morais nas leis e nas estruturas políticas. Essa ação limpa a sociedade e prepara o terreno para a salvação.",
+    "b": ["Am 5,24", "Ef 5,11"],
+    "cic": ["909"],
+    "a": "Como engenheiros sanitários que despoluem o leito de um rio para garantir água saudável a toda a população ribeirinha."
+  },
+  {
+    "c": 4,
+    "p": "O que são os ministérios leigos não ordenados na liturgia e na paróquia?",
+    "r": "Os ministérios leigos não ordenados são funções de serviço litúrgico ou pastoral conferidas a fiéis leigos para o bem da comunidade. Entre eles destacam-se os leitores, acólitos, catequistas e distribuidores extraordinários da Eucaristia. Esses serviços leigos auxiliam os pastores e dinamizam a vida comunitária.",
+    "b": ["1Cor 12,28", "Rm 12,7-8"],
+    "cic": ["910"],
+    "a": "Como os assistentes treinados de uma equipe cirúrgica que preparam os instrumentos e apoiam o médico durante o procedimento."
+  },
+  {
+    "c": 4,
+    "p": "Como os leigos participam nos conselhos diocesanos e paroquiais de governo?",
+    "r": "Os leigos participam integrando conselhos pastorais, conselhos de assuntos econômicos e tribunais eclesiásticos segundo as normas do direito. Sua experiência profissional e prudência humana oferecem valiosa ajuda aos bispos e párocos na tomada de decisões. Essa cooperação reflete a corresponsabilidade na vida da Igreja.",
+    "b": ["At 6,2-4", "1Cor 14,40"],
+    "cic": ["911"],
+    "a": "Como os conselheiros comunitários consultados pelo prefeito para avaliar o orçamento e as prioridades do município."
+  },
+  {
+    "c": 4,
+    "p": "Como o trabalho profissional do leigo se torna uma oferta de culto agradável a Deus?",
+    "r": "O trabalho do leigo torna-se culto agradável quando é realizado com competência, honestidade e intenção de servir a Deus e ao próximo. Ao desempenhar seus deveres diários com amor, o leigo santifica a própria matéria e o ambiente de trabalho. Esse empenho profissional une o esforço humano ao poder criador de Deus.",
+    "b": ["Col 3,17", "1Cor 10,31"],
+    "cic": ["912"],
+    "a": "Como um pintor que assina cada tela concluída dedicando o trabalho à apreciação do seu querido mestre."
+  },
+  {
+    "c": 4,
+    "p": "O que o Catecismo ensina no resumo sobre o papel fundamental dos leigos?",
+    "r": "O resumo ensina que os leigos têm por vocação própria buscar o Reino de Deus iluminando e ordenando as realidades temporais. Por estarem inseridos no mundo, eles são chamados a ser testemunhas vivas da ressurreição de Cristo. A sua missão é indispensável para que o Evangelho chegue a todas as estruturas sociais.",
+    "b": ["1Pd 2,9", "Mt 5,14"],
+    "cic": ["913"],
+    "a": "Como as colunas de iluminação pública instaladas ao longo de toda a malha viária para clarear o caminho dos motoristas."
+  },
+  {
+    "c": 4,
+    "p": "O que é a vida consagrada na estrutura e na história da Igreja Católica?",
+    "r": "A vida consagrada é uma forma estável de vivência cristã em que o fiel se entrega totalmente a Deus pelo professamento dos conselhos evangélicos. Embora não faça parte da estrutura hierárquica da Igreja, ela pertence de modo inabalável à sua vida e santidade. Os consagrados dedicam-se ao serviço do Reino e ao louvor divino.",
+    "b": ["1Cor 7,32-34", "Mt 19,12"],
+    "cic": ["914"],
+    "a": "Como a reserva florestal preservada dentro de uma propriedade, dedicada exclusivamente a produzir ar puro e beleza natural."
+  },
+  {
+    "c": 4,
+    "p": "Quais são os três conselhos evangélicos professados pelos religiosos e consagrados?",
+    "r": "Os três conselhos evangélicos são a castidade no celibato pelo Reino dos céus, a pobreza evangélica e a obediência dedicada a Deus. Professados por votos ou outros laços sagrados, eles imitam a forma de vida que o próprio Jesus escolheu na terra. Esses conselhos libertam a alma para amar a Deus com coração indiviso.",
+    "b": ["Mt 19,21", "Mt 19,12"],
+    "cic": ["915"],
+    "a": "Como as três cordas de segurança que prendem o alpinista firmemente à rocha enquanto ele escala a montanha."
+  },
+  {
+    "c": 4,
+    "p": "De que modo a vida consagrada busca a perfeição da caridade na Igreja?",
+    "r": "A vida consagrada busca a perfeição da caridade entregando o coração, os bens e a vontade totalmente a Deus e ao próximo. Ao renunciarem aos atrativos do mundo, o consagrado antecipa a vida futura e dá testemunho da glória do céu. Esse estado de vida manifesta a força do Espírito Santo atuando na alma humana.",
+    "b": ["Fl 3,8", "1Jo 4,19"],
+    "cic": ["916"],
+    "a": "Como uma pessoa que doa todos os seus recursos e tempo livre para cuidar de um abrigo de crianças órfãs."
+  },
+  {
+    "c": 4,
+    "p": "Por que existem tantas ordens, congregações e famílias religiosas diferentes na Igreja?",
+    "r": "Existem muitas famílias religiosas porque o Espírito Santo concedeu variados carismas aos fundadores e fundadoras ao longo dos séculos. Cada instituto religioso desenvolve um estilo próprio de oração, vida comunitária e apostolado no serviço aos pobres, doentes ou estudantes. Essa diversidade manifesta a riqueza inesgotável da Igreja.",
+    "b": ["1Cor 12,4-7", "Ef 4,11-12"],
+    "cic": ["917"],
+    "a": "Como um imenso jardim botânico plantado com centenas de espécies de flores, cada qual com sua cor e perfume característicos."
+  },
+  {
+    "c": 4,
+    "p": "O que caracteriza a vida eremítica ou anacorética dentro da vida consagrada?",
+    "r": "A vida eremítica caracteriza-se pela separação estrita do mundo, pelo silêncio da solidão, pela oração assídua e pela penitência rigorosa. Sem necessariamente pertencer a um mosteiro comunitário, o eremita dedica sua vida ao louvor de Deus e à salvação do mundo. Esse escondimento manifesta que Cristo é o único bem da alma.",
+    "b": ["Hb 11,37-38", "Sl 84,2-3"],
+    "cic": ["918-921"],
+    "a": "Como o farol solitário construído em uma ilha distante que consome energia noite e dia para vigiar o oceano."
+  },
+  {
+    "c": 4,
+    "p": "Qual é o significado da Ordem das Virgens e Viúvas consagradas na tradição católica?",
+    "r": "A Ordem das Virgens e Viúvas reúne mulheres que expressam a decisão santa de seguir a Cristo na castidade perpétua e no celibato pelo Reino. Consagradas pelo bispo diocesano, elas se unem de modo especial à Igreja como Esposa de Cristo. Elas permanecem no mundo servindo à comunidade com a sua oração e trabalho.",
+    "b": ["1Cor 7,34", "1Tm 5,5"],
+    "cic": ["922-924"],
+    "a": "Como uma noiva que guarda com carinho e fidelidade a sua aliança de compromisso enquanto aguarda a chegada definitiva do noivo."
+  },
+  {
+    "c": 4,
+    "p": "O que é a vida religiosa e como ela se diferencia de outras formas de consagração?",
+    "r": "A vida religiosa distingue-se pelo seu caráter comunitário público, pela profissão solene dos votos e pela separação própria do mundo. Os religiosos vivem em fraternidade sob a autoridade de um superior e seguem uma regra de vida aprovada pela Igreja. O seu culto público de louvor e apostolado edifica a Igreja.",
+    "b": ["At 2,44-47", "Hb 10,24-25"],
+    "cic": ["925-927"],
+    "a": "Como os membros de uma comitiva militar que vivem no mesmo quartel, usam o mesmo fardamento e obedecem ao mesmo comando."
+  },
+  {
+    "c": 4,
+    "p": "O que são os Institutos Seculares dentro da vida consagrada da Igreja Católica?",
+    "r": "Os Institutos Seculares são associações em que os fiéis vivem a consagração dos conselhos evangélicos sem deixarem suas atividades no mundo. Os seus membros trabalham em profissões civis e residem em suas casas, agindo como fermento de santidade na sociedade. Eles unem a força da consagração à presença no mundo.",
+    "b": ["Mt 13,33", "Jo 17,15-16"],
+    "cic": ["928-929"],
+    "a": "Como agentes de saúde disfarçados entre a população local para aplicar tratamentos medicinais sem chamar a atenção."
+  },
+  {
+    "c": 4,
+    "p": "O que caracteriza as Sociedades de Vida Apostólica na Igreja?",
+    "r": "As Sociedades de Vida Apostólica são compostas por membros que buscam um fim apostólico específico sem fazer votos religiosos formais. Eles vivem em comunidade fraterna e buscam a perfeição da caridade através da observância de suas constituições próprias. Suas obras dedicam-se às missões, à educação ou aos doentes.",
+    "b": ["At 4,32", "2Cor 8,19-20"],
+    "cic": ["930"],
+    "a": "Como uma equipe médica voluntária que compartilha alojamento temporário para realizar atendimentos comunitários."
+  },
+  {
+    "c": 4,
+    "p": "Qual é a relação entre a vida consagrada e a esperança da vinda gloriosa de Cristo?",
+    "r": "A vida consagrada é um sinal profético que aponta para o Reino dos céus e para a ressurreição futura da humanidade. Ao renunciarem aos bens terrenos e ao casamento pelo Reino, os consagrados mostram que só Deus basta para preencher o coração. O seu testemunho recorda a todos que a pátria definitiva é o céu.",
+    "b": ["Mt 22,30", "Ap 22,20"],
+    "cic": ["931-933"],
+    "a": "Como uma torre de vigia elevada que avista os primeiros raios da alvorada antes que as pessoas no vale percebam o dia."
+  },
+  {
+    "c": 4,
+    "p": "De que modo a vida consagrada contribui para a missão evangelizadora de toda a Igreja?",
+    "r": "A vida consagrada contribui para a missão tanto pela ação apostólica direta quanto pela oração contemplativa e penitência nos mosteiros. A intercessão dos religiosos contemplativos sustenta misteriosamente o trabalho de todos os missionários no mundo. Além disso, a caridade heroica dos consagrados atrai as almas a Cristo.",
+    "b": ["Jo 15,5", "Ex 17,11-12"],
+    "cic": ["931-933"],
+    "a": "Como as raízes profundas de uma grande árvore que absorvem água e minerais no subsolo para manter os frutos doces no topo."
+  },
+  {
+    "c": 4,
+    "p": "O que o Catecismo ensina no resumo final sobre a harmonia das vocações na Igreja?",
+    "r": "O resumo ensina que a Igreja é composta por fiéis hierárquicos, leigos e consagrados que formam um só Corpo ordenado em Cristo. Cada vocação possui a sua dignidade e missão próprias para servir ao crescimento da caridade e à salvação do mundo. Na diversidade de membros, a Igreja reflete a beleza única da Santíssima Trindade.",
+    "b": ["1Cor 12,12-27", "Ef 4,15-16"],
+    "cic": ["934-945"],
+    "a": "Como uma grande catedral construída com pedras, vitrais, madeira e metais diversos, compondo uma única e harmoniosa obra de arte."
+  }
+]
