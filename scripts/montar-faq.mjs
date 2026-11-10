@@ -2,6 +2,7 @@
 // Uso: node scripts/montar-faq.mjs s1   (Parte I, Seção 1)
 //      node scripts/montar-faq.mjs s2   (Parte I, Seção 2)
 //      node scripts/montar-faq.mjs s3   (Parte II, Seção 1)
+//      node scripts/montar-faq.mjs s4   (Parte II, Seção 2)
 import { readFileSync, writeFileSync, readdirSync, existsSync } from 'node:fs';
 import { join, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
@@ -54,10 +55,28 @@ const SECOES = {
       5: { titulo: 'Capítulo 2, Artigo 2: Diversidade litúrgica e unidade do mistério', faixa: '§ 1200–1209' },
     },
   },
-};
-const chave = process.argv[2];
+  s4: {
+    prefixoId: 'P2-S2',
+    saida: 'faq-parte2-secao2.json',
+    parte: 2,
+    faixa: [1210, 1690],
+    secao: 'Seção 2: Os sete sacramentos da Igreja',
+    titulo: 'Perguntas Frequentes – Parte II, Seção 2: Os sete sacramentos da Igreja',
+    descricao: 'Dúvidas de católicos sobre a Segunda Seção da Segunda Parte do Catecismo da Igreja Católica (§ 1210–1690): Batismo, Confirmação, Eucaristia, Penitência, Unção dos Enfermos, Ordem, Matrimônio, os sacramentais e as exéquias. Cada resposta cita os parágrafos do Catecismo e passagens bíblicas, com uma analogia para facilitar a compreensão.',
+    categorias: {
+      1: { titulo: 'Capítulo 1, Artigo 1: O sacramento do Batismo', faixa: '§ 1210–1284' },
+      2: { titulo: 'Capítulo 1, Artigo 2: O sacramento da Confirmação', faixa: '§ 1285–1321' },
+      3: { titulo: 'Capítulo 1, Artigo 3: O sacramento da Eucaristia', faixa: '§ 1322–1419' },
+      4: { titulo: 'Capítulo 2, Artigo 4: O sacramento da Penitência e da Reconciliação', faixa: '§ 1420–1498' },
+      5: { titulo: 'Capítulo 2, Artigo 5: A Unção dos Enfermos', faixa: '§ 1499–1532' },
+      6: { titulo: 'Capítulo 3, Artigo 6: O sacramento da Ordem', faixa: '§ 1533–1600' },
+      7: { titulo: 'Capítulo 3, Artigo 7: O sacramento do Matrimônio', faixa: '§ 1601–1666' },
+      8: { titulo: 'Capítulo 4: Os sacramentais e as exéquias cristãs', faixa: '§ 1667–1690' },
+    },
+  },
+};const chave = process.argv[2];
 const cfg = SECOES[chave];
-if (!cfg) { console.log('Uso: node scripts/montar-faq.mjs s1|s2|s3'); process.exit(1); }
+if (!cfg) { console.log('Uso: node scripts/montar-faq.mjs s1|s2|s3|s4'); process.exit(1); }
 
 const raiz = join(dirname(fileURLToPath(import.meta.url)), '..');
 const pastaLotes = join(raiz, 'data', `fonte-${chave}`);

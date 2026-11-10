@@ -183,8 +183,10 @@ function ligarFormFaq() {
 }
 
 function htmlTemas(faq, s) {
+  // Tema ainda sem perguntas (seção em andamento) não aparece.
   return `<div class="lista-acoes">${s.temas.map((t) => {
     const n = perguntasDoTema(faq, s.id, t.c).length;
+    if (!n) return '';
     return `<a class="linha-acao" href="#/duvidas/${s.id}/${t.c}"><span class="t"><strong>${esc(t.titulo)}</strong><small>${esc(t.faixa)} · ${plural(n, 'pergunta', 'perguntas')}</small></span>${icone('dir')}</a>`;
   }).join('')}</div>`;
 }
