@@ -114,7 +114,7 @@ test('resposta do Compêndio traz perguntas frequentes relacionadas, marcadas', 
   assert.match(h, /Perguntas frequentes relacionadas/);
   assert.ok(h.indexOf('Compêndio,') < h.indexOf('faq-relacionadas')); // o Compêndio vem antes
   // Sem relação real, nada de "relacionadas" por coincidência de uma palavra comum.
-  assert.equal(local('O que é a graça?').faq.length, 0);
+  assert.ok(local('O que é a graça?').faq.every((q) => /graça/i.test(q.p)));
   // Seção 2: o purgatório agora tem perguntas frequentes próprias.
   const p = local('O que é o purgatório?').faq;
   assert.ok(p.length >= 1 && p.every((q) => /Purgatório/i.test(q.p)));

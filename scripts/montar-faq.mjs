@@ -1,6 +1,7 @@
 // Junta os lotes de data/fonte-<secao>/loteNN.json no arquivo final da FAQ e valida o conteúdo.
 // Uso: node scripts/montar-faq.mjs s1   (Parte I, Seção 1)
 //      node scripts/montar-faq.mjs s2   (Parte I, Seção 2)
+//      node scripts/montar-faq.mjs s3   (Parte II, Seção 1)
 import { readFileSync, writeFileSync, readdirSync, existsSync } from 'node:fs';
 import { join, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
@@ -37,11 +38,26 @@ const SECOES = {
       5: { titulo: 'Capítulo 3, Artigos 10 a 12: Perdão dos pecados, ressurreição e vida eterna', faixa: '§ 976–1065' },
     },
   },
+  s3: {
+    prefixoId: 'P2-S1',
+    saida: 'faq-parte2-secao1.json',
+    parte: 2,
+    faixa: [1066, 1209],
+    secao: 'Seção 1: A economia sacramental',
+    titulo: 'Perguntas Frequentes – Parte II, Seção 1: A economia sacramental (a liturgia)',
+    descricao: 'Dúvidas de católicos sobre a Primeira Seção da Segunda Parte do Catecismo da Igreja Católica (§ 1066–1209): o que é a liturgia, a obra da Santíssima Trindade na liturgia, o mistério pascal nos sacramentos e como, quando e onde a Igreja celebra. Cada resposta cita os parágrafos do Catecismo e passagens bíblicas, com uma analogia para facilitar a compreensão.',
+    categorias: {
+      1: { titulo: 'Introdução e Capítulo 1, Artigo 1: A liturgia, obra da Santíssima Trindade', faixa: '§ 1066–1112' },
+      2: { titulo: 'Capítulo 1, Artigo 2: O mistério pascal nos sacramentos da Igreja', faixa: '§ 1113–1134' },
+      3: { titulo: 'Capítulo 2, Artigo 1: Quem celebra e como celebrar', faixa: '§ 1135–1162' },
+      4: { titulo: 'Capítulo 2, Artigo 1: Quando e onde celebrar', faixa: '§ 1163–1199' },
+      5: { titulo: 'Capítulo 2, Artigo 2: Diversidade litúrgica e unidade do mistério', faixa: '§ 1200–1209' },
+    },
+  },
 };
-
 const chave = process.argv[2];
 const cfg = SECOES[chave];
-if (!cfg) { console.log('Uso: node scripts/montar-faq.mjs s1|s2'); process.exit(1); }
+if (!cfg) { console.log('Uso: node scripts/montar-faq.mjs s1|s2|s3'); process.exit(1); }
 
 const raiz = join(dirname(fileURLToPath(import.meta.url)), '..');
 const pastaLotes = join(raiz, 'data', `fonte-${chave}`);
@@ -133,7 +149,7 @@ const doc = {
   fonte: 'Catecismo da Igreja Católica (texto integral em vatican.va)',
   total_perguntas: perguntas.length,
   categorias: Object.entries(cfg.categorias).map(([k, v]) => ({ categoria: `${cfg.secao} (${v.titulo})`, paragrafos: v.faixa, quantidade: contagem[k] || 0 })),
-  partes: [{ parte: 'Parte I: A Profissão da Fé', secao: cfg.secao, quantidade: perguntas.length, perguntas }],
+  partes: [{ parte: (cfg.parte || 1) === 2 ? 'Parte II: A Celebração do Mistério Cristão' : 'Parte I: A Profissão da Fé', secao: cfg.secao, quantidade: perguntas.length, perguntas }],
 };
 
 console.log(`Itens: ${itens.length} | por categoria:`, contagem);
@@ -156,7 +172,7 @@ function publicarNoSite() {
     const final = JSON.parse(readFileSync(arq, 'utf8'));
     const cDoTitulo = new Map(Object.entries(s.categorias).map(([c, v]) => [`${s.secao} (${v.titulo})`, Number(c)]));
     secoes.push({
-      id, parte: 1, titulo: s.secao, ini: s.faixa[0], fim: s.faixa[1],
+      id, parte: s.parte || 1, titulo: s.secao, ini: s.faixa[0], fim: s.faixa[1],
       temas: Object.entries(s.categorias).map(([c, v]) => ({ c: Number(c), titulo: v.titulo, faixa: v.faixa })),
     });
     for (const q of final.partes[0].perguntas) {
