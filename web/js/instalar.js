@@ -89,18 +89,28 @@ function mostrarAviso() {
   requestAnimationFrame(() => requestAnimationFrame(() => el.classList.add('visivel')));
 }
 
+// O convite flutuante só aparece no celular e depois de a pessoa usar o site (3 telas),
+// para não cobrir o conteúdo logo na chegada. No computador, a opção fica só na aba Mais.
+const TELAS_ANTES = 3;
+let telas = 0;
+const celular = () => matchMedia('(max-width: 760px)').matches;
+function talvezMostrar() {
+  if (telas >= TELAS_ANTES && celular()) mostrarAviso();
+}
+
 export function iniciarInstalacao() {
   if (instalado()) return;
+  window.addEventListener('hashchange', () => { telas += 1; setTimeout(talvezMostrar, 1200); });
   window.addEventListener('beforeinstallprompt', (ev) => {
     ev.preventDefault(); // usamos o nosso aviso em vez da mini barra do navegador
     eventoInstalar = ev;
     avisar();
-    setTimeout(mostrarAviso, 1200);
+    setTimeout(talvezMostrar, 1200);
   });
   window.addEventListener('appinstalled', () => {
     eventoInstalar = null;
     fecharAviso(false);
     avisar();
   });
-  if (ehIOS()) setTimeout(mostrarAviso, 1500);
+  if (ehIOS()) setTimeout(talvezMostrar, 1500);
 }

@@ -82,14 +82,19 @@ export const htmlCicFaq = (cic) => cic.map(([a, b]) =>
   `<button type="button" class="cita fonte" data-n="${a}">§ ${a}${b > a ? `–${b}` : ''}</button>`).join('');
 
 // Uma pergunta, em sanfona: a resposta, a analogia, a Bíblia e os § (que abrem o painel do leitor).
-export function htmlPergunta(q) {
-  return `<details class="faq-item" id="${esc(q.id)}">
+// Aspas tipográficas nos títulos ("'Eu creio'" → "“Eu creio”").
+export const aspas = (t) => String(t).replace(/'([^']+)'/g, '“$1”');
+
+export function htmlPergunta(q, opcoes) {
+  const aberta = typeof opcoes === 'object' && opcoes?.aberta;
+  return `<details class="faq-item" id="${esc(q.id)}"${aberta ? ' open' : ''}>
     <summary><span>${esc(q.p)}</span><svg class="ic" aria-hidden="true"><use href="#i-baixo"/></svg></summary>
     <div class="faq-corpo">
       <p>${esc(q.r)}</p>
       ${q.a ? `<p class="faq-analogia"><strong>Para entender:</strong> ${esc(q.a)}</p>` : ''}
       ${q.b.length ? `<p class="faq-biblia"><strong>Na Bíblia:</strong> ${q.b.map(esc).join(' · ')}</p>` : ''}
       <div class="fontes"><span class="rotulo">No Catecismo · toque para ler</span><div class="fontes-lista">${htmlCicFaq(q.cic)}</div></div>
+      <button type="button" class="bt-sec bt-compartilhar" data-compartilhar="${esc(q.id)}"><svg class="ic" aria-hidden="true"><use href="#i-compartilhar"/></svg>Compartilhar</button>
     </div>
   </details>`;
 }
@@ -103,4 +108,4 @@ export function htmlItemFaq(q, { comPergunta = true } = {}) {
     ${q.b?.length ? `<p class="faq-biblia"><strong>Na Bíblia:</strong> ${q.b.map(esc).join(' · ')}</p>` : ''}`;
 }
 
-export const htmlListaPerguntas = (lista) => `<div class="faq-lista">${lista.map(htmlPergunta).join('')}</div>`;
+export const htmlListaPerguntas = (lista) => `<div class="faq-lista">${lista.map((q) => htmlPergunta(q)).join('')}</div>`;
