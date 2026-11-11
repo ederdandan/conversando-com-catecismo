@@ -1,0 +1,393 @@
+[
+  {
+    "c": 3,
+    "o": "Os católicos não leem a Bíblia nem incentivam a leitura da Palavra de Deus em suas comunidades.",
+    "r": "A Igreja exorta com força e insistência todos os fiéis a aprenderem a ciência eminente de Jesus Cristo pela leitura frequente das divinas Escrituras.",
+    "e": "O Catecismo ensina que a Igreja sempre venerou as divinas Escrituras como venera o próprio Corpo do Senhor. A leitura da Bíblia deve ser acompanhada pela oração para que seja estabelecido o diálogo entre Deus e o homem. Desconhecer as Escrituras é desconhecer a Cristo, como ensina São Jerônimo. Portanto, a Igreja recomenda vivamente o acesso de todos os fiéis à Sagrada Escritura.",
+    "cic": [
+      "131",
+      "133"
+    ],
+    "b": [
+      "Fl 3,8"
+    ],
+    "bt": [],
+    "a": "É como um banquete farto preparado para a família inteira, em que o pai convida carinhosamente cada filho a se sentar diariamente à mesa."
+  },
+  {
+    "c": 3,
+    "o": "A Bíblia foi escrita por homens comuns, logo contém erros humanos e imperfeições morais.",
+    "r": "Deus é o Autor da Sagrada Escritura, pois inspirou os autores humanos a escreverem com fidelidade tudo o que Ele queria.",
+    "e": "O Catecismo ensina que as verdades reveladas por Deus contidas nos livros da Sagrada Escritura foram consignadas por inspiração do Espírito Santo. Deus escolheu homens e serviu-Se das suas faculdades e capacidades para que, agindo Ele neles e por eles, escrevessem tudo e só aquilo que Ele queria. Por isso, os livros da Escritura ensinam com firmeza, fidelidade e sem erro a verdade salvífica. Deus é a garantia suprema da verdade presente no texto sagrado.",
+    "cic": [
+      "105",
+      "106",
+      "107"
+    ],
+    "b": [
+      "2Tm 3,16"
+    ],
+    "bt": [],
+    "a": "É como um arquiteto genial que desenha uma planta perfeita usando o lápis de um aprendiz: a mão do aprendiz segura o lápis, mas o traço e o projeto pertencem inteiramente ao mestre."
+  },
+  {
+    "c": 3,
+    "o": "A Bíblia deve ser interpretada de forma puramente literal, ao pé da letra, sem complicações teológicas.",
+    "r": "Para descobrir a intenção dos autores sagrados, é preciso levar em conta os gêneros literários e os sentidos da Escritura.",
+    "e": "A verdade é expressa de modo diverso nos textos históricos, proféticos, poéticos ou em outros gêneros de discurso. O leitor deve atender às condições da época e da cultura do autor humano para compreender o que ele pretendia significar. Além disso, a Escritura deve ser lida e interpretada com o mesmo Espírito com que foi escrita. Ignorar os gêneros literários leva a erros graves de interpretação.",
+    "cic": [
+      "109",
+      "110",
+      "111"
+    ],
+    "b": [
+      "Lc 24,27"
+    ],
+    "bt": [],
+    "a": "É como ler um poema de amor: se a pessoa interpretar as metáforas poéticas como ordens médicas literais, perderá completamente a mensagem que o autor quis transmitir."
+  },
+  {
+    "c": 3,
+    "o": "A Igreja Católica acrescentou sete livros humanos à Bíblia que não pertencem ao cânon inspirado.",
+    "r": "A Igreja discerniu a lista completa dos livros sagrados pela Tradição apostólica sob a orientação do Espírito Santo.",
+    "e": "O Catecismo ensina que foi a Tradição apostólica que fez a Igreja discernir quais escritos deviam ser incluídos na lista dos livros sagrados. Esse cânon completo inclui quarenta e seis livros para o Antigo Testamento e vinte e sete para o Novo Testamento. Os chamados livros deuterocanônicos foram acolhidos pela Igreja primitiva como parte da Escritura inspirada. A integridade do cânon bíblico é garantida pelo testemunho da Tradição católica.",
+    "cic": [
+      "120"
+    ],
+    "b": [
+      "2Ts 2,15"
+    ],
+    "bt": [
+      {
+        "ref": "2Ts 2,15",
+        "t": "Mantenham-se firmes e guardem as tradições que aprenderam de nós, seja por palavra, seja por carta nossa"
+      }
+    ],
+    "a": "É como a lista oficial dos documentos fundacionais de uma nação, onde apenas o conselho constituinte tem a autoridade de reconhecer quais manuscritos originais fazem parte da coleção autêntica."
+  },
+  {
+    "c": 3,
+    "o": "O Antigo Testamento é cheio de violência e regras ultrapassadas que não têm mais valor para nós.",
+    "r": "O Antigo Testamento é parte devedora da Sagrada Escritura e conserva um valor espiritual permanente para a salvação.",
+    "e": "O Catecismo afirma que o Antigo Testamento preparou a vinda de Cristo, Redentor do universo. Embora contenham elementos imperfeitos e provisórios, os seus livros testemunham a pedagogia do amor de Deus. Neles estão contidos ensinamentos sublimes sobre Deus, uma sabedoria salvadora e tesouros inestimáveis de oração. Os cristãos veneram o Antigo Testamento como verdadeira Palavra de Deus.",
+    "cic": [
+      "121",
+      "122",
+      "123"
+    ],
+    "b": [
+      "Rm 15,4"
+    ],
+    "bt": [],
+    "a": "É como os alicerces profundos de um grande edifício: eles foram construídos primeiro na terra, mas continuam a sustentar toda a estrutura visível do prédio."
+  },
+  {
+    "c": 3,
+    "o": "Não existe ligação real entre o Antigo e o Novo Testamento, são duas religiões totalmente diferentes.",
+    "r": "A Igreja ensina a unidade dos dois Testamentos pelo desígnio de Deus e pela tipologia divina.",
+    "e": "O Novo Testamento está escondido no Antigo, enquanto o Antigo torna-se manifesto no Novo. O desígnio da Antiga Aliança estava ordenado a preparar e pré-figurar a vinda de Cristo. As realidades do Antigo Testamento contêm figuras e tipos que se cumprem plenamente na pessoa e missão de Jesus. Assim, ambos os Testamentos se esclarecem mutuamente em uma profunda harmonia.",
+    "cic": [
+      "128",
+      "129",
+      "130"
+    ],
+    "b": [
+      "1Cor 10,11",
+      "Lc 24,44"
+    ],
+    "bt": [],
+    "a": "É como as duas metades de um medalhão antigo: quando encaixadas, revelam a imagem completa e indivisível que o artesão projetou."
+  },
+  {
+    "c": 3,
+    "o": "Os quatro Evangelhos foram escritos décadas depois de Cristo e contêm lendas criadas pela Igreja.",
+    "r": "Os Evangelhos possuem origem apostólica e transmitem fielmente o que Jesus realmente fez e ensinou.",
+    "e": "O Catecismo afirma que os quatro Evangelhos — Mateus, Marcos, Lucas e João — ocupam o lugar central na Escritura porque são o testemunho principal da vida e da doutrina do Verbo Encarnado. A Igreja defende firmemente a historicidade dos Evangelhos. Os autores sagrados escreveram com fidelidade a verdade sobre Jesus, comunicando o que testemunharam ou receberam dos primeiros discípulos. O Espírito Santo guiou a redação de cada texto para que transmitissem a fé autêntica.",
+    "cic": [
+      "125",
+      "126",
+      "127"
+    ],
+    "b": [
+      "Lc 1,1-4",
+      "Jo 20,31"
+    ],
+    "bt": [],
+    "a": "É como os relatórios oficiais de testemunhas oculares de um grande evento histórico registrados para que a memória dos fatos permaneça viva e inalterada."
+  },
+  {
+    "c": 3,
+    "o": "Os sentidos alegórico e moral da Bíblia são invenções medievais para fugir do texto exato.",
+    "r": "A tradição da Igreja distingue o sentido literal do sentido espiritual, que se divide em alegórico, moral e anagógico.",
+    "e": "O Catecismo ensina que o sentido literal é o significado transmitido pelas palavras da Escritura e descoberto pela exegese. O sentido espiritual desdobra essa verdade em três dimensões: o alegórico nos ajuda a reconhecer os fatos em Cristo; o moral nos orienta no agir correto; e o anagógico nos conduz à glória celeste. Todos os sentidos da Sagrada Escritura devem apoiar-se sobre o sentido literal. A combinação desses sentidos expressa a riqueza inesgotável da Palavra divina.",
+    "cic": [
+      "115",
+      "116",
+      "117"
+    ],
+    "b": [
+      "1Cor 10,11"
+    ],
+    "bt": [],
+    "a": "É como uma música executada em orquestra: a melodia principal dá a estrutura da canção, enquanto os arranjos polifônicos acrescentam profundidade sem alterar a nota original."
+  },
+  {
+    "c": 3,
+    "o": "Para entender a Bíblia basta a pesquisa histórica dos estudiosos, não precisa da fé da Igreja.",
+    "r": "A Escritura deve ser lida e interpretada no mesmo Espírito em que foi escrita e segundo a Tradição da Igreja.",
+    "e": "Para descobrir o sentido dos textos sagrados, o intérprete precisa considerar a intenção do autor humano e o contexto histórico. No entanto, o Catecismo ensina três critérios fundamentais para uma interpretação espiritual: prestar atenção à unidade de toda a Escritura, ler a Bíblia na Tradição viva de toda a Igreja e respeitar a analogia da fé. Sem a luz do Espírito Santo e a comunhão da Igreja, a exegese reduz-se a uma análise literária incompleta.",
+    "cic": [
+      "111",
+      "112",
+      "113",
+      "114"
+    ],
+    "b": [
+      "Lc 24,45"
+    ],
+    "bt": [],
+    "a": "É como analisar uma carta de amor usando um microscópio de laboratório: a análise técnica mostra a composição do papel e da tinta, mas só o amor no coração do leitor compreende o sentimento da mensagem."
+  },
+  {
+    "c": 3,
+    "o": "A leitura da Bíblia pela população leiga sempre foi proibida pela Igreja Católica na história.",
+    "r": "A Igreja sempre encorajou a leitura orante e piedosa das Escrituras, facilitando traduções adequadas para o povo.",
+    "e": "O Catecismo ressalta que o acesso à Sagrada Escritura deve ser aberto aos fiéis cristãos de modo amplo e fácil. Desde os primeiros séculos, a Igreja traduziu os textos sagrados para as línguas dos povos para nutrir a fé da comunidade. A recomendação da leitura bíblica é constante nos ensinamentos dos Padres da Igreja e dos Concílios. A Igreja alerta apenas contra traduções corrompidas e interpretações subjetivas que desfiguram o Evangelho.",
+    "cic": [
+      "131",
+      "133"
+    ],
+    "b": [
+      "Fl 3,8"
+    ],
+    "bt": [],
+    "a": "É como a recomendação de um médico para tomar remédios sob receita exata: a orientação busca garantir o uso correto do tratamento sem restringir o acesso à saúde."
+  },
+  {
+    "c": 3,
+    "o": "Se a Bíblia é divinamente inspirada, Deus ditou cada palavra mecanicamente aos autores humanos.",
+    "r": "Deus usou autores humanos vivos que conservaram o pleno uso das suas faculdades e capacidades pessoais.",
+    "e": "A inspiração divina não anula a liberdade nem a inteligência dos autores sagrados. O Catecismo ensina que Deus agiu nos hagiógrafos e por eles, fazendo com que utilizassem suas próprias faculdades morais e intelectuais. Eles escreveram como verdadeiros autores, utilizando a linguagem, os conhecimentos e o estilo literário de sua própria época. Assim, o texto bíblico traz ao mesmo tempo a autoria plena de Deus e a marca do escritor humano.",
+    "cic": [
+      "106"
+    ],
+    "b": [
+      "2Tm 3,16"
+    ],
+    "bt": [],
+    "a": "É como um autor erudito que dita o seu raciocínio a um secretário fluente: o secretário utiliza seu vocabulário e estilo para redigir o texto, mas a ideia e o conteúdo pertencem ao autor."
+  },
+  {
+    "c": 3,
+    "o": "Contradições entre trechos do Antigo e do Novo Testamento provam que a Bíblia não é infalível.",
+    "r": "A verdade salvífica contida na Escritura é ensinada sem erro graças à inspiração do Espírito Santo.",
+    "e": "O Catecismo afirma que os livros da Escritura ensinam com firmeza e sem erro a verdade que Deus quis consignar para nossa salvação. O desenvolvimento progressivo da Revelação mostra que Deus educou o Seu povo em etapas ao longo da história. O que parecem contradições superficiais são na verdade etapas da pedagogia divina que se cumprem em Cristo. A inerrância bíblica garante a verdade salvífica e não a precisão de curiosidades científicas secundárias.",
+    "cic": [
+      "107",
+      "122"
+    ],
+    "b": [
+      "2Tm 3,16-17"
+    ],
+    "bt": [],
+    "a": "É como os capítulos da biografia de um homem: o capítulo da infância relata regras de conduta infantis que são superadas na idade adulta, sem que isso invalide o livro inteiro."
+  },
+  {
+    "c": 3,
+    "o": "A pregação da Igreja deve se basear apenas nos ensinamentos do Novo Testamento, descartando o Antigo.",
+    "r": "A Igreja sempre defendeu a unidade indissociável dos dois Testamentos na pregação e na liturgia.",
+    "e": "A rejeição do Antigo Testamento foi expressamente condenada pela Igreja desde os primeiros séculos como uma heresia. O Catecismo recorda que o próprio Jesus explicou a Escritura aos discípulos a partir de Moisés e de todos os Profetas. A liturgia católica lê o Antigo e o Novo Testamento em cada celebração para manifestar a continuidade da salvação. Suprimir o Antigo Testamento seria mutilar a própria compreensão do mistério de Cristo.",
+    "cic": [
+      "123",
+      "129"
+    ],
+    "b": [
+      "Lc 24,27"
+    ],
+    "bt": [],
+    "a": "É como cortar as raízes de uma árvore frutífera achando que apenas os galhos carregados de frutos importam para a colheita."
+  },
+  {
+    "c": 3,
+    "o": "Qualquer livro religioso escrito por pessoas devotas pode ser considerado inspirado como a Bíblia.",
+    "r": "A inspiração bíblica é um carisma único do Espírito Santo concedido exclusivamente aos autores dos livros do cânon.",
+    "e": "O Catecismo ensina que a Igreja reconhece como sagrados e canônicos os livros do Antigo e do Novo Testamento porque foram escritos sob a inspiração do Espírito Santo. Deus é o Autor supremo desses livros, e essa garantia foi confiada à Igreja para ser transmitida a todas as gerações. Nenhum escrito teológico ou espiritual posterior possui esse carisma especial de inerrância e autoridade divina. A Bíblia ocupa um lugar único e irrepetível na vida da Igreja.",
+    "cic": [
+      "105",
+      "120"
+    ],
+    "b": [
+      "2Tm 3,16"
+    ],
+    "bt": [],
+    "a": "É como a assinatura original do Presidente em uma lei sancionada: nenhum comentário de jornal ou análise jurídica possui o poder vinculante do texto assinado."
+  },
+  {
+    "c": 3,
+    "o": "Os católicos valorizam mais os ritos e tradições humanas do que a própria Palavra de Deus na Bíblia.",
+    "r": "A Igreja venera a Sagrada Escritura como venera o próprio Corpo do Senhor na celebração litúrgica.",
+    "e": "O Catecismo declara que a Palavra de Deus é o sustento e a força da Igreja, a firmeza da fé para seus filhos e o alimento da alma. Na celebração da Missa, a mesa da Palavra de Deus e a mesa do Corpo de Cristo preparam o mesmo banquete espiritual para os fiéis. Toda a pregação da Igreja e a própria vida cristã devem ser nutridas e regidas pela Sagrada Escritura. A veneração católica à Bíblia expressa-se no amor e na obediência ao Evangelho.",
+    "cic": [
+      "131",
+      "132"
+    ],
+    "b": [
+      "1Ts 2,13"
+    ],
+    "bt": [],
+    "a": "É como o ar puro que respiramos dentro de casa: a estrutura do imóvel acolhe e protege os moradores, mas é o ar que entra pelas janelas que mantém todos vivos."
+  },
+  {
+    "c": 3,
+    "o": "A interpretação alegórica da Bíblia é fantasiosa e destrói o sentido histórico dos fatos narrados.",
+    "r": "O sentido alegórico apoia-se no sentido literal das palavras e reconhece os acontecimentos como figuras de Cristo.",
+    "e": "O Catecismo esclarece que todos os sentidos da Escritura devem ter por fundamento o sentido literal. A interpretação alegórica não nega a realidade histórica dos acontecimentos, mas ajuda a perceber como os eventos da Antiga Aliança prefiguram o mistério da Redenção em Cristo. Por exemplo, a travessia do Mar Vermelho é um fato histórico que é sinal do Batismo. Assim, a alegoria aprofunda a inteligência espiritual dos acontecimentos sem apagar a história.",
+    "cic": [
+      "115",
+      "116",
+      "117"
+    ],
+    "b": [
+      "1Cor 10,1-2"
+    ],
+    "bt": [],
+    "a": "É como observar a maquete minuciosa do arquiteto antes de ver o prédio pronto: a maquete tem utilidade e existência própria, mas antecipa a forma do edifício real."
+  },
+  {
+    "c": 3,
+    "o": "A Bíblia é um livro ultrapassado que não tem nada a dizer sobre os problemas morais do mundo atual.",
+    "r": "Na Sagrada Escritura, o Pai que está nos céus vem amorosamente ao encontro dos Seus filhos para dialogar com eles.",
+    "e": "O Catecismo afirma que a Palavra de Deus é viva e eficaz, conservando uma atualidade permanente para todas as gerações humanas. As verdades morais e espirituais contidas na Bíblia iluminam a dignidade da pessoa humana, a justiça e o amor ao próximo em qualquer época histórica. Na leitura orante da Escritura, o homem contemporâneo encontra respostas profundas para os anseios do seu coração. A Palavra divina não envelhece porque provém do Deus eterno.",
+    "cic": [
+      "104",
+      "131"
+    ],
+    "b": [
+      "Hb 4,12"
+    ],
+    "bt": [],
+    "a": "É como o código genético humano: embora tenha sido desenhado na origem da humanidade, continua a governar e dar vida a cada novo ser humano que nasce hoje."
+  },
+  {
+    "c": 3,
+    "o": "Se a Bíblia é difícil de entender, é melhor deixá-la apenas para os teólogos e padres.",
+    "r": "Todos os fiéis devem buscar o conhecimento de Cristo através da leitura frequente das divinas Escrituras.",
+    "e": "O Catecismo recorda a célebre frase de São Jerônimo: 'Ignorar as Escrituras é ignorar a Cristo'. A Igreja recomenda com insistência a todos os cristãos a leitura pessoal e comunitária da Bíblia acompanhada da oração. Embora existam passagens complexas que exigem o estudo, a mensagem central do amor e da salvação de Deus é acessível a todos os corações humildes. A oração diária com a Palavra transforma a vida do crente simples.",
+    "cic": [
+      "133"
+    ],
+    "b": [
+      "Fl 3,8"
+    ],
+    "bt": [],
+    "a": "É como o pão na mesa da família: não é preciso ser um nutricionista profissional para se alimentar diariamente do pão e fortalecer as energias do corpo."
+  },
+  {
+    "c": 3,
+    "o": "Os livros deuterocanônicos foram inventados pela Igreja no Concílio de Trento para apoiar a doutrina do Purgatório.",
+    "r": "A Igreja acolheu o cânon dos livros sagrados desde a época apostólica, confirmando-o solenemente nos concílios.",
+    "e": "O Catecismo ensina que a lista completa dos livros sagrados do Antigo Testamento foi recebida pela Tradição apostólica a partir da versão grega da Septuaginta, usada pelos apóstolos e primeiros cristãos. O Concílio de Trento apenas reconfirmou solenemente o cânon histórico já professado nos concílios da Igreja primitiva. Esses livros sempre fizeram parte da vida litúrgica e doutrinal católica. A inclusão desses textos não foi uma invenção tardia, mas a preservação da herança apostólica.",
+    "cic": [
+      "120"
+    ],
+    "b": [
+      "2Ts 2,15"
+    ],
+    "bt": [
+      {
+        "ref": "2Ts 2,15",
+        "t": "Mantenham-se firmes e guardem as tradições que aprenderam de nós, seja por palavra, seja por carta nossa"
+      }
+    ],
+    "a": "É como o selo oficial em uma coleção de obras de arte antiquíssimas: o selo colocado pela comissão não cria as telas, apenas confirma publicamente o catálogo herdado."
+  },
+  {
+    "c": 3,
+    "o": "A exegese científica moderna tornou a fé da Igreja na inspiração divina da Bíblia algo ingênuo.",
+    "r": "A investigação histórica e o respeito pela inspiração divina unem-se para revelar o sentido completo do texto sagrado.",
+    "e": "A Igreja encoraja os estudos exegéticos que investigam as línguas originais, os manuscritos e o contexto histórico dos textos bíblicos. No entanto, o Catecismo adverte que a ciência exegética atinge a sua plenitude quando lê o texto na fé e sob a luz do Espírito Santo. A fé não teme a verdade científica, pois ambas buscam compreender o desígnio de Deus. A exegese autêntica une o rigor crítico ao respeito pelo Autor divino da Escritura.",
+    "cic": [
+      "109",
+      "111"
+    ],
+    "b": [
+      "Lc 24,45"
+    ],
+    "bt": [],
+    "a": "É como examinar um violino antigo com aparelhos de ultrassom: a medição técnica revela a idade e a densidade da madeira, mas só a execução musical revela a alma do instrumento."
+  },
+  {
+    "c": 3,
+    "o": "Os Evangelhos contêm versões divergentes sobre os milagres e palavras de Jesus, tornando os relatos duvidosos.",
+    "r": "Cada evangelista redigiu o seu relato escolhendo elementos da tradição oral para atender às comunidades com verdade.",
+    "e": "O Catecismo explica a síntese do processo de redação dos Evangelhos em três etapas: a vida e o ensino de Jesus, a tradição oral dos apóstolos e a redação escrita. Os quatro evangelistas escreveram sob a inspiração do Espírito Santo, selecionando e sintetizando os fatos segundo o propósito de suas obras. As variações nos detalhes refletem as perspectivas pastorais de cada autor sem alterar a verdade substancial dos atos e palavras de Cristo. Essa diversidade enriquece o testemunho da fé.",
+    "cic": [
+      "126"
+    ],
+    "b": [
+      "Jo 20,31"
+    ],
+    "bt": [],
+    "a": "É como quatro fotógrafos registrando o mesmo evento de ângulos diferentes: cada foto mostra detalhes próprios do ângulo escolhido, mas todas confirmam o mesmo acontecimento central."
+  },
+  {
+    "c": 3,
+    "o": "A teologia católica coloca os escritos dos Santos Padres no mesmo nível de autoridade da Bíblia.",
+    "r": "A Sagrada Escritura é a Palavra de Deus inspirada, enquanto os ensinamentos dos Padres da Igreja a testemunham com fidelidade.",
+    "e": "O Catecismo enfatiza que a palavra dos Santos Padres testemunha a presença viva da Tradição na vida da Igreja. Seus escritos ajudam a compreender como os primeiros cristãos interpretavam e viviam a Sagrada Escritura. Contudo, a Bíblia possui o carisma único de inspiração divina direta e inerrância salvífica. O estudo dos Padres ilumina o texto bíblico sem substituir a autoridade suprema da Palavra de Deus.",
+    "cic": [
+      "119",
+      "131"
+    ],
+    "b": [
+      "1Ts 2,13"
+    ],
+    "bt": [],
+    "a": "É como os relatórios dos primeiros grandes juristas que comentam o texto da Constituição de um país: os comentários são de extremo valor histórico e doutrinal, mas a norma suprema continua sendo a própria Constituição."
+  },
+  {
+    "c": 3,
+    "o": "A leitura do sentido anagógico da Bíblia é uma tentativa de fugir dos compromissos sociais deste mundo.",
+    "r": "O sentido anagógico conduz a nossa vida ao destino eterno em Deus, fortalecendo a esperança no compromisso terrestre.",
+    "e": "O Catecismo ensina que podemos ver as realidades espirituais e terrestres no seu sentido anagógico enquanto sinais da nossa pátria celeste. Por exemplo, a Igreja na terra é sinal da Jerusalém celestial. Contemplar o destino eterno não aliena o cristão, mas dá o sentido supremo a todas as suas ações diárias. Sabendo que seremos julgados pelo amor, o desejo do Céu impulsiona a transformação justa do mundo presente.",
+    "cic": [
+      "117"
+    ],
+    "b": [
+      "1Cor 10,11"
+    ],
+    "bt": [],
+    "a": "É como o marinheiro em alto-mar que olha para o farol na costa distante: fixar os olhos no porto de chegada dá-lhe a direção e a força necessárias para remar com energia no mar agitado."
+  },
+  {
+    "c": 3,
+    "o": "A Bíblia diz que 'a letra mata', por isso não devemos dar importância aos textos escritos da Escritura.",
+    "r": "Para que as palavras escritas não fiquem como letra morta, é preciso que Cristo nos abra o espírito para compreender a Escritura.",
+    "e": "A citação paulina sobre a letra e o Espírito alerta contra o legalismo frio e a interpretação puramente humana desprovida da graça. O Catecismo ensina que a fé cristã não é uma religião da palavra escrita e muda, mas do Verbo encarnado e vivo. É o Espírito Santo quem vivifica o texto bíblico no coração do leitor crente. Assim, a leitura feita no Espírito transforma o texto escrito em alimento vivo para a alma.",
+    "cic": [
+      "108",
+      "111"
+    ],
+    "b": [
+      "2Cor 3,6",
+      "Lc 24,45"
+    ],
+    "bt": [],
+    "a": "É como uma lâmpada montada na parede: o aparelho de vidro e metal está pronto, mas precisa da corrente elétrica para acender e iluminar o ambiente."
+  },
+  {
+    "c": 3,
+    "o": "Para os católicos, a Bíblia é apenas uma fonte de citações piedosas usada em rituais antigos.",
+    "r": "A Sagrada Escritura é a alma da teologia, o sustento da pregação e o alimento constante da oração cristã.",
+    "e": "O Catecismo afirma que o estudo da Sagrada Página deve ser como que a alma da teologia sagrada. Da mesma forma, o ministério da palavra, que inclui a pregação pastoral, a catequese e a instrução cristã, nutre-se com saúde da palavra da Bíblia. A oração cristã, seja na Liturgia das Horas ou no Rosário, é totalmente tecida de textos e figuras bíblicas. Para a Igreja, a Bíblia é uma fonte inesgotável de vida e verdade presente.",
+    "cic": [
+      "132",
+      "133"
+    ],
+    "b": [
+      "2Tm 3,16-17"
+    ],
+    "bt": [],
+    "a": "É como a seiva viva que circula por dentro do tronco e de todas as folhas de uma grande árvore, garantindo a sua cor verde e o nascimento de frutos saborosos."
+  }
+]
