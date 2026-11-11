@@ -1,6 +1,6 @@
 // Service worker: leitor 100% offline. Nunca intercepta a API do chat (outro domínio / /api/).
 // Ao mudar qualquer arquivo do site, troque a VERSAO: os aparelhos baixam tudo de novo e recarregam.
-const VERSAO = 'catecismo-v36';
+const VERSAO = 'catecismo-v37';
 const ARQUIVOS = [
   './', 'index.html', 'estilo.css', 'manifest.webmanifest',
   'icones/icone-192.png', 'icones/icone-512.png', 'icones/icone-maskable-512.png',

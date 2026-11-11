@@ -62,6 +62,8 @@ export function htmlResposta(texto, enviados) {
       const itens = linhas.map((l) => `<li>${inline(l.replace(/^\s*([-*•]|\d+[.)])\s+/, ''))}</li>`).join('');
       return ordenada ? `<ol>${itens}</ol>` : `<ul>${itens}</ul>`;
     }
-    return `<p>${linhas.map(inline).join('<br>')}</p>`;
+    // Analogia do catequista ("**Para entender:** …"): mesmo destaque das perguntas frequentes.
+    const analogia = /^\s*\*\*Para entender:?\*\*/i.test(linhas[0]);
+    return `<p${analogia ? ' class="faq-analogia"' : ''}>${linhas.map(inline).join('<br>')}</p>`;
   }).join('');
 }
