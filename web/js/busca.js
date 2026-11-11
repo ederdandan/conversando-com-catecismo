@@ -192,6 +192,12 @@ const SINONIMOS = [
   [['amem'], 'amen'], // grafia de Portugal: Ámen
   [['depois da morte', 'apos a morte', 'quando morremos', 'quando a gente morre'], 'morte corpo alma sucede juizo particular'],
   [['uncao', 'extrema uncao', 'doente', 'doentes'], 'uncao enfermos'],
+  [['tatuagem', 'tatuagens', 'tatuar', 'piercing', 'piercings', 'cirurgia plastica', 'plastica', 'mutilacao'], 'respeito corpo saude integridade corporal mutilacoes amputacoes'],
+  [['loteria', 'aposta', 'apostas', 'apostar', 'bet', 'bets', 'cassino', 'jogo do bicho', 'jogar dinheiro'], 'jogos de azar apostas'],
+  [['droga', 'drogas', 'maconha', 'cocaina', 'fumar', 'cigarro', 'bebida', 'beber', 'bebedeira', 'embriaguez', 'alcool'], 'droga estupefacientes abuso alimentos alcool tabaco temperanca'],
+  [['suicidio', 'se matar'], 'suicidio'],
+  [['aborto', 'abortar'], 'aborto vida humana conceicao'],
+  [['vacina', 'transplante', 'doacao de orgaos'], 'saude transplante orgaos'],
 ].map(([chaves, extra]) => [chaves.map(normalizar), normalizar(extra)]);
 
 // Acrescenta à pergunta os termos do Catecismo correspondentes às palavras do dia a dia.

@@ -44,6 +44,7 @@ export const temIA = () => Boolean(API_URL && armazenamento.ler('codigo'));
 // Resposta já pronta: a pergunta mais parecida do Compêndio (oficial) ou das perguntas frequentes.
 // Sem IA (modo Compêndio, cota esgotada, IA fora do ar, sem internet): sempre responde daqui.
 // Com IA (estrita): só se a pergunta já existir quase igual; senão retorna null e a IA responde.
+const MOTIVO_SEM_IA = 'O catequista não encontrou no Catecismo uma resposta direta para isso.';
 async function respostaLocal(pergunta, motivo, { estrita = false } = {}) {
   try {
     indiceCompendio ??= criarIndiceCompendio(await carregarCompendio());
@@ -257,7 +258,9 @@ async function perguntar(main, texto, ctx, { forcarIA = false } = {}) {
   rolarParaFim(main);
 
   if (!paragrafos.length) {
-    Object.assign(lista[i], { texto: MENSAGEM_RECUSA, estado: 'local' });
+    const local = await respostaLocal(pergunta, MOTIVO_SEM_IA);
+    if (local && local.estado === 'compendio') lista[i] = local;
+    else Object.assign(lista[i], { texto: MENSAGEM_RECUSA, estado: 'local' });
     atualizarMensagem(main, i);
     salvarConversa();
     return;
@@ -311,6 +314,14 @@ async function perguntar(main, texto, ctx, { forcarIA = false } = {}) {
   } finally {
     emAndamento = null;
     form?.classList.remove('ocupado');
+  }
+  // A IA recusou ou não citou o Catecismo: melhor mostrar a pergunta mais próxima já respondida.
+  if (lista[i].estado === 'pronto') {
+    const aval = avaliarResposta(lista[i].texto, lista[i].paragrafos || []);
+    if (aval.recusa || aval.semFonte) {
+      const local = await respostaLocal(pergunta, MOTIVO_SEM_IA);
+      if (local && local.estado === 'compendio') lista[i] = local;
+    }
   }
   if (conversa !== lista) return;
   atualizarMensagem(main, i);
