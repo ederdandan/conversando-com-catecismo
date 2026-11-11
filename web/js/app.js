@@ -454,13 +454,9 @@ iniciarInstalacao();
 function telaSobre(d) {
   const ia = temIA();
   main.innerHTML = `${cabecalho('Mais')}<div class="tela">
-    <section class="secao-mais" aria-labelledby="rot-tema-mais">
-      <h2 class="rotulo" id="rot-tema-mais">Tema de cores</h2>
-      <div class="temas" role="group" aria-labelledby="rot-tema-mais">${htmlTemasCor()}</div>
-    </section>
     <div class="lista-acoes">
       <div id="linha-instalar"></div>
-      <button type="button" class="linha-acao abrir-ajustes"><span class="icone-caixa"><span class="aa">Aa</span></span><span class="t"><strong>Tamanho da letra</strong><small>Letra maior ou menor para ler</small></span>${icone('dir')}</button>
+      <button type="button" class="linha-acao abrir-ajustes"><span class="icone-caixa"><span class="aa">Aa</span></span><span class="t"><strong>Tamanho da letra e tema</strong><small>Letra maior ou menor e cores do app</small></span>${icone('dir')}</button>
       ${ia
     ? `<button type="button" class="linha-acao" id="bt-sair-ia"><span class="icone-caixa">${icone('chat')}</span><span class="t"><strong>Sair do modo IA</strong><small>O chat volta a responder só pelo Compêndio</small></span>${icone('dir')}</button>`
     : `<a class="linha-acao" href="#/entrar"><span class="icone-caixa">${icone('chat')}</span><span class="t"><strong>Usar o catequista com IA</strong><small>Entre com seu código de convite</small></span>${icone('dir')}</a>`}
