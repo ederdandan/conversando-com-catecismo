@@ -25,7 +25,10 @@ let ultima = '';
 export function contarTela(caminho, titulo = '') {
   if (caminho === ultima) return; // mesma tela (ex.: rolando dentro do capítulo)
   ultima = caminho;
-  enviar({ p: caminho, t: titulo, r: document.referrer || '' });
+  // De onde a pessoa veio (Google, WhatsApp...): só na 1ª tela e só se for outro site.
+  const r = !contarTela.feito && document.referrer && !document.referrer.includes(location.host) ? document.referrer : '';
+  contarTela.feito = true;
+  enviar({ p: caminho, t: titulo, r });
 }
 
 // Um evento ("tema/manto", "duvida/compartilhada"): aparece na lista de eventos do painel.
