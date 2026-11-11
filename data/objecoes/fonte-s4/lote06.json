@@ -1,0 +1,282 @@
+[
+  {
+    "c": 3,
+    "o": "Só Deus pode perdoar pecados; confessor nenhum tem o poder de absolver ninguém.",
+    "r": "Deus é de fato o único que perdoa os pecados, mas Jesus exercia esse poder divino e conferiu essa autoridade aos homens para agirem em Seu nome.",
+    "e": "O Catecismo ensina que somente Deus perdoa os pecados. Contudo, sendo Jesus o Filho de Deus, Ele exerceu esse poder na terra e, por Sua autoridade divina, concedeu essa mesma faculdade aos homens para que a exercessem em Seu nome. Ao dar o Espírito Santo aos Apóstolos, Cristo confiou-lhes o ministério da reconciliação. Assim, o sacerdote não perdoa por autoridade própria, mas como instrumento que age em nome de Cristo.",
+    "b": ["Mc 2,7.10", "Jo 20,22-23"],
+    "bt": [
+      {
+        "ref": "Mc 2,10",
+        "t": "O Filho do Homem tem na terra o poder de perdoar os pecados"
+      }
+    ],
+    "cic": ["1441"],
+    "a": "Como o juiz de uma vara cível que assina o perdão judicial de uma pena em nome do Estado, usando a autoridade delegada pela lei suprema."
+  },
+  {
+    "c": 3,
+    "o": "Eu confesso meus erros diretamente a Deus na minha oração pessoal, não preciso contar meus pecados para outro homem.",
+    "r": "A oração pessoal a Deus é essencial, mas o próprio Cristo instituiu a confissão auricular para que o perdão chegue de forma pessoal e comunitária pela Igreja.",
+    "e": "A confissão dos pecados perante o sacerdote é um elemento essencial do sacramento instituído por Cristo. Pela acusação das faltas, o fiel encara de frente os seus erros, assume a responsabilidade e abre-se à reconciliação visível com a Igreja e com Deus. Jesus dirigia-Se pessoalmente a cada doente e pecador para curá-lo de forma concreta. Por essa razão, a confissão individual e a absolvição constituem o modo ordinário de reconciliação com Deus.",
+    "b": ["Mc 2,5", "Tg 5,16"],
+    "bt": [],
+    "cic": ["1455", "1456", "1484"],
+    "a": "Como o paciente que consulta presencialmente o médico para receber o diagnóstico e a prescrição do remédio específico para sua ferida."
+  },
+  {
+    "c": 3,
+    "o": "Onde é que está escrito na Bíblia que Jesus deu poder aos homens para perdoar pecados?",
+    "r": "Jesus deu explicitamente esse poder aos Apóstolos na tarde da Ressurreição e ao conceder a Pedro as chaves do Reino dos céus.",
+    "e": "Na tarde da Ressurreição, o Senhor Jesus apareceu aos Apóstolos, soprou sobre eles e disse para receberem o Espírito Santo e perdoarem os pecados. Além disso, Cristo deu a Pedro e aos Apóstolos a autoridade solene de ligar e desligar na terra e nos céus. As palavras ligar e desligar significam acolher de novo na comunhão da Igreja e de Deus. Esse ministério apostólico foi transmitido aos bispos e presbíteros pelo sacramento da Ordem.",
+    "b": ["Jo 20,22-23", "Mt 16,19"],
+    "bt": [
+      {
+        "ref": "Jo 20,22-23",
+        "t": "Recebei o Espírito Santo: àqueles a quem perdoardes os pecados ser-lhes-ão perdoados; e àqueles a quem os retiverdes ser-lhes-ão retidos"
+      }
+    ],
+    "cic": ["1444", "1461", "1485"],
+    "a": "Como a entrega da chave mestra do cofre pelo proprietário ao seu administrador de confiança para liberar o acesso aos bens da casa."
+  },
+  {
+    "c": 3,
+    "o": "Tenho medo de me confessar porque o padre pode contar meus pecados para outras pessoas ou me julgar.",
+    "r": "O sacerdote é obrigado a guardar segredo absoluto sobre os pecados confessados sob o sigilo sacramental inviolável, sob penas severíssimas.",
+    "e": "A Igreja declara que todo sacerdote que ouve confissões está obrigado a manter segredo absoluto sobre o que ouve na confissão. Esse segredo é chamado sigilo sacramental porque aquilo que o penitente manifesta fica selado pelo próprio sacramento. O sacerdote jamais pode denunciar o penitente ou usar esses conhecimentos por qualquer pretexto ou causa. No confessionário, o sacerdote atua como o bom Pastor que acolhe o pecador com delicadeza e compaixão.",
+    "b": ["1Pd 4,8"],
+    "bt": [],
+    "cic": ["1465", "1467"],
+    "a": "Como um cofre-forte blindado onde o documento depositado é trancado para sempre sem que nenhuma chave no mundo volte a abri-lo."
+  },
+  {
+    "c": 3,
+    "o": "A penitência que o padre manda rezar depois da confissão é para pagar pelo perdão dos pecados?",
+    "r": "A absolvição apaga a culpa do pecado, mas a penitência serve para reparar o dano causado e restabelecer a saúde espiritual da alma.",
+    "e": "O pecado fere e enfraquece o próprio pecador, suas relações com Deus e com o próximo. Embora a absolvição apague o pecado, ela não remedeia todas as desordens e consequências temporais que a falta provocou. A satisfação ou penitência imposta pelo confessor busca reparar os danos causados e ajudar o fiel a conformar sua vida com Cristo. Todos os nossos méritos e a força da nossa satisfação procedem unicamente de Jesus Cristo.",
+    "b": ["Rm 8,17", "Fl 4,13"],
+    "bt": [],
+    "cic": ["1459", "1460"],
+    "a": "Como consertar a cerca do vizinho após ter quebrado a madeira por descuido: o pedido de desculpas restaura a amizade, mas a cerca precisa ser reconstruída."
+  },
+  {
+    "c": 3,
+    "o": "Já fui batizado e limpo de todos os pecados. É desnecessário existir outro sacramento para perdoar pecados depois do Batismo.",
+    "r": "O Batismo nos purifica de fato, mas a fragilidade da natureza humana permanece, exigindo a Reconciliação para quem cai após o Batismo.",
+    "e": "A iniciação cristã nos concede uma vida nova em Cristo, mas não suprime a fraqueza da natureza humana nem a inclinação ao pecado. O Apóstolo São João adverte que se dissermos que não temos pecado, enganamo-nos a nós mesmos. Sabendo dessa realidade, Cristo instituiu a Penitência para reconciliar os batizados que perderam a graça baptismal. Os Padres da Igreja chamam a Penitência de uma tábua de salvação após o naufrágio do pecado.",
+    "b": ["1Jo 1,8", "1Cor 6,11"],
+    "bt": [
+      {
+        "ref": "1Jo 1,8",
+        "t": "Se dissermos que não temos pecado, enganamo-nos a nós mesmos, e a verdade não está em nós"
+      }
+    ],
+    "cic": ["1425", "1426", "1446"],
+    "a": "Como ter um bote de resgate acoplado ao navio para socorrer o passageiro que acidentalmente cai na água durante a viagem."
+  },
+  {
+    "c": 3,
+    "o": "Se a pessoa estiver muito triste pelo mal que fez, esse arrependimento sincero sozinho já perdoa os pecados mortais sem precisar de padre.",
+    "r": "A contrição perfeita nascida do amor de Deus perdoa pecados mortais, mas exige obrigatoriamente a intenção de se confessar assim que possível.",
+    "e": "Quando o arrependimento procede do amor a Deus sobre todas as coisas, a Igreja o chama de contrição perfeita. Essa dor da alma perdoa os pecados veniais e obtém o perdão dos pecados mortais antes da absolvição. No entanto, para ser autêntica, a contrição perfeita inclui necessariamente o firme propósito de recorrer à confissão sacramental logo que haja oportunidade. Sem a intenção do sacramento instituído por Cristo, o perdão não se realiza plenamente.",
+    "b": ["Sl 51,19", "Ez 36,26"],
+    "bt": [],
+    "cic": ["1452"],
+    "a": "Como o envio de um socorro de emergência via rádio que traz alívio imediato, mas exige que o paciente vá ao posto de saúde assim que chegar à cidade."
+  },
+  {
+    "c": 3,
+    "o": "Sentir vergonha de contar meus maus atos a um padre torna a confissão um suplício desumano.",
+    "r": "Expor os pecados ao sacerdote liberta a alma, ajuda a encarar a responsabilidade e permite receber a cura do Médico divino.",
+    "e": "O ato de acusar os próprios pecados, mesmo sob o aspecto humano, traz libertação e facilita a reconciliação interior. Ao confessar, o homem encara a verdade dos seus atos e abre-se à misericórdia de Deus e da comunidade eclesial. São Jerônimo lembrava que se o doente tem vergonha de mostrar sua ferida ao médico, a medicina não pode curar o que desconhece. O confessor não está lá para condenar, mas para estancar as feridas espirituais.",
+    "b": ["Mc 2,17", "Tg 5,16"],
+    "bt": [],
+    "cic": ["1455", "1456"],
+    "a": "Como retirar o curativo e mostrar o machucado ao enfermeiro para que ele possa aplicar o antisséptico correto."
+  },
+  {
+    "c": 3,
+    "o": "A prática da confissão auricular e privada foi uma invenção da Igreja na Idade Média que não existia no cristianismo primitivo.",
+    "r": "A forma da celebração evoluiu na história, mas a estrutura essencial de contrição, confissão e absolvição sempre foi mantida desde as origens.",
+    "e": "Nos primeiros séculos, a reconciliação dos pecados graves envolvia uma rigorosa disciplina penitencial pública. A partir do século VII, os missionários irlandeses difundiram a prática da penitência privada e secreta com o sacerdote. Apesar dessas mudanças de disciplina litúrgica ao longo dos séculos, a estrutura fundamental do sacramento permaneceu idêntica. Essa estrutura inclui sempre os atos do penitente e a ação de Deus por meio da Igreja.",
+    "b": ["2Cor 5,18", "At 19,18"],
+    "bt": [],
+    "cic": ["1447", "1448"],
+    "a": "Como o remédio administrado no hospital que passou a ser entregue em frascos individuais e discretos, mantendo o mesmo princípio ativo curativo."
+  },
+  {
+    "c": 3,
+    "o": "Qualquer pecado meu afeta apenas a mim e a Deus, a comunidade ou a Igreja não têm nada a ver com as minhas escolhas morais.",
+    "r": "O pecado nunca é puramente privado; ele ofende a Deus e atenta contra a comunhão de todo o Corpo Místico da Igreja.",
+    "e": "O pecado é primariamente ofensa a Deus, mas também fere e enfraquece a comunhão espiritual da comunidade cristã. Como a Igreja forma um só Corpo em Cristo, a falta cometida por um dos seus membros prejudica a saúde de todos. Da mesma forma, o sacramento da Reconciliação produz um efeito vivificante que restaura a comunhão dos santos. A reconciliação com a Igreja é inseparável da reconciliação com o Criador.",
+    "b": ["1Cor 12,26", "2Cor 5,20"],
+    "bt": [],
+    "cic": ["1440", "1469"],
+    "a": "Como uma infecção em um dente que espalha mal-estar por todo o corpo, necessitando que o organismo inteiro seja tratado para voltar à saúde."
+  },
+  {
+    "c": 3,
+    "o": "A contrição por medo do inferno não vale nada para Deus; só o arrependimento por amor puro é aceito.",
+    "r": "O arrependimento por temor da condenação chama-se contrição imperfeita e é um dom do Espírito Santo que dispõe a alma a receber o perdão no sacramento.",
+    "e": "A contrição dita imperfeita ou atrição nasce da consideração da gravidade do pecado ou do temor das penas do inferno. Embora não nasça do amor puro de caridade, ela é um impulso real do Espírito Santo que desperta a consciência. Por si mesma ela não obtém o perdão dos pecados graves, mas dispõe a alma para recebê-lo no sacramento da Penitência. Pela absolvição sacramental, a graça leva essa conversão interior a bom termo.",
+    "b": ["Sl 111,10", "Lc 15,17-19"],
+    "bt": [],
+    "cic": ["1453"],
+    "a": "Como o motorista que reduz a velocidade ao ver o sinal de perigo por medo do acidente, iniciando um comportamento prudente que preserva a sua vida."
+  },
+  {
+    "c": 3,
+    "o": "Basta se confessar uma vez na vida quando se converte; ficar se confessando todos os anos é obsessão puritana.",
+    "r": "O mandamento da Igreja prescreve a confissão dos pecados graves ao menos uma vez ao ano como garantia mínima de conversão.",
+    "e": "O mandamento eclesiástico determina que todo fiel que atingiu a idade da discrição deve confessar os pecados graves no mínimo uma vez por ano. Essa obrigação visa a assegurar que o cristão não permaneça no estado de pecado mortal que o afasta da graça. Além disso, a confissão antes de receber a Primeira Comunhão é exigida para as crianças. Esse recurso habitual renova a caminhada de conversão contínua da vida cristã.",
+    "b": ["1Cor 11,28", "Tg 5,16"],
+    "bt": [],
+    "cic": ["1457"],
+    "a": "Como a revisão mecânica anual obrigatória do veículo para certificar que a direção e os freios continuam funcionando com segurança."
+  },
+  {
+    "c": 3,
+    "o": "Confessar pecados veniais pequenos é perda de tempo do padre, só se deve confessar pecado mortal.",
+    "r": "Confessar pecados veniais não é estritamente obrigatório, mas é vivamente recomendado para formar a consciência e progredir nas virtudes.",
+    "e": "A confissão das faltas cotidianas ou pecados veniais não é estritamente necessária, pois eles podem ser perdoados pela oração e pela Eucaristia. Contudo, a Igreja recomenda vivamente a confissão frequente desses pequenos desvios. Essa prática ajuda a formar um juízo moral reto, combater a concupiscência e deixar-se curar pela misericórdia de Cristo. A acusação das faltas veniais é o ponto de partida para o verdadeiro progresso espiritual.",
+    "b": ["Lc 6,36", "1Jo 1,9"],
+    "bt": [],
+    "cic": ["1458"],
+    "a": "Como aparar as pequenas arestas e polir as imperfeições da escultura para torná-la cada dia mais bela e perfeita."
+  },
+  {
+    "c": 3,
+    "o": "Em grandes aglomerações como festas e peregrinações, os padres deveriam dar absolvição geral para todos de uma vez sem confissão individual.",
+    "r": "A absolvição geral é restrita a casos raros de grave necessidade ou perigo iminente de morte, não se aplicando a grandes afluências de fiéis.",
+    "e": "A absolvição geral coletiva sem confissão prévia individual só é permitida em caso de iminente perigo de morte ou grave necessidade sem confessores suficientes. O Catecismo esclarece expressamente que grandes afluências de fiéis em festas ou peregrinações não constituem motivo de grave necessidade. Além disso, quem recebe a absolvição geral precisa ter o propósito de confessar individualmente seus pecados graves posteriormente. A confissão individual continua sendo o único modo ordinário.",
+    "b": ["Mc 2,5", "Jo 20,23"],
+    "bt": [],
+    "cic": ["1483", "1484"],
+    "a": "Como a distribuição de coletes salva-vidas de emergência em um naufrágio iminente, que não substitui o atendimento médico individualizado posterior na praia."
+  },
+  {
+    "c": 3,
+    "o": "Fazer mortificação ou privações voluntárias na Quaresma é uma prática masoquista medieval sem utilidade espiritual.",
+    "r": "O jejum, a oração e a esmola expressam a conversão interior do coração em relação a si mesmo, a Deus e aos outros.",
+    "e": "A penitência interior do cristão traduz-se em obras externas como o jejum, a oração e a esmola. Nos tempos litúrgicos como a Quaresma e nas sextas-feiras, essas práticas de ascese reavivam o espírito de conversão. Privações voluntárias e partilha fraterna ajudam a dominar as inclinações desordenadas e libertam o coração. Essas atitudes não representam desespero, mas união ao sacrifício redentor de Cristo.",
+    "b": ["Mt 6,16-18", "Tb 12,8"],
+    "bt": [],
+    "cic": ["1434", "1438"],
+    "a": "Como o treino físico rigoroso do atleta que restringe o consumo de doces para ganhar fôlego e resistência na corrida."
+  },
+  {
+    "c": 3,
+    "o": "A fórmula de absolvição dita pelo sacerdote católico é um texto frio e burocrático que não reflete a misericórdia de Deus.",
+    "r": "A fórmula da absolvição invoca expressamente a misericórdia do Pai, a Paixão do Filho e a efusão do Espírito Santo concedendo perdão e paz.",
+    "e": "Na Igreja latina, a fórmula sacramental da absolvição proclama que Deus, Pai de misericórdia, reconciliou o mundo consigo pela morte e ressurreição do Seu Filho. Ela lembra a missão do Espírito Santo enviado para a remissão dos pecados e concede ao penitente o perdão e a paz pelo ministério da Igreja. O sacerdote conclui absolvendo as culpas em Nome da Santíssima Trindade. Trata-se de uma solene e amorosa invocação da graça divina.",
+    "b": ["2Cor 5,18", "Jo 20,22-23"],
+    "bt": [],
+    "cic": ["1449"],
+    "a": "Como o veredito de absolvição lido pelo juiz que cita o decreto de clemência do governante e declara o réu livre de qualquer acusação."
+  },
+  {
+    "c": 3,
+    "o": "O sacramento da confissão perdoa pecados e apaga as penas eternas, mas é falso dizer que antecipa qualquer julgamento de Deus.",
+    "r": "Na confissão, o pecador submete-se ao juízo misericordioso de Deus nesta vida, passando da morte à vida sem ir a julgamento de condenação.",
+    "e": "Ao recorrer ao sacramento da Penitência, o fiel remete-se ao julgamento misericordioso de Deus e antecipa de certo modo o juízo final. É nesta vida terrena que nos é dada a oportunidade de escolher entre a vida e a morte espiritual. Ao se converter pela fé e pela absolvição, o pecador passa da morte para a vida e não será sujeito à condenação. A misericórdia acolhida hoje liberta a alma do temor do julgamento futuro.",
+    "b": ["Jo 5,24", "1Cor 11,31"],
+    "bt": [
+      {
+        "ref": "Jo 5,24",
+        "t": "não é sujeito a julgamento"
+      }
+    ],
+    "cic": ["1470"],
+    "a": "Como apresentar o comprovante de liquidação espontânea do débito no guichê antes que o caso seja levado à execução judicial."
+  },
+  {
+    "c": 3,
+    "o": "Os bispos e padres agem com prepotência ao dizerem que podem decidir quem fica ligado ou desligado da comunidade.",
+    "r": "As chaves dadas a Pedro e aos Apóstolos significam que a acolhida ou exclusão da comunhão eclesial reflete a reconciliação com o próprio Deus.",
+    "e": "Jesus conferiu a Pedro e aos Apóstolos a autoridade de ligar e desligar, que significa acolher de novo ou excluir da comunidade crente. Essa função eclesial foi confiada aos bispos e presbíteros como um serviço pastoral à santidade da Igreja. Quem é privado da comunhão por atos graves precisa arrepender-se para ser reintegrado. A reconciliação operada pelos ministros na terra é sancionada por Deus nos céus.",
+    "b": ["Mt 16,19", "Mt 18,18"],
+    "bt": [
+      {
+        "ref": "Mt 16,19",
+        "t": "Dar-te-ei as chaves do Reino dos céus; tudo o que ligares na terra ficará ligado nos céus, e tudo o que desligares na terra ficará desligado nos céus"
+      }
+    ],
+    "cic": ["1444", "1445"],
+    "a": "Como o porteiro do clube que verifica a credencial de sócio na portaria, garantindo a integridade e o respeito às normas internas da instituição."
+  },
+  {
+    "c": 3,
+    "o": "Fazer o exame de consciência à luz dos dez mandamentos é uma prática obsoleta que só gera culpa desnecessária.",
+    "r": "O exame de consciência ilumina a alma com a Palavra de Deus para reconhecer a verdade dos próprios atos e buscar a cura.",
+    "e": "A preparação adequada para o sacramento da Penitência exige um sério exame de consciência feito à luz da Palavra de Deus. O Decálogo, o Sermão da Montanha e os ensinamentos dos Apóstolos oferecem o espelho moral onde a alma enxerga suas faltas. Esse exame não visa a produzir remorso estéril, mas a despertar o arrependimento sincero e o desejo de conversão. Iluminada pela verdade, a consciência abre-se ao perdão misericordioso de Deus.",
+    "b": ["Rm 12,2", "1Cor 13,4-7"],
+    "bt": [],
+    "cic": ["1454"],
+    "a": "Como acender a lâmpada do quarto escuro para enxergar onde estão os objetos fora de lugar e conseguir arrumar a sala."
+  },
+  {
+    "c": 3,
+    "o": "A Bíblia diz que o homem se converte quando quer; dizer que a conversão é graça de Deus tira o mérito do esforço humano.",
+    "r": "A conversão exige o movimento do coração humano, mas é iniciada e movida primariamente pela graça atrativa de Deus.",
+    "e": "A conversão não é um produto exclusivo das forças morais humanas. É o movimento de um coração contrito atraído e tocado pela graça de Deus, que nos amou primeiro. O profeta Jeremias suplica na Escritura: Convertei-nos, Senhor, e seremos convertidos. É ao descobrir a profundeza do amor divino que o coração do pecador se comove e ganha coragem para recomeçar. A graça precede e acompanha cada passo do regresso ao Pai.",
+    "b": ["Lm 5,21", "Jo 6,44"],
+    "bt": [
+      {
+        "ref": "Lm 5,21",
+        "t": "Convertei-nos, Senhor, e seremos convertidos"
+      }
+    ],
+    "cic": ["1428", "1432"],
+    "a": "Como o filho que só toma coragem para voltar para casa porque sabe que os braços abertos e o amor do pai o estão aguardando."
+  },
+  {
+    "c": 3,
+    "o": "Se o padre for um homem indigno ou culpado de maus atos, a absolvição dada por ele não vale nada.",
+    "r": "A eficácia da absolvição não depende da santidade do confessor, mas da autoridade e da ação do próprio Cristo que age através dele.",
+    "e": "Os bispos e presbíteros exercem o ministério da reconciliação em virtude do sacramento da Ordem que receberam. Quando o sacerdote pronuncia a absolvição, é o próprio Cristo que perdoa e cura a alma do pecador. Por essa razão, as limitações ou falhas morais do ministro não anulam a validade da graça dispensada ao penitente contrito. A misericórdia divina garante que a salvação do fiel não fique prisioneira do homem.",
+    "b": ["2Cor 5,20", "Jo 20,23"],
+    "bt": [],
+    "cic": ["1461", "1484"],
+    "a": "Como o decreto de indulto assinado pelo funcionário do cartório: a validade da lei depende do selo do Estado e não das virtudes pessoais do escrivão."
+  },
+  {
+    "c": 3,
+    "o": "Pedir perdão de joelhos diante do sacerdote é uma humilhação que destrói o amor-próprio da pessoa.",
+    "r": "A verdadeira penitência requer a humildade do coração que reconhece a verdade da própria falta para ser elevado pela graça.",
+    "e": "O sacramento da Penitência leva o pecador a assumir livremente suas falhas com contrição no coração, confissão na boca e humildade nas obras. Essa atitude de simplicidade não destrói a dignidade humana, mas restaura a verdade interior da pessoa diante do seu Criador. A conversão inspira-se na parábola do filho pródigo, que reconheceu seu erro e foi acolhido com alegria pelo pai. A humildade é o terreno onde a misericórdia floresce.",
+    "b": ["Lc 15,18.21", "Tg 4,10"],
+    "bt": [],
+    "cic": ["1439", "1450", "1489"],
+    "a": "Como o paciente que se deita na maca do hospital para ser examinado pelo médico, permitindo que o tratamento salve a sua vida."
+  },
+  {
+    "c": 3,
+    "o": "A Igreja usa a excomunhão como um ato de vingança para rejeitar os fiéis que cometeram faltas graves.",
+    "r": "A excomunhão é a pena medicinal mais severa da Igreja para conscientizar da gravidade do delito e motivar o arrependimento do culpado.",
+    "e": "Certos pecados de gravidade extrema são punidos pela Igreja com a pena da excomunhão. Essa medida impede a recepção dos sacramentos e visa a proteger a comunidade e fazer o culpado tomar consciência do mal cometido. Longe de ser uma vingança definitiva, a excomunhão tem um objetivo essencialmente medicinal de convidar o pecador à conversão. Em caso de perigo de morte, qualquer sacerdote pode absolver de qualquer excomunhão.",
+    "b": ["1Cor 5,5", "1Tm 1,20"],
+    "bt": [],
+    "cic": ["1463"],
+    "a": "Como o isolamento sanitário temporário imposto ao paciente com infecção contagiosa grave para protegê-lo e evitar a contaminação dos outros."
+  },
+  {
+    "c": 3,
+    "o": "Rezar o Pai-Nosso ou fazer uma boa ação é uma penitência muito fraca para apagar um pecado grave.",
+    "r": "A penitência imposta pelo confessor adapta-se à situação do fiel, e seu valor expiatório vem totalmente dos méritos infinitos de Cristo.",
+    "e": "A satisfação imposta no confessionário deve levar em conta a situação do penitente e a gravidade dos pecados cometidos. Ela pode consistir em orações, obras de caridade, serviços aos necessitados ou privações voluntárias. Todavia, a nossa capacidade de satisfazer pelos nossos erros não deriva de nossas próprias forças, mas haure todo o seu valor na Paixão de Cristo. Unindo nosso pequeno esforço ao sofrimento do Senhor, tornamo-nos co-herdeiros de Sua glória.",
+    "b": ["Rm 3,25", "1Jo 2,1-2"],
+    "bt": [],
+    "cic": ["1460"],
+    "a": "Como a pequena contribuição simbólica dada pela criança para ajudar a pagar a dívida que o pai já quitou por inteiro no banco."
+  },
+  {
+    "c": 3,
+    "o": "Não preciso do sacramento da reconciliação porque me esforço para ser uma boa pessoa e não faço mal a ninguém.",
+    "r": "O pecado é uma ofensa à santidade de Deus e ao Seu amor, e aos olhos da fé não existe mal pior do que o pecado.",
+    "e": "A vida de fé ensina que o pecado não se reduz a causar danos sociais visíveis, mas é a recusa do amor de Deus e da Sua Lei eterna. Todos os batizados carregam a inclinação ao egoísmo e necessitam continuamente da cura trazida pelos sacramentos. Aos olhos da fé, não existe mal mais grave do que o pecado, pois ele fere a honra divina e a dignidade humana. O sacramento da Reconciliação oferece a cura trazida por Cristo, Médico das almas.",
+    "b": ["Rm 3,23", "1Jo 1,8-10"],
+    "bt": [],
+    "cic": ["1487", "1488"],
+    "a": "Como o organismo aparentemente saudável que carrega pequenas toxinas internas invisíveis e necessita de desintoxicação regular."
+  }
+]
