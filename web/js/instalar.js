@@ -4,6 +4,8 @@
 // - Já instalado (aberto como app): não mostra nada.
 // Ao tocar "Agora não", o aviso só volta depois de DIAS_PAUSA dias; a opção continua na aba Mais.
 
+import { contarEvento } from './metricas.js';
+
 const DIAS_PAUSA = 14;
 const CHAVE = 'instalar_pausa_ate';
 
@@ -108,6 +110,7 @@ export function iniciarInstalacao() {
     setTimeout(talvezMostrar, 1200);
   });
   window.addEventListener('appinstalled', () => {
+    contarEvento('app/instalado', 'Instalação do app');
     eventoInstalar = null;
     fecharAviso(false);
     avisar();

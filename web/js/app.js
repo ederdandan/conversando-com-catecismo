@@ -4,7 +4,8 @@ import { htmlSumario, htmlCapitulo, htmlNota, htmlParagrafo, nomeParte, partesDe
 import { sairDaIA, telaConversar, telaEntrar, temIA } from './chat.js';
 import { criarIndice, buscar, numerosCitados, radicaisDaPergunta, trecho } from './busca.js';
 import { esc, partesHtml } from './html.js';
-import { aoMudar, htmlInstrucoesIOS, iniciarInstalacao, instalar, modoInstalacao } from './instalar.js';
+import { aoMudar, htmlInstrucoesIOS, iniciarInstalacao, instalado, instalar, modoInstalacao } from './instalar.js';
+import { contarEvento, contarTela } from './metricas.js';
 import { iniciarGestos } from './gestos.js';
 import { aspas, buscarFaq, carregarFaq, htmlListaPerguntas, htmlPergunta, perguntasDoCapitulo, perguntasDoTema } from './faq.js';
 
@@ -66,6 +67,7 @@ aplicarTema(pref.ler('tema', 'auto'));
 // Ao mudar a letra o texto reflui: volta ao § que estava no topo da leitura.
 function mudarFonte(delta) {
   aplicarFonte(nivelFonte() + delta);
+  contarEvento(`letra/nivel-${nivelFonte() + 1}`, 'Tamanho da letra');
   if (document.body.dataset.rota === 'p' && paragrafoVisivel) document.getElementById(`p${paragrafoVisivel}`)?.scrollIntoView({ block: 'start' });
 }
 $('#bt-menor').addEventListener('click', () => mudarFonte(-1));
@@ -73,7 +75,9 @@ $('#bt-maior').addEventListener('click', () => mudarFonte(1));
 // Botões de tema existem na folha Aa e na aba Mais (que é redesenhada): um ouvinte só, no documento.
 document.addEventListener('click', (ev) => {
   const b = ev.target.closest('[data-tema]');
-  if (b) aplicarTema(b.dataset.tema);
+  if (!b) return;
+  aplicarTema(b.dataset.tema);
+  contarEvento(`tema/${b.dataset.tema}`, 'Tema de cores');
 });
 
 // ---------- índice de busca (criado sob demanda) ----------
@@ -287,6 +291,7 @@ async function telaFaq(d, arg) {
       <p class="contagem">${lista.length ? `${plural(lista.length, 'pergunta', 'perguntas')} sobre <strong>${esc(b)}</strong>` : `Nenhuma dúvida frequente sobre <strong>${esc(b)}</strong>. <a href="#/busca/${encodeURIComponent(b)}">Buscar no texto do Catecismo</a>.`}</p>
       ${htmlListaPerguntas(lista)}</div>`;
     document.title = `${b} · Perguntas frequentes`;
+    contarEvento(`${lista.length ? 'busca-duvidas' : 'busca-duvidas-sem-resultado'}/${b.toLowerCase().slice(0, 60)}`, `${lista.length} perguntas`);
   } else if (a === 'cap' && d.capituloDe(Number(b))) {
     const cap = d.capituloDe(Number(b));
     const lista = perguntasDoCapitulo(faq, cap.ini, cap.fim).sort((x, y) => x.principal - y.principal);
@@ -364,6 +369,7 @@ function telaLeitor(d, n) {
     capituloAtual = cap;
     observarLeitura(d);
     preencherFaqCapitulo(cap);
+    contarTela(`/ler/${cap.ini}`, cap.titulo || cap.tituloParte || 'Leitura');
   }
   const alvo = document.getElementById(`p${n}`);
   document.querySelectorAll('.par.alvo').forEach((el) => el.classList.remove('alvo'));
@@ -417,6 +423,7 @@ function telaBusca(d, q) {
     <ol class="resultados">${lista.join('')}</ol></div>`;
   ligarFormBusca();
   document.title = `${q} · Busca · Catecismo`;
+  contarEvento(`${lista.length ? 'busca' : 'busca-sem-resultado'}/${q.toLowerCase().slice(0, 60)}`, `${lista.length} resultados`);
   // Busca única: as dúvidas frequentes sobre o mesmo assunto aparecem junto do texto.
   carregarFaq().then((faq) => {
     const l = buscarFaq(faq, q, 3);
@@ -464,6 +471,11 @@ function telaSobre(d) {
         <a href="${esc(d.fonte)}" target="_blank" rel="noopener">vatican.va</a> (edição de Portugal), com a grafia adaptada ao Brasil (ação, batismo, matrimônio).
         © Libreria Editrice Vaticana. Uso não comercial.</p>
       <p>O leitor funciona sem internet depois da primeira visita.</p>
+      <h2>Estatísticas de uso</h2>
+      <p>Para saber o que é mais usado e melhorar o app, contamos de forma anônima as telas abertas e algumas ações
+        (perguntas frequentes abertas, buscas, tema escolhido), pelo GoatCounter. Não usamos cookies, não guardamos
+        dados pessoais nem o texto das perguntas feitas no chat. Se o seu navegador pede para não ser rastreado
+        («Do Not Track»), nada é contado.</p>
       <h2>Sobre o chat</h2>
       <p>Sem código de convite, o chat responde com o <strong>Compêndio do Catecismo da Igreja Católica</strong>
         (Santa Sé, 2005) ou com as <strong>perguntas frequentes</strong> deste site: a pergunta mais parecida com a sua,
@@ -485,6 +497,33 @@ function telaSobre(d) {
   });
 }
 
+// ---------- métricas: nome estável de cada tela (sem dados da pessoa) ----------
+function caminhoMetrica(rota, arg) {
+  const fixas = { inicio: 'Início', busca: 'Busca', conversar: 'Conversar', entrar: 'Código de convite' };
+  if (rota === 'sumario') return ['/ler', 'Ler o Catecismo'];
+  if (rota === 'sobre') return ['/mais', 'Mais'];
+  if (rota !== 'duvidas') return [`/${fixas[rota] ? rota : 'outra'}`, fixas[rota] || 'Outra'];
+  const [a = '', b = ''] = arg.split('/');
+  if (!a) return ['/duvidas', 'Dúvidas frequentes'];
+  if (a === 'busca') return ['/duvidas/busca', 'Dúvidas: busca'];
+  if (a === 'parte') return [`/duvidas/parte-${b}`, `Dúvidas: ${b}ª Parte`];
+  if (a === 'cap') return [`/duvidas/capitulo-${b}`, 'Dúvidas do capítulo'];
+  if (a === 'q') return [`/duvidas/pergunta/${b}`, 'Pergunta compartilhada'];
+  return [`/duvidas/${a}${b ? `-${b}` : ''}`, 'Dúvidas: tema'];
+}
+
+// Pergunta frequente aberta, "Reportar erro" e "Perguntar sobre este trecho".
+document.addEventListener('toggle', (ev) => {
+  const it = ev.target;
+  if (it.classList?.contains('faq-item') && it.open) contarEvento(`duvida/aberta/${it.id}`, it.querySelector('summary')?.textContent.trim() || '');
+}, true);
+document.addEventListener('click', (ev) => {
+  const rep = ev.target.closest('.bt-reportar');
+  if (rep) contarEvento(`duvida/reportar-erro/${rep.closest('.faq-item')?.id || ''}`, 'Reportar erro');
+  if (ev.target.closest('[data-perguntar]')) contarEvento('leitor/perguntar-sobre-trecho', 'Perguntar sobre este trecho');
+});
+contarEvento(instalado() ? 'sessao/app-instalado' : 'sessao/navegador', 'Abertura do app');
+
 // ---------- roteador ----------
 async function rotear() {
   const h = decodeURIComponent(location.hash.replace(/^#\/?/, ''));
@@ -497,6 +536,7 @@ async function rotear() {
     if (ativo) a.setAttribute('aria-current', 'page'); else a.removeAttribute('aria-current');
   });
   document.body.dataset.rota = rota || 'inicio';
+  if (rota !== 'p') contarTela(...caminhoMetrica(rota || 'inicio', arg));
   if (rota !== 'p') { capituloAtual = null; window.scrollTo({ top: 0 }); document.title = 'Catecismo da Igreja Católica'; }
   if (rota === 'conversar') return telaConversar(main, { carregar, obterIndice });
   if (rota === 'entrar') return telaEntrar(main, { carregar, obterIndice });
@@ -608,6 +648,7 @@ async function compartilharPergunta(id) {
   let q;
   try { q = (await carregarFaq()).perguntas.find((x) => x.id === id); } catch { return; }
   if (!q) return;
+  contarEvento(`duvida/compartilhada/${id}`, q.p);
   const url = `${location.origin}${location.pathname}#/duvidas/q/${encodeURIComponent(id)}`;
   const texto = `${q.p}\n\n${q.r}`;
   if (navigator.share) {

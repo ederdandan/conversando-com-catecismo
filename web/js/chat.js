@@ -4,6 +4,7 @@ import { selecionarParagrafos } from './busca.js';
 import { avaliarResposta, htmlResposta, MENSAGEM_RECUSA } from './citacoes.js';
 import { esc } from './html.js';
 import { carregarCompendio, criarIndiceCompendio, htmlRespostaCompendio, responderLocal } from './compendio.js';
+import { contarEvento } from './metricas.js';
 import { carregarFaq, criarIndiceFaq } from './faq.js';
 import { salvarLista } from './historico.js';
 
@@ -237,6 +238,8 @@ async function perguntar(main, texto, ctx, { forcarIA = false } = {}) {
     const daqui = conversa;
     const resposta = await respostaLocal(pergunta, '', { estrita: temIA() });
     if (conversa !== daqui) return; // "Nova conversa" no meio do caminho
+    // Métrica: só o tipo de resposta, nunca o texto da pergunta.
+    if (resposta || !temIA()) contarEvento(resposta ? 'chat/resposta-pronta' : 'chat/sem-resposta', temIA() ? 'Chat com IA' : 'Chat sem IA');
     if (resposta) {
       const i = conversa.push(resposta) - 1;
       atualizarMensagem(main, i);
@@ -269,6 +272,7 @@ async function perguntar(main, texto, ctx, { forcarIA = false } = {}) {
     historico.push({ papel: 'assistente', texto: ultResp.texto.slice(0, MAX_HISTORICO_CHARS - 400) });
   }
 
+  contarEvento('chat/resposta-ia', 'Chat com IA');
   emAndamento = new AbortController();
   const form = main.querySelector('#form-pergunta');
   form?.classList.add('ocupado');

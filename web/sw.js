@@ -1,13 +1,13 @@
 // Service worker: leitor 100% offline. Nunca intercepta a API do chat (outro domínio / /api/).
 // Ao mudar qualquer arquivo do site, troque a VERSAO: os aparelhos baixam tudo de novo e recarregam.
-const VERSAO = 'catecismo-v31';
+const VERSAO = 'catecismo-v32';
 const ARQUIVOS = [
   './', 'index.html', 'estilo.css', 'manifest.webmanifest',
   'icones/icone-192.png', 'icones/icone-512.png', 'icones/icone-maskable-512.png',
   'icones/apple-touch-icon.png', 'icones/favicon-32.png',
   'js/app.js', 'js/dados.js', 'js/leitor.js', 'js/busca.js', 'js/html.js',
   'js/chat.js', 'js/citacoes.js', 'js/config.js', 'js/compendio.js', 'js/instalar.js',
-  'js/historico.js', 'js/gestos.js', 'js/faq.js', 'js/semelhanca.js',
+  'js/historico.js', 'js/gestos.js', 'js/faq.js', 'js/semelhanca.js', 'js/metricas.js',
   'data/catecismo.json', 'data/compendio.json', 'data/faq.json',
 ];
 
