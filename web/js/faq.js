@@ -41,7 +41,7 @@ const chaves = (texto) => new Set(termos(texto).map(chave));
 export function buscarFaq(faq, consulta, limite = 30) {
   const qs = [...new Set(termos(consulta).map(chave))];
   if (!qs.length) return [];
-  faq.termos ??= faq.perguntas.map((q) => ({ p: chaves(q.p), r: chaves(`${q.r} ${q.a}`) }));
+  faq.termos ??= faq.perguntas.map((q) => ({ p: chaves(q.p), r: chaves(`${q.r} ${q.e || ''} ${q.a}`) }));
   const N = faq.perguntas.length;
   const idf = qs.map((t) => {
     const df = faq.termos.filter(({ p, r }) => p.has(t) || r.has(t)).length;
@@ -86,10 +86,10 @@ export const htmlCicFaq = (cic) => cic.map(([a, b]) =>
   `<button type="button" class="cita fonte" data-n="${a}">§ ${a}${b > a ? `–${b}` : ''}</button>`).join('');
 
 // "Reportar erro": abre o email do leitor com o código da pergunta (só se EMAIL_ERROS estiver configurado).
-function htmlReportar(q, email = EMAIL_ERROS) {
+export function htmlReportar(q, email = EMAIL_ERROS, tipo = 'pergunta') {
   if (!email) return '';
-  const assunto = encodeURIComponent(`Erro na pergunta ${q.id}`);
-  const corpo = encodeURIComponent(`Pergunta: ${q.p}\n\nO que está errado:\n\n`);
+  const assunto = encodeURIComponent(`Erro na ${tipo} ${q.id}`);
+  const corpo = encodeURIComponent(`${tipo[0].toUpperCase() + tipo.slice(1)}: ${q.p}\n\nO que está errado:\n\n`);
   return `<a class="bt-reportar" href="mailto:${esc(email)}?subject=${assunto}&amp;body=${corpo}">Reportar erro</a>`;
 }
 

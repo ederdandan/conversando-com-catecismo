@@ -8,6 +8,7 @@ import { aoMudar, htmlInstrucoesIOS, iniciarInstalacao, instalado, instalar, mod
 import { contarEvento, contarTela } from './metricas.js';
 import { iniciarGestos } from './gestos.js';
 import { aspas, buscarFaq, carregarFaq, htmlListaPerguntas, htmlPergunta, perguntasDoCapitulo, perguntasDoTema } from './faq.js';
+import { buscarObjecoes, carregarObjecoes, htmlListaObjecoes, htmlObjecao, objecoesDoCapitulo, objecoesDoTema } from './objecoes.js';
 
 const $ = (s, el = document) => el.querySelector(s);
 const main = $('#conteudo');
@@ -152,6 +153,7 @@ function telaInicio(d) {
       ${cartaoLeitura}
       <div class="lista-acoes">
         <a class="linha-acao" href="#/duvidas"><span class="icone-caixa">${icone('duvida')}</span><span class="t"><strong>Dúvidas frequentes</strong><small id="n-duvidas">Perguntas de católicos, respondidas com o Catecismo</small></span>${icone('dir')}</a>
+        <a class="linha-acao" href="#/objecoes"><span class="icone-caixa">${icone('cruz')}</span><span class="t"><strong>Respostas a objeções</strong><small id="n-objecoes">O que dizer quando questionam a fé católica</small></span>${icone('dir')}</a>
         <a class="linha-acao" href="#/conversar"><span class="icone-caixa">${icone('chat')}</span><span class="t"><strong>Tire uma dúvida</strong><small>${temIA() ? 'Um catequista responde com o Catecismo' : 'Escreva sua pergunta; a resposta vem do Catecismo'}</small></span>${icone('dir')}</a>
       </div>
       <div>
@@ -164,6 +166,10 @@ function telaInicio(d) {
     const el = $('#n-duvidas', main);
     if (el) el.textContent = `${faq.perguntas.length.toLocaleString('pt-BR')} perguntas de católicos, respondidas com o Catecismo`;
   }).catch(() => { /* sem FAQ: fica o texto padrão */ });
+  carregarObjecoes().then((ob) => {
+    const el = $('#n-objecoes', main);
+    if (el) el.textContent = `${ob.objecoes.length.toLocaleString('pt-BR')} objeções, com resposta curta e explicação do Catecismo`;
+  }).catch(() => { /* sem objeções */ });
 }
 
 function telaSumario(d, parte) {
@@ -254,8 +260,8 @@ function tituloGrupo(t) {
   const min = t.toLowerCase().replace(/\p{L}[\p{L}-]*/gu, (w) => (PROPRIOS.has(w) ? w[0].toUpperCase() + w.slice(1) : w));
   return min.replace(/\p{L}/u, (c) => c.toUpperCase()); // «mestre…» → «Mestre…»
 }
-function htmlAgrupada(d, lista) {
-  if (lista.length <= 20) return htmlListaPerguntas(lista);
+function htmlAgrupada(d, lista, render = htmlListaPerguntas, nomes = ['pergunta', 'perguntas']) {
+  if (lista.length <= 20) return render(lista);
   const grupos = [];
   for (const q of [...lista].sort((x, y) => x.principal - y.principal)) {
     const g = grupoDoParagrafo(d, q.principal);
@@ -270,10 +276,10 @@ function htmlAgrupada(d, lista) {
     grupos.splice(i, 1);
     i -= 1;
   }
-  if (grupos.length < 2) return htmlListaPerguntas(lista);
+  if (grupos.length < 2) return render(lista);
   return `<div class="faq-grupos">${grupos.map(({ g, qs }) => `<details class="faq-grupo">
-      <summary><span class="t"><strong>${esc(tituloGrupo(g))}</strong><small>§ ${qs[0].principal}–${qs[qs.length - 1].principal} · ${plural(qs.length, 'pergunta', 'perguntas')}</small></span>${icone('baixo')}</summary>
-      ${htmlListaPerguntas(qs)}
+      <summary><span class="t"><strong>${esc(tituloGrupo(g))}</strong><small>§ ${qs[0].principal}–${qs[qs.length - 1].principal} · ${plural(qs.length, ...nomes)}</small></span>${icone('baixo')}</summary>
+      ${render(qs)}
     </details>`).join('')}</div>`;
 }
 
@@ -333,13 +339,90 @@ async function telaFaq(d, arg) {
       const { curto, rotulo } = nomeParte(pt.parte, pt.titulo);
       return `<a class="cartao-parte" href="#/duvidas/parte/${pt.parte}"><small>${rotulo}</small><strong>${esc(curto)}</strong><span class="cartao-n">${contagem.get(pt.parte).toLocaleString('pt-BR')} perguntas</span></a>`;
     }).join('');
-    html = `${cabecalho('Dúvidas frequentes')}<div class="tela faq">
+    html = `${cabecalho('Dúvidas frequentes')}<div class="tela faq">${abasDuvidas('duvidas')}
       <p class="sub">Dúvidas comuns de católicos, respondidas com o Catecismo, com passagens da Bíblia e uma comparação para ajudar a entender. Toque num § para ler o texto oficial.</p>
       ${formFaq()}
       <div><h2 class="rotulo">Escolha uma parte do Catecismo</h2><div class="grade-partes">${cartoes}</div></div></div>`;
   }
   main.innerHTML = html;
   ligarFormFaq();
+}
+
+// ---------- objeções ----------
+const abasDuvidas = (atual) => `<nav class="seg" aria-label="Dúvidas ou objeções">
+    <a href="#/duvidas"${atual === 'duvidas' ? ' aria-current="page"' : ''}>Dúvidas</a>
+    <a href="#/objecoes"${atual === 'objecoes' ? ' aria-current="page"' : ''}>Objeções</a>
+  </nav>`;
+
+const formObj = (valor = '') => `<form class="busca" id="form-obj" role="search">
+    <label>${icone('busca')}
+      <input type="search" name="q" value="${esc(valor)}" placeholder="Buscar nas objeções" aria-label="Buscar nas objeções" autocomplete="off" enterkeyhint="search" />
+    </label>
+    <button type="submit">Buscar</button>
+  </form>`;
+
+function ligarFormObj() {
+  $('#form-obj')?.addEventListener('submit', (ev) => {
+    ev.preventDefault();
+    const q = new FormData(ev.target).get('q').toString().trim();
+    if (q) location.hash = `#/objecoes/busca/${encodeURIComponent(q)}`;
+  });
+}
+
+const OBJ_NOMES = ['objeção', 'objeções'];
+const linhaTemaObj = (ob, s, t) => {
+  const n = objecoesDoTema(ob, s.id, t.c).length;
+  return n ? `<a class="linha-acao" href="#/objecoes/${s.id}/${t.c}"><span class="t"><strong>${esc(t.titulo)}</strong><small>${plural(n, ...OBJ_NOMES)}</small></span>${icone('dir')}</a>` : '';
+};
+
+// #/objecoes · #/objecoes/s1/2 · #/objecoes/q/<id> · #/objecoes/cap/<ini> · #/objecoes/busca/<texto>
+async function telaObjecoes(d, arg) {
+  let ob;
+  try { ob = await carregarObjecoes(); } catch (e) { return telaErro(e); }
+  const [a, ...resto] = arg.split('/');
+  const b = resto.join('/');
+  const secao = ob.secoes.find((s) => s.id === a);
+  let html;
+  if (a === 'busca' && b) {
+    const lista = buscarObjecoes(ob, b);
+    html = `${cabVoltar('#/objecoes', 'Voltar às objeções', 'Buscar', 'Respostas a objeções')}<div class="tela faq">${formObj(b)}
+      <p class="contagem">${lista.length ? `${plural(lista.length, ...OBJ_NOMES)} sobre <strong>${esc(b)}</strong>` : `Nenhuma objeção sobre <strong>${esc(b)}</strong>. <a href="#/duvidas/busca/${encodeURIComponent(b)}">Buscar nas dúvidas frequentes</a>.`}</p>
+      ${htmlListaObjecoes(lista)}</div>`;
+    document.title = `${b} · Objeções`;
+    contarEvento(`${lista.length ? 'busca-objecoes' : 'busca-objecoes-sem-resultado'}/${b.toLowerCase().slice(0, 60)}`, `${lista.length} objeções`);
+  } else if (a === 'cap' && d.capituloDe(Number(b))) {
+    const cap = d.capituloDe(Number(b));
+    const lista = objecoesDoCapitulo(ob, cap.ini, cap.fim).sort((x, y) => x.principal - y.principal);
+    html = `${cabVoltar(`#/p/${cap.ini}`, 'Voltar ao capítulo', cap.titulo || cap.tituloParte, 'Objeções sobre o capítulo')}<div class="tela faq">
+      <p class="contagem">${plural(lista.length, ...OBJ_NOMES)} · § ${cap.ini}–${cap.fim}</p>
+      ${htmlListaObjecoes(lista)}</div>`;
+  } else if (a === 'q') {
+    const o = ob.objecoes.find((x) => x.id === b);
+    const s = o && ob.secoes.find((x) => x.id === o.s);
+    const t = s?.temas.find((x) => x.c === o.c);
+    if (!t) { location.replace('#/objecoes'); return; }
+    html = `${cabVoltar(`#/objecoes/${s.id}/${t.c}`, 'Ver o tema', t.titulo, 'Respostas a objeções')}<div class="tela faq">
+      ${htmlObjecao(o, { aberta: true })}
+      <div class="lista-acoes">${linhaTemaObj(ob, s, t)}</div></div>`;
+    document.title = `${o.o} · Objeções`;
+  } else if (secao && b) {
+    const tema = secao.temas.find((t) => String(t.c) === b);
+    if (!tema) { location.replace('#/objecoes'); return; }
+    const lista = objecoesDoTema(ob, secao.id, tema.c);
+    const agrupada = htmlAgrupada(d, lista, htmlListaObjecoes, OBJ_NOMES);
+    html = `${cabVoltar('#/objecoes', 'Voltar às objeções', tema.titulo, `${secao.parte}ª Parte · ${secao.titulo}`)}<div class="tela faq">
+      <p class="contagem">${plural(lista.length, ...OBJ_NOMES)}${agrupada.includes('faq-grupo') ? ' · toque num assunto para ver as objeções' : ''}</p>
+      ${agrupada}</div>`;
+    document.title = `${tema.titulo} · Objeções`;
+  } else {
+    const blocos = ob.secoes.map((s) => `<section class="faq-secao"><h2 class="faq-secao-titulo">${esc(s.titulo)} <small>${s.parte}ª Parte</small></h2>
+      <div class="lista-acoes">${s.temas.map((t) => linhaTemaObj(ob, s, t)).join('')}</div></section>`).join('');
+    html = `${cabecalho('Dúvidas frequentes')}<div class="tela faq">${abasDuvidas('objecoes')}
+      <p class="sub">${ob.objecoes.length.toLocaleString('pt-BR')} objeções comuns à fé católica, com uma resposta curta para a conversa e a explicação do Catecismo. Responda “com mansidão e respeito” (1Pd 3,15).</p>
+      ${formObj()}${blocos}</div>`;
+  }
+  main.innerHTML = html;
+  ligarFormObj();
 }
 
 // Fim do capítulo no leitor: "Dúvidas sobre este capítulo", se houver perguntas frequentes dele.
@@ -350,8 +433,13 @@ async function preencherFaqCapitulo(cap) {
   if (!el || capituloAtual !== cap) return;
   const n = perguntasDoCapitulo(faq, cap.ini, cap.fim).length;
   if (!n) return;
-  el.innerHTML = `<a class="linha-acao" href="#/duvidas/cap/${cap.ini}"><span class="icone-caixa">${icone('duvida')}</span><span class="t"><strong>Dúvidas sobre este capítulo</strong><small>${plural(n, 'pergunta frequente', 'perguntas frequentes')}, com a Bíblia e o Catecismo</small></span>${icone('dir')}</a>`;
+  el.innerHTML = `<div class="lista-acoes"><a class="linha-acao" href="#/duvidas/cap/${cap.ini}"><span class="icone-caixa">${icone('duvida')}</span><span class="t"><strong>Dúvidas sobre este capítulo</strong><small>${plural(n, 'pergunta frequente', 'perguntas frequentes')}, com a Bíblia e o Catecismo</small></span>${icone('dir')}</a></div>`;
   el.hidden = false;
+  carregarObjecoes().then((ob) => {
+    const k = objecoesDoCapitulo(ob, cap.ini, cap.fim).length;
+    if (!k || capituloAtual !== cap) return;
+    $('.lista-acoes', el)?.insertAdjacentHTML('beforeend', `<a class="linha-acao" href="#/objecoes/cap/${cap.ini}"><span class="icone-caixa">${icone('cruz')}</span><span class="t"><strong>Objeções sobre este capítulo</strong><small>${plural(k, 'objeção respondida', 'objeções respondidas')} com o Catecismo</small></span>${icone('dir')}</a>`);
+  }).catch(() => { /* sem objeções */ });
 }
 
 let capituloAtual = null;
@@ -433,6 +521,13 @@ function telaBusca(d, q) {
       <a class="faq-ver-todas" href="#/duvidas/busca/${encodeURIComponent(q)}">Ver todas as dúvidas sobre “${esc(q)}” ${icone('dir')}</a></section>
       <h2 class="rotulo">No texto do Catecismo</h2>`);
   }).catch(() => { /* sem FAQ */ });
+  carregarObjecoes().then((ob) => {
+    const l = buscarObjecoes(ob, q, 2);
+    const cont = $('.contagem', main);
+    if (!l.length || !cont || document.body.dataset.rota !== 'busca') return;
+    cont.insertAdjacentHTML('afterend', `<section class="faq-na-busca"><h2 class="rotulo">Objeções</h2>${htmlListaObjecoes(l)}
+      <a class="faq-ver-todas" href="#/objecoes/busca/${encodeURIComponent(q)}">Ver todas as objeções sobre “${esc(q)}” ${icone('dir')}</a></section>`);
+  }).catch(() => { /* sem objeções */ });
 }
 
 // Linha "Instalar o app" na aba Mais (aparece só quando dá para instalar).
@@ -498,6 +593,14 @@ function caminhoMetrica(rota, arg) {
   const fixas = { inicio: 'Início', busca: 'Busca', conversar: 'Conversar', entrar: 'Código de convite' };
   if (rota === 'sumario') return ['/ler', 'Ler o Catecismo'];
   if (rota === 'sobre') return ['/mais', 'Mais'];
+  if (rota === 'objecoes') {
+    const [a = '', b = ''] = arg.split('/');
+    if (!a) return ['/objecoes', 'Objeções'];
+    if (a === 'busca') return ['/objecoes/busca', 'Objeções: busca'];
+    if (a === 'cap') return [`/objecoes/capitulo-${b}`, 'Objeções do capítulo'];
+    if (a === 'q') return [`/objecoes/objecao/${b}`, 'Objeção compartilhada'];
+    return [`/objecoes/${a}${b ? `-${b}` : ''}`, 'Objeções: tema'];
+  }
   if (rota !== 'duvidas') return [`/${fixas[rota] ? rota : 'outra'}`, fixas[rota] || 'Outra'];
   const [a = '', b = ''] = arg.split('/');
   if (!a) return ['/duvidas', 'Dúvidas frequentes'];
@@ -511,7 +614,7 @@ function caminhoMetrica(rota, arg) {
 // Pergunta frequente aberta, "Reportar erro" e "Perguntar sobre este trecho".
 document.addEventListener('toggle', (ev) => {
   const it = ev.target;
-  if (it.classList?.contains('faq-item') && it.open) contarEvento(`duvida/aberta/${it.id}`, it.querySelector('summary')?.textContent.trim() || '');
+  if (it.classList?.contains('faq-item') && it.open) contarEvento(`${it.id.startsWith('O-') ? 'objecao' : 'duvida'}/aberta/${it.id}`, it.querySelector('summary')?.textContent.trim() || '');
 }, true);
 document.addEventListener('click', (ev) => {
   const rep = ev.target.closest('.bt-reportar');
@@ -525,7 +628,7 @@ async function rotear() {
   const h = decodeURIComponent(location.hash.replace(/^#\/?/, ''));
   const [rota, ...resto] = h.split('/');
   const arg = resto.join('/');
-  const atual = rota === 'p' || rota === 'busca' ? 'sumario' : rota === 'entrar' ? 'sobre' : (rota || 'inicio');
+  const atual = rota === 'p' || rota === 'busca' ? 'sumario' : rota === 'entrar' ? 'sobre' : rota === 'objecoes' ? 'duvidas' : (rota || 'inicio');
   document.querySelectorAll('.nav a, .abas a').forEach((a) => {
     const ativo = a.dataset.rota === atual;
     a.classList.toggle('ativo', ativo);
@@ -545,6 +648,7 @@ async function rotear() {
   if (rota === 'sumario') return telaSumario(d, arg === '' ? null : Number(arg));
   if (rota === 'busca' && arg) return telaBusca(d, arg);
   if (rota === 'duvidas') return telaFaq(d, arg);
+  if (rota === 'objecoes') return telaObjecoes(d, arg);
   if (rota === 'sobre') return telaSobre(d);
   return telaInicio(d);
 }
@@ -658,7 +762,25 @@ async function compartilharPergunta(id) {
 document.addEventListener('click', (ev) => {
   const b = ev.target.closest('[data-compartilhar]');
   if (b) compartilharPergunta(b.dataset.compartilhar);
+  const o = ev.target.closest('[data-compartilhar-obj]');
+  if (o) compartilharObjecao(o.dataset.compartilharObj);
 });
+
+async function compartilharObjecao(id) {
+  let o;
+  try { o = (await carregarObjecoes()).objecoes.find((x) => x.id === id); } catch { return; }
+  if (!o) return;
+  contarEvento(`objecao/compartilhada/${id}`, o.o);
+  const url = `${location.origin}${location.pathname}#/objecoes/q/${encodeURIComponent(id)}`;
+  const texto = `“${o.o}”\n\n${o.r}\n\n${o.e}`;
+  if (navigator.share) {
+    try { await navigator.share({ title: o.o, text: texto, url }); return; } catch (e) { if (e.name === 'AbortError') return; }
+  }
+  try {
+    await navigator.clipboard.writeText(`${texto}\n\n${url}`);
+    avisoRapido('Objeção copiada, com o link');
+  } catch { avisoRapido('Não foi possível copiar'); }
+}
 
 document.addEventListener('keydown', (ev) => {
   if (ev.key !== 'Escape') return;

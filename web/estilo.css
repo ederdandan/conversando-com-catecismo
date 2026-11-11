@@ -623,3 +623,22 @@ main.entra-esq { animation: entra-esq .2s ease-out; }
 .tema-amostra i:nth-child(2) { width: 55%; opacity: .55; }
 .tema-amostra b { position: absolute; right: 8px; top: 8px; width: 10px; height: 10px; border-radius: 50%; }
 .secao-mais { display: flex; flex-direction: column; gap: 10px; }
+/* ---------- objeções ---------- */
+/* Alternador "Dúvidas | Objeções" no topo da aba Dúvidas */
+.seg { display: grid; grid-template-columns: 1fr 1fr; gap: 4px; padding: 4px; border-radius: 14px; background: var(--trilho); }
+.seg a {
+  display: flex; align-items: center; justify-content: center; min-height: 40px; border-radius: 10px;
+  font: 600 15px var(--sans); color: var(--suave); text-decoration: none;
+}
+.seg a[aria-current="page"] { background: var(--superficie); color: var(--acento); box-shadow: 0 1px 3px rgb(0 0 0 / .12); }
+.faq-secao-titulo small { font: 600 13px var(--sans); color: var(--suave); margin-left: 4px; }
+.obj-item summary span { font-style: italic; }
+.faq-corpo > p.obj-curta {
+  padding: 10px 12px; border-left: 3px solid var(--acento); border-radius: 4px 10px 10px 4px;
+  background: var(--acento-suave); font-weight: 600;
+}
+.obj-curta .rotulo { display: block; margin-bottom: 2px; font: 700 12px var(--sans); letter-spacing: .04em; text-transform: uppercase; color: var(--acento); }
+.obj-verso { margin: 0; padding: 2px 0 2px 14px; border-left: 2px solid var(--linha); }
+.obj-verso p { margin: 0; font: italic calc(1rem * var(--escala))/1.6 var(--serif); }
+.obj-verso cite { display: block; margin-top: 4px; font: 600 13px var(--sans); font-style: normal; color: var(--suave); }
+.obj-verso cite .cita { font: inherit; color: var(--acento); background: none; border: 0; padding: 0; cursor: pointer; text-decoration: underline; }
