@@ -371,9 +371,17 @@ function ligarFormObj() {
 
 const OBJ_NOMES = ['objeção', 'objeções'];
 const linhaTemaObj = (ob, s, t) => {
-  const n = objecoesDoTema(ob, s.id, t.c).length;
-  return n ? `<a class="linha-acao" href="#/objecoes/${s.id}/${t.c}"><span class="t"><strong>${esc(t.titulo)}</strong><small>${plural(n, ...OBJ_NOMES)}</small></span>${icone('dir')}</a>` : '';
+  const lista = objecoesDoTema(ob, s.id, t.c);
+  if (!lista.length) return '';
+  const ps = lista.map((o) => o.principal);
+  const faixa = `§ ${Math.min(...ps)}–${Math.max(...ps)}`;
+  return `<a class="linha-acao" href="#/objecoes/${s.id}/${t.c}"><span class="t"><strong>${esc(t.titulo)}</strong><small>${faixa} · ${plural(lista.length, ...OBJ_NOMES)}</small></span>${icone('dir')}</a>`;
 };
+
+// Mesma navegação das dúvidas: partes do Catecismo → seções e temas → objeções agrupadas.
+const htmlSecoesObjDaParte = (ob, parte) => ob.secoes.filter((s) => s.parte === parte)
+  .map((s) => `<section class="faq-secao"><h2 class="faq-secao-titulo">${esc(s.titulo)}</h2>
+      <div class="lista-acoes">${s.temas.map((t) => linhaTemaObj(ob, s, t)).join('')}</div></section>`).join('');
 
 // #/objecoes · #/objecoes/s1/2 · #/objecoes/q/<id> · #/objecoes/cap/<ini> · #/objecoes/busca/<texto>
 async function telaObjecoes(d, arg) {
@@ -405,18 +413,30 @@ async function telaObjecoes(d, arg) {
       ${htmlObjecao(o, { aberta: true })}
       <div class="lista-acoes">${linhaTemaObj(ob, s, t)}</div></div>`;
     document.title = `${o.o} · Objeções`;
+  } else if (a === 'parte' && ob.secoes.some((s) => s.parte === Number(b))) {
+    const pt = partesDe(d).find((x) => x.parte === Number(b));
+    const { curto, rotulo } = nomeParte(Number(b), pt?.titulo || '');
+    html = `${cabVoltar('#/objecoes', 'Voltar às objeções', curto, `${rotulo} · Respostas a objeções`)}<div class="tela faq">
+      ${formObj()}${htmlSecoesObjDaParte(ob, Number(b))}</div>`;
+    document.title = `${curto} · Objeções`;
   } else if (secao && b) {
     const tema = secao.temas.find((t) => String(t.c) === b);
-    if (!tema) { location.replace('#/objecoes'); return; }
+    if (!tema) { location.replace(`#/objecoes/parte/${secao.parte}`); return; }
     const lista = objecoesDoTema(ob, secao.id, tema.c);
     const agrupada = htmlAgrupada(d, lista, htmlListaObjecoes, OBJ_NOMES);
-    html = `${cabVoltar('#/objecoes', 'Voltar às objeções', tema.titulo, `${secao.parte}ª Parte · ${secao.titulo}`)}<div class="tela faq">
+    html = `${cabVoltar(`#/objecoes/parte/${secao.parte}`, 'Voltar aos temas', tema.titulo, `${secao.parte}ª Parte · ${secao.titulo}`)}<div class="tela faq">
       <p class="contagem">${plural(lista.length, ...OBJ_NOMES)}${agrupada.includes('faq-grupo') ? ' · toque num assunto para ver as objeções' : ''}</p>
       ${agrupada}</div>`;
     document.title = `${tema.titulo} · Objeções`;
   } else {
-    const blocos = ob.secoes.map((s) => `<section class="faq-secao"><h2 class="faq-secao-titulo">${esc(s.titulo)} <small>${s.parte}ª Parte</small></h2>
-      <div class="lista-acoes">${s.temas.map((t) => linhaTemaObj(ob, s, t)).join('')}</div></section>`).join('');
+    const contagem = new Map();
+    const parteDaSecao = new Map(ob.secoes.map((s) => [s.id, s.parte]));
+    for (const o of ob.objecoes) contagem.set(parteDaSecao.get(o.s), (contagem.get(parteDaSecao.get(o.s)) || 0) + 1);
+    const cartoes = partesDe(d).filter((pt) => contagem.get(pt.parte)).map((pt) => {
+      const { curto, rotulo } = nomeParte(pt.parte, pt.titulo);
+      return `<a class="cartao-parte" href="#/objecoes/parte/${pt.parte}"><small>${rotulo}</small><strong>${esc(curto)}</strong><span class="cartao-n">${contagem.get(pt.parte).toLocaleString('pt-BR')} objeções</span></a>`;
+    }).join('');
+    const blocos = `<div><h2 class="rotulo">Escolha uma parte do Catecismo</h2><div class="grade-partes">${cartoes}</div></div>`;
     html = `${cabecalho('Dúvidas frequentes')}<div class="tela faq">${abasDuvidas('objecoes')}
       <p class="sub">${ob.objecoes.length.toLocaleString('pt-BR')} objeções comuns à fé católica, com uma resposta curta para a conversa e a explicação do Catecismo. Responda “com mansidão e respeito” (1Pd 3,15).</p>
       ${formObj()}${blocos}</div>`;
