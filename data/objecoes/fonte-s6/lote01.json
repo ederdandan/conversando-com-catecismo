@@ -1,0 +1,415 @@
+[
+  {
+    "c": 1,
+    "o": "Os católicos alteraram os Dez Mandamentos e removeram o mandamento que proíbe fazer imagens esculpidas.",
+    "r": "A Igreja não removeu nenhum mandamento; a proibição de idolatria está incluída no Primeiro Mandamento, seguindo a divisão tradicional de Santo Agostinho.",
+    "e": "O Catecismo ensina que a tradição católica segue a divisão dos mandamentos estabelecida por Santo Agostinho, que agrupa a proibição de adorar falsos deuses e imagens no Primeiro Mandamento. O texto bíblico do Êxodo contém dez preceitos, mas as diferentes tradições cristãs e judaicas agrupam os versículos de formas distintas. A proibição das imagens no Antigo Testamento visava impedir a idolatria, ou seja, adorar a matéria em lugar do Criador. Na Igreja Católica, o Primeiro Mandamento conserva integralmente a proibição de adorar qualquer criatura ou imagem em lugar de Deus.",
+    "b": [
+      "Ex 20,2-6",
+      "Dt 5,6-10"
+    ],
+    "bt": [],
+    "cic": [
+      "2066",
+      "2112-2114"
+    ],
+    "a": "É como agrupar as duas primeiras cláusulas de um contrato sob o mesmo capítulo de abertura sem alterar uma única palavra do texto original."
+  },
+  {
+    "c": 1,
+    "o": "Dividir o último mandamento sobre o cobiçar em dois é um truque para somar dez mandamentos após apagar o das imagens.",
+    "r": "A distinção entre cobiçar a mulher do próximo e cobiçar os seus bens reflete a própria diferenciação bíblica entre a pureza do coração e a justiça material.",
+    "e": "O Catecismo ensina que o Nono e o Décimo Mandamentos desdobram a proibição da cobiça em duas dimensões morais distintas: os desejos da carne e a ganância dos bens materiais. O livro do Deuteronômio coloca em primeiro lugar a proibição de cobiçar a mulher do próximo e, em seguida, os bens alheios. Essa divisão respeita a dignidade própria do matrimônio e da pessoa em relação ao mero direito de propriedade. Assim, o Decálogo mantém a sua estrutura harmoniosa de dez palavras divinas.",
+    "b": [
+      "Dt 5,21",
+      "Ex 20,17"
+    ],
+    "bt": [],
+    "cic": [
+      "2066"
+    ],
+    "a": "É como separar no código civil o capítulo do direito de família do capítulo dos direitos patrimoniais de propriedade."
+  },
+  {
+    "c": 1,
+    "o": "Os Dez Mandamentos são leis judaicas antigas que foram abolidas por Jesus no Novo Testamento.",
+    "r": "Jesus não aboliu o Decálogo, mas o confirmou, cumpriu e levou à sua plenitude no mandamento do amor a Deus e ao próximo.",
+    "e": "O Catecismo ensina que os Dez Mandamentos mantêm um valor permanente para os cristãos, pois exprimem os deveres fundamentais do homem para com Deus e o próximo. Jesus reafirmou a validade do Decálogo ao responder ao jovem rico que, para entrar na vida eterna, é preciso guardar os mandamentos. As dez palavras não foram anuladas pelo Evangelho, mas interpretadas em sua intenção mais profunda sob a lei do amor. O Decálogo permanece como o guia fundamental da lei natural gravada no coração humano.",
+    "b": [
+      "Mt 5,17",
+      "Mt 19,16-19"
+    ],
+    "bt": [
+      {
+        "ref": "Mt 5,17",
+        "t": "Não penseis que vim abolir a Lei ou os Profetas; não vim abolir, mas cumprir"
+      }
+    ],
+    "cic": [
+      "2052-2055",
+      "2072-2073"
+    ],
+    "a": "É como a regra fundamental da gramática que não é descartada pelo grande poeta, mas usada para compor a obra-prima mais bela."
+  },
+  {
+    "c": 1,
+    "o": "Acreditar em horóscopo e astrologia é uma brincadeira inofensiva que não afeta a fé em Deus.",
+    "r": "Consultar horóscopos é uma prática contrária ao Primeiro Mandamento, pois entrega a confiança do futuro aos astros em vez da providência divina.",
+    "e": "O Catecismo ensina que todas as formas de adivinhação, incluindo a astrologia, a quiromancia e a consulta de horóscopos, devem ser rejeitadas. Essas práticas escondem um desejo de poder sobre o tempo, sobre a história e sobre os homens, buscando apaziguar poderes ocultos. Elas contradizem a atitude de respeito filial, amor e confiança que devemos unicamente a Deus como Senhor do nosso futuro. O cristão deve entregar o seu amanhã com confiança nas mãos da providência do Pai.",
+    "b": [
+      "Dt 18,10-12",
+      "Jr 29,11"
+    ],
+    "bt": [],
+    "cic": [
+      "2115-2116"
+    ],
+    "a": "É como o passageiro do navio que abandona as instruções do capitão no leme para tentar adivinhar a rota lendo as manchas no chão."
+  },
+  {
+    "c": 1,
+    "o": "Usar amuletos, talismãs ou simpatias para ter sorte ou proteção é algo natural e compatível com a fé cristã.",
+    "r": "O uso de amuletos e simpatias é um ato de superstição que atribui um poder mágico a objetos criados, ferindo a confiança pura em Deus.",
+    "e": "O Catecismo ensina que a superstição é um desvio do sentimento religioso e do culto devido ao verdadeiro Deus. Ela manifesta-se quando se atribui uma eficácia quase mágica a certas práticas, objetos, frases ou amuletos de sorte. Colocar a segurança pessoal ou o sucesso em objetos materiais é retirar o coração do Criador para depositá-lo na criatura. O cristão é chamado a buscar a proteção divina através da oração sincera e da vida na graça.",
+    "b": [
+      "1Tm 1,4",
+      "Dt 18,10-11"
+    ],
+    "bt": [],
+    "cic": [
+      "2111"
+    ],
+    "a": "É como o paciente que ignora o tratamento prescrito pelo médico para confiar o seu bem-estar a um laço de fita preso no pulso."
+  },
+  {
+    "c": 1,
+    "o": "O espiritismo e a evocação dos mortos ajudam a dar consolo aos enlutados e são aceitos pela doutrina católica.",
+    "r": "A Igreja proíbe o espiritismo e a invocação dos mortos porque essas práticas buscam poderes ocultos e abrem espaço para enganos espirituais.",
+    "e": "O Catecismo ensina claramente que a evocação dos mortos e o recurso a médiuns espiritas devem ser terminantemente rejeitados pelos fiéis. Todas as práticas de magia, feitiçaria ou espiritismo, pelas quais se pretende domesticar os espíritos ou adivinhar o oculto, são gravemente contrárias à virtude da religião. A fé católica ensina que o consolo e a comunhão com os falecidos ocorrem pela oração, pela Santa Missa e pela esperança na ressurreição. Buscar contatos mediúnicos fere a confiança na Revelação divina trazida por Cristo.",
+    "b": [
+      "Dt 18,10-12",
+      "Lv 20,6"
+    ],
+    "bt": [],
+    "cic": [
+      "2116-2117"
+    ],
+    "a": "É como o cidadão que ignora a comunicação oficial do governo para tentar obter notícias através de escutas ilegais na escuridão."
+  },
+  {
+    "c": 1,
+    "o": "A idolatria não existe mais no mundo moderno, pois ninguém mais adora estátuas de deuses antigos como Baal ou Júpiter.",
+    "r": "A idolatria continua viva hoje sempre que o ser humano diviniza o dinheiro, o poder, o prazer, o estado ou o próprio ego no lugar de Deus.",
+    "e": "O Catecismo ensina que a idolatria não se refere apenas aos cultos pagãos do passado aos falsos deuses de pedra ou metal. A idolatria consiste em divinizar o que não é Deus, ocorrendo sempre que o homem presta culto e veneração suprema a uma criatura em lugar do Criador. O dinheiro, o poder, a fama, o prazer e o poder político tornam-se ídolos quando ocupam o lugar supremo no coração humano. Render-se a esses falsos deuses escraviza a alma e afasta da verdadeira liberdade dos filhos de Deus.",
+    "b": [
+      "Mt 6,24",
+      "Gl 5,19-20"
+    ],
+    "bt": [
+      {
+        "ref": "Mt 6,24",
+        "t": "Ninguém pode servir a dois senhores... Vós não podeis servir a Deus e ao Dinheiro"
+      }
+    ],
+    "cic": [
+      "2112-2114"
+    ],
+    "a": "É como a pessoa que retira a foto do cônjuge do porta-retratos do quarto para colocar uma pilha de cédulas bancárias no lugar."
+  },
+  {
+    "c": 1,
+    "o": "Fazer promessas ou votos a Deus é uma barganha comercial indigna que tenta comprar a graça divina.",
+    "r": "As promessas e os votos são atos legítimos da virtude da religião, pelos quais o fiel oferece a Deus um compromisso livre de amor e gratidão.",
+    "e": "O Catecismo ensina que a promessa e o voto são atos do culto pelo qual o cristão se compromete com Deus a realizar uma obra boa. Longe de ser uma barganha comercial, o voto é um ato de devoção e gratidão que manifesta o amor e a confiança na bondade do Criador. Ao cumprir uma promessa, o crente reconhece que a graça recebida promana gratuitamente de Deus e responde com uma doação de si mesmo. A Igreja orienta que as promessas sejam feitas com prudência e fidelidade.",
+    "b": [
+      "Sl 50,14",
+      "Ecl 5,3-4"
+    ],
+    "bt": [],
+    "cic": [
+      "2101-2103"
+    ],
+    "a": "É como o filho que promete preparar um jantar especial ao pai em sinal de profunda gratidão pelo auxílio recebido na caminhada."
+  },
+  {
+    "c": 1,
+    "o": "O ateísmo é uma posição racional lógica, enquanto a fé em Deus é um desvario sem fundamento.",
+    "r": "O ateísmo nega a origem e o fim do ser humano, rejeitando as provas racionais que apontam para a existência de um Criador do universo.",
+    "e": "O Catecismo ensina que o ateísmo é um pecado contra a virtude da religião, pois recusa ou nega a existência de Deus. A razão humana pode conhecer com certeza a existência de Deus através das obras da criação e da ordem do universo. Muitas vezes, o ateísmo fundamenta-se numa visão falsa do problema do mal ou na busca de uma autonomia humana mal compreendida. A Igreja convida ao diálogo sincero, lembrando que a negação do Criador degrada a própria dignidade do homem.",
+    "b": [
+      "Sl 14,1",
+      "Rm 1,19-20"
+    ],
+    "bt": [],
+    "cic": [
+      "2123-2126"
+    ],
+    "a": "É como observar o relógio de precisão funcionando perfeitamente no pulso e insistir que as engrenagens surgiram por acaso no deserto."
+  },
+  {
+    "c": 1,
+    "o": "O agnosticismo é uma atitude prudente e neutra de quem prefere não opinar sobre a existência de Deus.",
+    "r": "O agnosticismo muitas vezes esconde uma fuga do compromisso com a verdade, reduzindo a busca do sentido da vida a uma indiferença moral.",
+    "e": "O Catecismo explica que o agnosticismo pode revestir várias formas, desde a busca sincera da verdade até ao desinteresse e à indiferença existencial. Em muitos casos, o agnóstico recusa-se a decidir sobre a existência de Deus declarando ser impossível prová-la ou conhecê-la. O agnosticismo equivale frequentemente a um ateísmo prático, no qual a pessoa vive como se Deus não existisse. Essa postura de neutralidade omite a busca da resposta às perguntas mais fundamentais da existência humana.",
+    "b": [
+      "At 17,27",
+      "Rm 1,21"
+    ],
+    "bt": [],
+    "cic": [
+      "2127-2128"
+    ],
+    "a": "É como o viajante que para no cruzamento da estrada e decide não escolher caminho algum, permanecendo parado no acostamento."
+  },
+  {
+    "c": 1,
+    "o": "Fazer sacrifícios ou privações morais na vida cristã é uma prática masoquista que Deus não deseja.",
+    "r": "O sacrifício espiritual é a oferenda do próprio coração e de nossas ações a Deus, unindo a nossa vida ao sacrifício redentor de Cristo.",
+    "e": "O Catecismo ensina que o sacrifício exterior deve ser a expressão do sacrifício espiritual interior de um coração contrito e amoroso. Oferecer a Deus o nosso trabalho, as nossas dores, o nosso jejum e a nossa oração é um ato de adoração e de comunhão com o Redentor. O verdadeiro sacrifício não consiste em buscar o sofrimento por si mesmo, mas em entregar a vida por amor a Deus e ao próximo. Em Cristo, os nossos pequenos sacrifícios adquirem um valor infinito de salvação.",
+    "b": [
+      "Rm 12,1",
+      "1Pd 2,5"
+    ],
+    "bt": [
+      {
+        "ref": "Rm 12,1",
+        "t": "Eu vos exorto, pois, irmãos, pela misericórdia de Deus, a que ofereçais os vossos corpos como hostia viva, santa e agradável a Deus"
+      }
+    ],
+    "cic": [
+      "2099-2100"
+    ],
+    "a": "É como o atleta que aceita de bom grado o treino exigente e o cansaço do corpo por amor à vitória na competição."
+  },
+  {
+    "c": 1,
+    "o": "A religião deve ser um ato estritamente privado, sem qualquer manifestação pública ou presença na sociedade civil.",
+    "r": "O culto a Deus possui uma dimensão social necessária, pois o homem é por natureza um ser social chamado a viver a fé em comunidade.",
+    "e": "O Catecismo ensina que o dever de prestar a Deus um culto autêntico diz respeito ao homem individualmente e em sociedade. O dever social de religião exige que os cidadãos e as instituições respeitem o direito de professar a fé publicamente sem coerção. A fé cristã transforma as estruturas da sociedade e promove o bem comum, a justiça e a paz no ambiente comunitário. Privatizar a religião é mutilar a dignidade da pessoa e a natureza comunitária da vida cristã.",
+    "b": [
+      "Lc 12,8",
+      "At 4,19-20"
+    ],
+    "bt": [],
+    "cic": [
+      "2104-2105"
+    ],
+    "a": "É como a linguagem pátria que não pode ficar restrita ao pensamento pessoal, precisando ser falada na praça pública para unir o povo."
+  },
+  {
+    "c": 1,
+    "o": "A liberdade religiosa significa que todas as religiões são igualmente verdadeiras e que a verdade objetiva não existe.",
+    "r": "A liberdade religiosa é o direito de não ser coagido na busca da verdade, mas não significa que todas as crenças sejam equivalentes.",
+    "e": "O Catecismo ensina que o direito à liberdade religiosa fundamenta-se na própria dignidade da pessoa humana criada por Deus. A pessoa humana tem o dever moral de procurar a verdade, especialmente no que diz respeito a Deus e à Sua Igreja, e de aderir a ela. O direito à liberdade religiosa significa que ninguém pode ser forçado por poderes humanos a agir contra a sua consciência em matéria religiosa. Esse direito não aprova o erro nem implica um relativismo doutrinal no qual a verdade deixa de existir.",
+    "b": [
+      "At 5,29",
+      "1Tm 2,4"
+    ],
+    "bt": [],
+    "cic": [
+      "2106-2109"
+    ],
+    "a": "É como o direito de escolher a medicação médica na farmácia: a lei garante que ninguém seja forçado a tomar remédio, mas o vírus exige a vacina certa."
+  },
+  {
+    "c": 1,
+    "o": "Tentar a Deus fazendo pedidos ousados para testar se Ele realmente cumpre Suas promessas é um sinal de fé corajosa.",
+    "r": "Tentar a Deus é um pecado contra o Primeiro Mandamento, pois coloca à prova a omnipotência e a bondade do Criador com presunção.",
+    "e": "O Catecismo ensina que tentar a Deus consiste em colocar a prova, por palavras ou por atos, a Sua bondade e o Seu poder divino. Jesus recusou a proposta do diabo de se lançar do templo para testar a proteção dos anjos, citando as Escrituras: 'Não tentarás o Senhor teu Deus'. Essa atitude presunçosa carece do respeito e da confiança filial devidos ao Pai celestial. O crente deve rezar com humildade e confiança sem exigir sinais milagrosos para comprovar a fidelidade de Deus.",
+    "b": [
+      "Dt 6,16",
+      "Mt 4,7"
+    ],
+    "bt": [
+      {
+        "ref": "Mt 4,7",
+        "t": "Não tentarás o Senhor teu Deus"
+      }
+    ],
+    "cic": [
+      "2119"
+    ],
+    "a": "É como o filho que se joga da janela da casa só para testar se o pai vai correr a tempo de segurá-lo antes do impacto."
+  },
+  {
+    "c": 1,
+    "o": "Cometer um sacrilégio é apenas um desrespeito cultural a um monumento histórico sem gravidade espiritual.",
+    "r": "O sacrilégio é uma falta grave contra a religião que profana coisas, pessoas ou lugares consagrados a Deus, especialmente a Eucaristia.",
+    "e": "O Catecismo ensina que o sacrilégio consiste em profanar ou tratar indignamente os sacramentos e as outras ações litúrgicas, bem como as pessoas, as coisas e os lugares consagrados a Deus. O sacrilégio adquire uma gravidade particular quando é cometido contra a Santíssima Eucaristia, que é o próprio Corpo real de Cristo. Essa falta fere diretamente a honra devida a Deus e escandaliza a comunidade dos crentes. O respeito pelas coisas sagradas expressa a saúde espiritual e o temor de Deus na alma.",
+    "b": [
+      "1Cor 11,27-29",
+      "Ez 22,26"
+    ],
+    "bt": [],
+    "cic": [
+      "2120"
+    ],
+    "a": "É como pisotear com desprezo a bandeira da nação na frente do tribunal de justiça para insultar a soberania do país."
+  },
+  {
+    "c": 1,
+    "o": "Pagar por um sacramento ou comprar uma bênção espiritual é uma prática normal de sustentação da Igreja.",
+    "r": "A compra ou venda de coisas espirituais chama-se simonia e é um pecado grave que tenta comercializar a graça gratuita de Deus.",
+    "e": "O Catecismo ensina que a simonia é a compra ou venda de realidades espirituais como sacramentos, bênçãos ou cargos eclesiais. O termo deriva de Simão Mago, que quis comprar com dinheiro o poder do Espírito Santo aos apóstolos e foi duramente repreendido por São Pedro. As graças divinas são dons totalmente gratuitos de Deus e não podem ser vendidas ou compradas com bens materiais. É legítimo sustentar os ministros da Igreja com ofertas voluntárias, mas jamais comercializar os sacramentos.",
+    "b": [
+      "At 8,18-24",
+      "Mt 10,8"
+    ],
+    "bt": [
+      {
+        "ref": "Mt 10,8",
+        "t": "Recebestes de graça, dai de graça"
+      }
+    ],
+    "cic": [
+      "2121-2122"
+    ],
+    "a": "É como tentar pagar em dinheiro vivo o amor e o afeto sincero dos pais para exigir um atestado de predileção na família."
+  },
+  {
+    "c": 1,
+    "o": "O desespero de quem perde a esperança na salvação é um sofrimento inevitável e sem responsabilidade moral.",
+    "r": "O desespero é um pecado contra o Primeiro Mandamento, pois recusa a misericórdia infinita e a fidelidade às promessas de Deus.",
+    "e": "O Catecismo ensina que pelo desespero o homem deixa de esperar de Deus a sua salvação pessoal, os auxílios para alcançá-la ou o perdão dos seus pecados. O desespero opõe-se à virtude teologal da esperança, que nos faz confiar no poder e na misericórdia inesgotável do Criador. Essa atitude fecha a alma à recepção da graça do arrependimento e desconfia da verdade da Paixão de Cristo. O cristão deve recordar que a misericórdia de Deus é maior do que qualquer miséria humana.",
+    "b": [
+      "Rm 4,18",
+      "1Tm 1,15"
+    ],
+    "bt": [],
+    "cic": [
+      "2091"
+    ],
+    "a": "É como o naufrago que avista o barco de resgate ao seu lado e se recusa a segurar a bóia por insistir que afundará."
+  },
+  {
+    "c": 1,
+    "o": "A presunção de achar que seremos salvos sem precisar de conversão é uma atitude de fé madura e confiante.",
+    "r": "A presunção é uma falta contra a esperança que se apoia nas próprias forças humanas ou abusa da misericórdia de Deus sem mudar de vida.",
+    "e": "O Catecismo ensina que a presunção reveste duas formas: ou o homem presume nas suas próprias capacidades, julgando poder salvar-se sem a ajuda de Deus; ou presume na omnipotência e misericórdia divinas, esperando obter o perdão sem conversão e a glória sem mérito. A presunção ilude a consciência e impede o verdadeiro arrependimento dos pecados. A verdadeira esperança cristã combina a confiança filial na graça de Deus com o esforço sincero de conversão diária.",
+    "b": [
+      "1Cor 10,12",
+      "Lc 12,19-20"
+    ],
+    "bt": [],
+    "cic": [
+      "2092"
+    ],
+    "a": "É como o aluno que não estuda para a prova nem comparece às aulas e tem certeza absoluta de que receberá a nota máxima."
+  },
+  {
+    "c": 1,
+    "o": "A indiferença religiosa e a acídia espiritual são apenas traços de personalidade e não atitudes pecaminosas.",
+    "r": "A indiferença e a acídia são pecados contra o amor de Deus, pois desprezam a iniciativa divina e recusam a alegria da salvação.",
+    "e": "O Catecismo ensina que a caridade exige um amor fervoroso a Deus e que os pecados contra esse amor ferem o Primeiro Mandamento. A indiferença negligencia ou recusa a consideração da caridade divina; a ingratidão esquece os benefícios de Deus; a acídia é uma preguiça espiritual que chega a rejeitar a alegria que vem de Deus. Essas atitudes esfriam o coração e fecham a alma à comunhão com o Criador. O fiel é convidado a renovar o fervor da sua vida de oração.",
+    "b": [
+      "Ap 3,15-16",
+      "Mt 22,37-38"
+    ],
+    "bt": [],
+    "cic": [
+      "2093-2094"
+    ],
+    "a": "É como o filho que recebe um presente inestimável preparado com sacrifício pelos pais e dá as costas sem dizer um obrigado."
+  },
+  {
+    "c": 1,
+    "o": "Dúvidas voluntárias sobre a fé são atitudes intelectuais saudáveis que não afetam a fidelidade a Deus.",
+    "r": "A dúvida voluntária negligencia a verdade revelada por Deus, enquanto a incredulidade recusa abertamente o assentimento à fé da Igreja.",
+    "e": "O Catecismo distingue as dificuldades involuntárias de fé, que podem ser ocasião de amadurecimento, das dúvidas voluntárias sobre a doutrina. A dúvida voluntária sobre a fé hesita em dar o assentimento às verdades reveladas ou recusa-se a aceitar o que Deus ensina pela Igreja. A incredulidade é o desprezo da verdade revelada ou a recusa deliberada de aderir a ela. O Primeiro Mandamento exige que guardemos a fé com prudência e evitemos o que a possa destruir.",
+    "b": [
+      "2Tm 1,13-14",
+      "Hb 3,12"
+    ],
+    "bt": [],
+    "cic": [
+      "2088-2089"
+    ],
+    "a": "É como o capitão de navio que recebe o relatório oficial do farol confiável e prefere ignorar o aviso para avançar cego na névoa."
+  },
+  {
+    "c": 1,
+    "o": "Heresia, apostasia e cisma são apenas opiniões teológicas divergentes sem gravidade espiritual.",
+    "r": "A heresia, a apostasia e o cisma são faltas graves contra o Primeiro Mandamento que rompem a unidade e a integridade da fé cristã.",
+    "e": "O Catecismo define a heresia como a negação ou dúvida obstinada, após o Batismo, de uma verdade da fé divina e católica; a apostasia é o repúdio total da fé cristã; o cisma é a recusa da submissão ao Papa ou da comunhão com os membros da Igreja. Estas atitudes ferem a unidade do Corpo Místico de Cristo e rompem os laços da caridade na verdade. Elas distanciam o cristão da plenitude dos meios de salvação. A Igreja reza e trabalha pela preservação e restauração da unidade de todos os fiéis.",
+    "b": [
+      "Tt 3,10-11",
+      "1Jo 2,19"
+    ],
+    "bt": [],
+    "cic": [
+      "2089"
+    ],
+    "a": "É como o galho que se corta e se separa do tronco da árvore centenária, secando por falta do alimento da seiva."
+  },
+  {
+    "c": 1,
+    "o": "Adorar a Deus consiste apenas em ter pensamentos positivos no coração, sem necessidade de gestos de culto.",
+    "r": "A adoração a Deus exige uma atitude do espírito e gestos corporais de humildade, pois o ser humano é composto de corpo e alma.",
+    "e": "O Catecismo ensina que adorar a Deus é reconhecê-Lo como Criador e Senhor absoluto de tudo o que existe. A verdadeira adoração une o respeito interior da mente e do coração aos atos exteriores de louvor, de prostração e de oração comunitária. Adorar a Deus liberta o homem do egocentrismo e do culto aos falsos ídolos da terra. Ao adorar o Pai em espírito e verdade, o ser humano realiza a sua vocação mais nobre.",
+    "b": [
+      "Lc 4,8",
+      "Jo 4,23-24"
+    ],
+    "bt": [
+      {
+        "ref": "Lc 4,8",
+        "t": "Ao Senhor teu Deus adorarás e só a Ele prestarás culto"
+      }
+    ],
+    "cic": [
+      "2095-2097"
+    ],
+    "a": "É como a saudação respeitosa ao chefe de Estado que combina a consideração da mente com a reverência do corpo no salão."
+  },
+  {
+    "c": 1,
+    "o": "A magia e a feitiçaria podem ser usadas para o bem quando visam curar enfermidades de pessoas queridas.",
+    "r": "Todas as práticas de magia e feitiçaria, mesmo com intenções ditas de cura, são gravemente contrárias à virtude da religião.",
+    "e": "O Catecismo ensina que todas as práticas de magia ou de feitiçaria, pelas quais se pretende domesticar as forças ocultas para as pôr ao seu serviço, são gravemente opostas à fé. Mesmo quando essas práticas são realizadas com a intenção de curar a saúde de alguém, permanecem gravemente pecaminosas. O recurso a espíritos, feitiços, simpatias secretas ou ocultismo substitui a confiança no único Deus pelas ilusões do Maligno. A busca da saúde deve usar meios medicinais legítimos e a oração confiante.",
+    "b": [
+      "Gl 5,19-21",
+      "Ap 22,15"
+    ],
+    "bt": [],
+    "cic": [
+      "2117"
+    ],
+    "a": "É como aceitar uma poção venenosa do falsificador na esperança ilusória de que o líquido cure a dor de cabeça do paciente."
+  },
+  {
+    "c": 1,
+    "o": "O Primeiro Mandamento é um preceito de medo que proíbe o ser humano de desfrutar da criação e das suas capacidades.",
+    "r": "O Primeiro Mandamento é o fundamento da liberdade humana, pois ao mandar adorar só a Deus liberta o homem da escravidão das criaturas.",
+    "e": "O Catecismo ensina que o Primeiro Mandamento da Lei de Deus ordena ao homem crer em Deus, esperar Nele e amá-Lo sobre todas as coisas. Este mandamento não restringe a felicidade humana, mas protege o coração do homem contra a tirania das criaturas e dos falsos deuses. Ao reconhecer unicamente o Criador como Senhor supremo, a pessoa humana adquire a sua verdadeira dignidade de filho de Deus. Amar a Deus acima de tudo torna o ser humano capaz de amar as criaturas com ordem e pureza.",
+    "b": [
+      "Dt 6,5",
+      "Mt 22,37"
+    ],
+    "bt": [
+      {
+        "ref": "Dt 6,5",
+        "t": "Amarás o Senhor teu Deus de todo o teu coração, de toda a tua alma e de todas as tuas forças"
+      }
+    ],
+    "cic": [
+      "2083-2086"
+    ],
+    "a": "É como o sol no centro do sistema planetário que mantém cada planeta em sua órbita perfeita sem colidir nem se perder na escuridão."
+  },
+  {
+    "c": 1,
+    "o": "Deus não precisa do nosso culto ou da nossa adoração, por isso os mandamentos do serviço divino são egoístas.",
+    "r": "Deus não precisa do nosso culto, mas o homem necessita adorar a Deus para manter a sua vida ordenada e salvar a sua alma.",
+    "e": "O Catecismo ensina que o culto prestado a Deus não acrescenta nada à grandeza divina, mas traz a salvação e a santificação ao próprio homem. Adorar a Deus é reconhecer a verdade das coisas: que Ele é o Criador e que nós dependemos inteiramente da Sua bondade paterna. Prestar culto ao Senhor liberta a mente das ilusões do orgulho e coloca a vida humana no rumo do bem. O mandamento da adoração é um presente do amor de Deus para o nosso próprio bem.",
+    "b": [
+      "Sl 115,1",
+      "1Tm 1,17"
+    ],
+    "bt": [],
+    "cic": [
+      "2095-2097",
+      "2100"
+    ],
+    "a": "É como a planta que se volta para a luz do sol: a flor não acrescenta brilho ao astro solar, mas recebe a vida que a faz desabrochar."
+  }
+]
